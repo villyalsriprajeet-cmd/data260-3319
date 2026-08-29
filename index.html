@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW1-Sri</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Community Sports League Fixtures</h1>
+  <form id="fixtureForm">
+    <label for="fixtureTitle">Fixture Title</label>
+    <input type="text" id="fixtureTitle" placeholder="e.g. real madrid vs barcelona - Matchweek 5" required autofocus>
+    <label for="venue">Venue</label>
+    <input type="text" id="venue" placeholder="e.g. Bernabeu Stadium" required>
+    <label for="email">Your Email</label>
+    <input type="email" id="email" placeholder="e.g. coach@example.com" required>
+    <label for="details">Match Details</label>
+    <textarea id="details" rows="4" placeholder="Describe the fixture - teams, matchweek, kickoff time" required></textarea>
+    <label for="status">Status</label>
+    <select id="status" required>
+      <option value="" disabled selected>Select status</option>
+      <option value="Scheduled">Scheduled</option>
+      <option value="Live">Live</option>
+      <option value="Completed">Completed</option>
+      <option value="Postponed">Postponed</option>
+    </select>
+    <div class="terms">
+      <input type="checkbox" id="terms">
+      <label for="terms">I agree to the terms and conditions.</label>
+    </div>
+    <button type="submit">Submit Fixture</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
