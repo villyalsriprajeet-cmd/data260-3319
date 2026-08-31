@@ -1,0 +1,68 @@
+Fixed input loaded: San Jose State Spartans vs Fresno State Bulldogs - Mountain West Soccer Fixture
+
+Starting 20 runs x 2 temperatures = 40 total runs.
+
+
+===== Temperature 0.0 : 20 runs =====
+  [2026-08-29 15:14:04] run  1/20  475926 ms  tags=['san jose state spartans', 'fresno state bulldogs', 'spartan soccer complex']
+  [2026-08-29 15:22:00] run  2/20  480846 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 15:30:01] run  3/20  426321 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 15:37:09] run  4/20  330193 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 15:42:39] run  5/20  345778 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 15:48:25] run  6/20  311365 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 15:53:36] run  7/20  325877 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 15:59:02] run  8/20  307956 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 16:04:10] run  9/20  367921 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 16:10:18] run 10/20  331272 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 16:15:49] run 11/20  320738 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 16:21:10] run 12/20  309107 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 16:26:19] run 13/20  371491 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 16:32:31] run 14/20  317862 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 16:37:48] run 15/20  313169 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 16:43:02] run 16/20  309972 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 16:48:12] run 17/20  367992 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 16:54:20] run 18/20  304383 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 16:59:24] run 19/20  423694 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+  [2026-08-29 17:06:30] run 20/20  416459 ms  tags=['spartans vs bulldogs', 'mountain west soccer', 'spartan soccer complex']
+
+===== Temperature 0.7 : 20 runs =====
+  [2026-08-29 17:13:26] run  1/20  332229 ms  tags=['spartan vs bulldogs', 'mountain west soccer', 'soccer complex']
+  [2026-08-29 17:19:00] run  2/20  339290 ms  tags=['san jose state spartans', 'fresno state bulldogs', 'mountain west soccer']
+  [2026-08-29 17:24:40] run  3/20  357693 ms  tags=['soccer', 'mountainwestconference', 'spartansoccercomplex']
+  [2026-08-29 17:30:37] run  4/20  421832 ms  tags=['soccer', 'mountainwestconference', 'spartanmatch']
+  [2026-08-29 17:37:39] run  5/20  416374 ms  tags=['san jose state', 'fresno state', 'mountain west soccer']
+  [2026-08-29 17:44:36] run  6/20  316258 ms  tags=['soccerfixtures', 'mountainwestsoccer', 'conferencegames']
+  [2026-08-29 17:49:52] run  7/20  533084 ms  tags=['mountain west soccer', 'spartan soccer complex', 'soccer match']
+  [2026-08-29 17:58:45] run  8/20  520271 ms  tags=['san jose state', 'fresno state', 'mountain west soccer']
+  [2026-08-29 18:07:25] run  9/20  487046 ms  tags=['spartan vs bulldogs', 'mountain west soccer', 'scheduling conflict']
+  [2026-08-29 18:15:32] run 10/20  531360 ms  tags=['state', 'spartans', 'bulldogs']
+  [2026-08-29 18:24:24] run 11/20  484994 ms  tags=['spartan vs bulldogs', 'mountain west soccer', 'san jose state home game']
+  [2026-08-29 18:32:29] run 12/20  418688 ms  tags=['state', 'spartans', 'bulldogs']
+  [2026-08-29 18:39:27] run 13/20  347321 ms  tags=['spartan vs bulldogs', 'mountain west soccer', 'soccer complex']
+  [2026-08-29 18:45:15] run 14/20  388023 ms  tags=['state', 'spartans', 'bulldogs']
+  [2026-08-29 18:51:43] run 15/20  302493 ms  tags=['spartan soccer', 'mountain west soccer', 'fresno bulldogs']
+  [2026-08-29 18:56:45] run 16/20  376442 ms  tags=['state', 'spartans', 'bulldogs']
+  [2026-08-29 19:03:03] run 17/20  385021 ms  tags=['soccerfixture', 'mountainwestconference', 'spartansoccercomplex']
+  [2026-08-29 19:09:28] run 18/20  422695 ms  tags=['soccer_teams', 'college_venues', 'fixture_details']
+  [2026-08-29 19:16:31] run 19/20  328962 ms  tags=['state', 'spartans', 'bulldogs']
+  [2026-08-29 19:22:00] run 20/20  407076 ms  tags=['mountain west soccer', 'spartan soccer complex', 'conference table']
+
+
+========== METRICS ==========
+
+Temperature 0.0:
+  Distinct tag sets       : 2
+  Tags in all 20 runs     : ['spartan soccer complex']
+  Tags in exactly 1 run   : ['fresno state bulldogs', 'san jose state spartans']
+  Latency p50/p95/p99 ms  : 330732.5 / 476172.0 / 479911.2
+
+Temperature 0.7:
+  Distinct tag sets       : 14
+  Tags in all 20 runs     : []
+  Tags in exactly 1 run   : ['college_venues', 'conference table', 'conferencegames', 'fixture_details', 'fresno bulldogs', 'fresno state bulldogs', 'mountainwestsoccer', 'san jose state home game', 'san jose state spartans', 'scheduling conflict', 'soccer match', 'soccer_teams', 'soccerfixture', 'soccerfixtures', 'spartan soccer', 'spartanmatch']
+  Latency p50/p95/p99 ms  : 397549.5 / 531446.2 / 532756.4
+
+Saved raw results to: /Users/villyalsriprajeet/Desktop/data260-3319/reports/hw01/raw
+  - all_runs.json
+  - all_runs.csv
+  - metrics.json

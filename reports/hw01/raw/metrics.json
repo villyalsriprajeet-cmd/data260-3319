@@ -1,0 +1,40 @@
+{
+  "0.0": {
+    "distinct_tag_sets": 2,
+    "tags_in_all_runs": [
+      "spartan soccer complex"
+    ],
+    "tags_in_exactly_one_run": [
+      "fresno state bulldogs",
+      "san jose state spartans"
+    ],
+    "latency_p50_ms": 330732.5,
+    "latency_p95_ms": 476172.0,
+    "latency_p99_ms": 479911.2
+  },
+  "0.7": {
+    "distinct_tag_sets": 14,
+    "tags_in_all_runs": [],
+    "tags_in_exactly_one_run": [
+      "college_venues",
+      "conference table",
+      "conferencegames",
+      "fixture_details",
+      "fresno bulldogs",
+      "fresno state bulldogs",
+      "mountainwestsoccer",
+      "san jose state home game",
+      "san jose state spartans",
+      "scheduling conflict",
+      "soccer match",
+      "soccer_teams",
+      "soccerfixture",
+      "soccerfixtures",
+      "spartan soccer",
+      "spartanmatch"
+    ],
+    "latency_p50_ms": 397549.5,
+    "latency_p95_ms": 531446.2,
+    "latency_p99_ms": 532756.4
+  }
+}

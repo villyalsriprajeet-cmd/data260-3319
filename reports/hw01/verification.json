@@ -1,0 +1,69 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "index.html exists",
+      "passed": true
+    },
+    {
+      "check": "script.js exists",
+      "passed": true
+    },
+    {
+      "check": "style.css exists",
+      "passed": true
+    },
+    {
+      "check": "Dockerfile exists",
+      "passed": true
+    },
+    {
+      "check": "agents_demo.py exists",
+      "passed": true
+    },
+    {
+      "check": "nondeterminism_input.json exists",
+      "passed": true
+    },
+    {
+      "check": "all_runs.json exists",
+      "passed": true
+    },
+    {
+      "check": "all_runs.csv exists",
+      "passed": true
+    },
+    {
+      "check": "metrics.json exists",
+      "passed": true
+    },
+    {
+      "check": "40 total runs recorded",
+      "passed": true
+    },
+    {
+      "check": "model_client.py exists",
+      "passed": true
+    },
+    {
+      "check": "hw1_client.py exists",
+      "passed": true
+    },
+    {
+      "check": "AGENT.md exists",
+      "passed": true
+    },
+    {
+      "check": "METRICS.md exists",
+      "passed": true
+    },
+    {
+      "check": "AI_USE.md exists",
+      "passed": true
+    },
+    {
+      "check": "RUN_LOG.txt exists",
+      "passed": true
+    }
+  ]
+}

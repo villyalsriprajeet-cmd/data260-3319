@@ -1,0 +1,41 @@
+timestamp,temperature,run,tag1,tag2,tag3,summary,latency_ms
+2026-08-29 15:14:04,0.0,1,san jose state spartans,fresno state bulldogs,spartan soccer complex,San Jose State Spartans host Fresno State Bulldogs in a Mountain West Conference soccer match.,475926
+2026-08-29 15:22:00,0.0,2,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,480846
+2026-08-29 15:30:01,0.0,3,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,426321
+2026-08-29 15:37:09,0.0,4,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,330193
+2026-08-29 15:42:39,0.0,5,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,345778
+2026-08-29 15:48:25,0.0,6,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,311365
+2026-08-29 15:53:36,0.0,7,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,325877
+2026-08-29 15:59:02,0.0,8,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,307956
+2026-08-29 16:04:10,0.0,9,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,367921
+2026-08-29 16:10:18,0.0,10,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,331272
+2026-08-29 16:15:49,0.0,11,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,320738
+2026-08-29 16:21:10,0.0,12,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,309107
+2026-08-29 16:26:19,0.0,13,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,371491
+2026-08-29 16:32:31,0.0,14,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,317862
+2026-08-29 16:37:48,0.0,15,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,313169
+2026-08-29 16:43:02,0.0,16,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,309972
+2026-08-29 16:48:12,0.0,17,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,367992
+2026-08-29 16:54:20,0.0,18,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,304383
+2026-08-29 16:59:24,0.0,19,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,423694
+2026-08-29 17:06:30,0.0,20,spartans vs bulldogs,mountain west soccer,spartan soccer complex,Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.,416459
+2026-08-29 17:13:26,0.7,1,spartan vs bulldogs,mountain west soccer,soccer complex,San Jose State and Fresno State compete in Mountain West soccer match.,332229
+2026-08-29 17:19:00,0.7,2,san jose state spartans,fresno state bulldogs,mountain west soccer,Spartans host Bulldogs in Mountain West soccer match this Saturday.,339290
+2026-08-29 17:24:40,0.7,3,soccer,mountainwestconference,spartansoccercomplex,Spartans face Bulldogs in Mountain West soccer match.,357693
+2026-08-29 17:30:37,0.7,4,soccer,mountainwestconference,spartanmatch,San Jose State and Fresno State play in a Mountain West Conference match.,421832
+2026-08-29 17:37:39,0.7,5,san jose state,fresno state,mountain west soccer,San Jose State and Fresno State face off in a Mountain West soccer match at Spartan Soccer Complex.,416374
+2026-08-29 17:44:36,0.7,6,soccerfixtures,mountainwestsoccer,conferencegames,Spartans vs Bulldogs in Mountain West soccer match.%.,316258
+2026-08-29 17:49:52,0.7,7,mountain west soccer,spartan soccer complex,soccer match,San Jose State Spartans face Fresno State Bulldogs in a Mountain West conference soccer match at the Spartan Soccer Complex.,533084
+2026-08-29 17:58:45,0.7,8,san jose state,fresno state,mountain west soccer,San Jose State and Fresno State in Mountain West soccer match.,520271
+2026-08-29 18:07:25,0.7,9,spartan vs bulldogs,mountain west soccer,scheduling conflict,San Jose State and Fresno State teams compete in a Mountain West soccer match with special scheduling issues.,487046
+2026-08-29 18:15:32,0.7,10,state,spartans,bulldogs,San Jose State Spartans vs Fresno State Bulldogs - Mountain West Soccer Fixture. The San Jose State Spartans host the Fresno State Bulldogs in a.,531360
+2026-08-29 18:24:24,0.7,11,spartan vs bulldogs,mountain west soccer,san jose state home game,San Jose State hosts Fresno State in a Mountain West soccer match.,484994
+2026-08-29 18:32:29,0.7,12,state,spartans,bulldogs,San Jose State Spartans vs Fresno State Bulldogs - Mountain West Soccer Fixture. The San Jose State Spartans host the Fresno State Bulldogs in a.,418688
+2026-08-29 18:39:27,0.7,13,spartan vs bulldogs,mountain west soccer,soccer complex,Spartans face Bulldogs in Mountain West soccer match at Spartan Soccer Complex.,347321
+2026-08-29 18:45:15,0.7,14,state,spartans,bulldogs,San Jose State Spartans vs Fresno State Bulldogs - Mountain West Soccer Fixture. The San Jose State Spartans host the Fresno State Bulldogs in a.,388023
+2026-08-29 18:51:43,0.7,15,spartan soccer,mountain west soccer,fresno bulldogs,San Jose State Spartans host Fresno State Bulldogs in Mountain West soccer match.,302493
+2026-08-29 18:56:45,0.7,16,state,spartans,bulldogs,San Jose State Spartans vs Fresno State Bulldogs - Mountain West Soccer Fixture. The San Jose State Spartans host the Fresno State Bulldogs in a.,376442
+2026-08-29 19:03:03,0.7,17,soccerfixture,mountainwestconference,spartansoccercomplex,San Jose State faces Fresno State in a Mountain West soccer game at the Spartan Soccer Complex.,385021
+2026-08-29 19:09:28,0.7,18,soccer_teams,college_venues,fixture_details,San Jose State vs Fresno State at Spartan Soccer Complex. Match details and fixture information.,422695
+2026-08-29 19:16:31,0.7,19,state,spartans,bulldogs,San Jose State Spartans vs Fresno State Bulldogs - Mountain West Soccer Fixture. The San Jose State Spartans host the Fresno State Bulldogs in a.,328962
+2026-08-29 19:22:00,0.7,20,mountain west soccer,spartan soccer complex,conference table,Spartans and Bulldogs play in a Mountain West conference game at the Spartan Soccer Complex.,407076

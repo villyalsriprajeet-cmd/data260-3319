@@ -1,0 +1,482 @@
+[
+  {
+    "timestamp": "2026-08-29 15:14:04",
+    "temperature": 0.0,
+    "run": 1,
+    "tags": [
+      "san jose state spartans",
+      "fresno state bulldogs",
+      "spartan soccer complex"
+    ],
+    "summary": "San Jose State Spartans host Fresno State Bulldogs in a Mountain West Conference soccer match.",
+    "latency_ms": 475926
+  },
+  {
+    "timestamp": "2026-08-29 15:22:00",
+    "temperature": 0.0,
+    "run": 2,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 480846
+  },
+  {
+    "timestamp": "2026-08-29 15:30:01",
+    "temperature": 0.0,
+    "run": 3,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 426321
+  },
+  {
+    "timestamp": "2026-08-29 15:37:09",
+    "temperature": 0.0,
+    "run": 4,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 330193
+  },
+  {
+    "timestamp": "2026-08-29 15:42:39",
+    "temperature": 0.0,
+    "run": 5,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 345778
+  },
+  {
+    "timestamp": "2026-08-29 15:48:25",
+    "temperature": 0.0,
+    "run": 6,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 311365
+  },
+  {
+    "timestamp": "2026-08-29 15:53:36",
+    "temperature": 0.0,
+    "run": 7,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 325877
+  },
+  {
+    "timestamp": "2026-08-29 15:59:02",
+    "temperature": 0.0,
+    "run": 8,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 307956
+  },
+  {
+    "timestamp": "2026-08-29 16:04:10",
+    "temperature": 0.0,
+    "run": 9,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 367921
+  },
+  {
+    "timestamp": "2026-08-29 16:10:18",
+    "temperature": 0.0,
+    "run": 10,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 331272
+  },
+  {
+    "timestamp": "2026-08-29 16:15:49",
+    "temperature": 0.0,
+    "run": 11,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 320738
+  },
+  {
+    "timestamp": "2026-08-29 16:21:10",
+    "temperature": 0.0,
+    "run": 12,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 309107
+  },
+  {
+    "timestamp": "2026-08-29 16:26:19",
+    "temperature": 0.0,
+    "run": 13,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 371491
+  },
+  {
+    "timestamp": "2026-08-29 16:32:31",
+    "temperature": 0.0,
+    "run": 14,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 317862
+  },
+  {
+    "timestamp": "2026-08-29 16:37:48",
+    "temperature": 0.0,
+    "run": 15,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 313169
+  },
+  {
+    "timestamp": "2026-08-29 16:43:02",
+    "temperature": 0.0,
+    "run": 16,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 309972
+  },
+  {
+    "timestamp": "2026-08-29 16:48:12",
+    "temperature": 0.0,
+    "run": 17,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 367992
+  },
+  {
+    "timestamp": "2026-08-29 16:54:20",
+    "temperature": 0.0,
+    "run": 18,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 304383
+  },
+  {
+    "timestamp": "2026-08-29 16:59:24",
+    "temperature": 0.0,
+    "run": 19,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 423694
+  },
+  {
+    "timestamp": "2026-08-29 17:06:30",
+    "temperature": 0.0,
+    "run": 20,
+    "tags": [
+      "spartans vs bulldogs",
+      "mountain west soccer",
+      "spartan soccer complex"
+    ],
+    "summary": "Men's soccer match between San Jose State and Fresno State at Spartan Soccer Complex.",
+    "latency_ms": 416459
+  },
+  {
+    "timestamp": "2026-08-29 17:13:26",
+    "temperature": 0.7,
+    "run": 1,
+    "tags": [
+      "spartan vs bulldogs",
+      "mountain west soccer",
+      "soccer complex"
+    ],
+    "summary": "San Jose State and Fresno State compete in Mountain West soccer match.",
+    "latency_ms": 332229
+  },
+  {
+    "timestamp": "2026-08-29 17:19:00",
+    "temperature": 0.7,
+    "run": 2,
+    "tags": [
+      "san jose state spartans",
+      "fresno state bulldogs",
+      "mountain west soccer"
+    ],
+    "summary": "Spartans host Bulldogs in Mountain West soccer match this Saturday.",
+    "latency_ms": 339290
+  },
+  {
+    "timestamp": "2026-08-29 17:24:40",
+    "temperature": 0.7,
+    "run": 3,
+    "tags": [
+      "soccer",
+      "mountainwestconference",
+      "spartansoccercomplex"
+    ],
+    "summary": "Spartans face Bulldogs in Mountain West soccer match.",
+    "latency_ms": 357693
+  },
+  {
+    "timestamp": "2026-08-29 17:30:37",
+    "temperature": 0.7,
+    "run": 4,
+    "tags": [
+      "soccer",
+      "mountainwestconference",
+      "spartanmatch"
+    ],
+    "summary": "San Jose State and Fresno State play in a Mountain West Conference match.",
+    "latency_ms": 421832
+  },
+  {
+    "timestamp": "2026-08-29 17:37:39",
+    "temperature": 0.7,
+    "run": 5,
+    "tags": [
+      "san jose state",
+      "fresno state",
+      "mountain west soccer"
+    ],
+    "summary": "San Jose State and Fresno State face off in a Mountain West soccer match at Spartan Soccer Complex.",
+    "latency_ms": 416374
+  },
+  {
+    "timestamp": "2026-08-29 17:44:36",
+    "temperature": 0.7,
+    "run": 6,
+    "tags": [
+      "soccerfixtures",
+      "mountainwestsoccer",
+      "conferencegames"
+    ],
+    "summary": "Spartans vs Bulldogs in Mountain West soccer match.%.",
+    "latency_ms": 316258
+  },
+  {
+    "timestamp": "2026-08-29 17:49:52",
+    "temperature": 0.7,
+    "run": 7,
+    "tags": [
+      "mountain west soccer",
+      "spartan soccer complex",
+      "soccer match"
+    ],
+    "summary": "San Jose State Spartans face Fresno State Bulldogs in a Mountain West conference soccer match at the Spartan Soccer Complex.",
+    "latency_ms": 533084
+  },
+  {
+    "timestamp": "2026-08-29 17:58:45",
+    "temperature": 0.7,
+    "run": 8,
+    "tags": [
+      "san jose state",
+      "fresno state",
+      "mountain west soccer"
+    ],
+    "summary": "San Jose State and Fresno State in Mountain West soccer match.",
+    "latency_ms": 520271
+  },
+  {
+    "timestamp": "2026-08-29 18:07:25",
+    "temperature": 0.7,
+    "run": 9,
+    "tags": [
+      "spartan vs bulldogs",
+      "mountain west soccer",
+      "scheduling conflict"
+    ],
+    "summary": "San Jose State and Fresno State teams compete in a Mountain West soccer match with special scheduling issues.",
+    "latency_ms": 487046
+  },
+  {
+    "timestamp": "2026-08-29 18:15:32",
+    "temperature": 0.7,
+    "run": 10,
+    "tags": [
+      "state",
+      "spartans",
+      "bulldogs"
+    ],
+    "summary": "San Jose State Spartans vs Fresno State Bulldogs - Mountain West Soccer Fixture. The San Jose State Spartans host the Fresno State Bulldogs in a.",
+    "latency_ms": 531360
+  },
+  {
+    "timestamp": "2026-08-29 18:24:24",
+    "temperature": 0.7,
+    "run": 11,
+    "tags": [
+      "spartan vs bulldogs",
+      "mountain west soccer",
+      "san jose state home game"
+    ],
+    "summary": "San Jose State hosts Fresno State in a Mountain West soccer match.",
+    "latency_ms": 484994
+  },
+  {
+    "timestamp": "2026-08-29 18:32:29",
+    "temperature": 0.7,
+    "run": 12,
+    "tags": [
+      "state",
+      "spartans",
+      "bulldogs"
+    ],
+    "summary": "San Jose State Spartans vs Fresno State Bulldogs - Mountain West Soccer Fixture. The San Jose State Spartans host the Fresno State Bulldogs in a.",
+    "latency_ms": 418688
+  },
+  {
+    "timestamp": "2026-08-29 18:39:27",
+    "temperature": 0.7,
+    "run": 13,
+    "tags": [
+      "spartan vs bulldogs",
+      "mountain west soccer",
+      "soccer complex"
+    ],
+    "summary": "Spartans face Bulldogs in Mountain West soccer match at Spartan Soccer Complex.",
+    "latency_ms": 347321
+  },
+  {
+    "timestamp": "2026-08-29 18:45:15",
+    "temperature": 0.7,
+    "run": 14,
+    "tags": [
+      "state",
+      "spartans",
+      "bulldogs"
+    ],
+    "summary": "San Jose State Spartans vs Fresno State Bulldogs - Mountain West Soccer Fixture. The San Jose State Spartans host the Fresno State Bulldogs in a.",
+    "latency_ms": 388023
+  },
+  {
+    "timestamp": "2026-08-29 18:51:43",
+    "temperature": 0.7,
+    "run": 15,
+    "tags": [
+      "spartan soccer",
+      "mountain west soccer",
+      "fresno bulldogs"
+    ],
+    "summary": "San Jose State Spartans host Fresno State Bulldogs in Mountain West soccer match.",
+    "latency_ms": 302493
+  },
+  {
+    "timestamp": "2026-08-29 18:56:45",
+    "temperature": 0.7,
+    "run": 16,
+    "tags": [
+      "state",
+      "spartans",
+      "bulldogs"
+    ],
+    "summary": "San Jose State Spartans vs Fresno State Bulldogs - Mountain West Soccer Fixture. The San Jose State Spartans host the Fresno State Bulldogs in a.",
+    "latency_ms": 376442
+  },
+  {
+    "timestamp": "2026-08-29 19:03:03",
+    "temperature": 0.7,
+    "run": 17,
+    "tags": [
+      "soccerfixture",
+      "mountainwestconference",
+      "spartansoccercomplex"
+    ],
+    "summary": "San Jose State faces Fresno State in a Mountain West soccer game at the Spartan Soccer Complex.",
+    "latency_ms": 385021
+  },
+  {
+    "timestamp": "2026-08-29 19:09:28",
+    "temperature": 0.7,
+    "run": 18,
+    "tags": [
+      "soccer_teams",
+      "college_venues",
+      "fixture_details"
+    ],
+    "summary": "San Jose State vs Fresno State at Spartan Soccer Complex. Match details and fixture information.",
+    "latency_ms": 422695
+  },
+  {
+    "timestamp": "2026-08-29 19:16:31",
+    "temperature": 0.7,
+    "run": 19,
+    "tags": [
+      "state",
+      "spartans",
+      "bulldogs"
+    ],
+    "summary": "San Jose State Spartans vs Fresno State Bulldogs - Mountain West Soccer Fixture. The San Jose State Spartans host the Fresno State Bulldogs in a.",
+    "latency_ms": 328962
+  },
+  {
+    "timestamp": "2026-08-29 19:22:00",
+    "temperature": 0.7,
+    "run": 20,
+    "tags": [
+      "mountain west soccer",
+      "spartan soccer complex",
+      "conference table"
+    ],
+    "summary": "Spartans and Bulldogs play in a Mountain West conference game at the Spartan Soccer Complex.",
+    "latency_ms": 407076
+  }
+]
