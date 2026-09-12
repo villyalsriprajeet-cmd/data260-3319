@@ -1,0 +1,51 @@
+{
+  "homework": "HW2",
+  "SID4": 3319,
+  "commit_hash": "9eb27b80171d1a5a8e530f79ecdfca2240c28b7e",
+  "model": "qwen2.5:3b",
+  "SEED": 3319,
+  "VERIFY_SEED": 263319,
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "agents_graph.py exists",
+      "passed": true
+    },
+    {
+      "check": "schema_hw02.py exists",
+      "passed": true
+    },
+    {
+      "check": "runner_hw02.py exists",
+      "passed": true
+    },
+    {
+      "check": "FastAPI main.py exists",
+      "passed": true
+    },
+    {
+      "check": "schema_input.json exists",
+      "passed": true
+    },
+    {
+      "check": "schema accepts a valid 3-tag output",
+      "passed": true
+    },
+    {
+      "check": "schema rejects wrong tag count",
+      "passed": true
+    },
+    {
+      "check": "schema rejects out-of-range tag length",
+      "passed": true
+    },
+    {
+      "check": "LangGraph graph compiles",
+      "passed": true
+    },
+    {
+      "check": "FastAPI responds 200 on port 8619",
+      "passed": true
+    }
+  ]
+}

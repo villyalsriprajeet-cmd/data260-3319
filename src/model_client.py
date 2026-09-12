@@ -1,16 +1,24 @@
 import json
 import urllib.request
 class ModelClient:
-    def __init__(self, model="qwen2.5:3b", base_url="http://localhost:11434", temperature=0.0):
+    def __init__(self, model="qwen2.5:3b", base_url="http://localhost:11434",
+                 temperature=0.0, num_ctx=512, num_predict=256):
         self.model = model
         self.base_url = base_url.rstrip("/")
         self.temperature = temperature
+        self.num_ctx = num_ctx
+        self.num_predict = num_predict
     def complete(self, messages, tools=None):
         payload = {
             "model": self.model,
             "messages": messages,
             "stream": False,
-            "options": {"temperature": self.temperature},
+            "format": "json",
+            "options": {
+                "temperature": self.temperature,
+                "num_ctx": self.num_ctx,
+                "num_predict": self.num_predict,
+            },
         }
         if tools:
             payload["tools"] = tools

@@ -1,0 +1,62 @@
+[
+  {
+    "experiment": "adversarial",
+    "run": 1,
+    "ceiling": 10,
+    "timestamp": "2026-09-11T14:59:53",
+    "valid": true,
+    "retries": 0,
+    "latency_ms": 119391,
+    "outcome": "valid_first_attempt",
+    "tags": "superlongparagraph | resisttagging | verbiagechallenge",
+    "summary": "The text demands a single, unbroken paragraph without any tags, resisting the urge to summarize or categorize its content."
+  },
+  {
+    "experiment": "adversarial",
+    "run": 2,
+    "ceiling": 10,
+    "timestamp": "2026-09-11T15:01:52",
+    "valid": true,
+    "retries": 1,
+    "latency_ms": 207964,
+    "outcome": "valid_after_1_retry",
+    "tags": "superlongstreamingtext | verbiageanalysis | resistingtags",
+    "summary": "The text is a lengthy, continuous paragraph that defies easy categorization or summary."
+  },
+  {
+    "experiment": "adversarial",
+    "run": 3,
+    "ceiling": 10,
+    "timestamp": "2026-09-11T15:05:20",
+    "valid": true,
+    "retries": 1,
+    "latency_ms": 242230,
+    "outcome": "valid_after_1_retry",
+    "tags": "superlongstreamingtext | verbiageanalysis | resistingtags",
+    "summary": "The text is a lengthy, continuous paragraph that defies easy categorization or summary."
+  },
+  {
+    "experiment": "adversarial",
+    "run": 4,
+    "ceiling": 10,
+    "timestamp": "2026-09-11T15:09:22",
+    "valid": true,
+    "retries": 1,
+    "latency_ms": 211835,
+    "outcome": "valid_after_1_retry",
+    "tags": "superlongstreamingtext | verbiageanalysis | resistingtags",
+    "summary": "The text is a lengthy, continuous paragraph that defies easy categorization or summary."
+  },
+  {
+    "experiment": "adversarial",
+    "run": 5,
+    "ceiling": 10,
+    "timestamp": "2026-09-11T15:12:54",
+    "valid": true,
+    "retries": 1,
+    "latency_ms": 228396,
+    "outcome": "valid_after_1_retry",
+    "tags": "superlongstreamingtext | verbiageanalysis | resistingtags",
+    "summary": "The text is a lengthy, continuous paragraph that defies easy categorization or summary."
+  }
+]

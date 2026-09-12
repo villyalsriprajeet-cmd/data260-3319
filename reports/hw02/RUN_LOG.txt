@@ -1,0 +1,115 @@
+[schema30] run 1/30: valid_first_attempt (retries=0, 209854 ms)
+[schema30] run 2/30: valid_first_attempt (retries=0, 117006 ms)
+[schema30] run 3/30: valid_first_attempt (retries=0, 109812 ms)
+[schema30] run 4/30: valid_first_attempt (retries=0, 95399 ms)
+[schema30] run 5/30: valid_first_attempt (retries=0, 95721 ms)
+[schema30] run 6/30: valid_first_attempt (retries=0, 155636 ms)
+[schema30] run 7/30: valid_first_attempt (retries=0, 139496 ms)
+[schema30] run 8/30: valid_first_attempt (retries=0, 173950 ms)
+[schema30] run 9/30: valid_first_attempt (retries=0, 116821 ms)
+[schema30] run 10/30: valid_first_attempt (retries=0, 115709 ms)
+[schema30] run 11/30: valid_first_attempt (retries=0, 111057 ms)
+[schema30] run 12/30: valid_first_attempt (retries=0, 104937 ms)
+[schema30] run 13/30: valid_first_attempt (retries=0, 99060 ms)
+[schema30] run 14/30: valid_first_attempt (retries=0, 94454 ms)
+[schema30] run 15/30: valid_first_attempt (retries=0, 103251 ms)
+[schema30] run 16/30: valid_first_attempt (retries=0, 121355 ms)
+[schema30] run 17/30: valid_first_attempt (retries=0, 122042 ms)
+[schema30] run 18/30: valid_first_attempt (retries=0, 131502 ms)
+[schema30] run 19/30: valid_first_attempt (retries=0, 142131 ms)
+[schema30] run 20/30: valid_first_attempt (retries=0, 96738 ms)
+[schema30] run 21/30: valid_first_attempt (retries=0, 94585 ms)
+[schema30] run 22/30: valid_first_attempt (retries=0, 99522 ms)
+[schema30] run 23/30: valid_first_attempt (retries=0, 95385 ms)
+[schema30] run 24/30: valid_first_attempt (retries=0, 104986 ms)
+[schema30] run 25/30: valid_first_attempt (retries=0, 110167 ms)
+[schema30] run 26/30: valid_first_attempt (retries=0, 118099 ms)
+[schema30] run 27/30: valid_first_attempt (retries=0, 127071 ms)
+[schema30] run 28/30: valid_first_attempt (retries=0, 121165 ms)
+[schema30] run 29/30: valid_first_attempt (retries=0, 96928 ms)
+[schema30] run 30/30: valid_first_attempt (retries=0, 98763 ms)
+  wrote schema_runs.csv and schema_runs.json
+
+=== schema30 summary ===
+  runs: 30
+  completion rate: 100.00%
+  mean latency: 117420 ms
+  valid_first_attempt: 30
+  valid_after_1_retry: 0
+  valid_after_2plus_retries: 0
+  hit_ceiling: 0
+[ceiling2] run 1/20: valid_first_attempt (retries=0, 95388 ms)
+[ceiling2] run 2/20: valid_first_attempt (retries=0, 95619 ms)
+[ceiling2] run 3/20: valid_first_attempt (retries=0, 98513 ms)
+[ceiling2] run 4/20: valid_first_attempt (retries=0, 95595 ms)
+[ceiling2] run 5/20: valid_first_attempt (retries=0, 94634 ms)
+[ceiling2] run 6/20: valid_first_attempt (retries=0, 101438 ms)
+[ceiling2] run 7/20: valid_first_attempt (retries=0, 107434 ms)
+[ceiling2] run 8/20: valid_first_attempt (retries=0, 109560 ms)
+[ceiling2] run 9/20: valid_first_attempt (retries=0, 108359 ms)
+[ceiling2] run 10/20: valid_first_attempt (retries=0, 110907 ms)
+[ceiling2] run 11/20: valid_first_attempt (retries=0, 112548 ms)
+[ceiling2] run 12/20: valid_first_attempt (retries=0, 93548 ms)
+[ceiling2] run 13/20: valid_first_attempt (retries=0, 98017 ms)
+[ceiling2] run 14/20: valid_first_attempt (retries=0, 106211 ms)
+[ceiling2] run 15/20: valid_first_attempt (retries=0, 95895 ms)
+[ceiling2] run 16/20: valid_first_attempt (retries=0, 93465 ms)
+[ceiling2] run 17/20: valid_first_attempt (retries=0, 94807 ms)
+[ceiling2] run 18/20: valid_first_attempt (retries=0, 107026 ms)
+[ceiling2] run 19/20: valid_first_attempt (retries=0, 112601 ms)
+[ceiling2] run 20/20: valid_first_attempt (retries=0, 121600 ms)
+  wrote ceiling2_runs.csv and ceiling2_runs.json
+
+=== ceiling2 summary ===
+  runs: 20
+  completion rate: 100.00%
+  mean latency: 102658 ms
+  valid_first_attempt: 20
+  valid_after_1_retry: 0
+  valid_after_2plus_retries: 0
+  hit_ceiling: 0
+[ceiling10] run 1/20: valid_first_attempt (retries=0, 96004 ms)
+[ceiling10] run 2/20: valid_first_attempt (retries=0, 97086 ms)
+[ceiling10] run 3/20: valid_first_attempt (retries=0, 99963 ms)
+[ceiling10] run 4/20: valid_first_attempt (retries=0, 101642 ms)
+[ceiling10] run 5/20: valid_first_attempt (retries=0, 101217 ms)
+[ceiling10] run 6/20: valid_first_attempt (retries=0, 99923 ms)
+[ceiling10] run 7/20: valid_first_attempt (retries=0, 93697 ms)
+[ceiling10] run 8/20: valid_first_attempt (retries=0, 94453 ms)
+[ceiling10] run 9/20: valid_first_attempt (retries=0, 93654 ms)
+[ceiling10] run 10/20: valid_first_attempt (retries=0, 117264 ms)
+[ceiling10] run 11/20: valid_first_attempt (retries=0, 115940 ms)
+[ceiling10] run 12/20: valid_first_attempt (retries=0, 93756 ms)
+[ceiling10] run 13/20: valid_first_attempt (retries=0, 93645 ms)
+[ceiling10] run 14/20: valid_first_attempt (retries=0, 104437 ms)
+[ceiling10] run 15/20: valid_first_attempt (retries=0, 98905 ms)
+[ceiling10] run 16/20: valid_first_attempt (retries=0, 98654 ms)
+[ceiling10] run 17/20: valid_first_attempt (retries=0, 106250 ms)
+[ceiling10] run 18/20: valid_first_attempt (retries=0, 103053 ms)
+[ceiling10] run 19/20: valid_first_attempt (retries=0, 102543 ms)
+[ceiling10] run 20/20: valid_first_attempt (retries=0, 109565 ms)
+  wrote ceiling10_runs.csv and ceiling10_runs.json
+
+=== ceiling10 summary ===
+  runs: 20
+  completion rate: 100.00%
+  mean latency: 101082 ms
+  valid_first_attempt: 20
+  valid_after_1_retry: 0
+  valid_after_2plus_retries: 0
+  hit_ceiling: 0
+[adversarial] run 1/5: valid_first_attempt (retries=0, 119391 ms)
+[adversarial] run 2/5: valid_after_1_retry (retries=1, 207964 ms)
+[adversarial] run 3/5: valid_after_1_retry (retries=1, 242230 ms)
+[adversarial] run 4/5: valid_after_1_retry (retries=1, 211835 ms)
+[adversarial] run 5/5: valid_after_1_retry (retries=1, 228396 ms)
+  wrote adversarial_runs.csv and adversarial_runs.json
+
+=== adversarial summary ===
+  runs: 5
+  completion rate: 100.00%
+  mean latency: 201963 ms
+  valid_first_attempt: 1
+  valid_after_1_retry: 4
+  valid_after_2plus_retries: 0
+  hit_ceiling: 0

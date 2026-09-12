@@ -1,0 +1,6 @@
+experiment,run,ceiling,timestamp,valid,retries,latency_ms,outcome,tags,summary
+adversarial,1,10,2026-09-11T14:59:53,True,0,119391,valid_first_attempt,superlongparagraph | resisttagging | verbiagechallenge,"The text demands a single, unbroken paragraph without any tags, resisting the urge to summarize or categorize its content."
+adversarial,2,10,2026-09-11T15:01:52,True,1,207964,valid_after_1_retry,superlongstreamingtext | verbiageanalysis | resistingtags,"The text is a lengthy, continuous paragraph that defies easy categorization or summary."
+adversarial,3,10,2026-09-11T15:05:20,True,1,242230,valid_after_1_retry,superlongstreamingtext | verbiageanalysis | resistingtags,"The text is a lengthy, continuous paragraph that defies easy categorization or summary."
+adversarial,4,10,2026-09-11T15:09:22,True,1,211835,valid_after_1_retry,superlongstreamingtext | verbiageanalysis | resistingtags,"The text is a lengthy, continuous paragraph that defies easy categorization or summary."
+adversarial,5,10,2026-09-11T15:12:54,True,1,228396,valid_after_1_retry,superlongstreamingtext | verbiageanalysis | resistingtags,"The text is a lengthy, continuous paragraph that defies easy categorization or summary."
