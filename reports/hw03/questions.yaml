@@ -1,0 +1,29 @@
+# HW3 Part 2 — five domain questions (Domain 7: community sports league fixtures).
+# Committed to git BEFORE running retrieval, so expected answers can't be edited after seeing output.
+k: 5
+questions:
+  - id: q1
+    question: "Who were the champions of the 2023-24 Premier League?"
+    expected_answer: "Manchester City"
+    expected_source: "data/corpus/2023_24_premier_league.txt"
+    single_source: true
+  - id: q2
+    question: "Which club won the 2023-24 La Liga title?"
+    expected_answer: "Real Madrid"
+    expected_source: "data/corpus/2023_24_la_liga.txt"
+    single_source: false
+  - id: q3
+    question: "Which team won the 2023-24 EFL Championship and were promoted as champions?"
+    expected_answer: "Leicester City"
+    expected_source: "data/corpus/2023_24_efl_championship.txt"
+    single_source: true
+  - id: q4
+    question: "At which stadium was the 2024-25 UEFA Champions League final played?"
+    expected_answer: "Allianz Arena"
+    expected_source: "data/corpus/2024_25_uefa_champions_league.txt"
+    single_source: true
+  - id: q5
+    question: "Which club won the 2024 MLS Supporters' Shield?"
+    expected_answer: "Inter Miami"
+    expected_source: "data/corpus/2024_major_league_soccer_season.txt"
+    single_source: false
