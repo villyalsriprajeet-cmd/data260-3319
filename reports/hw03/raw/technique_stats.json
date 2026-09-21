@@ -1,0 +1,17 @@
+{
+  "top_k": 5,
+  "techniques": {
+    "token": {
+      "num_chunks": 499,
+      "avg_chunk_len_chars": 700.3
+    },
+    "semantic": {
+      "num_chunks": 167,
+      "avg_chunk_len_chars": 1821.3
+    },
+    "sentence_window": {
+      "num_chunks": 3202,
+      "avg_chunk_len_chars": 95.0
+    }
+  }
+}

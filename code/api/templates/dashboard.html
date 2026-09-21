@@ -1,0 +1,79 @@
+<!-- Dashboard page - only reachable when logged in -->
+{% extends "base.html" %}
+{% block title %}Dashboard - Sports League Fixtures{% endblock %}
+{% block nav_dashboard %}active{% endblock %}
+{% block content %}
+  <!-- Welcome and logout -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Dashboard</h3>
+      <p class="card-text">Welcome, <strong>{{ user }}</strong></p>
+      <a class="btn btn-danger" href="/logout">Logout</a>
+      <a class="btn btn-outline-secondary ms-2" href="/">Home</a>
+    </div>
+  </div>
+  <!-- Search box - submits q back to dashboard -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Search fixtures</h5>
+      <form action="/dashboard" method="get" class="row g-2">
+        <div class="col-sm-9">
+          <input class="form-control" type="search" name="q" value="{{ q }}" placeholder="Search by fixture title or venue">
+        </div>
+        <div class="col-sm-3 d-grid">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Fixtures list (filtered by search) -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Fixtures</h5>
+      {% if fixtures %}
+        <ul class="list-group">
+          {% for f in fixtures %}
+          <!-- one row per fixture -->
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><strong>#{{ f.id }}</strong> &mdash; {{ f.fixtureTitle }} <span class="text-muted">@ {{ f.venue }}</span></span>
+            <span class="badge text-bg-secondary">{{ f.status }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="text-muted text-center py-3">No fixtures match your search.</p>
+      {% endif %}
+    </div>
+  </div>
+  <!-- Add a fixture  -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Add a fixture</h5>
+      <form method="post" action="/add" class="row g-2">
+        <div class="col-md-5"><input class="form-control" name="fixtureTitle" placeholder="Fixture title" required></div>
+        <div class="col-md-5"><input class="form-control" name="venue" placeholder="Venue" required></div>
+        <div class="col-md-2 d-grid"><button class="btn btn-primary" type="submit">Add</button></div>
+      </form>
+    </div>
+  </div>
+  <!-- Update fixture -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Update fixture #1</h5>
+      <form method="post" action="/update/1" class="row g-2">
+        <div class="col-md-5"><input class="form-control" name="fixtureTitle" placeholder="New title" required></div>
+        <div class="col-md-5"><input class="form-control" name="venue" placeholder="New venue" required></div>
+        <div class="col-md-2 d-grid"><button class="btn btn-warning" type="submit">Update</button></div>
+      </form>
+    </div>
+  </div>
+  <!-- Delete highest id fixture -->
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title">Delete highest-id fixture</h5>
+      <form method="post" action="/delete-highest">
+        <button class="btn btn-outline-danger" type="submit">Delete highest</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

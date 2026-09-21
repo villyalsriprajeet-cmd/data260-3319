@@ -1,0 +1,48 @@
+{
+  "domain_id": 7,
+  "domain": "Community sports league fixtures",
+  "generated": "2026-09-19",
+  "total_bytes": 310605,
+  "documents": [
+    {
+      "title": "2023\u201324 Premier League",
+      "local_file": "data/corpus/2023_24_premier_league.txt",
+      "url": "https://en.wikipedia.org/wiki/2023%E2%80%9324_Premier_League",
+      "access_date": "2026-09-19",
+      "bytes": 73431,
+      "sha256": "7e6d775ee9303f101b670665cb3c21bb6ad9b303dc5c1420948e2a72b86c0b9f"
+    },
+    {
+      "title": "2024 Major League Soccer season",
+      "local_file": "data/corpus/2024_major_league_soccer_season.txt",
+      "url": "https://en.wikipedia.org/wiki/2024_Major_League_Soccer_season",
+      "access_date": "2026-09-19",
+      "bytes": 91660,
+      "sha256": "a23eff64bc1fd304a5c5f4cd5c40f008382f01899eb3f072dc0a1848bb03839a"
+    },
+    {
+      "title": "2023\u201324 La Liga",
+      "local_file": "data/corpus/2023_24_la_liga.txt",
+      "url": "https://en.wikipedia.org/wiki/2023%E2%80%9324_La_Liga",
+      "access_date": "2026-09-19",
+      "bytes": 45540,
+      "sha256": "a3aaac1a93ed487efcfa8b4794a1cd3a07e1ce5fafc1930e5a2d2dbec6c5d7e1"
+    },
+    {
+      "title": "2023\u201324 EFL Championship",
+      "local_file": "data/corpus/2023_24_efl_championship.txt",
+      "url": "https://en.wikipedia.org/wiki/2023%E2%80%9324_EFL_Championship",
+      "access_date": "2026-09-19",
+      "bytes": 47729,
+      "sha256": "d506d8382d2dbcde9b8830f0eef1ab49cb1aba8210d96aa642de776e3c808db9"
+    },
+    {
+      "title": "2024\u201325 UEFA Champions League",
+      "local_file": "data/corpus/2024_25_uefa_champions_league.txt",
+      "url": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Champions_League",
+      "access_date": "2026-09-19",
+      "bytes": 52245,
+      "sha256": "56a6d31ec4204b0f245d4244cc49fd7f17d3e65af0c1f5c24503f9861d705553"
+    }
+  ]
+}

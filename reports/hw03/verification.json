@@ -1,0 +1,112 @@
+{
+  "hw": "hw3",
+  "generated": "2026-09-19T08:02:55.670487",
+  "commit_hash": "e648cc4c836c622b4137c5c2287c14a923007656",
+  "config": {
+    "SID4": 3319,
+    "PORT_BASE": 8619,
+    "PREFIX": "s3319",
+    "SEED": 3319,
+    "VERIFY_SEED": 263319,
+    "DOMAIN_ID": 7
+  },
+  "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "part1 file: code/api/main.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "part1 file: code/api/store.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "part1 file: code/api/routers/auth.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "part1 file: code/api/templates/base.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "part1 file: code/api/templates/home.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "part1 file: code/api/templates/login.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "part1 file: code/api/templates/dashboard.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "part2 file: code/rag/build_corpus.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "part2 file: code/rag/rag_compare.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "part2 file: code/rag/make_tables.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "corpus >= 200 KB",
+      "passed": true,
+      "detail": "5 files, 310605 bytes"
+    },
+    {
+      "check": "CORPUS_MANIFEST.json exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "SOURCES.md exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "questions.yaml >= 5 questions",
+      "passed": true,
+      "detail": "5 questions"
+    },
+    {
+      "check": "questions.yaml >= 2 single-source",
+      "passed": true,
+      "detail": "3 single-source"
+    },
+    {
+      "check": "raw/retrieval_rows.jsonl exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw/technique_stats.json exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "all three techniques present",
+      "passed": true,
+      "detail": "token,semantic,sentence_window"
+    },
+    {
+      "check": "METRICS.md exists",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+/Users/villyalsriprajeet/miniconda3_x86/envs/data260/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Run started: 2026-09-19T09:17:18.065340
+
+==============================================================================
+TECHNIQUE: token
+==============================================================================
+chunks=1424  avg_chunk_len=897.7 chars
+
+[w1] To be or not to be?
+  query embedding dim=384  first8=[0.0357, 0.047, -0.0157, 0.0448, 0.0322, 0.0291, 0.1086, -0.1071]
+  rank store     cosine    len    source                         preview
+  1    0.2675    0.3138    928    tinyshakespeare.txt            you have been a rod to her friends; you have not indeed
+  2    0.25      0.2223    892    tinyshakespeare.txt            do this feat, Achieve the elder, set the younger free F
+  3    0.2435    0.2865    983    tinyshakespeare.txt            wisdom, Cannot conclude but by the yea and no Of genera
+  shapes: query=(1, 384)  docs=(3, 384)  latency=105.67 ms
+
+==============================================================================
+TECHNIQUE: semantic
+==============================================================================
+chunks=624  avg_chunk_len=1787.5 chars
+
+[w1] To be or not to be?
+  query embedding dim=384  first8=[0.0357, 0.047, -0.0157, 0.0448, 0.0322, 0.0291, 0.1086, -0.1071]
+  rank store     cosine    len    source                         preview
+  1    0.2756    0.2957    232    tinyshakespeare.txt            my life is my foe's debt. BENVOLIO: Away, begone; the s
+  2    0.2507    0.2128    650    tinyshakespeare.txt            No; I would tell what 'twere to be a judge, And what a 
+  3    0.2454    0.2427    402    tinyshakespeare.txt            trouble us not. GONZALO: Good, yet remember whom thou h
+  shapes: query=(1, 384)  docs=(3, 384)  latency=62.11 ms
+
+==============================================================================
+TECHNIQUE: sentence_window
+==============================================================================
+chunks=12453  avg_chunk_len=89.6 chars
+
+[w1] To be or not to be?
+  query embedding dim=384  first8=[0.0357, 0.047, -0.0157, 0.0448, 0.0322, 0.0291, 0.1086, -0.1071]
+  rank store     cosine    len    source                         preview
+  1    0.3563    0.4033    83     tinyshakespeare.txt            LEONTES: At the queen's be't: 'good' should be pertinen
+  2    0.3165    0.3641    283    tinyshakespeare.txt            Officer: HERMIONE: Since what I am to say must be but t
+  3    0.3106    0.3389    146    tinyshakespeare.txt            LORD ROSS: Be confident to speak, Northumberland: We th
+  shapes: query=(1, 384)  docs=(3, 384)  latency=644.49 ms
+
+Wrote 9 rows to reports/hw03/raw/ (retrieval_rows.jsonl, .csv) + technique_stats.json
+Run finished: 2026-09-19T09:26:34.617254

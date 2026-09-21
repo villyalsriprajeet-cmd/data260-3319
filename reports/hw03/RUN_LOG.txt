@@ -1,0 +1,171 @@
+/Users/villyalsriprajeet/miniconda3_x86/envs/data260/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Run started: 2026-09-18T21:00:32.149274
+
+==============================================================================
+TECHNIQUE: token
+==============================================================================
+chunks=499  avg_chunk_len=700.3 chars
+
+[q1] Who were the champions of the 2023-24 Premier League?
+  query embedding dim=384  first8=[-0.0356, -0.0307, -0.0734, -0.015, 0.0048, 0.1213, -0.0162, 0.0243]
+  rank store     cosine    len    source                         preview
+  1    0.6328    0.6258    1013   2023_24_premier_league.txt     were the first team to have been promoted from non-Leag
+  2    0.6153    0.6079    956    2023_24_premier_league.txt     "When does the 2023/24 Premier League season start? Key
+  3    0.6128    0.6244    865    2023_24_premier_league.txt     Seasons Awards Hall of Fame | Finances | Richest clubs:
+  4    0.6088    0.5796    866    2023_24_premier_league.txt     Football season in England For other uses, see 2023–24 
+  5    0.5857    0.6208    697    2023_24_premier_league.txt     September 2023 | Erling Haaland | Manchester City | Ful
+  shapes: query=(1, 384)  docs=(5, 384)  latency=48.48 ms
+
+[q2] Which club won the 2023-24 La Liga title?
+  query embedding dim=384  first8=[-0.023, -0.0303, -0.0555, -0.0101, -0.0085, 0.0728, -0.0428, 0.0679]
+  rank store     cosine    len    source                         preview
+  1    0.7149    0.7124    832    2023_24_la_liga.txt            2022–23 2024–25 → The 2023–24 La Liga, also known as La
+  2    0.6539    0.6682    769    2023_24_la_liga.txt            "OFFICIAL: LaLiga defines the start and end dates for t
+  3    0.64      0.6273    795    2023_24_la_liga.txt            Retrieved 2024-06-25. ^ Menzies, John (2023-05-28). "Gr
+  4    0.638     0.6117    912    2023_24_la_liga.txt            1) Points; 2) Head-to-head points; 3) Head-to-head goal
+  5    0.6255    0.6421    689    2023_24_la_liga.txt            y EA SPORTS desvelan los 15 mejores jugadores de la tem
+  shapes: query=(1, 384)  docs=(5, 384)  latency=37.35 ms
+
+[q3] Which team won the 2023-24 EFL Championship and were promoted as champions?
+  query embedding dim=384  first8=[-0.0538, 0.0001, -0.0365, -0.0246, 0.0221, 0.0875, -0.0088, 0.0241]
+  rank store     cosine    len    source                         preview
+  1    0.594     0.2053    349    2023_24_efl_championship.txt   1914–15 1915–16 1916–17 1917–18 1918–19 1919–20 1920–21
+  2    0.5842    0.5263    271    2023_24_efl_championship.txt   1982–83 1983–84 1984–85 1985–86 1986–87 1987–88 1988–89
+  3    0.5675    0.5366    869    2023_24_efl_championship.txt   (23 September 2023) Southampton 5–3 Huddersfield Town (
+  4    0.5651    0.2919    349    2023_24_efl_championship.txt   1948–49 1949–50 1950–51 1951–52 1952–53 1953–54 1954–55
+  5    0.5635    0.5979    918    2023_24_efl_championship.txt   the EFL Championship under its current title and the 32
+  shapes: query=(1, 384)  docs=(5, 384)  latency=36.37 ms
+
+[q4] At which stadium was the 2024-25 UEFA Champions League final played?
+  query embedding dim=384  first8=[0.0327, 0.0862, 0.0015, -0.0414, 0.0141, 0.0107, -0.0628, 0.0253]
+  rank store     cosine    len    source                         preview
+  1    0.7091    0.7115    646    2024_25_uefa_champions_league.txt and 30 April, and the second legs were played on 6 and 
+  2    0.6936    0.6561    1050   2024_25_uefa_champions_league.txt Doué (Paris Saint-Germain) | ← 2023–24 2025–26 → Intern
+  3    0.6854    0.698     215    2024_25_uefa_champions_league.txt Commons has media related to 2024–25 UEFA Champions Lea
+  4    0.6575    0.6386    889    2024_25_uefa_champions_league.txt UEFA. Union of European Football Associations. Retrieve
+  5    0.6118    0.6315    891    2024_25_uefa_champions_league.txt UEFA Women's Champions League 2024–25 UEFA Youth League
+  shapes: query=(1, 384)  docs=(5, 384)  latency=37.12 ms
+
+[q5] Which club won the 2024 MLS Supporters' Shield?
+  query embedding dim=384  first8=[0.0103, -0.007, -0.0537, 0.0306, 0.0789, 0.0402, -0.0008, 0.0401]
+  rank store     cosine    len    source                         preview
+  1    0.6828    0.6736    1067   2024_major_league_soccer_season.txt Eastern and Western conferences. This was the first sea
+  2    0.678     0.6424    948    2024_major_league_soccer_season.txt U.S. Open Cup winners; (V) Canadian Championship winner
+  3    0.6375    0.5892    727    2024_major_league_soccer_season.txt Chicago Fire FC | 34 | 7 | 18 | 9 | 40 | 62 | −22 | 30 
+  4    0.616     0.5777    817    2024_major_league_soccer_season.txt | 7 | 51 | 66 | −15 | 31 | 14 | San Jose Earthquakes | 
+  5    0.6087    0.5645    657    2024_major_league_soccer_season.txt spot in Leagues Cup was given to San Diego FC. Overall 
+  shapes: query=(1, 384)  docs=(5, 384)  latency=40.64 ms
+
+==============================================================================
+TECHNIQUE: semantic
+==============================================================================
+chunks=167  avg_chunk_len=1821.3 chars
+
+[q1] Who were the champions of the 2023-24 Premier League?
+  query embedding dim=384  first8=[-0.0356, -0.0307, -0.0734, -0.015, 0.0048, 0.1213, -0.0162, 0.0243]
+  rank store     cosine    len    source                         preview
+  1    0.5941    0.5837    996    2023_24_premier_league.txt     Retrieved 14 May 2024. ^ "Dates for 2023/24 season conf
+  2    0.5639    0.517     20465  2023_24_premier_league.txt     Football season in England For other uses, see 2023–24 
+  3    0.5382    0.4834    1671   2023_24_premier_league.txt     Archived from the original on 21 February 2020. Retriev
+  4    0.5344    0.525     1169   2023_24_premier_league.txt     Sport UK. London. Archived from the original on 21 May 
+  5    0.5331    0.5109    25735  2023_24_efl_championship.txt   Football league season EFL Championship | Season | 2023
+  shapes: query=(1, 384)  docs=(5, 384)  latency=65.55 ms
+
+[q2] Which club won the 2023-24 La Liga title?
+  query embedding dim=384  first8=[-0.023, -0.0303, -0.0555, -0.0101, -0.0085, 0.0728, -0.0428, 0.0679]
+  rank store     cosine    len    source                         preview
+  1    0.6716    0.6475    384    2023_24_la_liga.txt            2 August 2022. Retrieved 27 April 2023. ^ "EA SPORTS FC
+  2    0.644     0.6107    482    2023_24_la_liga.txt            Retrieved 4 July 2018. ^ "LaLiga bate record histórico 
+  3    0.5952    0.6046    7263   2023_24_la_liga.txt            93rd season of La Liga Football league season La Liga |
+  4    0.5939    0.5442    292    2023_24_la_liga.txt            Retrieved 1 July 2019. ^ "Facilities". ^ "Montilivi se 
+  5    0.5796    0.5915    390    2023_24_la_liga.txt            Retrieved 29 May 2022. ^ "The Stadium". Athletic Bilbao
+  shapes: query=(1, 384)  docs=(5, 384)  latency=79.95 ms
+
+[q3] Which team won the 2023-24 EFL Championship and were promoted as champions?
+  query embedding dim=384  first8=[-0.0538, 0.0001, -0.0365, -0.0246, 0.0221, 0.0875, -0.0088, 0.0241]
+  rank store     cosine    len    source                         preview
+  1    0.561     0.1708    43     2023_24_efl_championship.txt   Archived from the original on 1 July 2021. 
+  2    0.5035    0.2075    15     2023_24_efl_championship.txt   17 April 2024. 
+  3    0.4947    0.4289    413    2023_24_efl_championship.txt   Retrieved 8 April 2022. ^ "Hull City 4–2 Sheffield Wedn
+  4    0.4899    0.4935    384    2023_24_la_liga.txt            2 August 2022. Retrieved 27 April 2023. ^ "EA SPORTS FC
+  5    0.4748    0.4668    8418   2023_24_efl_championship.txt   9 April 2024. Retrieved 9 April 2024. ^ Aloia, Andrew (
+  shapes: query=(1, 384)  docs=(5, 384)  latency=31.05 ms
+
+[q4] At which stadium was the 2024-25 UEFA Champions League final played?
+  query embedding dim=384  first8=[0.0327, 0.0862, 0.0015, -0.0414, 0.0141, 0.0107, -0.0628, 0.0253]
+  rank store     cosine    len    source                         preview
+  1    0.6709    0.6606    9591   2024_25_uefa_champions_league.txt European football tournament 2024–25 UEFA Champions Lea
+  2    0.6025    0.6001    162    2024_25_uefa_champions_league.txt Union of European Football Associations. 31 May 2025. R
+  3    0.5983    0.5753    368    2024_25_uefa_champions_league.txt 10 July 2023. Archived from the original on 16 March 20
+  4    0.5818    0.5806    785    2024_25_uefa_champions_league.txt Union of European Football Associations. 1 June 2025. R
+  5    0.5752    0.5499    241    2024_25_uefa_champions_league.txt Retrieved 27 August 2024. ^ "UEFA Club Competitions 202
+  shapes: query=(1, 384)  docs=(5, 384)  latency=26.02 ms
+
+[q5] Which club won the 2024 MLS Supporters' Shield?
+  query embedding dim=384  first8=[0.0103, -0.007, -0.0537, 0.0306, 0.0789, 0.0402, -0.0008, 0.0401]
+  rank store     cosine    len    source                         preview
+  1    0.552     0.5224    169    2024_major_league_soccer_season.txt ^ McCaskill, Steve (November 17, 2022). "MLS clubs to p
+  2    0.5436    0.5335    1742   2023_24_efl_championship.txt   ESPN. Retrieved 4 August 2023. ^ "Undefeated named Blue
+  3    0.5314    0.4883    165    2024_major_league_soccer_season.txt Retrieved June 24, 2024. ^ Boehm, Charles (July 1, 2024
+  4    0.5299    0.506     384    2023_24_la_liga.txt            2 August 2022. Retrieved 27 April 2023. ^ "EA SPORTS FC
+  5    0.522     0.475     145    2024_major_league_soccer_season.txt Archived from the original on February 21, 2024. Retrie
+  shapes: query=(1, 384)  docs=(5, 384)  latency=36.49 ms
+
+==============================================================================
+TECHNIQUE: sentence_window
+==============================================================================
+chunks=3202  avg_chunk_len=95.0 chars
+
+[q1] Who were the champions of the 2023-24 Premier League?
+  query embedding dim=384  first8=[-0.0356, -0.0307, -0.0734, -0.015, 0.0048, 0.1213, -0.0162, 0.0243]
+  rank store     cosine    len    source                         preview
+  1    0.6417    0.5054    153    2023_24_premier_league.txt     Teams [edit] Twenty teams competed in the league – the 
+  2    0.6102    0.1392    54     2023_24_premier_league.txt     Archived (PDF) from the original on 1 September 2023. 
+  3    0.6098    0.554     175    2023_24_premier_league.txt     They replaced Leicester City, Leeds United and Southamp
+  4    0.6095    0.6461    49     2023_24_premier_league.txt     ^ Premier League Handbook: Season 2023/24 (PDF). 
+  5    0.6059    0.1585    43     2023_24_premier_league.txt     Archived from the original on 21 May 2021. 
+  shapes: query=(1, 384)  docs=(5, 384)  latency=188.15 ms
+
+[q2] Which club won the 2023-24 La Liga title?
+  query embedding dim=384  first8=[-0.023, -0.0303, -0.0555, -0.0101, -0.0085, 0.0728, -0.0428, 0.0679]
+  rank store     cosine    len    source                         preview
+  1    0.6603    0.5824    90     2023_24_la_liga.txt            Barcelona were the defending champions, having won thei
+  2    0.6476    0.5652    151    2023_24_la_liga.txt            The third and final team relegated to Segunda was Valla
+  3    0.6448    0.5346    104    2023_24_la_liga.txt            This included the two top teams from the Segunda Divisi
+  4    0.6225    0.5986    178    2023_24_la_liga.txt            On 4 May 2024, Real Madrid were officially confirmed as
+  5    0.618     0.6193    155    2023_24_la_liga.txt            ^ https://www.european-football-statistics.co.uk/attn/a
+  shapes: query=(1, 384)  docs=(5, 384)  latency=141.71 ms
+
+[q3] Which team won the 2023-24 EFL Championship and were promoted as champions?
+  query embedding dim=384  first8=[-0.0538, 0.0001, -0.0365, -0.0246, 0.0221, 0.0875, -0.0088, 0.0241]
+  rank store     cosine    len    source                         preview
+  1    0.586     0.5347    54     2023_24_efl_championship.txt   ^ "See who made the EFL Team of the Season line-ups". 
+  2    0.5773    0.4376    157    2023_24_efl_championship.txt   Team changes [edit] The following teams have changed di
+  3    0.5663    0.1978    43     2023_24_efl_championship.txt   Archived from the original on 3 July 2022. 
+  4    0.5658    0.1889    45     2023_24_efl_championship.txt   Archived from the original on 10 July 2023. 
+  5    0.5613    0.1899    44     2023_24_efl_championship.txt   Archived from the original on 25 June 2021. 
+  shapes: query=(1, 384)  docs=(5, 384)  latency=128.8 ms
+
+[q4] At which stadium was the 2024-25 UEFA Champions League final played?
+  query embedding dim=384  first8=[0.0327, 0.0862, 0.0015, -0.0414, 0.0141, 0.0107, -0.0628, 0.0253]
+  rank store     cosine    len    source                         preview
+  1    0.7538    0.7705    130    2024_25_uefa_champions_league.txt Final [edit] Main article: 2025 UEFA Champions League f
+  2    0.7089    0.6446    94     2024_25_uefa_champions_league.txt External links [edit] Wikimedia Commons has media relat
+  3    0.6709    0.6751    1036   2024_25_uefa_champions_league.txt European football tournament 2024–25 UEFA Champions Lea
+  4    0.6684    0.6693    210    2024_25_uefa_champions_league.txt The winners of the 2023–24 UEFA Champions League and 20
+  5    0.6444    0.6285    347    2024_25_uefa_champions_league.txt As winners of the Champions League, Paris Saint-Germain
+  shapes: query=(1, 384)  docs=(5, 384)  latency=123.93 ms
+
+[q5] Which club won the 2024 MLS Supporters' Shield?
+  query embedding dim=384  first8=[0.0103, -0.007, -0.0537, 0.0306, 0.0789, 0.0402, -0.0008, 0.0401]
+  rank store     cosine    len    source                         preview
+  1    0.7098    0.5766    82     2024_major_league_soccer_season.txt Overall table [edit] The leading team in this table won
+  2    0.7096    0.6748    471    2024_major_league_soccer_season.txt Open Cup winners; (V) Canadian Championship winners Not
+  3    0.6695    0.6307    113    2024_major_league_soccer_season.txt The Columbus Crew were the reigning MLS Cup champions a
+  4    0.6277    0.6449    51     2024_major_league_soccer_season.txt ^ "FC Cincinnati clinches MLS Supporters' Shield". 
+  5    0.5951    0.5165    134    2024_major_league_soccer_season.txt In their fifth season in the league, Inter Miami CF won
+  shapes: query=(1, 384)  docs=(5, 384)  latency=155.91 ms
+
+Wrote 75 rows to reports/hw03/raw/ (retrieval_rows.jsonl, .csv) + technique_stats.json
+Run finished: 2026-09-18T21:02:49.608037

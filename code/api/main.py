@@ -1,76 +1,49 @@
-from pathlib import Path
+# HW3 - Community Sports League Fixtures (Domain 7), runs on port 8619
+import os
 from fastapi import FastAPI, Form, Request
 from fastapi.responses import RedirectResponse
-from fastapi.templating import Jinja2Templates
-PORT_BASE = 8619
-app = FastAPI(title="Community Sports League Fixtures - HW2")
-TEMPLATES_DIR = Path(__file__).resolve().parent / "templates"
-templates = Jinja2Templates(directory=str(TEMPLATES_DIR))
+from starlette.middleware.sessions import SessionMiddleware
+from .store import fixtures, get_next_id, current_user
+from .routers.auth import router as auth_router
 
-# In-memory data store
-fixtures = [
-    {"id": 1, "fixtureTitle": "Spartans vs Bulldogs - Matchweek 5",
-     "venue": "Spartan Soccer Complex", "status": "Scheduled"},
-    {"id": 2, "fixtureTitle": "Lions vs Tigers - Matchweek 6",
-     "venue": "City Arena", "status": "Scheduled"},
-]
-next_id = 3
-def get_next_id():
-    global next_id
-    nid = next_id
-    next_id += 1
-    return nid
-
-
-# HOME VIEW (also handles search)
-@app.get("/")
-def home(request: Request, q: str = ""):
-    query = q.strip().lower()
-    if query:
-        visible = [
-            f for f in fixtures
-            if query in f["fixtureTitle"].lower() or query in f["venue"].lower()
-        ]
-    else:
-        visible = fixtures
-
-    return templates.TemplateResponse(
-        request,
-        "home.html",
-        {"fixtures": visible, "q": q},
-    )
-
-
-# 1. ADD A RECORD
+PORT_BASE = 8619  
+SECRET_KEY = os.getenv("SECRET_KEY", "hw3-dev-only-secret-s3319")
+SESSION_MAX_AGE = int(os.getenv("SESSION_MAX_AGE", "900"))  # idle timeout in seconds
+COOKIE_SECURE = os.getenv("COOKIE_SECURE", "1") not in ("0", "false", "False")  # Secure attribute
+app = FastAPI(title="Community Sports League Fixtures - HW3")
+# Signed session cookie: HttpOnly and Secure and SameSite
+app.add_middleware(
+    SessionMiddleware,
+    secret_key=SECRET_KEY,
+    session_cookie="fixtures_session",
+    max_age=SESSION_MAX_AGE,
+    same_site="lax",
+    https_only=COOKIE_SECURE,
+)
+app.include_router(auth_router)  # home, login, dashboard, logout
 @app.post("/add")
-def add_fixture(fixtureTitle: str = Form(...), venue: str = Form(...)):
-    fixtures.append({
-        "id": get_next_id(),
-        "fixtureTitle": fixtureTitle,
-        "venue": venue,
-        "status": "Scheduled",
-    })
-    return RedirectResponse(url="/", status_code=303)
-
-
-# 2. UPDATE RECORD WITH ID 1
+def add_fixture(request: Request, fixtureTitle: str = Form(...), venue: str = Form(...)):
+    if not current_user(request):  # only logged in users can change data
+        return RedirectResponse(url="/login", status_code=303)
+    fixtures.append({"id": get_next_id(), "fixtureTitle": fixtureTitle, "venue": venue, "status": "Scheduled"})
+    return RedirectResponse(url="/dashboard", status_code=303)
 @app.post("/update/1")
-def update_fixture_1(fixtureTitle: str = Form(...), venue: str = Form(...)):
+def update_fixture_1(request: Request, fixtureTitle: str = Form(...), venue: str = Form(...)):
+    if not current_user(request):
+        return RedirectResponse(url="/login", status_code=303)
     for f in fixtures:
         if f["id"] == 1:
             f["fixtureTitle"] = fixtureTitle
             f["venue"] = venue
             break
-    return RedirectResponse(url="/", status_code=303)
-
-
-# 3. DELETE THE RECORD WITH THE HIGHEST ID
+    return RedirectResponse(url="/dashboard", status_code=303)
 @app.post("/delete-highest")
-def delete_highest():
+def delete_highest(request: Request):
+    if not current_user(request):
+        return RedirectResponse(url="/login", status_code=303)
     if fixtures:
-        highest = max(fixtures, key=lambda f: f["id"])
-        fixtures.remove(highest)
-    return RedirectResponse(url="/", status_code=303)
+        fixtures.remove(max(fixtures, key=lambda f: f["id"]))
+    return RedirectResponse(url="/dashboard", status_code=303)
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=PORT_BASE)
