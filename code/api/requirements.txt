@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+sqlalchemy>=2.0
+pymysql
+cryptography
+python-dotenv
+pydantic>=2.0
+email-validator
+requests
