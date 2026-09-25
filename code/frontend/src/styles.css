@@ -1,0 +1,43 @@
+/* League theme: green header, white panels */
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: #f1f5f1;
+  color: #1c2b1f;
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #1e5631;
+}
+.site-title { color: #fff; font-size: 22px; font-weight: 700; text-decoration: none; }
+.site-nav a { color: #d8f3dc; margin-left: 20px; text-decoration: none; font-weight: 600; }
+.site-nav a:hover { color: #fff; }
+.page { max-width: 900px; margin: 28px auto; padding: 0 16px; }
+.panel {
+  background: #fff;
+  border: 1px solid #d6e2d8;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.panel h2 { margin: 0 0 14px; font-size: 20px; }
+.login-panel { border-left: 5px solid #1e5631; }
+.danger-panel { border-left: 5px solid #b42318; }
+.login-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.fixture-form { display: grid; gap: 14px; max-width: 480px; }
+.fixture-form label { display: grid; gap: 6px; font-weight: 600; }
+input { padding: 10px 12px; border: 1px solid #b7c9bb; border-radius: 6px; font-size: 15px; }
+.btn { display: inline-block; padding: 9px 16px; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; border: 1px solid transparent; }
+.btn-green { background: #1e5631; color: #fff; }
+.btn-red { background: #b42318; color: #fff; }
+.btn-outline { background: #fff; color: #1e5631; border-color: #1e5631; }
+.fixture-table { width: 100%; border-collapse: collapse; }
+.fixture-table th { text-align: left; background: #e8f0ea; padding: 10px; font-size: 14px; }
+.fixture-table td { padding: 10px; border-bottom: 1px solid #e3ebe5; }
+.row-actions { display: flex; gap: 8px; justify-content: flex-end; }
+.status { color: #1e5631; font-weight: 700; margin: 0 0 16px; }
+.muted { color: #5b6b5e; }
+.error { color: #b42318; font-weight: 600; margin: 10px 0 0; }
