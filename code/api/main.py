@@ -3,7 +3,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .routers.auth import router as auth_router
 from .routers.fixtures import router as fixtures_router
-PORT_BASE = 8619 
+from .perf import sql_counter
+PORT_BASE = 8619
 app = FastAPI(title="Community Sports League Fixtures - HW4")
 app.add_middleware(
     CORSMiddleware,
@@ -12,6 +13,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+@app.middleware("http")
+async def add_sql_count(request, call_next):
+    box = {"n": 0}
+    sql_counter.set(box)  # fresh counter for this request
+    response = await call_next(request)
+    response.headers["X-SQL-Count"] = str(box["n"])  # statements this request ran
+    return response
 app.include_router(auth_router)  # POST /login
 app.include_router(fixtures_router)  # CRUD on /fixtures
 if __name__ == "__main__":

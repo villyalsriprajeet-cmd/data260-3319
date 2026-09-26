@@ -1,0 +1,27 @@
+[2026-09-25T16:37:35] seed=3319 teams=200 fixtures=5000
+[2026-09-25T16:49:07] measured 180 requests
+| Page size | Version | SQL stmts/req | p50 (ms) | p95 (ms) | p99 (ms) |
+| 10 | naive | 12 | 9.33 | 9.8 | 37.51 |
+| 10 | fixed | 2 | 4.27 | 5.11 | 5.51 |
+| 50 | naive | 52 | 30.95 | 35.85 | 37.8 |
+| 50 | fixed | 2 | 6.05 | 6.92 | 7.11 |
+| 200 | naive | 202 | 111.84 | 123.48 | 132.08 |
+| 200 | fixed | 2 | 11.3 | 12.35 | 26.03 |
+page 10: fixed is 2.19x faster (p50)
+page 50: fixed is 5.12x faster (p50)
+page 200: fixed is 9.9x faster (p50)
+[2026-09-25T16:49:24] measured 180 requests
+| Page size | Version | SQL stmts/req | p50 (ms) | p95 (ms) | p99 (ms) |
+|---|---|---|---|---|---|
+| 10 | naive | 12 | 9.9 | 10.53 | 10.75 |
+| 10 | fixed | 2 | 4.56 | 5.17 | 5.49 |
+| 50 | naive | 52 | 32.44 | 40.75 | 49.71 |
+| 50 | fixed | 2 | 6.24 | 7.15 | 7.49 |
+| 200 | naive | 202 | 111.56 | 133.1 | 139.17 |
+| 200 | fixed | 2 | 11.25 | 11.98 | 12.22 |
+page 10: fixed is 2.17x faster (p50)
+page 50: fixed is 5.2x faster (p50)
+page 200: fixed is 9.92x faster (p50)
+[2026-09-25T17:15:50] EXPLAIN after idx_fixtures_venue
+id	select_type	table	partitions	type	possible_keys	key	key_len	ref	rows	filtered	Extra
+1	SIMPLE	fixtures	NULL	ref	idx_fixtures_venue	idx_fixtures_venue	802	const	35	100.00	NULL

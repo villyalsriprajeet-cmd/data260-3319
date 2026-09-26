@@ -1,0 +1,68 @@
+{
+  "run_at": "2026-09-25T16:49:24",
+  "base_url": "http://localhost:8619",
+  "requests_total": 180,
+  "warmup_per_case": 3,
+  "cases": [
+    {
+      "page_size": 10,
+      "version": "naive",
+      "requests": 30,
+      "sql_per_request": 12,
+      "p50_ms": 9.9,
+      "p95_ms": 10.53,
+      "p99_ms": 10.75,
+      "speedup_p50": 2.17
+    },
+    {
+      "page_size": 10,
+      "version": "fixed",
+      "requests": 30,
+      "sql_per_request": 2,
+      "p50_ms": 4.56,
+      "p95_ms": 5.17,
+      "p99_ms": 5.49,
+      "speedup_p50": 2.17
+    },
+    {
+      "page_size": 50,
+      "version": "naive",
+      "requests": 30,
+      "sql_per_request": 52,
+      "p50_ms": 32.44,
+      "p95_ms": 40.75,
+      "p99_ms": 49.71,
+      "speedup_p50": 5.2
+    },
+    {
+      "page_size": 50,
+      "version": "fixed",
+      "requests": 30,
+      "sql_per_request": 2,
+      "p50_ms": 6.24,
+      "p95_ms": 7.15,
+      "p99_ms": 7.49,
+      "speedup_p50": 5.2
+    },
+    {
+      "page_size": 200,
+      "version": "naive",
+      "requests": 30,
+      "sql_per_request": 202,
+      "p50_ms": 111.56,
+      "p95_ms": 133.1,
+      "p99_ms": 139.17,
+      "speedup_p50": 9.92
+    },
+    {
+      "page_size": 200,
+      "version": "fixed",
+      "requests": 30,
+      "sql_per_request": 2,
+      "p50_ms": 11.25,
+      "p95_ms": 11.98,
+      "p99_ms": 12.22,
+      "speedup_p50": 9.92
+    }
+  ]
+}
