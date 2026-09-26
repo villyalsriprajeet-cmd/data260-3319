@@ -1,114 +1,44 @@
-[2026-09-25T16:37:35] seed=3319 teams=200 fixtures=5000
-[2026-09-25T16:49:07] measured 180 requests
-| Page size | Version | SQL stmts/req | p50 (ms) | p95 (ms) | p99 (ms) |
-| 10 | naive | 12 | 9.33 | 9.8 | 37.51 |
-| 10 | fixed | 2 | 4.27 | 5.11 | 5.51 |
-| 50 | naive | 52 | 30.95 | 35.85 | 37.8 |
-| 50 | fixed | 2 | 6.05 | 6.92 | 7.11 |
-| 200 | naive | 202 | 111.84 | 123.48 | 132.08 |
-| 200 | fixed | 2 | 11.3 | 12.35 | 26.03 |
-page 10: fixed is 2.19x faster (p50)
-page 50: fixed is 5.12x faster (p50)
-page 200: fixed is 9.9x faster (p50)
-[2026-09-25T16:49:24] measured 180 requests
-| Page size | Version | SQL stmts/req | p50 (ms) | p95 (ms) | p99 (ms) |
-|---|---|---|---|---|---|
-| 10 | naive | 12 | 9.9 | 10.53 | 10.75 |
-| 10 | fixed | 2 | 4.56 | 5.17 | 5.49 |
-| 50 | naive | 52 | 32.44 | 40.75 | 49.71 |
-| 50 | fixed | 2 | 6.24 | 7.15 | 7.49 |
-| 200 | naive | 202 | 111.56 | 133.1 | 139.17 |
-| 200 | fixed | 2 | 11.25 | 11.98 | 12.22 |
-page 10: fixed is 2.17x faster (p50)
-page 50: fixed is 5.2x faster (p50)
-page 200: fixed is 9.92x faster (p50)
-[2026-09-25T17:15:50] EXPLAIN after idx_fixtures_venue
-id	select_type	table	partitions	type	possible_keys	key	key_len	ref	rows	filtered	Extra
-1	SIMPLE	fixtures	NULL	ref	idx_fixtures_venue	idx_fixtures_venue	802	const	35	100.00	NULL
-/Users/villyalsriprajeet/miniconda3_x86/envs/data260/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-/Users/villyalsriprajeet/miniconda3_x86/envs/data260/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
-  warnings.warn('resource_tracker: There appear to be %d '
-[2026-09-25T18:58:13] HW4 Part 4 RAG run, model=qwen2.5:3b, embed=sentence-transformers/all-MiniLM-L6-v2
-corpus: 5 documents -> 248 chunks (chunk_size=500, overlap=50)
-/Users/villyalsriprajeet/miniconda3_x86/envs/data260/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-FAISS index: 248 vectors, dim=384
-
 [Q1] k=3 Who won the Golden Boot in the 2023-24 Premier League, and how many goals did he score?
   #1 score=0.5487 source=2023_24_premier_league.txt chunk=2023_24_premier_league#42 | Premier League. Retrieved 20 May 2026. ^ "Postecoglou ends wait for Australia with Barclays Manager award". Premier League. 15 September 2023. Archive
   #2 score=0.5294 source=2023_24_efl_championship.txt chunk=2023_24_efl_championship#22 | Includes 3 goals in The Championship play-offs. Hat-tricks [edit] Main article: List of EFL Championship hat-tricks | Player | For | Against | Result 
   #3 score=0.5218 source=2023_24_premier_league.txt chunk=2023_24_premier_league#20 | article: List of Premier League hat-tricks | Player | For | Against | Result | Date | Son Heung-min | Tottenham Hotspur | Burnley | 5–2 (A) | 2 Septem
-  (A) 67.9s -> The player who won the Golden Boot in the 2023-24 Premier League was Mohamed Salah, scoring 22 goals.
-  (B) 305.4s -> Based on the information provided in the context, there is no specific mention of the Golden Boot winner or the number of goals scored in the 2023-24 Premier League season. The context discusses various awards and achievements for players, but does not provide details about the Golden Boot winner or
-  (C) 233.0s -> I cannot answer this question from the provided documents
 
 [Q2] k=3 Which three clubs were relegated from the 2023-24 Premier League, and which club won the 2023-24 EFL Championship?
   #1 score=0.6603 source=2023_24_efl_championship.txt chunk=2023_24_efl_championship#2 | Team changes [edit] The following teams have changed division since the 2022–23 season: ‹ The template below (Col-begin) is being considered for delet
   #2 score=0.6471 source=2023_24_efl_championship.txt chunk=2023_24_efl_championship#36 | Cup | Prospects | Promotion to Premier League Relegation to EFL League One | v t e Second level English football league seasons | Football League Seco
   #3 score=0.6205 source=2023_24_efl_championship.txt chunk=2023_24_efl_championship#1 | Football league season EFL Championship | Season | 2023–24 | Dates | 4 August 2023 – 4 May 2024 | Champions | Leicester City 2nd Championship title 8t
-  (A) 59.2s -> In the 2023-24 Premier League, three clubs were relegated: Sheffield United, Norwich City, and Brighton & Hove Albion. The club that won the 2023-24 EFL Championship was Brighton & Hove Albion.
-  (B) 296.7s -> Based on the information provided in the context:
-
-- The three clubs that were relegated from the 2023-24 Premier League (which is referred to as the EFL Championship in this context) were Birmingham City, Huddersfield Town, and Rotherham United.
-- Leicester City won the 2023-24 EFL Championship.
-  (C) 277.6s -> The three clubs relegated from the 2023-24 Premier League were Birmingham City, Huddersfield Town, and Rotherham United [1] and [4]. Leicester City won the 2023-24 EFL Championship [4].
 
 [Q3] k=3 Which club were the defending champions at the start of the 2023-24 La Liga season?
   #1 score=0.6625 source=2023_24_la_liga.txt chunk=2023_24_la_liga#2 | It commenced on 11 August 2023 and ended on 26 May 2024. Barcelona were the defending champions, having won their 27th title the previous season. On 4
   #2 score=0.6298 source=2023_24_la_liga.txt chunk=2023_24_la_liga#23 | 22 February 2023. ^ "Spanish LALIGA Performance Stats, 2023-24 Season". ESPN. Retrieved 26 May 2024. ^ "EA SPORTS & LaLiga Announce Expansive New Part
   #3 score=0.6252 source=2023_24_la_liga.txt chunk=2023_24_la_liga#1 | 93rd season of La Liga Football league season La Liga | Season | 2023–24 | Dates | 11 August 2023 – 26 May 2024 | Champions | Real Madrid 36th title |
-  (A) 42.6s -> The defending champions at the start of the 2023-24 La Liga season were Real Madrid.
-  (B) 233.9s -> According to the context provided, Barcelona were the defending champions at the start of the 2023-24 La Liga season. They had won their 27th title the previous season.
-  (C) 284.4s -> Barcelona were the defending champions at the start of the 2023-24 La Liga season, as stated in [1].
 
 [Q4] k=3 Who won the league title?
   #1 score=0.4571 source=2023_24_premier_league.txt chunk=2023_24_premier_league#5 | The defeat left the Blades 10 points adrift of safety with three matches left to play. On 4 May, they also became the first Premier League side to con
   #2 score=0.4528 source=2023_24_premier_league.txt chunk=2023_24_premier_league#17 | 1–2 | 2–3 | 2–1 | 1–1 | 2–4 | 1–1 | — | 1–2 | 1–2 | 1–0 | 1–1 | 1–3 | 0–1 | 1–2 | 1–1 | Manchester City | 0–0 | 4–1 | 6–1 | 1–0 | 2–1 | 3–1 | 1–1 | 2–
   #3 score=0.4464 source=2024_25_uefa_champions_league.txt chunk=2024_25_uefa_champions_league#17 | Teams ranked from 25th to 36th were eliminated from all competitions, with no access to the 2024–25 UEFA Europa League. | Pos | Team v t e | Pld | W |
-  (A) 37.6s -> I'm sorry, but I don't have enough information to answer who won the league title. Could you please specify which league you are referring to?
-  (B) 240.4s -> Based on the information provided in the context, Manchester City won the league title. They secured the title with 91 points by beating West Ham United 3-1 at home on the final day of the season.
-  (C) 224.0s -> Manchester City won the league title with 91 points.
 
 [Q5] k=3 Who won the 2025 MLS Cup?
   #1 score=0.6502 source=2024_major_league_soccer_season.txt chunk=2024_major_league_soccer_season#19 | Open Cup winners; (V) Canadian Championship winners Notes: ^ As 2024 MLS Supporters' Shield champions ^ As winners of Leagues Cup ^ As runners-up of L
   #2 score=0.5672 source=2024_major_league_soccer_season.txt chunk=2024_major_league_soccer_season#47 | ^ "MLS unveils 2024 Regular Season schedule". MLSsoccer.com. December 20, 2023. Archived from the original on December 20, 2023. Retrieved December 20
   #3 score=0.5572 source=2024_major_league_soccer_season.txt chunk=2024_major_league_soccer_season#68 | Major League Soccer. November 7, 2024. Retrieved November 7, 2024. ^ Sigal, Jonathan (November 4, 2024). "LA Galaxy's Gabriel Pec named 2024 MLS Newco
-  (A) 48.1s -> As of my last update in 2023, the MLS Cup winner for 2025 has not been determined yet, as the tournament takes place annually. To find the correct winner, you should check the latest news or official announcements from Major League Soccer.
-  (B) 307.8s -> Based on the information provided in the context, the 2024 MLS Cup was won by LA Galaxy. The context mentions "LA Galaxy lift MLS Cup 2024 over New York Red Bulls" on December 7, 2024. However, the question asks about the 2025 MLS Cup, which is not mentioned in the given context. Therefore, I cannot
-  (C) 213.4s -> I cannot answer this question from the provided documents
 
 [Q6] k=3 What is the capital of Australia?
   #1 score=0.1962 source=2024_25_uefa_champions_league.txt chunk=2024_25_uefa_champions_league#3 | | Teams | Notes | 1 | England | 109.570 | 4 | | 2 | Spain | 92.998 | | 3 | Germany | 82.481 | +1 (EPS) | 4 | Italy | 81.926 | +1 (EPS) | 5 | France | 
   #2 score=0.1681 source=2024_major_league_soccer_season.txt chunk=2024_major_league_soccer_season#23 | Please help update this article to reflect recent events or newly available information. (February 2025) As of May 15, 2024 | Rank | Team | GP | Cumul
   #3 score=0.1503 source=2024_25_uefa_champions_league.txt chunk=2024_25_uefa_champions_league#4 | | Teams | Notes | 20 | Greece | 25.225 | 1 | | 21 | Israel | 25.000 | | 22 | Cyprus | 24.475 | | 23 | Sweden | 23.750 | | 24 | Poland | 20.750 | | 25 
-  (A) 12.2s -> The capital of Australia is Canberra.
-  (B) 234.1s -> The capital of Australia is Canberra.
-  (C) 0.0s -> I cannot answer this question from the provided documents. (No chunk passed the relevance filter.)
-      dropped: [('2024_25_uefa_champions_league#3', 'irrelevant'), ('2024_major_league_soccer_season#23', 'irrelevant'), ('2024_25_uefa_champions_league#4', 'irrelevant')]
 
-=== top_k sweep on Q2 (config C) ===
 [Q2] k=1 Which three clubs were relegated from the 2023-24 Premier League, and which club won the 2023-24 EFL Championship?
   #1 score=0.6603 source=2023_24_efl_championship.txt chunk=2023_24_efl_championship#2 | Team changes [edit] The following teams have changed division since the 2022–23 season: ‹ The template below (Col-begin) is being considered for delet
-  (C, k=1) 48.0s -> Leicester City, Leeds United, and Southampton were relegated from the 2023-24 Premier League. [1]
+
 [Q2] k=3 Which three clubs were relegated from the 2023-24 Premier League, and which club won the 2023-24 EFL Championship?
   #1 score=0.6603 source=2023_24_efl_championship.txt chunk=2023_24_efl_championship#2 | Team changes [edit] The following teams have changed division since the 2022–23 season: ‹ The template below (Col-begin) is being considered for delet
   #2 score=0.6471 source=2023_24_efl_championship.txt chunk=2023_24_efl_championship#36 | Cup | Prospects | Promotion to Premier League Relegation to EFL League One | v t e Second level English football league seasons | Football League Seco
   #3 score=0.6205 source=2023_24_efl_championship.txt chunk=2023_24_efl_championship#1 | Football league season EFL Championship | Season | 2023–24 | Dates | 4 August 2023 – 4 May 2024 | Champions | Leicester City 2nd Championship title 8t
-  (C, k=3) 277.6s -> The three clubs relegated from the 2023-24 Premier League were Birmingham City, Huddersfield Town, and Rotherham United [1] and [4]. Leicester City won the 2023-24 EFL Championship [4].
+
 [Q2] k=5 Which three clubs were relegated from the 2023-24 Premier League, and which club won the 2023-24 EFL Championship?
   #1 score=0.6603 source=2023_24_efl_championship.txt chunk=2023_24_efl_championship#2 | Team changes [edit] The following teams have changed division since the 2022–23 season: ‹ The template below (Col-begin) is being considered for delet
   #2 score=0.6471 source=2023_24_efl_championship.txt chunk=2023_24_efl_championship#36 | Cup | Prospects | Promotion to Premier League Relegation to EFL League One | v t e Second level English football league seasons | Football League Seco
   #3 score=0.6205 source=2023_24_efl_championship.txt chunk=2023_24_efl_championship#1 | Football league season EFL Championship | Season | 2023–24 | Dates | 4 August 2023 – 4 May 2024 | Champions | Leicester City 2nd Championship title 8t
   #4 score=0.5995 source=2023_24_efl_championship.txt chunk=2023_24_efl_championship#9 | April 2024 | 24th | Steve Evans | 17 April 2024 League table [edit] | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts | Promotion, qualification or 
   #5 score=0.5936 source=2023_24_efl_championship.txt chunk=2023_24_efl_championship#34 | ^ "Sky Bet Championship Manager and Player of the Month for November". EFL. 8 December 2023. ^ "Sky Bet Championship Manager and Player of the Month f
-  (C, k=5) 348.0s -> The three clubs relegated from the 2023-24 EFL Championship were Birmingham City, Huddersfield Town, and Rotherham United [7], [8], [9]. Leicester City won the 2023-24 EFL Championship [6].
-
-=== evaluation summary ===
-| Config | Accuracy (correct answers) | Faithfulness (grounded) | Format compliance | Robustness (Q5/Q6 refused) |
-|---|---|---|---|---|
-| A: No RAG | 0/6 | n/a | n/a | 0/2 |
-| B: Basic RAG | 2/6 | 3/6 | n/a | 0/2 |
-| C: Context-engineered RAG | 4/6 | 5/6 | 3/6 | 2/2 |
-
-[2026-09-25T19:57:56] wrote rag_retrievals.txt, rag_comparison.csv, rag_ksweep.csv, rag_eval.csv, rag_eval_summary.md to reports/hw04/raw/

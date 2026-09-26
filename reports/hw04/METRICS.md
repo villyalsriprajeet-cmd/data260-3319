@@ -30,3 +30,21 @@ Raw data: raw/n1_requests.csv (180 rows), summary: raw/n1_summary.json (run 2026
 | Query | Before | After |
 |---|---|---|
 | fixtures WHERE venue = 'San Jose Stadium' | type ALL, key NULL, rows 4890 | type ref, key idx_fixtures_venue, rows 35 |
+
+## Part 4 - Grounded RAG (qwen2.5:3b, all-MiniLM-L6-v2, FAISS, chunk 500/50, k=3)
+
+Run 2026-09-25T18:58:13, raw files: raw/rag_retrievals.txt, raw/rag_comparison.csv, raw/rag_ksweep.csv, raw/rag_eval.csv
+
+| Config | Accuracy (correct answers) | Faithfulness (grounded) | Format compliance | Robustness (Q5/Q6 refused) |
+|---|---|---|---|---|
+| A: No RAG | 0/6 | n/a | n/a | 0/2 |
+| B: Basic RAG | 2/6 | 3/6 | n/a | 0/2 |
+| C: Context-engineered RAG | 4/6 | 5/6 | 3/6 | 2/2 |
+
+### top_k sweep (Q2, config C)
+
+| k | Chunks | Result |
+|---|---|---|
+| 1 | EFL #2 | Wrong season (2022-23 relegations), champion missing |
+| 3 | EFL #2, #36, #1 | Leicester correct, relegated clubs wrong, invalid citation [4] |
+| 5 | + EFL #9, #34 | Leicester correct, relegated clubs wrong, invalid citations [6]-[9] |
