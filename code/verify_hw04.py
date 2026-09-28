@@ -74,7 +74,7 @@ try:
         teams = c.execute(text("SELECT COUNT(*) FROM teams")).scalar()
         linked = c.execute(text("SELECT COUNT(DISTINCT home_team_id) FROM fixtures")).scalar()
         users = c.execute(text("SELECT COUNT(*) FROM users")).scalar()
-    check("database connects via db_session_basede26 engine", True, engine.url.render_as_string(hide_password=True))
+        check("database connects to MySQL", True, engine.url.render_as_string(hide_password=True))
     check("fixtures table has at least 5,000 rows", fixtures >= 5000, fixtures)
     check("teams table has 200 rows, all linked", teams == 200 and linked == 200, f"{teams} teams, {linked} linked")
     check("users table has a login account", users >= 1, users)

@@ -9,10 +9,10 @@ DATABASE_URL = os.getenv("DATABASE_URL")  # MySQL connection string
 if not DATABASE_URL:
     raise RuntimeError("DATABASE_URL missing in code/api/.env")
 engine = create_engine(DATABASE_URL, pool_pre_ping=True)  # checks the connection is alive before use
-db_session_basede26 = sessionmaker(bind=engine, autoflush=False)  # required database connection variable
+SessionLocal = sessionmaker(bind=engine, autoflush=False)  # session factory for MySQL
 Base = declarative_base()  # parent class for all ORM models
 def get_db():
-    db = db_session_basede26()  # open one session per request
+    db = SessionLocal()  # open one session per request
     try:
         yield db  # hand it to the endpoint
     finally:
