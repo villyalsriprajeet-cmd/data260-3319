@@ -1,11 +1,12 @@
-# HW4 - Community Sports League Fixtures API (Domain 7) for the React client, runs on port 8619
+# HW5 - Community Sports League Fixtures API (Domain 7): fixtures and teams, runs on port 8619
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .routers.auth import router as auth_router
 from .routers.fixtures import router as fixtures_router
+from .routers.teams import router as teams_router
 from .perf import sql_counter
 PORT_BASE = 8619
-app = FastAPI(title="Community Sports League Fixtures - HW4")
+app = FastAPI(title="Community Sports League Fixtures - HW5")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],  # the React dev server
@@ -22,6 +23,7 @@ async def add_sql_count(request, call_next):
     return response
 app.include_router(auth_router)  # POST /login
 app.include_router(fixtures_router)  # CRUD on /fixtures
+app.include_router(teams_router)  # CRUD on /teams and /teams/{id}/fixtures
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=PORT_BASE)

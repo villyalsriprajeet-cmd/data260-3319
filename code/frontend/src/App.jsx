@@ -1,13 +1,13 @@
-// Main app: login state, fixture list, routes, and the CRUD handlers passed as props
+// Main app: login state and routes, fixture data lives in the Redux store
 import React, { useEffect, useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import Navbar from "./components/Navbar.jsx";
 import Login from "./components/Login.jsx";
 import Home from "./pages/Home.jsx";
 import CreateRecord from "./pages/CreateRecord.jsx";
 import UpdateRecord from "./pages/UpdateRecord.jsx";
-import DeleteRecord from "./pages/DeleteRecord.jsx";
-import { fetchFixtures, createFixture, updateFixture, deleteFixture } from "./api/fixturesApi.js";
+import { fetchFixtures } from "./features/fixtures/fixturesSlice.js";
 // Shows the page only when logged in
 function Protected({ loggedIn, children }) {
   if (!loggedIn) {
@@ -21,49 +21,25 @@ function Protected({ loggedIn, children }) {
   return children;
 }
 export default function App() {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [loggedIn, setLoggedIn] = useState(false); // true once the backend accepts our cookie
-  const [fixtures, setFixtures] = useState([]); // records shown on Home
-  // Load the list; 200 means the session cookie is valid, 401 means not logged in
+  // Load the first page into Redux; success means the session cookie is valid
   useEffect(() => {
-    fetchFixtures()
-      .then((data) => {
-        setFixtures(data);
-        setLoggedIn(true);
-      })
-      .catch(() => {
-        setFixtures([]);
-        setLoggedIn(false);
-      });
-  }, [loggedIn]);
-  // Create, passed to CreateRecord as a prop
-  async function onAdd(newFixture) {
-    const created = await createFixture(newFixture); // MySQL assigns the auto-increment id
-    setFixtures([...fixtures, created]);
-    navigate("/");
-  }
-  // Update, passed to UpdateRecord as a prop
-  async function onUpdate(id, changes) {
-    const updated = await updateFixture(id, changes);
-    setFixtures(fixtures.map((f) => (f.id === id ? updated : f)));
-    navigate("/");
-  }
-  // Delete, passed to DeleteRecord as a prop
-  async function onDelete(id) {
-    await deleteFixture(id);
-    setFixtures(fixtures.filter((f) => f.id !== id));
-    navigate("/");
-  }
+    dispatch(fetchFixtures(0))
+      .unwrap()
+      .then(() => setLoggedIn(true))
+      .catch(() => setLoggedIn(false));
+  }, [dispatch, loggedIn]);
   return (
     <>
       <Navbar loggedIn={loggedIn} />
       <main className="page">
         <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
         <Routes>
-          <Route path="/" element={<Home fixtures={fixtures} loggedIn={loggedIn} />} />
-          <Route path="/create" element={<Protected loggedIn={loggedIn}><CreateRecord onAdd={onAdd} /></Protected>} />
-          <Route path="/update/:id" element={<Protected loggedIn={loggedIn}><UpdateRecord onUpdate={onUpdate} /></Protected>} />
-          <Route path="/delete/:id" element={<Protected loggedIn={loggedIn}><DeleteRecord onDelete={onDelete} /></Protected>} />
+          <Route path="/" element={<Home loggedIn={loggedIn} />} />
+          <Route path="/create" element={<Protected loggedIn={loggedIn}><CreateRecord /></Protected>} />
+          <Route path="/update" element={<Protected loggedIn={loggedIn}><UpdateRecord /></Protected>} />
+          <Route path="/update/:id" element={<Protected loggedIn={loggedIn}><UpdateRecord /></Protected>} />
         </Routes>
       </main>
     </>

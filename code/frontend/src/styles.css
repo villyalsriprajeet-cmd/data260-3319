@@ -41,3 +41,7 @@ input { padding: 10px 12px; border: 1px solid #b7c9bb; border-radius: 6px; font-
 .status { color: #1e5631; font-weight: 700; margin: 0 0 16px; }
 .muted { color: #5b6b5e; }
 .error { color: #b42318; font-weight: 600; margin: 10px 0 0; }
+.pager { display: flex; gap: 10px; margin-top: 16px; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.form-gap { margin-top: 18px; }
+.nowrap { white-space: nowrap; }
