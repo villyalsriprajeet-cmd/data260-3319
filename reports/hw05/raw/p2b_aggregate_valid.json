@@ -1,0 +1,24 @@
+{
+    "ok": true,
+    "data": [
+      {
+        "city": "Gilroy",
+        "fixtures": 250,
+        "total_tickets": 64101,
+        "avg_tickets": 256.4
+      },
+      {
+        "city": "Redwood City",
+        "fixtures": 250,
+        "total_tickets": 63402,
+        "avg_tickets": 253.6
+      },
+      {
+        "city": "San Jose",
+        "fixtures": 250,
+        "total_tickets": 63301,
+        "avg_tickets": 253.2
+      }
+    ],
+    "error": null
+  }

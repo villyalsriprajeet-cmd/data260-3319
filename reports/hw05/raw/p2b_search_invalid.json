@@ -1,0 +1,8 @@
+{
+    "ok": false,
+    "data": null,
+    "error": {
+      "code": "INVALID_INPUT",
+      "message": "query must be at least 2 characters"
+    }
+  }

@@ -1,0 +1,8 @@
+{
+    "ok": false,
+    "data": null,
+    "error": {
+      "code": "INVALID_INPUT",
+      "message": "fixture_code must look like FX-00001, got 'ABC'"
+    }
+  }

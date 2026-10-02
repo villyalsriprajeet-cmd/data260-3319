@@ -1,0 +1,16 @@
+{
+    "ok": true,
+    "data": {
+      "id": 1,
+      "fixture_code": "FX-00001",
+      "fixture_title": "Pleasanton Hawks vs Cupertino Spartans - Matchweek 32",
+      "venue": "Pleasanton Sports Complex",
+      "tickets_available": 37,
+      "created_at": "2026-10-01T17:14:36",
+      "team_id": 1,
+      "team_name": "Pleasanton Hawks",
+      "team_city": "Pleasanton",
+      "team_email": "pleasanton.hawks@s3319league.org"
+    },
+    "error": null
+  }

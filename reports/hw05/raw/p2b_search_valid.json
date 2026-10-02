@@ -1,0 +1,30 @@
+{
+    "ok": true,
+    "data": {
+      "count": 3,
+      "results": [
+        {
+          "fixture_code": "FX-00001",
+          "fixture_title": "Pleasanton Hawks vs Cupertino Spartans - Matchweek 32",
+          "venue": "Pleasanton Sports Complex",
+          "tickets_available": 37,
+          "home_team": "Pleasanton Hawks"
+        },
+        {
+          "fixture_code": "FX-00002",
+          "fixture_title": "Santa Clara Hawks vs Fremont Sharks - Matchweek 32",
+          "venue": "Santa Clara Field",
+          "tickets_available": 74,
+          "home_team": "Santa Clara Hawks"
+        },
+        {
+          "fixture_code": "FX-00006",
+          "fixture_title": "Berkeley Hawks vs Sunnyvale Bulldogs - Matchweek 11",
+          "venue": "Berkeley Sports Complex",
+          "tickets_available": 222,
+          "home_team": "Berkeley Hawks"
+        }
+      ]
+    },
+    "error": null
+  }

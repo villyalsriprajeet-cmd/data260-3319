@@ -1,0 +1,8 @@
+{
+    "ok": false,
+    "data": null,
+    "error": {
+      "code": "INVALID_INPUT",
+      "message": "top_n must be between 1 and 20, got 0"
+    }
+  }

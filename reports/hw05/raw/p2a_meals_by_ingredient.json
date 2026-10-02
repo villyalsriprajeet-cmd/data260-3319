@@ -1,0 +1,30 @@
+{
+    "count": 5,
+    "results": [
+      {
+        "id": "52940",
+        "name": "Brown Stew Chicken",
+        "thumb": "https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg"
+      },
+      {
+        "id": "53161",
+        "name": "Chicken & chorizo rice pot",
+        "thumb": "https://www.themealdb.com/images/media/meals/fk80jp1763280767.jpg"
+      },
+      {
+        "id": "52846",
+        "name": "Chicken & mushroom Hotpot",
+        "thumb": "https://www.themealdb.com/images/media/meals/uuuspp1511297945.jpg"
+      },
+      {
+        "id": "52796",
+        "name": "Chicken Alfredo Primavera",
+        "thumb": "https://www.themealdb.com/images/media/meals/syqypv1486981727.jpg"
+      },
+      {
+        "id": "52934",
+        "name": "Chicken Basquaise",
+        "thumb": "https://www.themealdb.com/images/media/meals/wruvqv1511880994.jpg"
+      }
+    ]
+  }
