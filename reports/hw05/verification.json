@@ -1,7 +1,7 @@
 {
   "hw": "hw5",
-  "generated": "2026-10-04T00:36:05",
-  "commit_hash": "08f43cd3401170b1669410906d3e753e33b1c365",
+  "generated": "2026-10-04T01:02:22",
+  "commit_hash": "891828630b29f3f7d129f4f954f4e772ae1a27a4",
   "tag": "none",
   "config": {
     "SID4": 3319,
@@ -24,7 +24,7 @@
     },
     "safety_rule": "search_fixtures limit <= 20, no % or _ wildcards"
   },
-  "all_passed": false,
+  "all_passed": true,
   "checks": [
     {
       "check": "file exists: code/mcp_servers/meals_server.py",
@@ -108,7 +108,7 @@
     },
     {
       "check": "file exists: reports/hw05/report.pdf",
-      "passed": false,
+      "passed": true,
       "detail": ""
     },
     {
