@@ -1,0 +1,17 @@
+Retry policy: 3 attempts, backoff 100 ms doubling, max 1000 ms, DB timeout 5 s per attempt
+
+1. Success on the first attempt
+  attempts: ok
+  time: 210 ms
+  result: {"ok": true, "data": {"fixture_code": "FX-00001", "fixture_title": "Pleasanton Hawks vs Cupertino Spartans - Matchweek 32"}, "error": null}
+
+2. Failure on the first attempt, success after a retry
+  attempts: fail -> ok
+  time: 135 ms
+  result: {"ok": true, "data": {"fixture_code": "FX-00001", "fixture_title": "Pleasanton Hawks vs Cupertino Spartans - Matchweek 32"}, "error": null}
+
+3. Failure on every allowed attempt
+  attempts: fail -> fail -> fail
+  time: 311 ms
+  result: {"ok": false, "data": null, "error": {"code": "UNAVAILABLE", "message": "database still failing after 3 attempts: injected failure (simulated lost database connection)"}}
+

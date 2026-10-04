@@ -1,0 +1,151 @@
+failure_rate,call,tool,args,ok,attempts,attempt_pattern,error_code,latency_ms
+0.0,1,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,27.98
+0.0,2,fixture_details,"{""fixture_code"": ""FX-00002""}",True,1,S,,22.17
+0.0,3,tickets_by_city,"{""top_n"": 5}",True,1,S,,29.89
+0.0,4,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,20.09
+0.0,5,fixture_details,"{""fixture_code"": ""FX-00005""}",True,1,S,,21.78
+0.0,6,tickets_by_city,"{""top_n"": 5}",True,1,S,,24.93
+0.0,7,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,21.01
+0.0,8,fixture_details,"{""fixture_code"": ""FX-00008""}",True,1,S,,20.23
+0.0,9,tickets_by_city,"{""top_n"": 5}",True,1,S,,28.93
+0.0,10,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,22.52
+0.0,11,fixture_details,"{""fixture_code"": ""FX-00011""}",True,1,S,,24.11
+0.0,12,tickets_by_city,"{""top_n"": 5}",True,1,S,,28.94
+0.0,13,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,22.48
+0.0,14,fixture_details,"{""fixture_code"": ""FX-00014""}",True,1,S,,23.81
+0.0,15,tickets_by_city,"{""top_n"": 5}",True,1,S,,37.28
+0.0,16,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,20.61
+0.0,17,fixture_details,"{""fixture_code"": ""FX-00017""}",True,1,S,,21.32
+0.0,18,tickets_by_city,"{""top_n"": 5}",True,1,S,,35.69
+0.0,19,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,25.13
+0.0,20,fixture_details,"{""fixture_code"": ""FX-00020""}",True,1,S,,22.29
+0.0,21,tickets_by_city,"{""top_n"": 5}",True,1,S,,40.88
+0.0,22,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,20.97
+0.0,23,fixture_details,"{""fixture_code"": ""FX-00023""}",True,1,S,,24.0
+0.0,24,tickets_by_city,"{""top_n"": 5}",True,1,S,,33.55
+0.0,25,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,22.71
+0.0,26,fixture_details,"{""fixture_code"": ""FX-00026""}",True,1,S,,23.62
+0.0,27,tickets_by_city,"{""top_n"": 5}",True,1,S,,40.44
+0.0,28,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,22.7
+0.0,29,fixture_details,"{""fixture_code"": ""FX-00029""}",True,1,S,,22.67
+0.0,30,tickets_by_city,"{""top_n"": 5}",True,1,S,,35.43
+0.0,31,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,21.47
+0.0,32,fixture_details,"{""fixture_code"": ""FX-00032""}",True,1,S,,26.26
+0.0,33,tickets_by_city,"{""top_n"": 5}",True,1,S,,29.59
+0.0,34,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,23.81
+0.0,35,fixture_details,"{""fixture_code"": ""FX-00035""}",True,1,S,,22.27
+0.0,36,tickets_by_city,"{""top_n"": 5}",True,1,S,,34.54
+0.0,37,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,20.3
+0.0,38,fixture_details,"{""fixture_code"": ""FX-00038""}",True,1,S,,23.07
+0.0,39,tickets_by_city,"{""top_n"": 5}",True,1,S,,39.96
+0.0,40,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,20.9
+0.0,41,fixture_details,"{""fixture_code"": ""FX-00041""}",True,1,S,,24.78
+0.0,42,tickets_by_city,"{""top_n"": 5}",True,1,S,,34.61
+0.0,43,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,21.32
+0.0,44,fixture_details,"{""fixture_code"": ""FX-00044""}",True,1,S,,24.49
+0.0,45,tickets_by_city,"{""top_n"": 5}",True,1,S,,33.96
+0.0,46,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,21.24
+0.0,47,fixture_details,"{""fixture_code"": ""FX-00047""}",True,1,S,,20.79
+0.0,48,tickets_by_city,"{""top_n"": 5}",True,1,S,,33.7
+0.0,49,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,21.92
+0.0,50,fixture_details,"{""fixture_code"": ""FX-00050""}",True,1,S,,23.2
+0.2,1,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,23.64
+0.2,2,fixture_details,"{""fixture_code"": ""FX-00002""}",True,1,S,,24.4
+0.2,3,tickets_by_city,"{""top_n"": 5}",True,1,S,,37.51
+0.2,4,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,22.74
+0.2,5,fixture_details,"{""fixture_code"": ""FX-00005""}",True,1,S,,24.65
+0.2,6,tickets_by_city,"{""top_n"": 5}",True,1,S,,34.09
+0.2,7,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,23.1
+0.2,8,fixture_details,"{""fixture_code"": ""FX-00008""}",True,1,S,,20.22
+0.2,9,tickets_by_city,"{""top_n"": 5}",True,1,S,,32.68
+0.2,10,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,20.2
+0.2,11,fixture_details,"{""fixture_code"": ""FX-00011""}",True,1,S,,22.41
+0.2,12,tickets_by_city,"{""top_n"": 5}",True,1,S,,33.8
+0.2,13,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,2,FS,,135.04
+0.2,14,fixture_details,"{""fixture_code"": ""FX-00014""}",True,1,S,,24.52
+0.2,15,tickets_by_city,"{""top_n"": 5}",True,2,FS,,148.71
+0.2,16,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,25.01
+0.2,17,fixture_details,"{""fixture_code"": ""FX-00017""}",True,1,S,,22.43
+0.2,18,tickets_by_city,"{""top_n"": 5}",True,1,S,,36.24
+0.2,19,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,22.7
+0.2,20,fixture_details,"{""fixture_code"": ""FX-00020""}",True,1,S,,23.84
+0.2,21,tickets_by_city,"{""top_n"": 5}",True,1,S,,32.7
+0.2,22,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,2,FS,,131.62
+0.2,23,fixture_details,"{""fixture_code"": ""FX-00023""}",True,1,S,,24.23
+0.2,24,tickets_by_city,"{""top_n"": 5}",True,1,S,,37.22
+0.2,25,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,21.28
+0.2,26,fixture_details,"{""fixture_code"": ""FX-00026""}",True,1,S,,24.51
+0.2,27,tickets_by_city,"{""top_n"": 5}",True,1,S,,34.77
+0.2,28,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,21.72
+0.2,29,fixture_details,"{""fixture_code"": ""FX-00029""}",True,1,S,,22.07
+0.2,30,tickets_by_city,"{""top_n"": 5}",True,1,S,,38.02
+0.2,31,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,2,FS,,135.6
+0.2,32,fixture_details,"{""fixture_code"": ""FX-00032""}",True,2,FS,,141.25
+0.2,33,tickets_by_city,"{""top_n"": 5}",True,1,S,,37.5
+0.2,34,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,23.39
+0.2,35,fixture_details,"{""fixture_code"": ""FX-00035""}",True,1,S,,21.65
+0.2,36,tickets_by_city,"{""top_n"": 5}",True,1,S,,33.11
+0.2,37,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,21.88
+0.2,38,fixture_details,"{""fixture_code"": ""FX-00038""}",True,2,FS,,135.05
+0.2,39,tickets_by_city,"{""top_n"": 5}",True,1,S,,35.48
+0.2,40,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,23.57
+0.2,41,fixture_details,"{""fixture_code"": ""FX-00041""}",True,1,S,,26.18
+0.2,42,tickets_by_city,"{""top_n"": 5}",True,1,S,,36.8
+0.2,43,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,22.25
+0.2,44,fixture_details,"{""fixture_code"": ""FX-00044""}",True,1,S,,24.58
+0.2,45,tickets_by_city,"{""top_n"": 5}",True,1,S,,37.55
+0.2,46,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,22.87
+0.2,47,fixture_details,"{""fixture_code"": ""FX-00047""}",True,1,S,,22.62
+0.2,48,tickets_by_city,"{""top_n"": 5}",True,1,S,,35.88
+0.2,49,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,2,FS,,122.24
+0.2,50,fixture_details,"{""fixture_code"": ""FX-00050""}",True,1,S,,25.01
+0.5,1,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",False,3,FFF,UNAVAILABLE,309.05
+0.5,2,fixture_details,"{""fixture_code"": ""FX-00002""}",True,1,S,,38.93
+0.5,3,tickets_by_city,"{""top_n"": 5}",True,1,S,,42.65
+0.5,4,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,20.85
+0.5,5,fixture_details,"{""fixture_code"": ""FX-00005""}",True,1,S,,20.18
+0.5,6,tickets_by_city,"{""top_n"": 5}",True,1,S,,31.08
+0.5,7,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,21.81
+0.5,8,fixture_details,"{""fixture_code"": ""FX-00008""}",True,1,S,,21.27
+0.5,9,tickets_by_city,"{""top_n"": 5}",False,3,FFF,UNAVAILABLE,311.23
+0.5,10,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,38.97
+0.5,11,fixture_details,"{""fixture_code"": ""FX-00011""}",True,3,FFS,,350.84
+0.5,12,tickets_by_city,"{""top_n"": 5}",True,1,S,,39.74
+0.5,13,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,23.77
+0.5,14,fixture_details,"{""fixture_code"": ""FX-00014""}",True,1,S,,22.6
+0.5,15,tickets_by_city,"{""top_n"": 5}",True,1,S,,36.27
+0.5,16,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,2,FS,,138.66
+0.5,17,fixture_details,"{""fixture_code"": ""FX-00017""}",True,2,FS,,143.25
+0.5,18,tickets_by_city,"{""top_n"": 5}",True,1,S,,39.32
+0.5,19,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,22.5
+0.5,20,fixture_details,"{""fixture_code"": ""FX-00020""}",True,1,S,,24.47
+0.5,21,tickets_by_city,"{""top_n"": 5}",True,1,S,,39.02
+0.5,22,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,2,FS,,139.0
+0.5,23,fixture_details,"{""fixture_code"": ""FX-00023""}",True,1,S,,24.41
+0.5,24,tickets_by_city,"{""top_n"": 5}",True,3,FFS,,363.41
+0.5,25,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,2,FS,,143.91
+0.5,26,fixture_details,"{""fixture_code"": ""FX-00026""}",True,1,S,,29.58
+0.5,27,tickets_by_city,"{""top_n"": 5}",True,1,S,,38.98
+0.5,28,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,21.86
+0.5,29,fixture_details,"{""fixture_code"": ""FX-00029""}",True,2,FS,,136.16
+0.5,30,tickets_by_city,"{""top_n"": 5}",True,3,FFS,,365.15
+0.5,31,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,24.77
+0.5,32,fixture_details,"{""fixture_code"": ""FX-00032""}",True,3,FFS,,350.09
+0.5,33,tickets_by_city,"{""top_n"": 5}",True,1,S,,42.58
+0.5,34,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",True,1,S,,25.41
+0.5,35,fixture_details,"{""fixture_code"": ""FX-00035""}",True,1,S,,25.14
+0.5,36,tickets_by_city,"{""top_n"": 5}",True,1,S,,33.04
+0.5,37,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",False,3,FFF,UNAVAILABLE,311.16
+0.5,38,fixture_details,"{""fixture_code"": ""FX-00038""}",True,2,FS,,145.52
+0.5,39,tickets_by_city,"{""top_n"": 5}",True,3,FFS,,365.17
+0.5,40,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",False,3,FFF,UNAVAILABLE,311.76
+0.5,41,fixture_details,"{""fixture_code"": ""FX-00041""}",False,3,FFF,UNAVAILABLE,310.44
+0.5,42,tickets_by_city,"{""top_n"": 5}",True,2,FS,,156.25
+0.5,43,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",False,3,FFF,UNAVAILABLE,311.33
+0.5,44,fixture_details,"{""fixture_code"": ""FX-00044""}",True,1,S,,36.74
+0.5,45,tickets_by_city,"{""top_n"": 5}",True,2,FS,,159.09
+0.5,46,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",False,3,FFF,UNAVAILABLE,307.76
+0.5,47,fixture_details,"{""fixture_code"": ""FX-00047""}",True,2,FS,,142.11
+0.5,48,tickets_by_city,"{""top_n"": 5}",True,2,FS,,157.21
+0.5,49,search_fixtures,"{""query"": ""Hawks"", ""limit"": 10}",False,3,FFF,UNAVAILABLE,311.72
+0.5,50,fixture_details,"{""fixture_code"": ""FX-00050""}",True,1,S,,42.08

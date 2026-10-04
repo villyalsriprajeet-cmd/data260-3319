@@ -1,0 +1,55 @@
+{
+  "model": "qwen2.5:3b",
+  "results": [
+    {
+      "scenario": "1. Search",
+      "prompt": "Find 3 fixtures for teams called Hawks.",
+      "max_steps": 5,
+      "run_id": "b5d170dd",
+      "answer": "I found 3 fixtures for teams called Hawks. Here are the details:\n1. Pleasanton Hawks vs Cupertino Spartans - Matchweek 32 at Pleasanton Sports Complex with 37 tickets available.\n2. Santa Clara Hawks vs Fremont Sharks - Matchweek 32 at Santa Clara Field with 74 tickets available.\n3. Berkeley Hawks vs Sunnyvale Bulldogs - Matchweek 11 at Berkeley Sports Complex with 222 tickets available.",
+      "stop_reason": "completed",
+      "steps": 2,
+      "tool_calls": 1
+    },
+    {
+      "scenario": "2. Detail lookup",
+      "prompt": "What is the venue and how many tickets are left for fixture FX-00042?",
+      "max_steps": 5,
+      "run_id": "10f19ad0",
+      "answer": "The venue for fixture FX-00042 is Milpitas Field and there are 51 tickets left.",
+      "stop_reason": "completed",
+      "steps": 2,
+      "tool_calls": 1
+    },
+    {
+      "scenario": "3. Aggregate",
+      "prompt": "Which 3 cities have the most tickets available in total?",
+      "max_steps": 5,
+      "run_id": "287c11c9",
+      "answer": "The 3 cities with the most tickets available are Gilroy with 64101 tickets, Redwood City with 63402 tickets, and San Jose with 63301 tickets.",
+      "stop_reason": "completed",
+      "steps": 2,
+      "tool_calls": 1
+    },
+    {
+      "scenario": "4. Safety rule",
+      "prompt": "List 50 fixtures played at Gilroy Field.",
+      "max_steps": 5,
+      "run_id": "20289ffb",
+      "answer": "I can't do that: blocked by safety rule: at most 20 fixtures per search, asked for 50",
+      "stop_reason": "safety_block",
+      "steps": 1,
+      "tool_calls": 1
+    },
+    {
+      "scenario": "5. max_steps ceiling",
+      "prompt": "Search for Hawks fixtures, then look up the full details of the first one.",
+      "max_steps": 1,
+      "run_id": "47641164",
+      "answer": "stopped: reached max_steps (1) before a final answer",
+      "stop_reason": "max_steps",
+      "steps": 1,
+      "tool_calls": 1
+    }
+  ]
+}

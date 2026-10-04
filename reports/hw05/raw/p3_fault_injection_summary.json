@@ -1,0 +1,41 @@
+{
+  "verify_seed": 263319,
+  "retry_policy": {
+    "max_attempts": 3,
+    "base_delay": 0.1,
+    "max_delay": 1.0
+  },
+  "db_timeout_s": 5,
+  "results": [
+    {
+      "failure_rate": 0.0,
+      "calls": 50,
+      "success_rate": 1.0,
+      "mean_latency_ms": 26.21,
+      "p99_latency_ms": 40.88,
+      "total_attempts": 50,
+      "sequence_sha256": "cc2e5ab8082123a6",
+      "same_sequence_on_replay": true
+    },
+    {
+      "failure_rate": 0.2,
+      "calls": 50,
+      "success_rate": 1.0,
+      "mean_latency_ms": 42.61,
+      "p99_latency_ms": 148.71,
+      "total_attempts": 57,
+      "sequence_sha256": "464e8d571fc30d5c",
+      "same_sequence_on_replay": true
+    },
+    {
+      "failure_rate": 0.5,
+      "calls": 50,
+      "success_rate": 0.84,
+      "mean_latency_ms": 131.37,
+      "p99_latency_ms": 365.17,
+      "total_attempts": 86,
+      "sequence_sha256": "423630a9add10db0",
+      "same_sequence_on_replay": true
+    }
+  ]
+}

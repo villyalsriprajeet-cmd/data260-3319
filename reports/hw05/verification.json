@@ -1,0 +1,270 @@
+{
+  "hw": "hw5",
+  "generated": "2026-10-04T00:36:05",
+  "commit_hash": "08f43cd3401170b1669410906d3e753e33b1c365",
+  "tag": "none",
+  "config": {
+    "SID4": 3319,
+    "PORT_BASE": 8619,
+    "PREFIX": "s3319",
+    "SEED": 3319,
+    "VERIFY_SEED": 263319,
+    "DOMAIN_ID": 7
+  },
+  "model": {
+    "llm": "qwen2.5:3b",
+    "runtime": "Ollama (local)",
+    "temperature": 0,
+    "max_steps": 5,
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_s": 0.1,
+      "max_delay_s": 1.0,
+      "db_timeout_s": 5
+    },
+    "safety_rule": "search_fixtures limit <= 20, no % or _ wildcards"
+  },
+  "all_passed": false,
+  "checks": [
+    {
+      "check": "file exists: code/mcp_servers/meals_server.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/mcp_servers/league_server.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/mcp_servers/envelope.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/mcp_servers/retry.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/mcp_servers/faults.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/mcp_servers/tool_entry.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/mcp_servers/agent.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/mcp_servers/test_runner.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/api/routers/teams.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/api/sql/003_hw05_relationship.sql",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/frontend/src/features/fixtures/fixturesSlice.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/frontend/src/store/store.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw05/RUN_LOG.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw05/METRICS.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw05/AI_USE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw05/REFLECTION.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw05/report.pdf",
+      "passed": false,
+      "detail": ""
+    },
+    {
+      "check": "raw/p2a_search_meals_by_name.json is valid JSON",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw/p2a_meals_by_ingredient.json is valid JSON",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw/p2a_random_meal.json is valid JSON",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw/p2a_meal_details.json is valid JSON",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "raw p2b search: valid call ok, invalid call rejected",
+      "passed": true,
+      "detail": "{'code': 'INVALID_INPUT', 'message': 'query must be at least 2 characters'}"
+    },
+    {
+      "check": "raw p2b details: valid call ok, invalid call rejected",
+      "passed": true,
+      "detail": "{'code': 'INVALID_INPUT', 'message': \"fixture_code must look like FX-00001, got 'ABC'\"}"
+    },
+    {
+      "check": "raw p2b aggregate: valid call ok, invalid call rejected",
+      "passed": true,
+      "detail": "{'code': 'INVALID_INPUT', 'message': 'top_n must be between 1 and 20, got 0'}"
+    },
+    {
+      "check": "raw fault data has 150 calls (3 rates x 50)",
+      "passed": true,
+      "detail": "150 rows, rates ['0.0', '0.2', '0.5']"
+    },
+    {
+      "check": "VERIFY_SEED replay gives the same success/failure sequence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "success rate falls as the failure rate rises",
+      "passed": true,
+      "detail": "{'0.0': 1.0, '0.2': 1.0, '0.5': 0.84}"
+    },
+    {
+      "check": "agent_runs.jsonl has at least 4 runs",
+      "passed": true,
+      "detail": "5 runs"
+    },
+    {
+      "check": "agent log shows completed, safety_block and max_steps stops",
+      "passed": true,
+      "detail": "['completed', 'max_steps', 'safety_block']"
+    },
+    {
+      "check": "agent log records tool calls with input and result",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "database connects to MySQL",
+      "passed": true,
+      "detail": "mysql+pymysql://s3319_app:***@localhost:3306/s3319_rel"
+    },
+    {
+      "check": "fixtures and teams tables are filled",
+      "passed": true,
+      "detail": "5000 fixtures, 200 teams"
+    },
+    {
+      "check": "fixtures -> teams foreign key is ON DELETE RESTRICT",
+      "passed": true,
+      "detail": "RESTRICT"
+    },
+    {
+      "check": "backend responds on port 8619",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "teams list without login returns 401",
+      "passed": true,
+      "detail": "401"
+    },
+    {
+      "check": "login returns 200",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "check": "teams list is paginated",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "check": "relationship query returns team 1's fixtures",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "check": "bad fixture_code format returns 422",
+      "passed": true,
+      "detail": "422"
+    },
+    {
+      "check": "deleting a team that has fixtures returns 409",
+      "passed": true,
+      "detail": "409"
+    },
+    {
+      "check": "meals MCP server lists its 4 tools",
+      "passed": true,
+      "detail": "['search_meals_by_name', 'meals_by_ingredient', 'random_meal', 'meal_details']"
+    },
+    {
+      "check": "meals MCP server answers search_meals_by_name",
+      "passed": true,
+      "detail": "{\n  \"count\": 1,\n  \"results\": [\n    {\n      \"id\": \"52771\",\n      \"name\": \"Spicy A"
+    },
+    {
+      "check": "league MCP server has exactly 3 tools",
+      "passed": true,
+      "detail": "['search_fixtures', 'fixture_details', 'tickets_by_city']"
+    },
+    {
+      "check": "league MCP server answers tickets_by_city in the {ok, data, error} envelope",
+      "passed": true,
+      "detail": "{\n  \"ok\": true,\n  \"data\": [\n    {\n      \"city\": \"Gilroy\",\n      \"fixtures\": 250,"
+    },
+    {
+      "check": "execute_tool allows a search within the safety rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "execute_tool blocks a search that breaks the safety rule",
+      "passed": true,
+      "detail": "{'code': 'SAFETY_BLOCKED', 'message': 'blocked by safety rule: at most 20 fixtures per search, asked for 50'}"
+    },
+    {
+      "check": "offline test runner passes every test",
+      "passed": true,
+      "detail": "12/12 tests passed"
+    },
+    {
+      "check": "Ollama has qwen2.5:3b",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+(data260) villyalsriprajeet@Villyals-MacBook-Pro data260-3319 % python code/mcp_servers/retry_demo.py
+2026-10-02 16:06:43,258 INFO league: fixture_details code=FX-00001
+2026-10-02 16:06:43,468 INFO league: fixture_details code=FX-00001
+2026-10-02 16:06:43,469 WARNING league.retry: attempt 1/3 failed: injected failure (simulated lost database connection); retrying in 100 ms
+2026-10-02 16:06:43,603 INFO league: fixture_details code=FX-00001
+2026-10-02 16:06:43,603 WARNING league.retry: attempt 1/3 failed: injected failure (simulated lost database connection); retrying in 100 ms
+2026-10-02 16:06:43,708 WARNING league.retry: attempt 2/3 failed: injected failure (simulated lost database connection); retrying in 200 ms
+2026-10-02 16:06:43,914 ERROR league.retry: attempt 3/3 failed: injected failure (simulated lost database connection); giving up
+Retry policy: 3 attempts, backoff 100 ms doubling, max 1000 ms, DB timeout 5 s per attempt
+
+1. Success on the first attempt
+  attempts: ok
+  time: 210 ms
+  result: {"ok": true, "data": {"fixture_code": "FX-00001", "fixture_title": "Pleasanton Hawks vs Cupertino Spartans - Matchweek 32"}, "error": null}
+
+2. Failure on the first attempt, success after a retry
+  attempts: fail -> ok
+  time: 135 ms
+  result: {"ok": true, "data": {"fixture_code": "FX-00001", "fixture_title": "Pleasanton Hawks vs Cupertino Spartans - Matchweek 32"}, "error": null}
+
+3. Failure on every allowed attempt
+  attempts: fail -> fail -> fail
+  time: 311 ms
+  result: {"ok": false, "data": null, "error": {"code": "UNAVAILABLE", "message": "database still failing after 3 attempts: injected failure (simulated lost database connection)"}}
+(data260) villyalsriprajeet@Villyals-MacBook-Pro data260-3319 % python code/mcp_servers/fault_injection.py
+2026-10-02 16:07:01,720 INFO league: tickets_by_city top_n=5
+2026-10-02 16:07:01,844 INFO league: tickets_by_city top_n=5
+2026-10-02 16:07:01,889 INFO league: tickets_by_city top_n=5
+2026-10-02 16:07:01,917 INFO league: search_fixtures query='Hawks' limit=10
+2026-10-02 16:07:01,945 INFO league: fixture_details code=FX-00002
+[... output trimmed, every call is in reports/hw05/raw/p3_fault_injection_calls.csv ...]
+2026-10-02 16:07:11,578 WARNING league.retry: attempt 1/3 failed: injected failure (simulated lost database connection); retrying in 100 ms
+2026-10-02 16:07:11,684 WARNING league.retry: attempt 2/3 failed: injected failure (simulated lost database connection); retrying in 200 ms
+2026-10-02 16:07:11,889 ERROR league.retry: attempt 3/3 failed: injected failure (simulated lost database connection); giving up
+2026-10-02 16:07:11,890 INFO league: fixture_details code=FX-00050
+VERIFY_SEED=263319, 50 calls per rate, 150 calls total
+Injected failure rate  Success rate  Mean latency (ms)  p99 latency (ms)  Attempts  Same sequence
+0%                     100%          26.21              40.88             50        True
+20%                    100%          42.61              148.71            57        True
+50%                    84%           131.37             365.17            86        True
+Raw data: /Users/villyalsriprajeet/Desktop/data260-3319/reports/hw05/raw/p3_fault_injection_calls.csv
+(data260) villyalsriprajeet@Villyals-MacBook-Pro data260-3319 % python code/mcp_servers/run_scenarios.py 2>/dev/null
+1. Search: steps=2 stop=completed tool_calls=1
+   answer: I found 3 fixtures for teams called Hawks. Here are the details:
+1. Pleasanton Hawks vs Cupertino Spartans - Matchweek 32 at Pleasanton Sports Complex with 37 t
+
+2. Detail lookup: steps=2 stop=completed tool_calls=1
+   answer: The venue for fixture FX-00042 is Milpitas Field and there are 51 tickets left.
+
+3. Aggregate: steps=2 stop=completed tool_calls=1
+   answer: The 3 cities with the most tickets available are Gilroy with 64101 tickets, Redwood City with 63402 tickets, and San Jose with 63301 tickets.
+
+4. Safety rule: steps=1 stop=safety_block tool_calls=1
+   answer: I can't do that: blocked by safety rule: at most 20 fixtures per search, asked for 50
+
+5. max_steps ceiling: steps=1 stop=max_steps tool_calls=1
+   answer: stopped: reached max_steps (1) before a final answer
+
+Model: qwen2.5:3b
+| Scenario | Steps | Stop reason | Tool calls |
+|---|---|---|---|
+| 1. Search | 2 | completed | 1 |
+| 2. Detail lookup | 2 | completed | 1 |
+| 3. Aggregate | 2 | completed | 1 |
+| 4. Safety rule | 1 | safety_block | 1 |
+| 5. max_steps ceiling | 1 | max_steps | 1 |
+
+Log: /Users/villyalsriprajeet/Desktop/data260-3319/reports/hw05/agent_runs.jsonl
+[2026-10-04T00:35:43-07:00] python code/mcp_servers/test_runner.py
+PASS  search_fixtures_valid
+PASS  search_fixtures_rejects_short_query
+PASS  fixture_details_valid
+PASS  fixture_details_rejects_bad_code
+PASS  tickets_by_city_valid
+PASS  tickets_by_city_rejects_zero
+PASS  fixture_details_unknown_code_not_found
+PASS  unknown_tool_is_rejected
+PASS  wrong_argument_type_and_missing_argument
+PASS  storage_failure_returns_clean_error
+PASS  safety_rule_blocks_bulk_search
+PASS  run_agent_stops_at_max_steps
+
+12/12 tests passed
+
+[2026-10-04T00:35:45-07:00] python code/mcp_servers/safety_demo.py
+Safety rule: the assistant may get at most 20 fixtures per search and may not use % or _ wildcards
+
+Allowed: search_fixtures({"query": "Gilroy Field", "limit": 5})
+  -> {"ok": true, "data": "5 fixtures", "error": null}
+
+Blocked: search_fixtures({"query": "Gilroy Field", "limit": 50})
+  -> {"ok": false, "data": null, "error": {"code": "SAFETY_BLOCKED", "message": "blocked by safety rule: at most 20 fixtures per search, asked for 50"}}
+
