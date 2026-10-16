@@ -160,13 +160,18 @@ def log_metrics(metrics, path):
         if new_file:
             writer.writeheader()
         writer.writerow(metrics)
-def chat_turn(user_id, session_id, message, short_term_n=None, summarize_every=None, top_k=None, log_path=config.METRICS_LOG):
+def compress_window(window, keep_full=4):
+    old, recent = window[:-keep_full], window[-keep_full:]
+    return [m for m in old if m["role"] == "user"] + recent  # evict old assistant replies, keep the user's own words
+def chat_turn(user_id, session_id, message, short_term_n=None, summarize_every=None, top_k=None, log_path=config.METRICS_LOG, policy=None):
     n = config.SHORT_TERM_N if short_term_n is None else short_term_n
     every = config.SUMMARIZE_EVERY_USER_MSGS if summarize_every is None else summarize_every
     k = config.EPISODIC_TOP_K if top_k is None else top_k
     started = time.perf_counter()
     saved = save_message(user_id, session_id, "user", message)  # 1. save the user message
     window = short_term(user_id, session_id, n, saved["_id"])  # 2. short term window
+    if policy == "evict_assistant":
+        window = compress_window(window)  # eviction policy: drop old assistant replies
     session_summary = latest_summary(user_id, "session", session_id)  # 3. summaries
     lifetime_summary = latest_summary(user_id, "user")
     facts = retrieve_episodes(user_id, embed(message), k)  # 4. top-k episodic facts
