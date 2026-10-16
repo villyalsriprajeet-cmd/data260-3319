@@ -1,0 +1,42 @@
+# HW6 Part 3 memory probes, written and committed BEFORE any sweep run
+version: 1
+planted_facts:  # facts the fixed 30-message conversation plants (user message number)
+  - {message: 1, fact: "name is Sri, manages the Spartans"}
+  - {message: 2, fact: "home games at Riverside Park Field 3"}
+  - {message: 5, fact: "usual kickoff is Saturday at 9 AM (later replaced by the message 26 update)"}
+  - {message: 12, fact: "remind by email, never by text"}
+  - {message: 19, fact: "biggest rival is the Hawks"}
+  - {message: 26, fact: "next game moved to Sunday at 2 PM"}
+rubric:  # quality score 1 to 5 for each answer
+  5: "every expected item is stated and nothing contradicts the conversation"
+  4: "correct but one expected item is missing"
+  3: "about half of the expected items are right"
+  2: "mostly wrong or vague, or a wrong fact is mixed in with a right one"
+  1: "wrong, contradicts the conversation, or says it does not know"
+scoring: "score = 1 + round(4 * matched_items / total_items); if any must_not word appears the score is at most 2"
+probes:
+  - id: P1
+    question: "What is my name and which team do I manage?"
+    expected: "Sri, the Spartans"
+    must_include: [[sri], [spartans]]  # each inner list is one item, any word in it counts as a match
+    must_not: []
+  - id: P2
+    question: "Where do our home games take place?"
+    expected: "Riverside Park Field 3"
+    must_include: [[riverside], ["field 3", "field three"]]
+    must_not: []
+  - id: P3
+    question: "Which team is our biggest rival?"
+    expected: "the Hawks"
+    must_include: [[hawks]]
+    must_not: []
+  - id: P4
+    question: "How do I want to be reminded about fixtures?"
+    expected: "by email, not by text"
+    must_include: [[email]]
+    must_not: []
+  - id: P5
+    question: "When is our next game now?"
+    expected: "Sunday at 2 PM (moved from the usual Saturday 9 AM)"
+    must_include: [[sunday], ["2 pm", "2pm", "2:00", "14:00"]]
+    must_not: []
