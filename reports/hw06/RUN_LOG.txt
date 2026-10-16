@@ -1,0 +1,260 @@
+
+[1] USER: Hi, my name is Sri and I manage the Spartans.
+    ASSISTANT: Hello Sri! It's great to hear that you manage the Spartans. How can I assist you with the community sports league fixtures app today?
+    short-term msgs used: 0 | summary used: False | new facts: ['The user manages the Spartans', "The user's name is Sri"]
+    episodic facts retrieved: []
+    prompt tokens: 70 | latency: 30256 ms
+
+[2] USER: My favorite team is the Spartans and we play at Spartan Soccer Complex.
+    ASSISTANT: Sri, as the manager of the Spartans, you can use the app to manage fixtures and schedules for the team, all while playing at the Spartan Soccer Complex.
+    short-term msgs used: 2 | summary used: False | new facts: ['The user supports the Spartans', 'We play at Spartan Soccer Complex']
+    episodic facts retrieved: ['The user manages the Spartans', "The user's name is Sri"]
+    prompt tokens: 147 | latency: 10291 ms
+
+[3] USER: We usually play on Saturday mornings at 9 AM.
+    ASSISTANT: Given your role as the manager of the Spartans, you can use the app to schedule and manage Saturday morning fixtures at 9 AM at the Spartan Soccer Complex.
+    short-term msgs used: 4 | summary used: False | new facts: []
+    episodic facts retrieved: ['We play at Spartan Soccer Complex', 'The user supports the Spartans', 'The user manages the Spartans']
+    prompt tokens: 210 | latency: 5428 ms
+
+[4] USER: Our rival is the Hawks and we play them next week.
+    ASSISTANT: Next week, you and your team will play against the Hawks at the Spartan Soccer Complex, supporting the Spartans.
+    short-term msgs used: 6 | summary used: False | new facts: []
+    episodic facts retrieved: ['We play at Spartan Soccer Complex', 'The user supports the Spartans', 'The user manages the Spartans']
+    prompt tokens: 265 | latency: 4307 ms
+
+[5] USER: I prefer short reminders by email, not text messages.
+    ASSISTANT: I understand, Sri. I will send reminders about your team's upcoming match against the Hawks next week at the Spartan Soccer Complex via email, as you prefer.
+    short-term msgs used: 8 | summary used: False | new facts: ['The user prefers reminders by email']
+    episodic facts retrieved: ["The user's name is Sri", 'The user manages the Spartans', 'The user supports the Spartans']
+    prompt tokens: 309 | latency: 15859 ms
+
+[6] USER: Which venue do we play at?
+    ASSISTANT: We play at the Spartan Soccer Complex, which is your team's home venue.
+    short-term msgs used: 10 | summary used: True | new facts: []
+    episodic facts retrieved: ['We play at Spartan Soccer Complex', 'The user supports the Spartans', "The user's name is Sri"]
+    prompt tokens: 419 | latency: 11318 ms
+
+[7] USER: Who is our rival?
+    ASSISTANT: Your rival is the Hawks, and you manage the Spartans who play at the Spartan Soccer Complex.
+    short-term msgs used: 12 | summary used: True | new facts: []
+    episodic facts retrieved: ['The user supports the Spartans', 'We play at Spartan Soccer Complex', 'The user manages the Spartans']
+    prompt tokens: 450 | latency: 5340 ms
+
+[8] USER: What day and time do we usually play?
+    ASSISTANT: You usually play at the Spartan Soccer Complex on Saturday mornings at 9 AM, supporting the Spartans that you manage.
+    short-term msgs used: 12 | summary used: True | new facts: []
+    episodic facts retrieved: ['We play at Spartan Soccer Complex', 'The user supports the Spartans', 'The user manages the Spartans']
+    prompt tokens: 437 | latency: 12567 ms
+
+[9] USER: How should you remind me about fixtures?
+    ASSISTANT: I should remind you about fixtures via email, as you prefer, and the Spartans play at the Spartan Soccer Complex.
+    short-term msgs used: 12 | summary used: True | new facts: []
+    episodic facts retrieved: ['The user prefers reminders by email', 'We play at Spartan Soccer Complex', 'The user manages the Spartans']
+    prompt tokens: 420 | latency: 10318 ms
+
+[10] USER: What is my name and which team do I manage?
+    ASSISTANT: Your name is not provided in the memory, but you manage the Spartans and support the team, which plays at the Spartan Soccer Complex.
+    short-term msgs used: 12 | summary used: True | new facts: []
+    episodic facts retrieved: ['We play at Spartan Soccer Complex', 'The user manages the Spartans', 'The user supports the Spartans']
+    prompt tokens: 411 | latency: 18764 ms
+
+[11] USER: Which team do I support?
+    ASSISTANT: You support the Spartans, who play at the Spartan Soccer Complex, and you manage the team.
+    short-term msgs used: 12 | summary used: True | new facts: []
+    episodic facts retrieved: ['The user supports the Spartans', 'We play at Spartan Soccer Complex', 'The user manages the Spartans']
+    prompt tokens: 410 | latency: 7839 ms
+
+[12] USER: Please summarize what you know about me.
+    ASSISTANT: You are named Sri and you support the Spartans, managing the team.
+    short-term msgs used: 12 | summary used: True | new facts: []
+    episodic facts retrieved: ['The user supports the Spartans', "The user's name is Sri", 'The user manages the Spartans']
+    prompt tokens: 395 | latency: 6491 ms
+{
+    "user_id": "sri3319",
+    "session_id": "demo-session-1",
+    "recent_messages": [
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "user",
+            "content": "I prefer short reminders by email, not text messages.",
+            "created_at": "2026-10-16T07:22:49.464000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "assistant",
+            "content": "I understand, Sri. I will send reminders about your team's upcoming match against the Hawks next week at the Spartan Soccer Complex via email, as you prefer.",
+            "created_at": "2026-10-16T07:22:54.163000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "user",
+            "content": "Which venue do we play at?",
+            "created_at": "2026-10-16T07:23:05.428000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "assistant",
+            "content": "We play at the Spartan Soccer Complex, which is your team's home venue.",
+            "created_at": "2026-10-16T07:23:14.118000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "user",
+            "content": "Who is our rival?",
+            "created_at": "2026-10-16T07:23:16.832000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "assistant",
+            "content": "Your rival is the Hawks, and you manage the Spartans who play at the Spartan Soccer Complex.",
+            "created_at": "2026-10-16T07:23:20.975000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "user",
+            "content": "What day and time do we usually play?",
+            "created_at": "2026-10-16T07:23:22.243000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "assistant",
+            "content": "You usually play at the Spartan Soccer Complex on Saturday mornings at 9 AM, supporting the Spartans that you manage.",
+            "created_at": "2026-10-16T07:23:33.619000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "user",
+            "content": "How should you remind me about fixtures?",
+            "created_at": "2026-10-16T07:23:34.933000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "assistant",
+            "content": "I should remind you about fixtures via email, as you prefer, and the Spartans play at the Spartan Soccer Complex.",
+            "created_at": "2026-10-16T07:23:44.051000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "user",
+            "content": "What is my name and which team do I manage?",
+            "created_at": "2026-10-16T07:23:45.355000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "assistant",
+            "content": "Your name is not provided in the memory, but you manage the Spartans and support the team, which plays at the Spartan Soccer Complex.",
+            "created_at": "2026-10-16T07:23:54.020000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "user",
+            "content": "Which team do I support?",
+            "created_at": "2026-10-16T07:24:04.212000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "assistant",
+            "content": "You support the Spartans, who play at the Spartan Soccer Complex, and you manage the team.",
+            "created_at": "2026-10-16T07:24:10.850000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "user",
+            "content": "Please summarize what you know about me.",
+            "created_at": "2026-10-16T07:24:12.307000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "role": "assistant",
+            "content": "You are named Sri and you support the Spartans, managing the team.",
+            "created_at": "2026-10-16T07:24:17.867000"
+        }
+    ],
+    "session_summary": {
+        "user_id": "sri3319",
+        "session_id": "demo-session-1",
+        "scope": "session",
+        "text": "- Sri manages the Spartans team.\n- The Spartans play at the Spartan Soccer Complex.\n- They usually play Saturday mornings at 9 AM.\n- Their next match is against the Hawks next week at the Spartan Soccer Complex.\n- Sri prefers receiving reminders via email.",
+        "created_at": "2026-10-16T07:24:03.705000"
+    },
+    "lifetime_summary": null,
+    "episodic_facts": [
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "fact": "The user prefers reminders by email",
+            "importance": 0.8,
+            "created_at": "2026-10-16T07:22:56.902000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "fact": "We play at Spartan Soccer Complex",
+            "importance": 0.7,
+            "created_at": "2026-10-16T07:22:39.385000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "fact": "The user supports the Spartans",
+            "importance": 0.8,
+            "created_at": "2026-10-16T07:22:38.044000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "fact": "The user's name is Sri",
+            "importance": 0.8,
+            "created_at": "2026-10-16T07:22:24.501000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "fact": "The user manages the Spartans",
+            "importance": 0.7,
+            "created_at": "2026-10-16T07:22:24.323000"
+        }
+    ]
+}
+{
+    "user_id": "sri3319",
+    "daily_message_counts": [
+        {
+            "date": "2026-10-16",
+            "count": 24
+        }
+    ],
+    "recent_summaries": [
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "scope": "session",
+            "text": "- Sri manages the Spartans team.\n- The Spartans play at the Spartan Soccer Complex.\n- They usually play Saturday mornings at 9 AM.\n- Their next match is against the Hawks next week at the Spartan Soccer Complex.\n- Sri prefers receiving reminders via email.",
+            "created_at": "2026-10-16T07:24:03.705000"
+        },
+        {
+            "user_id": "sri3319",
+            "session_id": "demo-session-1",
+            "scope": "session",
+            "text": "- Sri manages the Spartans team.\n- The Spartans play at the Spartan Soccer Complex.\n- They usually play Saturday mornings at 9 AM.\n- Their next match is against the Hawks next week at the Spartan Soccer Complex.\n- Sri prefers receiving reminders via email.",
+            "created_at": "2026-10-16T07:23:04.889000"
+        }
+    ]
+}

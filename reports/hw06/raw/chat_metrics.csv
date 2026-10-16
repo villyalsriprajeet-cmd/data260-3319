@@ -1,0 +1,15 @@
+timestamp,user_id,session_id,turn,short_term_n,prompt_tokens,completion_tokens,primer_tokens,long_term_tokens,short_term_tokens,current_tokens,episodic_tokens,extract_prompt_tokens,extract_completion_tokens,summary_prompt_tokens,summary_completion_tokens,latency_ms,reply_latency_ms,token_method
+2026-10-16T06:47:55+00:00,smoke,smoke1,1,12,65,17,44,0,0,8,0,102,120,0,0,84168,2123,qwen2.5 tokenizer
+2026-10-16T07:11:25+00:00,smoke,smoke1,1,12,65,17,44,0,0,8,0,102,120,0,0,23643,5224,qwen2.5 tokenizer
+2026-10-16T07:22:24+00:00,sri3319,demo-session-1,1,12,70,30,44,0,0,13,0,127,37,0,0,30256,2467,qwen2.5 tokenizer
+2026-10-16T07:22:39+00:00,sri3319,demo-session-1,2,12,147,35,44,0,42,15,15,129,37,0,0,10291,2426,qwen2.5 tokenizer
+2026-10-16T07:22:44+00:00,sri3319,demo-session-1,3,12,210,34,44,0,91,11,23,125,5,0,0,5428,3779,qwen2.5 tokenizer
+2026-10-16T07:22:49+00:00,sri3319,demo-session-1,4,12,265,24,44,0,135,12,23,126,5,0,0,4307,2698,qwen2.5 tokenizer
+2026-10-16T07:23:04+00:00,sri3319,demo-session-1,5,12,309,33,44,0,170,11,23,125,21,299,55,15859,3717,qwen2.5 tokenizer
+2026-10-16T07:23:16+00:00,sri3319,demo-session-1,6,12,419,17,44,57,213,7,23,121,5,0,0,11318,7898,qwen2.5 tokenizer
+2026-10-16T07:23:21+00:00,sri3319,demo-session-1,7,12,450,21,44,57,236,5,23,119,5,0,0,5340,3318,qwen2.5 tokenizer
+2026-10-16T07:23:34+00:00,sri3319,demo-session-1,8,12,437,25,44,57,219,9,23,123,5,0,0,12567,6008,qwen2.5 tokenizer
+2026-10-16T07:23:44+00:00,sri3319,demo-session-1,9,12,420,25,44,57,203,8,23,122,5,0,0,10318,5969,qwen2.5 tokenizer
+2026-10-16T07:24:03+00:00,sri3319,demo-session-1,10,12,411,29,44,57,191,11,23,125,5,291,55,18764,5731,qwen2.5 tokenizer
+2026-10-16T07:24:11+00:00,sri3319,demo-session-1,11,12,410,21,44,57,195,6,23,120,5,0,0,7839,5677,qwen2.5 tokenizer
+2026-10-16T07:24:18+00:00,sri3319,demo-session-1,12,12,395,16,44,57,178,8,23,122,5,0,0,6491,4313,qwen2.5 tokenizer
