@@ -2,24 +2,28 @@ import json
 import urllib.request
 class ModelClient:
     def __init__(self, model="qwen2.5:3b", base_url="http://localhost:11434",
-                 temperature=0.0, num_ctx=512, num_predict=256):
+                 temperature=0.0, num_ctx=512, num_predict=256, seed=None):
         self.model = model
         self.base_url = base_url.rstrip("/")
         self.temperature = temperature
         self.num_ctx = num_ctx
         self.num_predict = num_predict
-    def complete(self, messages, tools=None):
+        self.seed = seed  # fixed seed for repeatable runs
+    def complete(self, messages, tools=None, json_mode=True):
         payload = {
             "model": self.model,
             "messages": messages,
             "stream": False,
-            "format": "json",
             "options": {
                 "temperature": self.temperature,
                 "num_ctx": self.num_ctx,
                 "num_predict": self.num_predict,
             },
         }
+        if json_mode:
+            payload["format"] = "json" 
+        if self.seed is not None:
+            payload["options"]["seed"] = self.seed
         if tools:
             payload["tools"] = tools
         data = json.dumps(payload).encode("utf-8")

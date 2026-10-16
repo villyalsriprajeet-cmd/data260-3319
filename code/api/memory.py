@@ -166,7 +166,7 @@ def chat_turn(user_id, session_id, message, short_term_n=None, summarize_every=N
     k = config.EPISODIC_TOP_K if top_k is None else top_k
     started = time.perf_counter()
     saved = save_message(user_id, session_id, "user", message)  # 1. save the user message
-    window = short_term(user_id, session_id, n, saved["_id"])  # 2. short-term window
+    window = short_term(user_id, session_id, n, saved["_id"])  # 2. short term window
     session_summary = latest_summary(user_id, "session", session_id)  # 3. summaries
     lifetime_summary = latest_summary(user_id, "user")
     facts = retrieve_episodes(user_id, embed(message), k)  # 4. top-k episodic facts
