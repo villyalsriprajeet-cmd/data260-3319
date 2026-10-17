@@ -14,12 +14,16 @@ from .embedder import embed
 from .mongo_db import get_episodes, get_messages, get_summaries
 PRIMER = ("You are the assistant for a community sports league fixtures app. Use the memory you are given to answer. "
           "Answer in at most two short sentences. If the memory does not contain the answer, say you do not know.")
-EXTRACT_SYSTEM = ("Extract up to 3 short lasting facts about the user from their message, such as their name, team, venue or preferences. "
+EXTRACT_SYSTEM = ("Extract up to 3 short lasting facts from the user's message, such as their name, team, venue, rival team, kickoff time or schedule change, and how they want to be reminded. "
                   'Reply with JSON only, like {"facts":[{"fact":"The user supports the Spartans","importance":0.8}]}. '
                   "importance is 0 to 1, higher means more important to remember. Only use what the user literally said, never guess or infer. "
-                  "Questions and small talk give an empty list: {\"facts\":[]}. Output the JSON and nothing else.")
+                  "A statement about their team, games, rivals, schedule or preferences is a fact. Questions and small talk give an empty list: {\"facts\":[]}. "
+                  "Examples: 'We train on Wednesdays at 6 PM.' gives {\"facts\":[{\"fact\":\"The team trains on Wednesdays at 6 PM\",\"importance\":0.7}]}. "
+                  "'Our main competitor is the Lions.' gives {\"facts\":[{\"fact\":\"The user's main rival is the Lions\",\"importance\":0.7}]}. "
+                  "'Message me about changes, not call me.' gives {\"facts\":[{\"fact\":\"The user wants to be messaged, not called\",\"importance\":0.7}]}. "
+                  "'What time is it?' gives {\"facts\":[]}. Output the JSON and nothing else.")
 SUMMARY_SYSTEM = ("Summarize the conversation as at most 6 short bullet points, one per line starting with '- '. "
-                  "Keep names, teams, venues, dates and preferences. Merge the previous summary with the new messages.")
+                  "Keep only facts about the user, their team, venue, rivals, schedule and preferences, and ignore general sports answers. Put the newest changes first and keep every bullet under 15 words. Merge the previous summary with the new messages.")
 LIFETIME_SYSTEM = ("Condense these session summaries into one lifetime summary of at most 8 short bullet points, one per line starting with '- '. "
                    "Keep every lasting fact about the user and drop repeats.")
 METRIC_FIELDS = ["timestamp", "user_id", "session_id", "turn", "short_term_n", "prompt_tokens", "completion_tokens",
@@ -136,7 +140,7 @@ def summarize_session(user_id, session_id):
     rows = list(get_messages().find(query).sort([("created_at", 1), ("_id", 1)]))
     text = "\n".join(f"{r['role']}: {r['content']}" for r in rows)
     prompt = f"Previous summary:\n{last['text'] if last else 'none'}\n\nNew messages:\n{text}\n\nWrite the updated summary."
-    result = call_model([{"role": "system", "content": SUMMARY_SYSTEM}, {"role": "user", "content": prompt}], num_predict=200)
+    result = call_model([{"role": "system", "content": SUMMARY_SYSTEM}, {"role": "user", "content": prompt}], num_predict=250)
     doc = {"user_id": user_id, "session_id": session_id, "scope": "session", "text": result["text"].strip(), "created_at": now()}
     get_summaries().insert_one(doc)
     return result

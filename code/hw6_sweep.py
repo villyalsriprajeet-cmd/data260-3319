@@ -59,6 +59,9 @@ def run_setting(label, results):
     n, policy = SETTINGS[label]
     user_id, session_id = f"sweep-{label}", f"sweep-{label}-session"
     clear_user(user_id)
+    memory.call_model([{"role": "user", "content": "Say hi."}], num_predict=5)  # load the model, embedder and tokenizer before timing starts
+    embed("warm up")
+    memory.count_tokens("warm up")
     for i, text in enumerate(conversation(), 1):
         out = memory.chat_turn(user_id, session_id, text, short_term_n=n, log_path=TURNS_CSV, policy=policy)
         print(f"[{label}] turn {i}/30 | prompt {out['metrics']['prompt_tokens']} tok | {out['metrics']['latency_ms']} ms | facts +{len(out['used']['new_facts_saved'])}", flush=True)
