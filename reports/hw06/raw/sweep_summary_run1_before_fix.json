@@ -1,0 +1,14 @@
+{
+  "n4": {
+    "mean_prompt_tokens_model": 435.1,
+    "mean_prompt_tokens_own_count": 392.0,
+    "mean_completion_tokens": 29.4,
+    "mean_latency_ms": 12787,
+    "mean_reply_latency_ms": 4608,
+    "maintenance_in_tokens_per_turn": 245.8,
+    "maintenance_out_tokens_per_turn": 51.0,
+    "mean_probe_quality": 4.2,
+    "cost_10000_convs_usd": 324.88,
+    "cost_chat_only_usd": 174.63
+  }
+}

@@ -258,3 +258,686 @@
         }
     ]
 }
+2026-10-16 16:39:03 /Users/villyalsriprajeet/miniconda3_x86/envs/data260/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+2026-10-16 16:39:03   warnings.warn(
+2026-10-16 16:39:51 Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2026-10-16 16:39:51 [n4] turn 1/30 | prompt 70 tok | 101160 ms | facts +2
+2026-10-16 16:39:56 [n4] turn 2/30 | prompt 143 tok | 4795 ms | facts +1
+2026-10-16 16:40:00 [n4] turn 3/30 | prompt 192 tok | 3754 ms | facts +0
+2026-10-16 16:40:04 [n4] turn 4/30 | prompt 176 tok | 4017 ms | facts +0
+2026-10-16 16:40:18 [n4] turn 5/30 | prompt 181 tok | 14217 ms | facts +0
+2026-10-16 16:40:25 [n4] turn 6/30 | prompt 267 tok | 7259 ms | facts +0
+2026-10-16 16:40:31 [n4] turn 7/30 | prompt 272 tok | 5826 ms | facts +0
+2026-10-16 16:40:35 [n4] turn 8/30 | prompt 287 tok | 4291 ms | facts +0
+2026-10-16 16:40:41 [n4] turn 9/30 | prompt 284 tok | 5124 ms | facts +0
+2026-10-16 16:41:02 [n4] turn 10/30 | prompt 278 tok | 21654 ms | facts +0
+2026-10-16 16:41:09 [n4] turn 11/30 | prompt 393 tok | 6899 ms | facts +0
+2026-10-16 16:41:15 [n4] turn 12/30 | prompt 380 tok | 5607 ms | facts +0
+2026-10-16 16:41:20 [n4] turn 13/30 | prompt 358 tok | 5327 ms | facts +0
+2026-10-16 16:41:25 [n4] turn 14/30 | prompt 374 tok | 4977 ms | facts +0
+2026-10-16 16:42:01 [n4] turn 15/30 | prompt 365 tok | 36058 ms | facts +0
+2026-10-16 16:42:09 [n4] turn 16/30 | prompt 543 tok | 7555 ms | facts +0
+2026-10-16 16:42:14 [n4] turn 17/30 | prompt 545 tok | 4867 ms | facts +0
+2026-10-16 16:42:18 [n4] turn 18/30 | prompt 538 tok | 4634 ms | facts +0
+2026-10-16 16:42:23 [n4] turn 19/30 | prompt 536 tok | 4576 ms | facts +0
+2026-10-16 16:42:47 [n4] turn 20/30 | prompt 538 tok | 23028 ms | facts +0
+2026-10-16 16:42:52 [n4] turn 21/30 | prompt 637 tok | 5222 ms | facts +0
+2026-10-16 16:42:58 [n4] turn 22/30 | prompt 636 tok | 5241 ms | facts +0
+2026-10-16 16:43:03 [n4] turn 23/30 | prompt 629 tok | 5881 ms | facts +0
+2026-10-16 16:43:09 [n4] turn 24/30 | prompt 639 tok | 5917 ms | facts +0
+2026-10-16 16:43:32 [n4] turn 25/30 | prompt 635 tok | 22392 ms | facts +0
+2026-10-16 16:43:38 [n4] turn 26/30 | prompt 628 tok | 6655 ms | facts +0
+2026-10-16 16:43:43 [n4] turn 27/30 | prompt 623 tok | 4961 ms | facts +0
+2026-10-16 16:43:48 [n4] turn 28/30 | prompt 631 tok | 4654 ms | facts +0
+2026-10-16 16:43:53 [n4] turn 29/30 | prompt 635 tok | 5282 ms | facts +0
+2026-10-16 16:44:35 [n4] turn 30/30 | prompt 639 tok | 41780 ms | facts +0
+2026-10-16 16:44:42 [n4] P1 score 5 | Your name is Sri and you manage the Spartans, who play their home games at Riverside Park Field 3.
+2026-10-16 16:44:44 [n4] P2 score 5 | Our home games take place at Riverside Park Field 3.
+2026-10-16 16:44:45 [n4] P3 score 5 | Our biggest rival is the Hawks.
+2026-10-16 16:44:48 [n4] P4 score 5 | I want to be reminded about fixtures by email, as it is the preferred method for reminders and it aligns with the user's preference.
+2026-10-16 16:44:53 [n4] P5 score 1 | Our next game is not specified in the current session summary, so I don't have the exact date. However, since the user manages the Spartans and Riverside Park Field 3 is their home venue, we can expect the next game to be at Riverside Park Field 3.
+2026-10-16 16:44:53 
+2026-10-16 16:44:53 | setting | mean prompt tokens/turn (model) | (own count) | mean latency ms | probe quality 1-5 | cost 10k convs (chat only) | cost (with memory upkeep) |
+2026-10-16 16:44:53 |---|---|---|---|---|---|---|
+2026-10-16 16:44:53 | n4 | 435.1 | 392.0 | 12787 | 4.2 | $174.63 | $324.88 |
+=== run 2: after extraction and summary fix, all four settings ===
+2026-10-16 17:21:03 /Users/villyalsriprajeet/miniconda3_x86/envs/data260/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+2026-10-16 17:21:03   warnings.warn(
+2026-10-16 17:21:14 Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2026-10-16 17:21:26 [n4] turn 1/30 | prompt 70 tok | 11882 ms | facts +2
+2026-10-16 17:21:33 [n4] turn 2/30 | prompt 143 tok | 7402 ms | facts +1
+2026-10-16 17:21:37 [n4] turn 3/30 | prompt 191 tok | 3843 ms | facts +0
+2026-10-16 17:21:41 [n4] turn 4/30 | prompt 175 tok | 4374 ms | facts +0
+2026-10-16 17:21:58 [n4] turn 5/30 | prompt 180 tok | 16544 ms | facts +1
+2026-10-16 17:22:05 [n4] turn 6/30 | prompt 264 tok | 6697 ms | facts +0
+2026-10-16 17:22:14 [n4] turn 7/30 | prompt 269 tok | 9694 ms | facts +0
+2026-10-16 17:22:21 [n4] turn 8/30 | prompt 295 tok | 6202 ms | facts +0
+2026-10-16 17:22:27 [n4] turn 9/30 | prompt 296 tok | 6521 ms | facts +0
+2026-10-16 17:22:49 [n4] turn 10/30 | prompt 270 tok | 21519 ms | facts +0
+2026-10-16 17:22:56 [n4] turn 11/30 | prompt 351 tok | 7567 ms | facts +0
+2026-10-16 17:23:08 [n4] turn 12/30 | prompt 342 tok | 11600 ms | facts +1
+2026-10-16 17:23:14 [n4] turn 13/30 | prompt 343 tok | 6189 ms | facts +0
+2026-10-16 17:23:20 [n4] turn 14/30 | prompt 365 tok | 5416 ms | facts +0
+2026-10-16 17:23:59 [n4] turn 15/30 | prompt 351 tok | 39826 ms | facts +0
+2026-10-16 17:24:08 [n4] turn 16/30 | prompt 473 tok | 8705 ms | facts +0
+2026-10-16 17:24:14 [n4] turn 17/30 | prompt 486 tok | 5578 ms | facts +0
+2026-10-16 17:24:24 [n4] turn 18/30 | prompt 473 tok | 9734 ms | facts +0
+2026-10-16 17:24:33 [n4] turn 19/30 | prompt 508 tok | 9132 ms | facts +1
+2026-10-16 17:24:53 [n4] turn 20/30 | prompt 522 tok | 19781 ms | facts +0
+2026-10-16 17:25:02 [n4] turn 21/30 | prompt 474 tok | 9318 ms | facts +0
+2026-10-16 17:25:09 [n4] turn 22/30 | prompt 499 tok | 7177 ms | facts +0
+2026-10-16 17:25:17 [n4] turn 23/30 | prompt 473 tok | 7419 ms | facts +0
+2026-10-16 17:25:22 [n4] turn 24/30 | prompt 457 tok | 5216 ms | facts +0
+2026-10-16 17:25:38 [n4] turn 25/30 | prompt 443 tok | 16558 ms | facts +0
+2026-10-16 17:25:49 [n4] turn 26/30 | prompt 459 tok | 10249 ms | facts +1
+2026-10-16 17:25:54 [n4] turn 27/30 | prompt 461 tok | 5163 ms | facts +0
+2026-10-16 17:25:59 [n4] turn 28/30 | prompt 454 tok | 5086 ms | facts +0
+2026-10-16 17:26:04 [n4] turn 29/30 | prompt 448 tok | 5181 ms | facts +0
+2026-10-16 17:26:40 [n4] turn 30/30 | prompt 437 tok | 34124 ms | facts +0
+2026-10-16 17:26:47 [n4] P1 score 3 | Your name is not provided in the remembered facts, but you manage the Spartans and your home games are at Riverside Park Field 3.
+2026-10-16 17:26:49 [n4] P2 score 5 | Our home games take place at Riverside Park Field 3.
+2026-10-16 17:26:52 [n4] P3 score 5 | Our biggest rival is the Hawks, and our home games are still scheduled at Riverside Park Field 3.
+2026-10-16 17:26:56 [n4] P4 score 5 | I want to be reminded about fixtures by email, with our home games at Riverside Park Field 3 and our next game scheduled for Sunday at 2 PM.
+2026-10-16 17:26:59 [n4] P5 score 5 | Our next game is now scheduled for Sunday at 2 PM at Riverside Park Field 3.
+2026-10-16 17:27:08 [n12] turn 1/30 | prompt 70 tok | 7882 ms | facts +2
+2026-10-16 17:27:13 [n12] turn 2/30 | prompt 143 tok | 5437 ms | facts +1
+2026-10-16 17:27:16 [n12] turn 3/30 | prompt 191 tok | 2855 ms | facts +0
+2026-10-16 17:27:20 [n12] turn 4/30 | prompt 227 tok | 4147 ms | facts +0
+2026-10-16 17:27:38 [n12] turn 5/30 | prompt 269 tok | 17401 ms | facts +1
+2026-10-16 17:27:45 [n12] turn 6/30 | prompt 415 tok | 7765 ms | facts +0
+2026-10-16 17:27:54 [n12] turn 7/30 | prompt 462 tok | 8892 ms | facts +0
+2026-10-16 17:28:02 [n12] turn 8/30 | prompt 482 tok | 7788 ms | facts +0
+2026-10-16 17:28:13 [n12] turn 9/30 | prompt 488 tok | 10550 ms | facts +0
+2026-10-16 17:28:38 [n12] turn 10/30 | prompt 514 tok | 25480 ms | facts +0
+2026-10-16 17:28:46 [n12] turn 11/30 | prompt 585 tok | 7588 ms | facts +0
+2026-10-16 17:28:58 [n12] turn 12/30 | prompt 557 tok | 12068 ms | facts +1
+2026-10-16 17:29:08 [n12] turn 13/30 | prompt 585 tok | 9724 ms | facts +0
+2026-10-16 17:29:15 [n12] turn 14/30 | prompt 566 tok | 7142 ms | facts +0
+2026-10-16 17:29:51 [n12] turn 15/30 | prompt 569 tok | 36089 ms | facts +0
+2026-10-16 17:30:00 [n12] turn 16/30 | prompt 687 tok | 8812 ms | facts +0
+2026-10-16 17:30:07 [n12] turn 17/30 | prompt 663 tok | 7186 ms | facts +0
+2026-10-16 17:30:16 [n12] turn 18/30 | prompt 662 tok | 8651 ms | facts +0
+2026-10-16 17:30:26 [n12] turn 19/30 | prompt 658 tok | 10166 ms | facts +1
+2026-10-16 17:30:46 [n12] turn 20/30 | prompt 653 tok | 19925 ms | facts +0
+2026-10-16 17:30:54 [n12] turn 21/30 | prompt 700 tok | 8264 ms | facts +0
+2026-10-16 17:31:02 [n12] turn 22/30 | prompt 707 tok | 7614 ms | facts +0
+2026-10-16 17:31:08 [n12] turn 23/30 | prompt 708 tok | 6497 ms | facts +0
+2026-10-16 17:31:18 [n12] turn 24/30 | prompt 696 tok | 9679 ms | facts +0
+2026-10-16 17:31:35 [n12] turn 25/30 | prompt 700 tok | 16905 ms | facts +0
+2026-10-16 17:31:46 [n12] turn 26/30 | prompt 672 tok | 11030 ms | facts +1
+2026-10-16 17:31:53 [n12] turn 27/30 | prompt 672 tok | 6939 ms | facts +0
+2026-10-16 17:32:01 [n12] turn 28/30 | prompt 675 tok | 7780 ms | facts +0
+2026-10-16 17:32:08 [n12] turn 29/30 | prompt 678 tok | 7525 ms | facts +0
+2026-10-16 17:32:48 [n12] turn 30/30 | prompt 691 tok | 39729 ms | facts +0
+2026-10-16 17:32:57 [n12] P1 score 5 | Your name is Sri and you manage the Spartans, who usually kick off home games at Riverside Park Field 3 on Saturdays at 9 AM.
+2026-10-16 17:33:01 [n12] P2 score 5 | Our home games take place at Riverside Park Field 3, as usual. However, our next game has been moved to Sunday at 2 PM due to a postponement.
+2026-10-16 17:33:05 [n12] P3 score 5 | Our biggest rival is the Hawks, and we usually play our home games at Riverside Park Field 3 on Saturdays at 9 AM.
+2026-10-16 17:33:09 [n12] P4 score 5 | I want to be reminded about fixtures by email, as you prefer, and our next game has been moved to Sunday at 2 PM.
+2026-10-16 17:33:12 [n12] P5 score 5 | Our next game is now scheduled for Sunday at 2 PM.
+2026-10-16 17:33:23 [n30] turn 1/30 | prompt 70 tok | 6100 ms | facts +2
+2026-10-16 17:33:29 [n30] turn 2/30 | prompt 143 tok | 5497 ms | facts +1
+2026-10-16 17:33:32 [n30] turn 3/30 | prompt 191 tok | 2873 ms | facts +0
+2026-10-16 17:33:36 [n30] turn 4/30 | prompt 227 tok | 4172 ms | facts +0
+2026-10-16 17:33:52 [n30] turn 5/30 | prompt 269 tok | 15908 ms | facts +1
+2026-10-16 17:33:56 [n30] turn 6/30 | prompt 415 tok | 4509 ms | facts +0
+2026-10-16 17:34:03 [n30] turn 7/30 | prompt 462 tok | 7165 ms | facts +0
+2026-10-16 17:34:09 [n30] turn 8/30 | prompt 534 tok | 5158 ms | facts +0
+2026-10-16 17:34:15 [n30] turn 9/30 | prompt 576 tok | 6138 ms | facts +0
+2026-10-16 17:34:34 [n30] turn 10/30 | prompt 641 tok | 19139 ms | facts +0
+2026-10-16 17:34:45 [n30] turn 11/30 | prompt 760 tok | 11337 ms | facts +0
+2026-10-16 17:34:55 [n30] turn 12/30 | prompt 811 tok | 9795 ms | facts +1
+2026-10-16 17:35:02 [n30] turn 13/30 | prompt 878 tok | 6395 ms | facts +0
+2026-10-16 17:35:11 [n30] turn 14/30 | prompt 934 tok | 8930 ms | facts +0
+2026-10-16 17:35:50 [n30] turn 15/30 | prompt 1014 tok | 39592 ms | facts +0
+2026-10-16 17:36:08 [n30] turn 16/30 | prompt 1211 tok | 17812 ms | facts +0
+2026-10-16 17:36:22 [n30] turn 17/30 | prompt 1225 tok | 13628 ms | facts +0
+2026-10-16 17:36:36 [n30] turn 18/30 | prompt 1221 tok | 14526 ms | facts +0
+2026-10-16 17:36:54 [n30] turn 19/30 | prompt 1251 tok | 17495 ms | facts +1
+2026-10-16 17:37:21 [n30] turn 20/30 | prompt 1273 tok | 27032 ms | facts +0
+2026-10-16 17:37:37 [n30] turn 21/30 | prompt 1282 tok | 16247 ms | facts +0
+2026-10-16 17:37:53 [n30] turn 22/30 | prompt 1322 tok | 15457 ms | facts +0
+2026-10-16 17:38:08 [n30] turn 23/30 | prompt 1313 tok | 15026 ms | facts +0
+2026-10-16 17:38:22 [n30] turn 24/30 | prompt 1339 tok | 14458 ms | facts +0
+2026-10-16 17:38:48 [n30] turn 25/30 | prompt 1336 tok | 25825 ms | facts +0
+2026-10-16 17:39:05 [n30] turn 26/30 | prompt 1336 tok | 16939 ms | facts +1
+2026-10-16 17:39:22 [n30] turn 27/30 | prompt 1347 tok | 16789 ms | facts +0
+2026-10-16 17:39:36 [n30] turn 28/30 | prompt 1363 tok | 14114 ms | facts +0
+2026-10-16 17:39:51 [n30] turn 29/30 | prompt 1359 tok | 15509 ms | facts +0
+2026-10-16 17:40:31 [n30] turn 30/30 | prompt 1352 tok | 39753 ms | facts +0
+2026-10-16 17:40:45 [n30] P1 score 3 | Your name is not provided in the remembered facts, but you manage the Spartans, and your team usually kicks off on Saturdays at 9 AM, with home games at Riverside Park Field 3.
+2026-10-16 17:40:50 [n30] P2 score 5 | Our home games take place at Riverside Park Field 3. Our next game has been moved to Sunday at 2 PM, which is not our usual Saturday kickoff at 9 AM.
+2026-10-16 17:40:54 [n30] P3 score 5 | Our biggest rival is the Hawks. Our home games are at Riverside Park Field 3, and we usually kickoff on Saturdays at 9 AM.
+2026-10-16 17:40:59 [n30] P4 score 5 | You want to be reminded about fixtures by email, as you prefer. Our home games are at Riverside Park Field 3, and our next game has been moved to Sunday at 2 PM.
+2026-10-16 17:41:03 [n30] P5 score 5 | Our next game is now scheduled for Sunday at 2 PM. Our home games are at Riverside Park Field 3, and we usually kickoff on Saturdays at 9 AM.
+2026-10-16 17:41:14 [evict] turn 1/30 | prompt 70 tok | 7448 ms | facts +2
+2026-10-16 17:41:20 [evict] turn 2/30 | prompt 143 tok | 5779 ms | facts +1
+2026-10-16 17:41:23 [evict] turn 3/30 | prompt 191 tok | 2765 ms | facts +0
+2026-10-16 17:41:27 [evict] turn 4/30 | prompt 188 tok | 3738 ms | facts +0
+2026-10-16 17:41:39 [evict] turn 5/30 | prompt 204 tok | 12657 ms | facts +1
+2026-10-16 17:41:46 [evict] turn 6/30 | prompt 283 tok | 6610 ms | facts +0
+2026-10-16 17:41:52 [evict] turn 7/30 | prompt 303 tok | 5885 ms | facts +0
+2026-10-16 17:41:57 [evict] turn 8/30 | prompt 307 tok | 4815 ms | facts +0
+2026-10-16 17:42:02 [evict] turn 9/30 | prompt 300 tok | 5071 ms | facts +0
+2026-10-16 17:42:16 [evict] turn 10/30 | prompt 299 tok | 14511 ms | facts +0
+2026-10-16 17:42:22 [evict] turn 11/30 | prompt 326 tok | 5486 ms | facts +0
+2026-10-16 17:42:32 [evict] turn 12/30 | prompt 318 tok | 9628 ms | facts +1
+2026-10-16 17:42:39 [evict] turn 13/30 | prompt 338 tok | 6919 ms | facts +0
+2026-10-16 17:42:43 [evict] turn 14/30 | prompt 356 tok | 4407 ms | facts +0
+2026-10-16 17:43:08 [evict] turn 15/30 | prompt 336 tok | 24453 ms | facts +0
+2026-10-16 17:43:13 [evict] turn 16/30 | prompt 408 tok | 5938 ms | facts +0
+2026-10-16 17:43:19 [evict] turn 17/30 | prompt 408 tok | 5544 ms | facts +0
+2026-10-16 17:43:26 [evict] turn 18/30 | prompt 402 tok | 6563 ms | facts +0
+2026-10-16 17:43:34 [evict] turn 19/30 | prompt 422 tok | 8661 ms | facts +1
+2026-10-16 17:43:54 [evict] turn 20/30 | prompt 431 tok | 19182 ms | facts +0
+2026-10-16 17:44:02 [evict] turn 21/30 | prompt 449 tok | 7998 ms | facts +0
+2026-10-16 17:44:09 [evict] turn 22/30 | prompt 457 tok | 7011 ms | facts +0
+2026-10-16 17:44:17 [evict] turn 23/30 | prompt 451 tok | 8754 ms | facts +0
+2026-10-16 17:44:24 [evict] turn 24/30 | prompt 463 tok | 6646 ms | facts +0
+2026-10-16 17:44:39 [evict] turn 25/30 | prompt 460 tok | 15073 ms | facts +0
+2026-10-16 17:44:49 [evict] turn 26/30 | prompt 429 tok | 9549 ms | facts +1
+2026-10-16 17:44:54 [evict] turn 27/30 | prompt 419 tok | 5147 ms | facts +0
+2026-10-16 17:45:01 [evict] turn 28/30 | prompt 404 tok | 6991 ms | facts +0
+2026-10-16 17:45:08 [evict] turn 29/30 | prompt 424 tok | 7258 ms | facts +0
+2026-10-16 17:45:44 [evict] turn 30/30 | prompt 438 tok | 35789 ms | facts +0
+2026-10-16 17:45:53 [evict] P1 score 3 | Your name is not provided in the remembered facts, but you manage the Spartans and your team usually kicks off at Riverside Park Field 3 on Saturdays at 9 AM.
+2026-10-16 17:45:59 [evict] P2 score 5 | Our home games take place at Riverside Park Field 3. Our next game has been moved to Sunday at 2 PM, and we usually kick off on Saturdays at 9 AM.
+2026-10-16 17:46:03 [evict] P3 score 5 | Our biggest rival is the Hawks, and our home games are typically at Riverside Park Field 3, where we usually kick off on Saturdays at 9 AM.
+2026-10-16 17:46:08 [evict] P4 score 5 | I want to be reminded about fixtures by email, as I prefer that method. Our next game has been moved to Sunday at 2 PM and our home games are at Riverside Park Field 3.
+2026-10-16 17:46:11 [evict] P5 score 5 | Our next game is now scheduled for Sunday at 2 PM at Riverside Park Field 3.
+2026-10-16 17:46:15 
+2026-10-16 17:46:15 | setting | mean prompt tokens/turn (model) | (own count) | mean latency ms | probe quality 1-5 | cost 10k convs (chat only) | cost (with memory upkeep) |
+2026-10-16 17:46:15 |---|---|---|---|---|---|---|
+2026-10-16 17:46:15 | n4 | 365.7 | 322.7 | 10790 | 4.6 | $163.41 | $331.18 |
+2026-10-16 17:46:15 | n12 | 544.8 | 467.8 | 11584 | 5 | $215.49 | $387.62 |
+2026-10-16 17:46:15 | n30 | 915.2 | 781.1 | 14444 | 4.6 | $340.41 | $506.88 |
+2026-10-16 17:46:15 | evict | 347.6 | 304.5 | 9209 | 4.6 | $153.33 | $311.19 |
+2026-10-17 16:00:51 needs_consolidation: (True, '49 content lines > 40')
+2026-10-17 16:00:51 content lines before: 49, after: 34
+2026-10-17 16:00:51   MERGED duplicate | name | 4 copies (2026-03-01, 2026-05-15, 2026-07-21, 2026-09-02) -> kept 2026-09-02
+2026-10-17 16:00:51   MERGED duplicate | timezone | 2 copies (2026-03-02, 2026-08-29) -> kept 2026-08-29
+2026-10-17 16:00:51   CONTRADICTION | kit colour | kept 2026-08-12 'red' over 2026-03-05 'blue'
+2026-10-17 16:00:51   CONTRADICTION | training day | kept 2026-08-20 'Wednesday' over 2026-04-02 'Tuesday'
+2026-10-17 16:00:51   CONTRADICTION | home venue | kept 2026-09-30 'maybe moving to Eastside Field next season (unconfirmed)' over 2026-03-01 'Riverside Park'
+2026-10-17 16:00:51   REVIEW | home venue | newest value is hedged, so newest-wins may be WRONG; the older value may still be true
+2026-10-17 16:00:51   MERGED duplicate | field surface | 2 copies (2026-03-12, 2026-09-30) -> kept 2026-09-30
+2026-10-17 16:00:51   MERGED duplicate | rival | 3 copies (2026-05-02, 2026-08-08, 2026-09-14) -> kept 2026-09-14
+2026-10-17 16:00:51   CONTRADICTION | next game | kept 2026-09-28 'Sunday 2 PM' over 2026-09-01 'Saturday 10 AM'
+2026-10-17 16:00:51   MERGED duplicate | summary style | 2 copies (2026-03-03, 2026-06-19) -> kept 2026-06-19
+2026-10-17 16:00:51   MERGED duplicate | league | 3 copies (2026-03-01, 2026-05-09, 2026-09-09) -> kept 2026-09-09
+2026-10-17 16:00:51   MERGED duplicate | points for win | 2 copies (2026-03-01, 2026-07-30) -> kept 2026-07-30
+2026-10-17 16:00:51 log written to MEMORY_CONSOLIDATION_LOG.md
+2026-10-17 16:07:52 startup: consolidation required = False (34 content lines, consolidated 2026-10-17T16:00:51)
+2026-10-17 16:07:52 
+2026-10-17 16:07:52 you> /help
+2026-10-17 16:07:52 Commands:
+2026-10-17 16:07:52   /memory   show AGENT.md and MEMORY.md as the model sees them
+2026-10-17 16:07:52   /compact  consolidate MEMORY.md and compress older chat messages (counts before and after)
+2026-10-17 16:07:52   /dream    pull lasting facts out of the recent chat and add them to MEMORY.md
+2026-10-17 16:07:52   /help     show this list
+2026-10-17 16:07:52   /quit     leave
+2026-10-17 16:07:52 
+2026-10-17 16:07:52 you> /memory
+2026-10-17 16:07:52 AGENT.md: 23 content lines
+2026-10-17 16:07:52 MEMORY.md: 34 content lines, last consolidated 2026-10-17 16:00:51
+2026-10-17 16:07:52 consolidation required: False (34 content lines, consolidated 2026-10-17T16:00:51)
+2026-10-17 16:07:52 --- MEMORY.md ---
+2026-10-17 16:07:52 <!-- last_consolidated: 2026-10-17T16:00:51 -->
+2026-10-17 16:07:52 # MEMORY.md
+2026-10-17 16:07:52 ## User
+2026-10-17 16:07:52 - [2026-09-02] name: Sri
+2026-10-17 16:07:52 - [2026-03-01] role: manager of the Spartans
+2026-10-17 16:07:52 - [2026-08-29] timezone: Pacific Time
+2026-10-17 16:07:52 - [2026-04-10] contact: prefers email over phone
+2026-10-17 16:07:52 - [2026-06-01] availability: weekday evenings only
+2026-10-17 16:07:52 - [2026-08-03] experience: second season managing the team
+2026-10-17 16:07:52 ## Team
+2026-10-17 16:07:52 - [2026-03-01] team: Spartans
+2026-10-17 16:07:52 - [2026-08-12] kit colour: red (supersedes 2026-03-05: blue)
+2026-10-17 16:07:52 - [2026-03-10] division: Division B
+2026-10-17 16:07:52 - [2026-08-20] training day: Wednesday (supersedes 2026-04-02: Tuesday)
+2026-10-17 16:07:52 - [2026-05-20] captain: Dana Reyes
+2026-10-17 16:07:52 - [2026-06-11] sponsor: Harbor Diner
+2026-10-17 16:07:52 ## Venue and schedule
+2026-10-17 16:07:52 - [2026-09-30] home venue: maybe moving to Eastside Field next season (unconfirmed) (supersedes 2026-03-01: Riverside Park)
+2026-10-17 16:07:52 - [2026-09-30] field surface: grass
+2026-10-17 16:07:52 - [2026-09-14] rival: Eagles
+2026-10-17 16:07:52 - [2026-06-14] away venue: Lakeview Stadium
+2026-10-17 16:07:52 - [2026-09-28] next game: Sunday 2 PM (supersedes 2026-09-01: Saturday 10 AM)
+2026-10-17 16:07:52 ## Preferences
+2026-10-17 16:07:52 - [2026-06-19] summary style: short bullets
+2026-10-17 16:07:52 - [2026-03-03] reminders: send 24 hours before kickoff
+2026-10-17 16:07:52 - [2026-04-22] units: miles
+2026-10-17 16:07:52 - [2026-05-30] language: English
+2026-10-17 16:07:52 - [2026-08-15] tone: friendly
+2026-10-17 16:07:52 ## League
+2026-10-17 16:07:52 - [2026-09-09] league: Community Sports League
+2026-10-17 16:07:52 - [2026-07-30] points for win: 3
+2026-10-17 16:07:52 - [2026-03-01] points for draw: 1
+2026-10-17 16:07:52 - [2026-04-05] season length: 12 weeks
+2026-10-17 16:07:52 - [2026-06-21] fixture source: league website
+2026-10-17 16:07:52 - [2026-08-25] rules: roster locks after week 3
+2026-10-17 16:07:52 
+2026-10-17 16:07:52 you> Hi, I am Sri and I manage the Spartans.
+2026-10-17 16:08:08 assistant: -
+2026-10-17 16:08:08 [prompt tokens: 1118, chat messages: 2]
+2026-10-17 16:08:08 
+2026-10-17 16:08:08 you> Our home games are at Riverside Park and I always want reminders 48 hours before kickoff.
+2026-10-17 16:08:11 assistant: - [2026-03-03] reminders: send 48 hours before kickoff
+2026-10-17 16:08:11 [prompt tokens: 1148, chat messages: 4]
+2026-10-17 16:08:11 
+2026-10-17 16:08:11 you> What should I check before sending the weekend fixture list?
+2026-10-17 16:08:15 assistant: - Check the current schedule for any changes
+2026-10-17 16:08:15 - Verify the team's kit color
+2026-10-17 16:08:15 - Confirm the home and away venues
+2026-10-17 16:08:15 - Ensure the next game details are correct
+2026-10-17 16:08:15 [prompt tokens: 1191, chat messages: 6]
+2026-10-17 16:08:15 
+2026-10-17 16:08:15 you> /dream
+2026-10-17 16:08:25 model reply: {"facts": [{"key": "short lower-case name", "value": "spartans"}, {"key": "home game venue", "value": "riverside park"}, {"key": "reminder preference", "value": "48 hours before kickoff"}, {"key": "team management", "value": "sri"}, {"key": "fixture list checks", "value": "current schedule, team's kit color, home and away venues, next game details"}]}
+2026-10-17 16:08:25   - [2026-10-17] short lower-case name: spartans
+2026-10-17 16:08:25   - [2026-10-17] home game venue: riverside park
+2026-10-17 16:08:25   - [2026-10-17] reminder preference: 48 hours before kickoff
+2026-10-17 16:08:25   - [2026-10-17] team management: sri
+2026-10-17 16:08:25   - [2026-10-17] fixture list checks: current schedule, team's kit color, home and away venues, next game details
+2026-10-17 16:08:25 /dream added 5 fact(s) to MEMORY.md
+2026-10-17 16:08:25 
+2026-10-17 16:08:25 you> /compact
+2026-10-17 16:08:27 messages: 6 -> 5
+2026-10-17 16:08:27 MEMORY.md content lines: 40 -> 40 (0 changes logged in MEMORY_CONSOLIDATION_LOG.md)
+2026-10-17 16:08:27 
+2026-10-17 16:08:27 you> /memory
+2026-10-17 16:08:27 AGENT.md: 23 content lines
+2026-10-17 16:08:27 MEMORY.md: 40 content lines, last consolidated 2026-10-17 16:08:25
+2026-10-17 16:08:27 consolidation required: False (40 content lines, consolidated 2026-10-17T16:08:25)
+2026-10-17 16:08:27 --- MEMORY.md ---
+2026-10-17 16:08:27 <!-- last_consolidated: 2026-10-17T16:08:25 -->
+2026-10-17 16:08:27 # MEMORY.md
+2026-10-17 16:08:27 ## User
+2026-10-17 16:08:27 - [2026-09-02] name: Sri
+2026-10-17 16:08:27 - [2026-03-01] role: manager of the Spartans
+2026-10-17 16:08:27 - [2026-08-29] timezone: Pacific Time
+2026-10-17 16:08:27 - [2026-04-10] contact: prefers email over phone
+2026-10-17 16:08:27 - [2026-06-01] availability: weekday evenings only
+2026-10-17 16:08:27 - [2026-08-03] experience: second season managing the team
+2026-10-17 16:08:27 ## Team
+2026-10-17 16:08:27 - [2026-03-01] team: Spartans
+2026-10-17 16:08:27 - [2026-08-12] kit colour: red (supersedes 2026-03-05: blue)
+2026-10-17 16:08:27 - [2026-03-10] division: Division B
+2026-10-17 16:08:27 - [2026-08-20] training day: Wednesday (supersedes 2026-04-02: Tuesday)
+2026-10-17 16:08:27 - [2026-05-20] captain: Dana Reyes
+2026-10-17 16:08:27 - [2026-06-11] sponsor: Harbor Diner
+2026-10-17 16:08:27 ## Venue and schedule
+2026-10-17 16:08:27 - [2026-09-30] home venue: maybe moving to Eastside Field next season (unconfirmed) (supersedes 2026-03-01: Riverside Park)
+2026-10-17 16:08:27 - [2026-09-30] field surface: grass
+2026-10-17 16:08:27 - [2026-09-14] rival: Eagles
+2026-10-17 16:08:27 - [2026-06-14] away venue: Lakeview Stadium
+2026-10-17 16:08:27 - [2026-09-28] next game: Sunday 2 PM (supersedes 2026-09-01: Saturday 10 AM)
+2026-10-17 16:08:27 ## Preferences
+2026-10-17 16:08:27 - [2026-06-19] summary style: short bullets
+2026-10-17 16:08:27 - [2026-03-03] reminders: send 24 hours before kickoff
+2026-10-17 16:08:27 - [2026-04-22] units: miles
+2026-10-17 16:08:27 - [2026-05-30] language: English
+2026-10-17 16:08:27 - [2026-08-15] tone: friendly
+2026-10-17 16:08:27 ## League
+2026-10-17 16:08:27 - [2026-09-09] league: Community Sports League
+2026-10-17 16:08:27 - [2026-07-30] points for win: 3
+2026-10-17 16:08:27 - [2026-03-01] points for draw: 1
+2026-10-17 16:08:27 - [2026-04-05] season length: 12 weeks
+2026-10-17 16:08:27 - [2026-06-21] fixture source: league website
+2026-10-17 16:08:27 - [2026-08-25] rules: roster locks after week 3
+2026-10-17 16:08:27 ## Recent (from /dream)
+2026-10-17 16:08:27 - [2026-10-17] short lower-case name: spartans
+2026-10-17 16:08:27 - [2026-10-17] home game venue: riverside park
+2026-10-17 16:08:27 - [2026-10-17] reminder preference: 48 hours before kickoff
+2026-10-17 16:08:27 - [2026-10-17] team management: sri
+2026-10-17 16:08:27 - [2026-10-17] fixture list checks: current schedule, team's kit color, home and away venues, next game details
+2026-10-17 16:11:23 startup: consolidation required = False (34 content lines, consolidated 2026-10-17T16:00:51)
+2026-10-17 16:11:23 
+2026-10-17 16:11:23 you> /help
+2026-10-17 16:11:23 Commands:
+2026-10-17 16:11:23   /memory   show AGENT.md and MEMORY.md as the model sees them
+2026-10-17 16:11:23   /compact  consolidate MEMORY.md and compress older chat messages (counts before and after)
+2026-10-17 16:11:23   /dream    pull lasting facts out of the recent chat and add them to MEMORY.md
+2026-10-17 16:11:23   /help     show this list
+2026-10-17 16:11:23   /quit     leave
+2026-10-17 16:11:23 
+2026-10-17 16:11:23 you> /memory
+2026-10-17 16:11:23 AGENT.md: 24 content lines
+2026-10-17 16:11:23 MEMORY.md: 34 content lines, last consolidated 2026-10-17 16:00:51
+2026-10-17 16:11:23 consolidation required: False (34 content lines, consolidated 2026-10-17T16:00:51)
+2026-10-17 16:11:23 --- MEMORY.md ---
+2026-10-17 16:11:23 <!-- last_consolidated: 2026-10-17T16:00:51 -->
+2026-10-17 16:11:23 # MEMORY.md
+2026-10-17 16:11:23 ## User
+2026-10-17 16:11:23 - [2026-09-02] name: Sri
+2026-10-17 16:11:23 - [2026-03-01] role: manager of the Spartans
+2026-10-17 16:11:23 - [2026-08-29] timezone: Pacific Time
+2026-10-17 16:11:23 - [2026-04-10] contact: prefers email over phone
+2026-10-17 16:11:23 - [2026-06-01] availability: weekday evenings only
+2026-10-17 16:11:23 - [2026-08-03] experience: second season managing the team
+2026-10-17 16:11:23 ## Team
+2026-10-17 16:11:23 - [2026-03-01] team: Spartans
+2026-10-17 16:11:23 - [2026-08-12] kit colour: red (supersedes 2026-03-05: blue)
+2026-10-17 16:11:23 - [2026-03-10] division: Division B
+2026-10-17 16:11:23 - [2026-08-20] training day: Wednesday (supersedes 2026-04-02: Tuesday)
+2026-10-17 16:11:23 - [2026-05-20] captain: Dana Reyes
+2026-10-17 16:11:23 - [2026-06-11] sponsor: Harbor Diner
+2026-10-17 16:11:23 ## Venue and schedule
+2026-10-17 16:11:23 - [2026-09-30] home venue: maybe moving to Eastside Field next season (unconfirmed) (supersedes 2026-03-01: Riverside Park)
+2026-10-17 16:11:23 - [2026-09-30] field surface: grass
+2026-10-17 16:11:23 - [2026-09-14] rival: Eagles
+2026-10-17 16:11:23 - [2026-06-14] away venue: Lakeview Stadium
+2026-10-17 16:11:23 - [2026-09-28] next game: Sunday 2 PM (supersedes 2026-09-01: Saturday 10 AM)
+2026-10-17 16:11:23 ## Preferences
+2026-10-17 16:11:23 - [2026-06-19] summary style: short bullets
+2026-10-17 16:11:23 - [2026-03-03] reminders: send 24 hours before kickoff
+2026-10-17 16:11:23 - [2026-04-22] units: miles
+2026-10-17 16:11:23 - [2026-05-30] language: English
+2026-10-17 16:11:23 - [2026-08-15] tone: friendly
+2026-10-17 16:11:23 ## League
+2026-10-17 16:11:23 - [2026-09-09] league: Community Sports League
+2026-10-17 16:11:23 - [2026-07-30] points for win: 3
+2026-10-17 16:11:23 - [2026-03-01] points for draw: 1
+2026-10-17 16:11:23 - [2026-04-05] season length: 12 weeks
+2026-10-17 16:11:23 - [2026-06-21] fixture source: league website
+2026-10-17 16:11:23 - [2026-08-25] rules: roster locks after week 3
+2026-10-17 16:11:23 
+2026-10-17 16:11:23 you> Hi, I am Sri and I manage the Spartans.
+2026-10-17 16:11:26 assistant: - Added you as manager of the Spartans.
+2026-10-17 16:11:26 [prompt tokens: 797, chat messages: 2]
+2026-10-17 16:11:26 
+2026-10-17 16:11:26 you> Our home games are at Riverside Park and I always want reminders 48 hours before kickoff.
+2026-10-17 16:11:28 assistant: - Updated your availability to send reminders 48 hours before kickoff.
+2026-10-17 16:11:28 [prompt tokens: 836, chat messages: 4]
+2026-10-17 16:11:28 
+2026-10-17 16:11:28 you> What should I check before sending the weekend fixture list?
+2026-10-17 16:11:32 assistant: - Check the team's training day, next game, and any changes in home or away venues. Ensure all fixtures are confirmed and the captain is selected. Verify the roster locks are in place.
+2026-10-17 16:11:32 [prompt tokens: 871, chat messages: 6]
+2026-10-17 16:11:32 
+2026-10-17 16:11:32 you> /dream
+2026-10-17 16:11:39 model reply: {"facts": [{"key": "name", "value": "Sri"}, {"key": "role", "value": "Manager"}, {"key": "availability", "value": "48 hours before kickoff"}, {"key": "reminder", "value": "48 hours before kickoff"}]}
+2026-10-17 16:11:39   - [2026-10-17] availability: 48 hours before kickoff
+2026-10-17 16:11:39   - [2026-10-17] reminder: 48 hours before kickoff
+2026-10-17 16:11:39   skipped (already stored): name: Sri
+2026-10-17 16:11:39   conflicts with an older 'availability', consolidation will resolve it
+2026-10-17 16:11:39 /dream added 2 fact(s) to MEMORY.md
+2026-10-17 16:11:39 
+2026-10-17 16:11:39 you> /compact
+2026-10-17 16:11:41 messages: 6 -> 5
+2026-10-17 16:11:41 MEMORY.md content lines: 37 -> 36 (1 changes logged in MEMORY_CONSOLIDATION_LOG.md)
+2026-10-17 16:11:41 
+2026-10-17 16:11:41 you> /memory
+2026-10-17 16:11:41 AGENT.md: 24 content lines
+2026-10-17 16:11:41 MEMORY.md: 36 content lines, last consolidated 2026-10-17 16:11:39
+2026-10-17 16:11:41 consolidation required: False (36 content lines, consolidated 2026-10-17T16:11:39)
+2026-10-17 16:11:41 --- MEMORY.md ---
+2026-10-17 16:11:41 <!-- last_consolidated: 2026-10-17T16:11:39 -->
+2026-10-17 16:11:41 # MEMORY.md
+2026-10-17 16:11:41 ## User
+2026-10-17 16:11:41 - [2026-09-02] name: Sri
+2026-10-17 16:11:41 - [2026-03-01] role: manager of the Spartans
+2026-10-17 16:11:41 - [2026-08-29] timezone: Pacific Time
+2026-10-17 16:11:41 - [2026-04-10] contact: prefers email over phone
+2026-10-17 16:11:41 - [2026-10-17] availability: 48 hours before kickoff (supersedes 2026-06-01: weekday evenings only)
+2026-10-17 16:11:41 - [2026-08-03] experience: second season managing the team
+2026-10-17 16:11:41 ## Team
+2026-10-17 16:11:41 - [2026-03-01] team: Spartans
+2026-10-17 16:11:41 - [2026-08-12] kit colour: red (supersedes 2026-03-05: blue)
+2026-10-17 16:11:41 - [2026-03-10] division: Division B
+2026-10-17 16:11:41 - [2026-08-20] training day: Wednesday (supersedes 2026-04-02: Tuesday)
+2026-10-17 16:11:41 - [2026-05-20] captain: Dana Reyes
+2026-10-17 16:11:41 - [2026-06-11] sponsor: Harbor Diner
+2026-10-17 16:11:41 ## Venue and schedule
+2026-10-17 16:11:41 - [2026-09-30] home venue: maybe moving to Eastside Field next season (unconfirmed) (supersedes 2026-03-01: Riverside Park)
+2026-10-17 16:11:41 - [2026-09-30] field surface: grass
+2026-10-17 16:11:41 - [2026-09-14] rival: Eagles
+2026-10-17 16:11:41 - [2026-06-14] away venue: Lakeview Stadium
+2026-10-17 16:11:41 - [2026-09-28] next game: Sunday 2 PM (supersedes 2026-09-01: Saturday 10 AM)
+2026-10-17 16:11:42 ## Preferences
+2026-10-17 16:11:42 - [2026-06-19] summary style: short bullets
+2026-10-17 16:11:42 - [2026-03-03] reminders: send 24 hours before kickoff
+2026-10-17 16:11:42 - [2026-04-22] units: miles
+2026-10-17 16:11:42 - [2026-05-30] language: English
+2026-10-17 16:11:42 - [2026-08-15] tone: friendly
+2026-10-17 16:11:42 ## League
+2026-10-17 16:11:42 - [2026-09-09] league: Community Sports League
+2026-10-17 16:11:42 - [2026-07-30] points for win: 3
+2026-10-17 16:11:42 - [2026-03-01] points for draw: 1
+2026-10-17 16:11:42 - [2026-04-05] season length: 12 weeks
+2026-10-17 16:11:42 - [2026-06-21] fixture source: league website
+2026-10-17 16:11:42 - [2026-08-25] rules: roster locks after week 3
+2026-10-17 16:11:42 ## Recent (from /dream)
+2026-10-17 16:11:42 - [2026-10-17] reminder: 48 hours before kickoff
+2026-10-17 16:14:40 startup: consolidation required = False (34 content lines, consolidated 2026-10-17T16:00:51)
+2026-10-17 16:14:40 
+2026-10-17 16:14:40 you> /help
+2026-10-17 16:14:40 Commands:
+2026-10-17 16:14:40   /memory   show AGENT.md and MEMORY.md as the model sees them
+2026-10-17 16:14:40   /compact  consolidate MEMORY.md and compress older chat messages (counts before and after)
+2026-10-17 16:14:40   /dream    pull lasting facts out of the recent chat and add them to MEMORY.md
+2026-10-17 16:14:40   /help     show this list
+2026-10-17 16:14:40   /quit     leave
+2026-10-17 16:14:40 
+2026-10-17 16:14:40 you> /memory
+2026-10-17 16:14:40 AGENT.md: 24 content lines
+2026-10-17 16:14:40 MEMORY.md: 34 content lines, last consolidated 2026-10-17 16:00:51
+2026-10-17 16:14:40 consolidation required: False (34 content lines, consolidated 2026-10-17T16:00:51)
+2026-10-17 16:14:40 --- MEMORY.md ---
+2026-10-17 16:14:40 <!-- last_consolidated: 2026-10-17T16:00:51 -->
+2026-10-17 16:14:40 # MEMORY.md
+2026-10-17 16:14:40 ## User
+2026-10-17 16:14:40 - [2026-09-02] name: Sri
+2026-10-17 16:14:40 - [2026-03-01] role: manager of the Spartans
+2026-10-17 16:14:40 - [2026-08-29] timezone: Pacific Time
+2026-10-17 16:14:40 - [2026-04-10] contact: prefers email over phone
+2026-10-17 16:14:40 - [2026-06-01] availability: weekday evenings only
+2026-10-17 16:14:40 - [2026-08-03] experience: second season managing the team
+2026-10-17 16:14:40 ## Team
+2026-10-17 16:14:40 - [2026-03-01] team: Spartans
+2026-10-17 16:14:40 - [2026-08-12] kit colour: red (supersedes 2026-03-05: blue)
+2026-10-17 16:14:40 - [2026-03-10] division: Division B
+2026-10-17 16:14:40 - [2026-08-20] training day: Wednesday (supersedes 2026-04-02: Tuesday)
+2026-10-17 16:14:40 - [2026-05-20] captain: Dana Reyes
+2026-10-17 16:14:40 - [2026-06-11] sponsor: Harbor Diner
+2026-10-17 16:14:40 ## Venue and schedule
+2026-10-17 16:14:40 - [2026-09-30] home venue: maybe moving to Eastside Field next season (unconfirmed) (supersedes 2026-03-01: Riverside Park)
+2026-10-17 16:14:40 - [2026-09-30] field surface: grass
+2026-10-17 16:14:40 - [2026-09-14] rival: Eagles
+2026-10-17 16:14:40 - [2026-06-14] away venue: Lakeview Stadium
+2026-10-17 16:14:40 - [2026-09-28] next game: Sunday 2 PM (supersedes 2026-09-01: Saturday 10 AM)
+2026-10-17 16:14:40 ## Preferences
+2026-10-17 16:14:40 - [2026-06-19] summary style: short bullets
+2026-10-17 16:14:40 - [2026-03-03] reminders: send 24 hours before kickoff
+2026-10-17 16:14:40 - [2026-04-22] units: miles
+2026-10-17 16:14:40 - [2026-05-30] language: English
+2026-10-17 16:14:40 - [2026-08-15] tone: friendly
+2026-10-17 16:14:40 ## League
+2026-10-17 16:14:40 - [2026-09-09] league: Community Sports League
+2026-10-17 16:14:40 - [2026-07-30] points for win: 3
+2026-10-17 16:14:40 - [2026-03-01] points for draw: 1
+2026-10-17 16:14:40 - [2026-04-05] season length: 12 weeks
+2026-10-17 16:14:40 - [2026-06-21] fixture source: league website
+2026-10-17 16:14:40 - [2026-08-25] rules: roster locks after week 3
+2026-10-17 16:14:40 
+2026-10-17 16:14:40 you> Hi, I am Sri and I manage the Spartans.
+2026-10-17 16:14:42 assistant: - Added you as manager of the Spartans.
+2026-10-17 16:14:42 [prompt tokens: 813, chat messages: 2]
+2026-10-17 16:14:42 
+2026-10-17 16:14:42 you> Our home games are at Riverside Park and I always want reminders 48 hours before kickoff.
+2026-10-17 16:14:43 assistant: - Updated reminder setting to 48 hours before kickoff for home games.
+2026-10-17 16:14:43 [prompt tokens: 852, chat messages: 4]
+2026-10-17 16:14:43 
+2026-10-17 16:14:43 you> What should I check before sending the weekend fixture list?
+2026-10-17 16:14:45 assistant: - Check team availability, home/away venues, and next game details.
+2026-10-17 16:14:45 [prompt tokens: 888, chat messages: 6]
+2026-10-17 16:14:45 
+2026-10-17 16:14:45 you> /dream
+2026-10-17 16:14:54 model reply: {"facts": [{"key": "name", "value": "Sri"}, {"key": "team", "value": "Spartans"}, {"key": "home venue", "value": "Riverside Park"}, {"key": "reminders", "value": "48 hours before kickoff"}, {"key": "summary style", "value": "check before sending the weekend fixture list"}]}
+2026-10-17 16:14:54   - [2026-10-17] home venue: Riverside Park
+2026-10-17 16:14:54   - [2026-10-17] reminders: 48 hours before kickoff
+2026-10-17 16:14:54   - [2026-10-17] summary style: check before sending the weekend fixture list
+2026-10-17 16:14:54   skipped (already stored): name: Sri
+2026-10-17 16:14:54   skipped (already stored): team: Spartans
+2026-10-17 16:14:54   conflicts with an older 'home venue', consolidation will resolve it
+2026-10-17 16:14:54   conflicts with an older 'reminders', consolidation will resolve it
+2026-10-17 16:14:54   conflicts with an older 'summary style', consolidation will resolve it
+2026-10-17 16:14:54 /dream added 3 fact(s) to MEMORY.md
+2026-10-17 16:14:54 
+2026-10-17 16:14:54 you> /compact
+2026-10-17 16:14:56 messages: 6 -> 5
+2026-10-17 16:14:56 MEMORY.md content lines: 38 -> 34 (3 changes logged in MEMORY_CONSOLIDATION_LOG.md)
+2026-10-17 16:14:56 
+2026-10-17 16:14:56 you> /memory
+2026-10-17 16:14:56 AGENT.md: 24 content lines
+2026-10-17 16:14:56 MEMORY.md: 34 content lines, last consolidated 2026-10-17 16:14:54
+2026-10-17 16:14:56 consolidation required: False (34 content lines, consolidated 2026-10-17T16:14:54)
+2026-10-17 16:14:56 --- MEMORY.md ---
+2026-10-17 16:14:56 <!-- last_consolidated: 2026-10-17T16:14:54 -->
+2026-10-17 16:14:56 # MEMORY.md
+2026-10-17 16:14:56 ## User
+2026-10-17 16:14:56 - [2026-09-02] name: Sri
+2026-10-17 16:14:56 - [2026-03-01] role: manager of the Spartans
+2026-10-17 16:14:56 - [2026-08-29] timezone: Pacific Time
+2026-10-17 16:14:56 - [2026-04-10] contact: prefers email over phone
+2026-10-17 16:14:56 - [2026-06-01] availability: weekday evenings only
+2026-10-17 16:14:56 - [2026-08-03] experience: second season managing the team
+2026-10-17 16:14:56 ## Team
+2026-10-17 16:14:56 - [2026-03-01] team: Spartans
+2026-10-17 16:14:56 - [2026-08-12] kit colour: red (supersedes 2026-03-05: blue)
+2026-10-17 16:14:56 - [2026-03-10] division: Division B
+2026-10-17 16:14:56 - [2026-08-20] training day: Wednesday (supersedes 2026-04-02: Tuesday)
+2026-10-17 16:14:56 - [2026-05-20] captain: Dana Reyes
+2026-10-17 16:14:56 - [2026-06-11] sponsor: Harbor Diner
+2026-10-17 16:14:56 ## Venue and schedule
+2026-10-17 16:14:56 - [2026-10-17] home venue: Riverside Park (supersedes 2026-09-30: maybe moving to Eastside Field next season (unconfirmed))
+2026-10-17 16:14:56 - [2026-09-30] field surface: grass
+2026-10-17 16:14:56 - [2026-09-14] rival: Eagles
+2026-10-17 16:14:56 - [2026-06-14] away venue: Lakeview Stadium
+2026-10-17 16:14:56 - [2026-09-28] next game: Sunday 2 PM (supersedes 2026-09-01: Saturday 10 AM)
+2026-10-17 16:14:56 ## Preferences
+2026-10-17 16:14:56 - [2026-10-17] summary style: check before sending the weekend fixture list (supersedes 2026-06-19: short bullets)
+2026-10-17 16:14:56 - [2026-10-17] reminders: 48 hours before kickoff (supersedes 2026-03-03: send 24 hours before kickoff)
+2026-10-17 16:14:56 - [2026-04-22] units: miles
+2026-10-17 16:14:56 - [2026-05-30] language: English
+2026-10-17 16:14:56 - [2026-08-15] tone: friendly
+2026-10-17 16:14:56 ## League
+2026-10-17 16:14:56 - [2026-09-09] league: Community Sports League
+2026-10-17 16:14:56 - [2026-07-30] points for win: 3
+2026-10-17 16:14:56 - [2026-03-01] points for draw: 1
+2026-10-17 16:14:56 - [2026-04-05] season length: 12 weeks
+2026-10-17 16:14:56 - [2026-06-21] fixture source: league website
+2026-10-17 16:14:56 - [2026-08-25] rules: roster locks after week 3
+2026-10-17 16:17:18 startup: consolidation required = False (34 content lines, consolidated 2026-10-17T16:00:51)
+2026-10-17 16:17:18 
+2026-10-17 16:17:18 you> /help
+2026-10-17 16:17:18 Commands:
+2026-10-17 16:17:18   /memory   show AGENT.md and MEMORY.md as the model sees them
+2026-10-17 16:17:18   /compact  consolidate MEMORY.md and compress older chat messages (counts before and after)
+2026-10-17 16:17:18   /dream    pull lasting facts out of the recent chat and add them to MEMORY.md
+2026-10-17 16:17:18   /help     show this list
+2026-10-17 16:17:18   /quit     leave
+2026-10-17 16:17:18 
+2026-10-17 16:17:19 you> /memory
+2026-10-17 16:17:19 AGENT.md: 24 content lines
+2026-10-17 16:17:19 MEMORY.md: 34 content lines, last consolidated 2026-10-17 16:00:51
+2026-10-17 16:17:19 consolidation required: False (34 content lines, consolidated 2026-10-17T16:00:51)
+2026-10-17 16:17:19 --- MEMORY.md ---
+2026-10-17 16:17:19 <!-- last_consolidated: 2026-10-17T16:00:51 -->
+2026-10-17 16:17:19 # MEMORY.md
+2026-10-17 16:17:19 ## User
+2026-10-17 16:17:19 - [2026-09-02] name: Sri
+2026-10-17 16:17:19 - [2026-03-01] role: manager of the Spartans
+2026-10-17 16:17:19 - [2026-08-29] timezone: Pacific Time
+2026-10-17 16:17:19 - [2026-04-10] contact: prefers email over phone
+2026-10-17 16:17:19 - [2026-06-01] availability: weekday evenings only
+2026-10-17 16:17:19 - [2026-08-03] experience: second season managing the team
+2026-10-17 16:17:19 ## Team
+2026-10-17 16:17:19 - [2026-03-01] team: Spartans
+2026-10-17 16:17:19 - [2026-08-12] kit colour: red (supersedes 2026-03-05: blue)
+2026-10-17 16:17:19 - [2026-03-10] division: Division B
+2026-10-17 16:17:19 - [2026-08-20] training day: Wednesday (supersedes 2026-04-02: Tuesday)
+2026-10-17 16:17:19 - [2026-05-20] captain: Dana Reyes
+2026-10-17 16:17:19 - [2026-06-11] sponsor: Harbor Diner
+2026-10-17 16:17:19 ## Venue and schedule
+2026-10-17 16:17:19 - [2026-09-30] home venue: maybe moving to Eastside Field next season (unconfirmed) (supersedes 2026-03-01: Riverside Park)
+2026-10-17 16:17:19 - [2026-09-30] field surface: grass
+2026-10-17 16:17:19 - [2026-09-14] rival: Eagles
+2026-10-17 16:17:19 - [2026-06-14] away venue: Lakeview Stadium
+2026-10-17 16:17:19 - [2026-09-28] next game: Sunday 2 PM (supersedes 2026-09-01: Saturday 10 AM)
+2026-10-17 16:17:19 ## Preferences
+2026-10-17 16:17:19 - [2026-06-19] summary style: short bullets
+2026-10-17 16:17:19 - [2026-03-03] reminders: send 24 hours before kickoff
+2026-10-17 16:17:19 - [2026-04-22] units: miles
+2026-10-17 16:17:19 - [2026-05-30] language: English
+2026-10-17 16:17:19 - [2026-08-15] tone: friendly
+2026-10-17 16:17:19 ## League
+2026-10-17 16:17:19 - [2026-09-09] league: Community Sports League
+2026-10-17 16:17:19 - [2026-07-30] points for win: 3
+2026-10-17 16:17:19 - [2026-03-01] points for draw: 1
+2026-10-17 16:17:19 - [2026-04-05] season length: 12 weeks
+2026-10-17 16:17:19 - [2026-06-21] fixture source: league website
+2026-10-17 16:17:19 - [2026-08-25] rules: roster locks after week 3
+2026-10-17 16:17:19 
+2026-10-17 16:17:19 you> Hi, I am Sri and I manage the Spartans.
+2026-10-17 16:17:19 assistant: - Added you as manager of the Spartans.
+2026-10-17 16:17:19 [prompt tokens: 813, chat messages: 2]
+2026-10-17 16:17:19 
+2026-10-17 16:17:19 you> Our home games are at Riverside Park and I always want reminders 48 hours before kickoff.
+2026-10-17 16:17:20 assistant: - Updated reminder setting to 48 hours before kickoff for home games.
+2026-10-17 16:17:20 [prompt tokens: 852, chat messages: 4]
+2026-10-17 16:17:20 
+2026-10-17 16:17:20 you> What should I check before sending the weekend fixture list?
+2026-10-17 16:17:22 assistant: - Check team availability, home/away venues, and next game details.
+2026-10-17 16:17:22 [prompt tokens: 888, chat messages: 6]
+2026-10-17 16:17:22 
+2026-10-17 16:17:22 you> /dream
+2026-10-17 16:17:32 model reply: {"facts": [{"key": "name", "value": "Sri"}, {"key": "role", "value": "Manager"}, {"key": "availability", "value": "Tuesdays only"}, {"key": "reminders", "value": "48 hours before each game"}, {"key": "home venue", "value": "Riverside Park"}]}
+2026-10-17 16:17:32   - [2026-10-17] home venue: Riverside Park
+2026-10-17 16:17:32   skipped (already stored): name: Sri
+2026-10-17 16:17:32   conflicts with an older 'home venue', consolidation will resolve it
+2026-10-17 16:17:32 /dream added 1 fact(s) to MEMORY.md
+2026-10-17 16:17:32 
+2026-10-17 16:17:32 you> /compact
+2026-10-17 16:17:33 messages: 6 -> 5
+2026-10-17 16:17:33 MEMORY.md content lines: 36 -> 34 (1 changes logged in MEMORY_CONSOLIDATION_LOG.md)
+2026-10-17 16:17:33 
+2026-10-17 16:17:34 you> /memory
+2026-10-17 16:17:34 AGENT.md: 24 content lines
+2026-10-17 16:17:34 MEMORY.md: 34 content lines, last consolidated 2026-10-17 16:17:32
+2026-10-17 16:17:34 consolidation required: False (34 content lines, consolidated 2026-10-17T16:17:32)
+2026-10-17 16:17:34 --- MEMORY.md ---
+2026-10-17 16:17:34 <!-- last_consolidated: 2026-10-17T16:17:32 -->
+2026-10-17 16:17:34 # MEMORY.md
+2026-10-17 16:17:34 ## User
+2026-10-17 16:17:34 - [2026-09-02] name: Sri
+2026-10-17 16:17:34 - [2026-03-01] role: manager of the Spartans
+2026-10-17 16:17:34 - [2026-08-29] timezone: Pacific Time
+2026-10-17 16:17:34 - [2026-04-10] contact: prefers email over phone
+2026-10-17 16:17:34 - [2026-06-01] availability: weekday evenings only
+2026-10-17 16:17:34 - [2026-08-03] experience: second season managing the team
+2026-10-17 16:17:34 ## Team
+2026-10-17 16:17:34 - [2026-03-01] team: Spartans
+2026-10-17 16:17:34 - [2026-08-12] kit colour: red (supersedes 2026-03-05: blue)
+2026-10-17 16:17:34 - [2026-03-10] division: Division B
+2026-10-17 16:17:34 - [2026-08-20] training day: Wednesday (supersedes 2026-04-02: Tuesday)
+2026-10-17 16:17:34 - [2026-05-20] captain: Dana Reyes
+2026-10-17 16:17:34 - [2026-06-11] sponsor: Harbor Diner
+2026-10-17 16:17:34 ## Venue and schedule
+2026-10-17 16:17:34 - [2026-10-17] home venue: Riverside Park (supersedes 2026-09-30: maybe moving to Eastside Field next season (unconfirmed))
+2026-10-17 16:17:34 - [2026-09-30] field surface: grass
+2026-10-17 16:17:34 - [2026-09-14] rival: Eagles
+2026-10-17 16:17:34 - [2026-06-14] away venue: Lakeview Stadium
+2026-10-17 16:17:34 - [2026-09-28] next game: Sunday 2 PM (supersedes 2026-09-01: Saturday 10 AM)
+2026-10-17 16:17:34 ## Preferences
+2026-10-17 16:17:34 - [2026-06-19] summary style: short bullets
+2026-10-17 16:17:34 - [2026-03-03] reminders: send 24 hours before kickoff
+2026-10-17 16:17:34 - [2026-04-22] units: miles
+2026-10-17 16:17:34 - [2026-05-30] language: English
+2026-10-17 16:17:34 - [2026-08-15] tone: friendly
+2026-10-17 16:17:34 ## League
+2026-10-17 16:17:34 - [2026-09-09] league: Community Sports League
+2026-10-17 16:17:34 - [2026-07-30] points for win: 3
+2026-10-17 16:17:34 - [2026-03-01] points for draw: 1
+2026-10-17 16:17:34 - [2026-04-05] season length: 12 weeks
+2026-10-17 16:17:34 - [2026-06-21] fixture source: league website
+2026-10-17 16:17:34 - [2026-08-25] rules: roster locks after week 3

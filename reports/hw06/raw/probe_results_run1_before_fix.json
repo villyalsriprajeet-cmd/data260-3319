@@ -1,0 +1,89 @@
+{
+  "n4": {
+    "short_term_n": 4,
+    "policy": null,
+    "probes": [
+      {
+        "answer": "Your name is Sri and you manage the Spartans, who play their home games at Riverside Park Field 3.",
+        "prompt_tokens": 604,
+        "latency_ms": 5907,
+        "own_prompt_tokens": 559,
+        "facts_retrieved": [
+          "The user manages the Spartans",
+          "The user's name is Sri",
+          "The venue for home games is Riverside Park Field 3"
+        ],
+        "score": 5,
+        "matched": 2,
+        "id": "P1",
+        "question": "What is my name and which team do I manage?",
+        "expected": "Sri, the Spartans"
+      },
+      {
+        "answer": "Our home games take place at Riverside Park Field 3.",
+        "prompt_tokens": 601,
+        "latency_ms": 1359,
+        "own_prompt_tokens": 556,
+        "facts_retrieved": [
+          "The venue for home games is Riverside Park Field 3",
+          "The user manages the Spartans",
+          "The user's name is Sri"
+        ],
+        "score": 5,
+        "matched": 2,
+        "id": "P2",
+        "question": "Where do our home games take place?",
+        "expected": "Riverside Park Field 3"
+      },
+      {
+        "answer": "Our biggest rival is the Hawks.",
+        "prompt_tokens": 600,
+        "latency_ms": 759,
+        "own_prompt_tokens": 555,
+        "facts_retrieved": [
+          "The venue for home games is Riverside Park Field 3",
+          "The user manages the Spartans",
+          "The user's name is Sri"
+        ],
+        "score": 5,
+        "matched": 1,
+        "id": "P3",
+        "question": "Which team is our biggest rival?",
+        "expected": "the Hawks"
+      },
+      {
+        "answer": "I want to be reminded about fixtures by email, as it is the preferred method for reminders and it aligns with the user's preference.",
+        "prompt_tokens": 603,
+        "latency_ms": 2418,
+        "own_prompt_tokens": 558,
+        "facts_retrieved": [
+          "The venue for home games is Riverside Park Field 3",
+          "The user manages the Spartans",
+          "The user's name is Sri"
+        ],
+        "score": 5,
+        "matched": 1,
+        "id": "P4",
+        "question": "How do I want to be reminded about fixtures?",
+        "expected": "by email, not by text"
+      },
+      {
+        "answer": "Our next game is not specified in the current session summary, so I don't have the exact date. However, since the user manages the Spartans and Riverside Park Field 3 is their home venue, we can expect the next game to be at Riverside Park Field 3.",
+        "prompt_tokens": 600,
+        "latency_ms": 4616,
+        "own_prompt_tokens": 555,
+        "facts_retrieved": [
+          "The venue for home games is Riverside Park Field 3",
+          "The user manages the Spartans",
+          "The user's name is Sri"
+        ],
+        "score": 1,
+        "matched": 0,
+        "id": "P5",
+        "question": "When is our next game now?",
+        "expected": "Sunday at 2 PM (moved from the usual Saturday 9 AM)"
+      }
+    ],
+    "mean_probe_quality": 4.2
+  }
+}

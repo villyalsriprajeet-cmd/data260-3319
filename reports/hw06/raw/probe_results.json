@@ -1,0 +1,350 @@
+{
+  "n4": {
+    "short_term_n": 4,
+    "policy": null,
+    "probes": [
+      {
+        "answer": "Your name is not provided in the remembered facts, but you manage the Spartans and your home games are at Riverside Park Field 3.",
+        "prompt_tokens": 420,
+        "latency_ms": 5383,
+        "own_prompt_tokens": 375,
+        "facts_retrieved": [
+          "The team usually kicks off on Saturdays at 9 AM",
+          "The user manages the Spartans",
+          "Our home games are at Riverside Park Field 3"
+        ],
+        "score": 3,
+        "matched": 1,
+        "id": "P1",
+        "question": "What is my name and which team do I manage?",
+        "expected": "Sri, the Spartans"
+      },
+      {
+        "answer": "Our home games take place at Riverside Park Field 3.",
+        "prompt_tokens": 423,
+        "latency_ms": 1659,
+        "own_prompt_tokens": 378,
+        "facts_retrieved": [
+          "Our home games are at Riverside Park Field 3",
+          "Our next game has been moved to Sunday at 2 PM",
+          "The team usually kicks off on Saturdays at 9 AM"
+        ],
+        "score": 5,
+        "matched": 2,
+        "id": "P2",
+        "question": "Where do our home games take place?",
+        "expected": "Riverside Park Field 3"
+      },
+      {
+        "answer": "Our biggest rival is the Hawks, and our home games are still scheduled at Riverside Park Field 3.",
+        "prompt_tokens": 418,
+        "latency_ms": 2726,
+        "own_prompt_tokens": 373,
+        "facts_retrieved": [
+          "The user's biggest rival is the Hawks",
+          "Our home games are at Riverside Park Field 3",
+          "The team usually kicks off on Saturdays at 9 AM"
+        ],
+        "score": 5,
+        "matched": 1,
+        "id": "P3",
+        "question": "Which team is our biggest rival?",
+        "expected": "the Hawks"
+      },
+      {
+        "answer": "I want to be reminded about fixtures by email, with our home games at Riverside Park Field 3 and our next game scheduled for Sunday at 2 PM.",
+        "prompt_tokens": 426,
+        "latency_ms": 3136,
+        "own_prompt_tokens": 381,
+        "facts_retrieved": [
+          "The user wants reminders about fixtures by email, not by text",
+          "Our home games are at Riverside Park Field 3",
+          "Our next game has been moved to Sunday at 2 PM"
+        ],
+        "score": 5,
+        "matched": 1,
+        "id": "P4",
+        "question": "How do I want to be reminded about fixtures?",
+        "expected": "by email, not by text"
+      },
+      {
+        "answer": "Our next game is now scheduled for Sunday at 2 PM at Riverside Park Field 3.",
+        "prompt_tokens": 422,
+        "latency_ms": 2141,
+        "own_prompt_tokens": 377,
+        "facts_retrieved": [
+          "Our next game has been moved to Sunday at 2 PM",
+          "Our home games are at Riverside Park Field 3",
+          "The team usually kicks off on Saturdays at 9 AM"
+        ],
+        "score": 5,
+        "matched": 2,
+        "id": "P5",
+        "question": "When is our next game now?",
+        "expected": "Sunday at 2 PM (moved from the usual Saturday 9 AM)"
+      }
+    ],
+    "mean_probe_quality": 4.6
+  },
+  "n12": {
+    "short_term_n": 12,
+    "policy": null,
+    "probes": [
+      {
+        "answer": "Your name is Sri and you manage the Spartans, who usually kick off home games at Riverside Park Field 3 on Saturdays at 9 AM.",
+        "prompt_tokens": 711,
+        "latency_ms": 7646,
+        "own_prompt_tokens": 626,
+        "facts_retrieved": [
+          "The team usually kicks off on Saturdays at 9 AM",
+          "The user manages the Spartans",
+          "Our home games are at Riverside Park Field 3"
+        ],
+        "score": 5,
+        "matched": 2,
+        "id": "P1",
+        "question": "What is my name and which team do I manage?",
+        "expected": "Sri, the Spartans"
+      },
+      {
+        "answer": "Our home games take place at Riverside Park Field 3, as usual. However, our next game has been moved to Sunday at 2 PM due to a postponement.",
+        "prompt_tokens": 714,
+        "latency_ms": 3769,
+        "own_prompt_tokens": 629,
+        "facts_retrieved": [
+          "Our home games are at Riverside Park Field 3",
+          "Our next game has been moved to Sunday at 2 PM",
+          "The team usually kicks off on Saturdays at 9 AM"
+        ],
+        "score": 5,
+        "matched": 2,
+        "id": "P2",
+        "question": "Where do our home games take place?",
+        "expected": "Riverside Park Field 3"
+      },
+      {
+        "answer": "Our biggest rival is the Hawks, and we usually play our home games at Riverside Park Field 3 on Saturdays at 9 AM.",
+        "prompt_tokens": 709,
+        "latency_ms": 2674,
+        "own_prompt_tokens": 624,
+        "facts_retrieved": [
+          "The user's biggest rival is the Hawks",
+          "Our home games are at Riverside Park Field 3",
+          "The team usually kicks off on Saturdays at 9 AM"
+        ],
+        "score": 5,
+        "matched": 1,
+        "id": "P3",
+        "question": "Which team is our biggest rival?",
+        "expected": "the Hawks"
+      },
+      {
+        "answer": "I want to be reminded about fixtures by email, as you prefer, and our next game has been moved to Sunday at 2 PM.",
+        "prompt_tokens": 717,
+        "latency_ms": 3569,
+        "own_prompt_tokens": 632,
+        "facts_retrieved": [
+          "The user wants reminders about fixtures by email, not by text",
+          "Our home games are at Riverside Park Field 3",
+          "Our next game has been moved to Sunday at 2 PM"
+        ],
+        "score": 5,
+        "matched": 1,
+        "id": "P4",
+        "question": "How do I want to be reminded about fixtures?",
+        "expected": "by email, not by text"
+      },
+      {
+        "answer": "Our next game is now scheduled for Sunday at 2 PM.",
+        "prompt_tokens": 713,
+        "latency_ms": 1738,
+        "own_prompt_tokens": 628,
+        "facts_retrieved": [
+          "Our next game has been moved to Sunday at 2 PM",
+          "Our home games are at Riverside Park Field 3",
+          "The team usually kicks off on Saturdays at 9 AM"
+        ],
+        "score": 5,
+        "matched": 2,
+        "id": "P5",
+        "question": "When is our next game now?",
+        "expected": "Sunday at 2 PM (moved from the usual Saturday 9 AM)"
+      }
+    ],
+    "mean_probe_quality": 5
+  },
+  "n30": {
+    "short_term_n": 30,
+    "policy": null,
+    "probes": [
+      {
+        "answer": "Your name is not provided in the remembered facts, but you manage the Spartans, and your team usually kicks off on Saturdays at 9 AM, with home games at Riverside Park Field 3.",
+        "prompt_tokens": 1295,
+        "latency_ms": 12872,
+        "own_prompt_tokens": 1120,
+        "facts_retrieved": [
+          "The team usually kicks off on Saturdays at 9 AM",
+          "The user manages the Spartans",
+          "Our home games are at Riverside Park Field 3"
+        ],
+        "score": 3,
+        "matched": 1,
+        "id": "P1",
+        "question": "What is my name and which team do I manage?",
+        "expected": "Sri, the Spartans"
+      },
+      {
+        "answer": "Our home games take place at Riverside Park Field 3. Our next game has been moved to Sunday at 2 PM, which is not our usual Saturday kickoff at 9 AM.",
+        "prompt_tokens": 1298,
+        "latency_ms": 4448,
+        "own_prompt_tokens": 1123,
+        "facts_retrieved": [
+          "Our home games are at Riverside Park Field 3",
+          "Our next game has been moved to Sunday at 2 PM",
+          "The team usually kicks off on Saturdays at 9 AM"
+        ],
+        "score": 5,
+        "matched": 2,
+        "id": "P2",
+        "question": "Where do our home games take place?",
+        "expected": "Riverside Park Field 3"
+      },
+      {
+        "answer": "Our biggest rival is the Hawks. Our home games are at Riverside Park Field 3, and we usually kickoff on Saturdays at 9 AM.",
+        "prompt_tokens": 1293,
+        "latency_ms": 3178,
+        "own_prompt_tokens": 1118,
+        "facts_retrieved": [
+          "The user's biggest rival is the Hawks",
+          "Our home games are at Riverside Park Field 3",
+          "The team usually kicks off on Saturdays at 9 AM"
+        ],
+        "score": 5,
+        "matched": 1,
+        "id": "P3",
+        "question": "Which team is our biggest rival?",
+        "expected": "the Hawks"
+      },
+      {
+        "answer": "You want to be reminded about fixtures by email, as you prefer. Our home games are at Riverside Park Field 3, and our next game has been moved to Sunday at 2 PM.",
+        "prompt_tokens": 1301,
+        "latency_ms": 3906,
+        "own_prompt_tokens": 1126,
+        "facts_retrieved": [
+          "The user wants reminders about fixtures by email, not by text",
+          "Our home games are at Riverside Park Field 3",
+          "Our next game has been moved to Sunday at 2 PM"
+        ],
+        "score": 5,
+        "matched": 1,
+        "id": "P4",
+        "question": "How do I want to be reminded about fixtures?",
+        "expected": "by email, not by text"
+      },
+      {
+        "answer": "Our next game is now scheduled for Sunday at 2 PM. Our home games are at Riverside Park Field 3, and we usually kickoff on Saturdays at 9 AM.",
+        "prompt_tokens": 1297,
+        "latency_ms": 4284,
+        "own_prompt_tokens": 1122,
+        "facts_retrieved": [
+          "Our next game has been moved to Sunday at 2 PM",
+          "Our home games are at Riverside Park Field 3",
+          "The team usually kicks off on Saturdays at 9 AM"
+        ],
+        "score": 5,
+        "matched": 2,
+        "id": "P5",
+        "question": "When is our next game now?",
+        "expected": "Sunday at 2 PM (moved from the usual Saturday 9 AM)"
+      }
+    ],
+    "mean_probe_quality": 4.6
+  },
+  "evict": {
+    "short_term_n": 12,
+    "policy": "evict_assistant",
+    "probes": [
+      {
+        "answer": "Your name is not provided in the remembered facts, but you manage the Spartans and your team usually kicks off at Riverside Park Field 3 on Saturdays at 9 AM.",
+        "prompt_tokens": 519,
+        "latency_ms": 8260,
+        "own_prompt_tokens": 474,
+        "facts_retrieved": [
+          "The team usually kicks off on Saturdays at 9 AM",
+          "The user manages the Spartans",
+          "Our home games are at Riverside Park Field 3"
+        ],
+        "score": 3,
+        "matched": 1,
+        "id": "P1",
+        "question": "What is my name and which team do I manage?",
+        "expected": "Sri, the Spartans"
+      },
+      {
+        "answer": "Our home games take place at Riverside Park Field 3. Our next game has been moved to Sunday at 2 PM, and we usually kick off on Saturdays at 9 AM.",
+        "prompt_tokens": 522,
+        "latency_ms": 4354,
+        "own_prompt_tokens": 477,
+        "facts_retrieved": [
+          "Our home games are at Riverside Park Field 3",
+          "Our next game has been moved to Sunday at 2 PM",
+          "The team usually kicks off on Saturdays at 9 AM"
+        ],
+        "score": 5,
+        "matched": 2,
+        "id": "P2",
+        "question": "Where do our home games take place?",
+        "expected": "Riverside Park Field 3"
+      },
+      {
+        "answer": "Our biggest rival is the Hawks, and our home games are typically at Riverside Park Field 3, where we usually kick off on Saturdays at 9 AM.",
+        "prompt_tokens": 517,
+        "latency_ms": 3657,
+        "own_prompt_tokens": 472,
+        "facts_retrieved": [
+          "The user's biggest rival is the Hawks",
+          "Our home games are at Riverside Park Field 3",
+          "The team usually kicks off on Saturdays at 9 AM"
+        ],
+        "score": 5,
+        "matched": 1,
+        "id": "P3",
+        "question": "Which team is our biggest rival?",
+        "expected": "the Hawks"
+      },
+      {
+        "answer": "I want to be reminded about fixtures by email, as I prefer that method. Our next game has been moved to Sunday at 2 PM and our home games are at Riverside Park Field 3.",
+        "prompt_tokens": 525,
+        "latency_ms": 4673,
+        "own_prompt_tokens": 480,
+        "facts_retrieved": [
+          "The user wants reminders about fixtures by email, not by text",
+          "Our home games are at Riverside Park Field 3",
+          "Our next game has been moved to Sunday at 2 PM"
+        ],
+        "score": 5,
+        "matched": 1,
+        "id": "P4",
+        "question": "How do I want to be reminded about fixtures?",
+        "expected": "by email, not by text"
+      },
+      {
+        "answer": "Our next game is now scheduled for Sunday at 2 PM at Riverside Park Field 3.",
+        "prompt_tokens": 521,
+        "latency_ms": 2339,
+        "own_prompt_tokens": 476,
+        "facts_retrieved": [
+          "Our next game has been moved to Sunday at 2 PM",
+          "Our home games are at Riverside Park Field 3",
+          "The team usually kicks off on Saturdays at 9 AM"
+        ],
+        "score": 5,
+        "matched": 2,
+        "id": "P5",
+        "question": "When is our next game now?",
+        "expected": "Sunday at 2 PM (moved from the usual Saturday 9 AM)"
+      }
+    ],
+    "mean_probe_quality": 4.6
+  }
+}

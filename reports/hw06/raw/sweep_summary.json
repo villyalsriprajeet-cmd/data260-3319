@@ -1,0 +1,50 @@
+{
+  "n4": {
+    "mean_prompt_tokens_model": 365.7,
+    "mean_prompt_tokens_own_count": 322.7,
+    "mean_completion_tokens": 35.8,
+    "mean_latency_ms": 10790,
+    "mean_reply_latency_ms": 4905,
+    "maintenance_in_tokens_per_turn": 380.4,
+    "maintenance_out_tokens_per_turn": 35.8,
+    "mean_probe_quality": 4.6,
+    "cost_10000_convs_usd": 331.18,
+    "cost_chat_only_usd": 163.41
+  },
+  "n12": {
+    "mean_prompt_tokens_model": 544.8,
+    "mean_prompt_tokens_own_count": 467.8,
+    "mean_completion_tokens": 34.7,
+    "mean_latency_ms": 11584,
+    "mean_reply_latency_ms": 6090,
+    "maintenance_in_tokens_per_turn": 381.9,
+    "maintenance_out_tokens_per_turn": 38.4,
+    "mean_probe_quality": 5,
+    "cost_10000_convs_usd": 387.62,
+    "cost_chat_only_usd": 215.49
+  },
+  "n30": {
+    "mean_prompt_tokens_model": 915.2,
+    "mean_prompt_tokens_own_count": 781.1,
+    "mean_completion_tokens": 43.9,
+    "mean_latency_ms": 14444,
+    "mean_reply_latency_ms": 9407,
+    "maintenance_in_tokens_per_turn": 386.9,
+    "maintenance_out_tokens_per_turn": 33.6,
+    "mean_probe_quality": 4.6,
+    "cost_10000_convs_usd": 506.88,
+    "cost_chat_only_usd": 340.41
+  },
+  "evict": {
+    "mean_prompt_tokens_model": 347.6,
+    "mean_prompt_tokens_own_count": 304.5,
+    "mean_completion_tokens": 32.7,
+    "mean_latency_ms": 9209,
+    "mean_reply_latency_ms": 4563,
+    "maintenance_in_tokens_per_turn": 369.0,
+    "maintenance_out_tokens_per_turn": 31.4,
+    "mean_probe_quality": 4.6,
+    "cost_10000_convs_usd": 311.19,
+    "cost_chat_only_usd": 153.33
+  }
+}
