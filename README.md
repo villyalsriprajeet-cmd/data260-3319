@@ -4,7 +4,7 @@ DATA-260 homework 1
 
 HW1 - Community Sports League Fixtures
 
-A small web app for submitting football league fixtures (match title, venue, submitter email, match details, status, and terms agreement). Built with plain HTML, CSS, and JavaScript, then packaged with Docker and deployed to AWS ECS. The repo also has the Part 2 agents, the Part 3 non-determinism experiment, and the Part 4 token-accounting client.
+A small web app for submitting football league fixtures (match title, venue, submitter email, match details, status, and terms agreement). Built with plain HTML, CSS, and JavaScript, then packaged with Docker and deployed to AWS ECS. The repo also has the Part 2 agents, the Part 3 non determinism experiment, and the Part 4 token accounting client.
 
 Configuration
 
@@ -79,3 +79,41 @@ Because the full history gets resent each turn, every new turn includes everythi
 
 What eventually limits that growth?
 The model's context window - the most tokens it can take at once. Once the history gets close to that, older turns have to be trimmed or summarized, otherwise it gets cut off.
+HW6 - MongoDB, chat memory, memory cost and file memory
+
+This extends the same repo. Same configuration as above (SID4 3319, PORT_BASE 8619, PREFIX s3319, SEED 3319, VERIFY_SEED 263319, DOMAIN_ID 7). Model: qwen2.5:3b through Ollama. MongoDB 7.0 runs in Docker (container s3319_mongo, database s3319_doc).
+
+Files
+
+- code/api/ - MongoDB fixtures CRUD (/api/fixtures) and the chat with memory (POST /api/chat, GET /api/memory/{user_id}, GET /api/aggregate/{user_id})
+- code/hw6_chat_demo.py - the scripted chat demo
+- code/hw6_sweep.py - the Part 3 sweep (N=4, 12, 30 and the eviction policy)
+- code/file_memory.py - loads AGENT.md and MEMORY.md, builds the system prompt, checks and runs consolidation
+- code/hw6_memory_cli.py - the /memory, /compact, /dream and /help commands
+- code/check_agent_rules.py - checks code against the rules in AGENT.md
+- code/verify_hw06.py - the self-check script (make verify-hw06)
+- AGENT.md, MEMORY.md, MEMORY_CONSOLIDATION_LOG.md - durable instructions, durable facts, and the consolidation audit
+- reports/hw06/ - report.pdf, METRICS.md, RUN_LOG.txt, AI_USE.md, verification.json, memory_probes.yaml, and raw/
+
+How to run
+
+Start MongoDB and Ollama, then the backend:
+
+    docker start s3319_mongo
+    ollama serve
+    python -m uvicorn code.api.main:app --port 8619
+
+Part 3 - the memory sweep (takes a while):
+
+    python -m code.hw6_sweep
+
+Part 4 - the file memory chat and its demo:
+
+    python -m code.hw6_memory_cli
+    python -m code.hw6_memory_cli --demo
+
+Self-check:
+
+    make verify-hw06
+
+Make sure the data260 environment is active, Docker is running, and Ollama has qwen2.5:3b pulled.
