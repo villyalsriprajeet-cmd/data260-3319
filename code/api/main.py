@@ -17,7 +17,7 @@ async def lifespan(app):
     try:
         ensure_collections()  # create the Mongo collections and rules on startup
     except PyMongoError as exc:
-        print(f"WARNING: MongoDB not ready: {exc}")  
+        print(f"WARNING: MongoDB not ready: {exc}")
     yield
 app = FastAPI(title="Community Sports League Fixtures - HW6", lifespan=lifespan)
 app.add_middleware(
@@ -30,7 +30,7 @@ app.add_middleware(
 @app.middleware("http")
 async def add_sql_count(request, call_next):
     box = {"n": 0}
-    sql_counter.set(box)  
+    sql_counter.set(box)
     response = await call_next(request)
     response.headers["X-SQL-Count"] = str(box["n"])  # statements this request ran
     return response

@@ -3,11 +3,9 @@ import argparse
 import json
 import sys
 from pathlib import Path
-
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
-from model_client import ModelClient  # noqa: E402
-from code import file_memory as fm  # noqa: E402
-
+from model_client import ModelClient
+from code import file_memory as fm
 KEEP_RECENT = 4  # messages kept in full by /compact
 DEMO_MESSAGES = [
     "Hi, I am Sri and I manage the Spartans.",
@@ -20,17 +18,10 @@ HELP = """Commands:
   /dream    pull lasting facts out of the recent chat and add them to MEMORY.md
   /help     show this list
   /quit     leave"""
-
-
 def make_client():
-    # same model settings as the earlier homeworks, fixed seed
     return ModelClient(num_ctx=4096, num_predict=200, seed=3319)
-
-
 def system_message(agent_path, memory_path):
     return {"role": "system", "content": fm.build_system_prompt(fm.load_agent(agent_path), fm.load_memory(memory_path))}
-
-
 def show_memory(agent_path, memory_path):
     agent, mem = fm.load_agent(agent_path), fm.load_memory(memory_path)
     due, why = fm.needs_consolidation(mem)
@@ -39,10 +30,7 @@ def show_memory(agent_path, memory_path):
     print(f"consolidation required: {due} ({why})")
     print("--- MEMORY.md ---")
     print(mem.rstrip())
-
-
-def compact(history, client, memory_path):
-    # consolidate MEMORY.md and shrink older chat messages to a summary
+def compact(history, client, memory_path):  # /compact: report counts before and after
     before_msgs, lines_before = len(history), len(fm.content_lines(fm.load_memory(memory_path)))
     _, lines_after, log = fm.run_consolidation(memory_path)
     if len(history) > KEEP_RECENT:
@@ -54,18 +42,13 @@ def compact(history, client, memory_path):
         history[:] = [{"role": "assistant", "content": "Summary of earlier chat:\n" + summary}] + recent
     print(f"messages: {before_msgs} -> {len(history)}")
     print(f"MEMORY.md content lines: {lines_before} -> {lines_after} ({len(log)} changes logged in {fm.LOG_PATH.name})")
-
-
 KEY_HINTS = {"name": "the user's name", "role": "the user's job", "team": "the team's name",
              "home venue": "where home games are played", "away venue": "where away games are played",
              "rival": "the opposing team", "next game": "date and time of the next game",
              "training day": "the day the team trains", "reminders": "how long before games to send reminders",
              "availability": "days and times the user is free", "timezone": "the user's time zone",
              "contact": "how to contact the user", "summary style": "how summaries should look"}
-
-
 def dream_prompt(keys):
-    # tell the model which keys exist and what each one means
     shown = ", ".join(f"{k} ({KEY_HINTS[k]})" if k in KEY_HINTS else k for k in keys)
     return ("Read the user's messages and list lasting facts they state about themselves, their team, venue, schedule or "
             f"preferences. Reuse one of these keys only when its meaning fits the fact: {shown}. Otherwise use a new key of "
@@ -73,10 +56,7 @@ def dream_prompt(keys):
             "'I can only help on Tuesdays' -> {\"facts\": [{\"key\": \"availability\", \"value\": \"Tuesdays only\"}]}; "
             "'Please remind me a day before each game' -> {\"facts\": [{\"key\": \"reminders\", \"value\": \"a day before each game\"}]}. "
             'Ignore questions and small talk. If nothing lasting was said, reply {"facts": []}.')
-
-
-def dream(history, client, memory_path):
-    # ask the model for lasting facts and append the new ones
+def dream(history, client, memory_path):  # /dream: add lasting facts to MEMORY.md
     mem = fm.load_memory(memory_path)
     users = [m["content"] for m in history[-10:] if m["role"] == "user"]
     said = "\n".join(t for t in users if not t.strip().endswith("?"))  # questions are not facts
@@ -88,19 +68,13 @@ def dream(history, client, memory_path):
     for line in added + notes:
         print(" ", line)
     print(f"/dream added {len(added)} fact(s) to MEMORY.md")
-
-
-def reply(history, client, user_text, agent_path, memory_path):
-    # one chat turn: system prompt is rebuilt from the files each time
+def reply(history, client, user_text, agent_path, memory_path):  # system prompt rebuilt from the files each turn
     history.append({"role": "user", "content": user_text})
     messages = [system_message(agent_path, memory_path)] + history
     out = client.complete(messages, json_mode=False)
     history.append({"role": "assistant", "content": out["text"].strip()})
     return out["text"].strip(), out["input_tokens"]
-
-
-def handle(line, history, client, agent_path, memory_path):
-    # route a command or a chat line; returns False to quit
+def handle(line, history, client, agent_path, memory_path):  # route a command or a chat line
     if line == "/quit":
         return False
     if line == "/help":
@@ -115,8 +89,6 @@ def handle(line, history, client, agent_path, memory_path):
         text, tokens = reply(history, client, line, agent_path, memory_path)
         print(f"assistant: {text}\n[prompt tokens: {tokens}, chat messages: {len(history)}]")
     return True
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--demo", action="store_true", help="run a scripted session")
@@ -140,7 +112,5 @@ def main():
                 break
         if line and not handle(line, history, client, args.agent, args.memory):
             break
-
-
 if __name__ == "__main__":
     main()

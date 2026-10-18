@@ -2,8 +2,8 @@
 from datetime import datetime
 from typing import Literal, Optional
 from pydantic import BaseModel, ConfigDict, Field, model_validator
-StatusEnum = Literal["Scheduled", "Live", "Completed", "Postponed"] 
-CategoryEnum = Literal["League", "Cup", "Friendly", "Tournament"]  
+StatusEnum = Literal["Scheduled", "Live", "Completed", "Postponed"]
+CategoryEnum = Literal["League", "Cup", "Friendly", "Tournament"]
 class FixtureDocCreate(BaseModel):
     model_config = ConfigDict(str_strip_whitespace=True, extra="forbid")  # trim spaces, reject unknown fields
     fixture_title: str = Field(min_length=1, max_length=100)  # required short text

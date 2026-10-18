@@ -1,4 +1,4 @@
-# Part 1 CRUD routes for the MongoDB fixtures collection 
+# Part 1 CRUD routes for the MongoDB fixtures collection
 from datetime import datetime, timezone
 from bson import ObjectId
 from bson.errors import InvalidId
@@ -11,9 +11,9 @@ def to_object_id(value: str) -> ObjectId:
     try:
         return ObjectId(value)
     except (InvalidId, TypeError):
-        raise HTTPException(status_code=400, detail=f"Invalid id format: {value}")  
+        raise HTTPException(status_code=400, detail=f"Invalid id format: {value}")
 def serialize(doc: dict) -> dict:
-    doc["id"] = str(doc.pop("_id"))  
+    doc["id"] = str(doc.pop("_id"))
     return doc
 @router.post("", response_model=FixtureDocOut, status_code=201)
 def create_fixture(payload: FixtureDocCreate):

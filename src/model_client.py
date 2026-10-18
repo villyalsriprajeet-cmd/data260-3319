@@ -21,7 +21,7 @@ class ModelClient:
             },
         }
         if json_mode:
-            payload["format"] = "json" 
+            payload["format"] = "json"
         if self.seed is not None:
             payload["options"]["seed"] = self.seed
         if tools:

@@ -30,7 +30,7 @@ METRIC_FIELDS = ["timestamp", "user_id", "session_id", "turn", "short_term_n", "
                  "primer_tokens", "long_term_tokens", "short_term_tokens", "current_tokens", "episodic_tokens",
                  "extract_prompt_tokens", "extract_completion_tokens", "summary_prompt_tokens", "summary_completion_tokens",
                  "latency_ms", "reply_latency_ms", "token_method"]
-_tokenizer = None  # loaded on first use
+_tokenizer = None
 def now():
     return datetime.now(timezone.utc)
 def call_model(messages, json_mode=False, num_predict=None):

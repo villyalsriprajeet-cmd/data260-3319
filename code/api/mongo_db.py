@@ -56,12 +56,12 @@ EPISODES_VALIDATOR = {"$jsonSchema": {
     "properties": {
         "user_id": {"bsonType": "string"},
         "session_id": {"bsonType": "string"},
-        "fact": {"bsonType": "string", "minLength": 1, "maxLength": 300}, 
+        "fact": {"bsonType": "string", "minLength": 1, "maxLength": 300},
         "importance": {"bsonType": ["double", "int"], "minimum": 0, "maximum": 1},
         "embedding": {"bsonType": "array", "items": {"bsonType": "double"}},
         "created_at": {"bsonType": "date"},
     }}}
-COLLECTIONS = { 
+COLLECTIONS = {
     FIXTURES_COLLECTION: (FIXTURES_VALIDATOR, [[("kickoff_at", ASCENDING)]]),
     MESSAGES_COLLECTION: (MESSAGES_VALIDATOR, [[("user_id", ASCENDING), ("session_id", ASCENDING), ("created_at", ASCENDING)],
                                                [("user_id", ASCENDING), ("created_at", ASCENDING)]]),

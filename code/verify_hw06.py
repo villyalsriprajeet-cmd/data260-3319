@@ -8,7 +8,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 import requests
-ROOT = Path(__file__).resolve().parents[1]  # repo root
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "code"))
 REP = ROOT / "reports" / "hw06"
@@ -126,7 +126,6 @@ except Exception as e:
 finally:
     if server:
         server.terminate()
-
 out = {"hw": "hw6", "sid4": SID4, "generated": datetime.now().isoformat(timespec="seconds"),
        "commit_hash": git("rev-parse", "HEAD") or "unknown", "tag": git("describe", "--tags", "--exact-match") or "none",
        "config": CONFIG, "model": MODEL, "all_passed": all(c["passed"] for c in checks), "checks": checks}
