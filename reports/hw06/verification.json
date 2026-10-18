@@ -1,0 +1,252 @@
+{
+  "hw": "hw6",
+  "sid4": 3319,
+  "generated": "2026-10-17T20:28:44",
+  "commit_hash": "835c514d1eef7b2babd15a8f1423bb48573dfaec",
+  "tag": "none",
+  "config": {
+    "SID4": 3319,
+    "PORT_BASE": 8619,
+    "PREFIX": "s3319",
+    "SEED": 3319,
+    "VERIFY_SEED": 263319,
+    "DOMAIN_ID": 7
+  },
+  "model": {
+    "llm": "qwen2.5:3b",
+    "runtime": "Ollama (local)",
+    "temperature": 0,
+    "seed": 3319,
+    "num_ctx": 4096,
+    "database": "MongoDB 7.0 (Docker s3319_mongo)",
+    "short_term_n": 12,
+    "summarize_every_user_msgs": 5,
+    "episodic_top_k": 3,
+    "embedder": "all-MiniLM-L6-v2",
+    "file_memory_max_lines": 40,
+    "file_memory_max_age_h": 24
+  },
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "file exists: AGENT.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: MEMORY.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: MEMORY_CONSOLIDATION_LOG.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/file_memory.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/hw6_memory_cli.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/check_agent_rules.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/api/mongo_db.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/api/memory.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/api/routers/docs.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/api/routers/chat.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: code/hw6_sweep.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw06/RUN_LOG.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw06/METRICS.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw06/AI_USE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw06/report.pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw06/memory_probes.yaml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw06/raw/chat_metrics.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw06/raw/sweep_turns.csv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw06/raw/probe_results.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file exists: reports/hw06/raw/sweep_summary.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "memory_probes.yaml parses",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sweep_turns.csv has 120 rows (4 settings x 30 turns)",
+      "passed": true,
+      "detail": "120"
+    },
+    {
+      "check": "probe_results.json is valid JSON with all 4 settings",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sweep_summary.json is valid JSON with all 4 settings",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "MongoDB has fixtures, messages, summaries and episodes",
+      "passed": true,
+      "detail": "['episodes', 'fixtures', 'messages', 'summaries']"
+    },
+    {
+      "check": "each collection has a $jsonSchema validator",
+      "passed": true,
+      "detail": "{'episodes': True, 'summaries': True, 'messages': True, 'fixtures': True}"
+    },
+    {
+      "check": "system prompt contains AGENT.md and MEMORY.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CLI offers /memory /compact /dream /help",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "current MEMORY.md has under 40 content lines",
+      "passed": true,
+      "detail": "34"
+    },
+    {
+      "check": "AGENT.md rule checker passes",
+      "passed": true,
+      "detail": "20/20 checks passed"
+    },
+    {
+      "check": "MEMORY.md has at least 2 commits (original and consolidated)",
+      "passed": true,
+      "detail": "3"
+    },
+    {
+      "check": "committed original MEMORY.md is 55 lines",
+      "passed": true,
+      "detail": "55"
+    },
+    {
+      "check": "replaying consolidation on the original gives under 40 lines",
+      "passed": true,
+      "detail": "34"
+    },
+    {
+      "check": "replay merges at least 3 duplicates and resolves at least 3 contradictions",
+      "passed": true,
+      "detail": "7 merges, 4 contradictions"
+    },
+    {
+      "check": "replay flags the hedged contradiction for review",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Ollama has qwen2.5:3b",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "backend responds on port 8619",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "check": "POST /api/fixtures creates a document (201)",
+      "passed": true,
+      "detail": "201"
+    },
+    {
+      "check": "GET /api/fixtures/{id} returns it",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PUT /api/fixtures/{id} changes only the sent field",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "check": "invalid category is rejected with 422",
+      "passed": true,
+      "detail": "422"
+    },
+    {
+      "check": "DELETE /api/fixtures/{id} removes it",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "check": "POST /api/chat returns a reply",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "check": "GET /api/memory/{user_id} shows the stored messages",
+      "passed": true,
+      "detail": "200"
+    }
+  ]
+}

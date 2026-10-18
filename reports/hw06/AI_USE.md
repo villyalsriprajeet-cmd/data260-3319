@@ -4,7 +4,7 @@
 I used AI as an assistant for this homework. It wrote the first drafts of the Mongo routes, the chat memory, the sweep script, the file memory module and the report text, and it walked me through each step. I set up MongoDB, Ollama and the environment on my laptop, ran every command myself, took all the screenshots, and checked the results against Compass and the raw files. Every number in the report comes from my own runs.
 
 ## 2. One AI output that was wrong
-The first fact-e\ xtraction prompt for the memory did not work well with qwen2.5:3b. In my first N=4 run it found nothing in four of the six messages that plant a fact, and the session summary was cut off, so the Sunday 2 PM change was lost. The score for that run was 4.2, and the next game question got 1 out of 5.
+The first fact extraction prompt for the memory did not work well with qwen2.5:3b. In my first N=4 run it found nothing in four of the six messages that plant a fact, and the session summary was cut off, so the Sunday 2 PM change was lost. The score for that run was 4.2, and the next game question got 1 out of 5.
 
 ## 3. How I found it
 The score looked too low, so I printed the stored facts and summaries for that run. The planted messages had empty results and one summary stopped in the middle of a bullet. I kept the files from that first run so the difference can be seen.
