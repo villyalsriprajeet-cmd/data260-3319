@@ -1,4 +1,4 @@
-<!-- last_consolidated: 2026-10-17T19:58:40 -->
+<!-- last_consolidated: 2026-10-17T16:17:32 -->
 # MEMORY.md
 ## User
 - [2026-09-02] name: Sri
@@ -15,7 +15,7 @@
 - [2026-05-20] captain: Dana Reyes
 - [2026-06-11] sponsor: Harbor Diner
 ## Venue and schedule
-- [2026-09-30] home venue: maybe moving to Eastside Field next season (unconfirmed) (supersedes 2026-03-01: Riverside Park)
+- [2026-10-17] home venue: Riverside Park (supersedes 2026-09-30: maybe moving to Eastside Field next season (unconfirmed))
 - [2026-09-30] field surface: grass
 - [2026-09-14] rival: Eagles
 - [2026-06-14] away venue: Lakeview Stadium
