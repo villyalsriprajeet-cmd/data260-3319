@@ -286,3 +286,68 @@ Well-formed call rate after repair:  50/50 = 100.0%
 Task success: 19/21
 Failures by type: malformed_args=8, unknown_tool=0, text_instead_of_tool=0, lost_chain=1
 Raw data: /Users/villyalsriprajeet/Desktop/data260-3319/reports/hw07/raw/p2_reliability_attempts.csv
+PASS  t_fail_then_retry_success: failed -> reflection stored with evidence -> retry passed (stop=success)
+PASS  t_human_review: still failing after 2 retries -> stop=human_review
+PASS  t_budget: tool budget 1 -> stop=budget_exhausted after 1 tool call(s)
+PASS  t_isolation: only the current user's reflections for the current run are loaded (1 of 3)
+PASS  t_injection: injected text removed, system prompt unchanged, delete_fixture still rejected (stop=human_review)
+
+5/5 Reflexion self-tests passed
+=== HW7 Part 3 Reflexion | task A | qwen2.5:3b temp 0.7 seed 263326 | max 2 retries, 12 tool calls, 20000 tokens | 2026-10-23 19:38:13 ===
+--- attempt 0 (original loop)  budget left: 12 tool calls, 20000 tokens
+[run 4a0137d5] Search for fixtures with 'Eagles' in the title, then look up the full details of the first result. Tell me its fixture code, venue, home team and tickets available.
+  step 1  model -> search_fixtures({"query": "Eagles"})
+           tool  <- ok: 10 fixture(s), first FX-00004
+  step 1  model -> fixture_details({"fixture_code": "FX-0001"})  REJECTED: schema validation failed: 'fixture_code' must match ^FX-\d{5}$ (e.g. FX-00001), got 'FX-0001'
+  step 2  model -> fixture_details({"fixture_code": "FX-00008"})
+           tool  <- ok: FX-00008 'Fremont Eagles vs Oakland Lions - Matchweek 12', tickets 296
+  step 3  model -> final answer
+answer: The fixture you asked about is FX-00008, which is held at Fremont Stadium. The home team is Fremont Eagles with 296 tickets available.
+stop=final_answer  iterations=3  tool_calls=2  repairs=1  tokens=3207  latency=32528 ms
+verifier: FAIL - fixture_details was not called for the first search result FX-00004
+reflection stored: failure='fixture_details was called for the wrong fixture_code (FX-00008 instead of FX-00004), leading to the wrong result being displayed' strategy='Ensure fixture_details is called with the correct fixture_code provided in the task'
+--- attempt 1 (Reflexion retry 1)  budget left: 10 tool calls, 16458 tokens
+[run bd42333f] Search for fixtures with 'Eagles' in the title, then look up the full details of the first result. Tell me its fixture code, venue, home team and tickets available.
+  step 1  model -> search_fixtures({"limit": 1, "query": "Eagles"})
+           tool  <- ok: 1 fixture(s), first FX-00004
+  step 2  model -> fixture_details({"fixture_code": "FX-00004"})
+           tool  <- ok: FX-00004 'Pleasanton Wolves vs Fremont Eagles - Matchweek 20', tickets 148
+  step 3  model -> final answer
+answer: The fixture code is FX-00004, it is held at Pleasanton Sports Complex, the home team is Pleasanton Wolves, and there are 148 tickets available.
+stop=final_answer  iterations=3  tool_calls=2  repairs=0  tokens=2218  latency=14153 ms
+verifier: PASS - searched, looked up first result FX-00004, answer cites it
+STOP=success  attempts=2  retries=1  tool_calls=4/12  tokens=5760/20000  latency=52744 ms
+=== HW7 Part 3 comparison | qwen2.5:3b temp 0.7 | 7 x A,B,C | same seeds as Part 2 | 2026-10-23 19:41:37 ===
+ 1 A seed 263320  original PASS  ->  reflexion success after 0 retries
+ 2 B seed 263321  original PASS  ->  reflexion success after 0 retries
+ 3 C seed 263322  original PASS  ->  reflexion success after 0 retries
+ 4 A seed 263323  original PASS  ->  reflexion success after 0 retries
+ 5 B seed 263324  original PASS  ->  reflexion success after 0 retries
+ 6 C seed 263325  original PASS  ->  reflexion success after 0 retries
+ 7 A seed 263326  original FAIL  ->  reflexion success after 1 retry
+ 8 B seed 263327  original PASS  ->  reflexion success after 0 retries
+ 9 C seed 263328  original PASS  ->  reflexion success after 0 retries
+10 A seed 263329  original PASS  ->  reflexion success after 0 retries
+11 B seed 263330  original PASS  ->  reflexion success after 0 retries
+12 C seed 263331  original FAIL  ->  reflexion success after 1 retry
+13 A seed 263332  original PASS  ->  reflexion success after 0 retries
+14 B seed 263333  original PASS  ->  reflexion success after 0 retries
+15 C seed 263334  original PASS  ->  reflexion success after 0 retries
+16 A seed 263335  original PASS  ->  reflexion success after 0 retries
+17 B seed 263336  original PASS  ->  reflexion success after 0 retries
+18 C seed 263337  original PASS  ->  reflexion success after 0 retries
+19 A seed 263338  original PASS  ->  reflexion success after 0 retries
+20 B seed 263339  original PASS  ->  reflexion success after 0 retries
+21 C seed 263340  original PASS  ->  reflexion success after 0 retries
+
+| Metric | Original loop | Reflexion loop |
+|---|---|---|
+| Task success | 19/21 | 21/21 |
+| Unsupported claims (episodes) | 0 | 0 |
+| Retry rate | 0% | 10% |
+| Tool calls (mean/episode) | 2.4 | 2.6 |
+| Tokens (mean/episode) | 2892.3 | 3195.0 |
+| Latency ms (mean/episode) | 17625.7 | 19901.9 |
+| Verifier false rejections | see note | see note (v1 verifier would reject 0) |
+stop reasons: {'success': 21, 'budget_exhausted': 0, 'human_review': 0}
+Raw data: /Users/villyalsriprajeet/Desktop/data260-3319/reports/hw07/raw/p3_comparison_episodes.csv, reflections: /Users/villyalsriprajeet/Desktop/data260-3319/reports/hw07/raw/p3_reflections.jsonl

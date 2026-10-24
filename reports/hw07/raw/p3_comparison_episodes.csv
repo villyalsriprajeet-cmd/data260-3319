@@ -1,0 +1,22 @@
+episode,task,seed,orig_success,orig_unsupported,orig_tool_calls,orig_tokens,orig_latency_ms,orig_reason,refl_success,refl_unsupported,retries,refl_tool_calls,refl_tokens,refl_latency_ms,stop_reason,legacy_b_false_rejections,rejected_answers
+1,A,263320,1,0,2,3246,19665,"searched, looked up first result FX-00004, answer cites it",1,0,0,2,3246,19669,success,0,
+2,B,263321,1,0,2,2514,14018,top city Gilroy and a supporting fixture from search,1,0,0,2,2514,14019,success,0,
+3,C,263322,1,0,3,2195,10605,"compared ['FX-00115', 'FX-00119'], winner FX-00119",1,0,0,3,2195,10608,success,0,
+4,A,263323,1,0,2,3010,13656,"searched, looked up first result FX-00004, answer cites it",1,0,0,2,3010,13659,success,0,
+5,B,263324,1,0,2,3073,18040,top city Gilroy and a supporting fixture from search,1,0,0,2,3073,18043,success,0,
+6,C,263325,1,0,3,2228,13501,"compared ['FX-00115', 'FX-00119'], winner FX-00119",1,0,0,3,2228,13503,success,0,
+7,A,263326,0,0,2,3207,16905,fixture_details was not called for the first search result FX-00004,1,0,1,4,5760,32259,success,0,"[0] fixture_details was not called for the first search result FX-00004 :: The fixture you asked about is FX-00008, which is held at Fremont Stadium. The home team is Fremont Eagles with 296 tickets available."
+8,B,263327,1,0,2,3056,15856,top city Gilroy and a supporting fixture from search,1,0,0,2,3056,15858,success,0,
+9,C,263328,1,0,3,2229,14358,"compared ['FX-00115', 'FX-00119'], winner FX-00119",1,0,0,3,2229,14360,success,0,
+10,A,263329,1,0,2,3182,14879,"searched, looked up first result FX-00004, answer cites it",1,0,0,2,3182,14880,success,0,
+11,B,263330,1,0,2,3059,15376,top city Gilroy and a supporting fixture from search,1,0,0,2,3059,15378,success,0,
+12,C,263331,0,0,3,2214,15169,"answer says FX-00115 has more, but the lookups show FX-00119 has more",1,0,1,6,6018,47565,success,0,"[0] answer says FX-00115 has more, but the lookups show FX-00119 has more :: The first fixture (FX-00115) has more tickets available with 247 compared to the second fixture (FX-00119) which has 395 tickets available."
+13,A,263332,1,0,2,3226,22473,"searched, looked up first result FX-00004, answer cites it",1,0,0,2,3226,22476,success,0,
+14,B,263333,1,0,2,2513,14661,top city Gilroy and a supporting fixture from search,1,0,0,2,2513,14663,success,0,
+15,C,263334,1,0,3,2237,15065,"compared ['FX-00115', 'FX-00119'], winner FX-00119",1,0,0,3,2237,15069,success,0,
+16,A,263335,1,0,2,2994,12577,"searched, looked up first result FX-00004, answer cites it",1,0,0,2,2994,12580,success,0,
+17,B,263336,1,0,3,5906,59740,top city Gilroy and a supporting fixture from search,1,0,0,3,5906,59743,success,0,
+18,C,263337,1,0,3,2212,14661,"compared ['FX-00115', 'FX-00119'], winner FX-00119",1,0,0,3,2212,14665,success,0,
+19,A,263338,1,0,2,3182,16869,"searched, looked up first result FX-00004, answer cites it",1,0,0,2,3182,16871,success,0,
+20,B,263339,1,0,2,3051,18319,top city Gilroy and a supporting fixture from search,1,0,0,2,3051,18322,success,0,
+21,C,263340,1,0,3,2204,13747,"compared ['FX-00115', 'FX-00119'], winner FX-00119",1,0,0,3,2204,13750,success,0,
