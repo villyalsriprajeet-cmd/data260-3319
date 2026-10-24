@@ -1,0 +1,23 @@
+{
+  "model": "qwen2.5:3b",
+  "temperature": 0.7,
+  "seeds": "263319+attempt",
+  "attempts": 21,
+  "task_success": 19,
+  "call_slots": 50,
+  "well_formed_before_repair": 42,
+  "well_formed_after_repair": 50,
+  "rate_before": 0.84,
+  "rate_after": 1.0,
+  "failures": {
+    "malformed_args": 8,
+    "unknown_tool": 0,
+    "text_instead_of_tool": 0,
+    "lost_chain": 1
+  },
+  "outcomes": {
+    "success": 19,
+    "lost_chain": 1,
+    "answer_not_supported": 1
+  }
+}

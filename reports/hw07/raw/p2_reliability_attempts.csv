@@ -1,0 +1,22 @@
+attempt,task,seed,outcome,check_reason,stop_reason,call_slots,well_formed_first_try,well_formed_after_repair,repairs,malformed_args,unknown_tool,text_instead_of_tool,lost_chain,tool_calls,tokens,latency_ms
+1,A,263320,success,"searched, looked up first result FX-00004, answer cites it",final_answer,2,1,2,1,1,0,0,0,2,3246,28188
+2,B,263321,success,top city Gilroy and a supporting fixture from search,final_answer,2,1,2,1,1,0,0,0,2,2514,23537
+3,C,263322,success,"compared ['FX-00115', 'FX-00119'], winner FX-00119",final_answer,3,3,3,0,0,0,0,0,3,2195,15783
+4,A,263323,success,"searched, looked up first result FX-00004, answer cites it",final_answer,2,2,2,0,0,0,0,0,2,3010,15510
+5,B,263324,success,top city Gilroy and a supporting fixture from search,final_answer,2,2,2,1,0,0,0,0,2,3073,20028
+6,C,263325,success,"compared ['FX-00115', 'FX-00119'], winner FX-00119",final_answer,3,3,3,0,0,0,0,0,3,2228,16281
+7,A,263326,lost_chain,fixture_details was not called for the first search result FX-00004,final_answer,2,1,2,1,1,0,0,1,2,3207,20678
+8,B,263327,success,top city Gilroy and a supporting fixture from search,final_answer,2,2,2,1,0,0,0,0,2,3056,19844
+9,C,263328,success,"compared ['FX-00115', 'FX-00119'], winner FX-00119",final_answer,3,3,3,0,0,0,0,0,3,2229,17563
+10,A,263329,success,"searched, looked up first result FX-00004, answer cites it",final_answer,2,1,2,1,1,0,0,0,2,3182,17265
+11,B,263330,success,top city Gilroy and a supporting fixture from search,final_answer,2,2,2,1,0,0,0,0,2,3059,19114
+12,C,263331,answer_not_supported,"answer says FX-00115 has more, but the lookups show FX-00119 has more",final_answer,3,3,3,0,0,0,0,0,3,2214,14689
+13,A,263332,success,"searched, looked up first result FX-00004, answer cites it",final_answer,2,1,2,1,1,0,0,0,2,3226,21241
+14,B,263333,success,top city Gilroy and a supporting fixture from search,final_answer,2,1,2,1,1,0,0,0,2,2513,17706
+15,C,263334,success,"compared ['FX-00115', 'FX-00119'], winner FX-00119",final_answer,3,3,3,0,0,0,0,0,3,2237,17439
+16,A,263335,success,"searched, looked up first result FX-00004, answer cites it",final_answer,2,2,2,0,0,0,0,0,2,2994,14475
+17,B,263336,success,top city Gilroy and a supporting fixture from search,final_answer,3,2,3,2,1,0,0,0,3,5906,55047
+18,C,263337,success,"compared ['FX-00115', 'FX-00119'], winner FX-00119",final_answer,3,3,3,0,0,0,0,0,3,2212,16648
+19,A,263338,success,"searched, looked up first result FX-00004, answer cites it",final_answer,2,1,2,1,1,0,0,0,2,3182,17321
+20,B,263339,success,top city Gilroy and a supporting fixture from search,final_answer,2,2,2,1,0,0,0,0,2,3051,17900
+21,C,263340,success,"compared ['FX-00115', 'FX-00119'], winner FX-00119",final_answer,3,3,3,0,0,0,0,0,3,2204,14393

@@ -8,3 +8,5 @@ select = ["E", "F", "I"]  # pycodestyle errors, pyflakes (unused imports/variabl
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
+[tool.ruff.lint.per-file-ignores]
+"code/hw7_*.py" = ["E402"]  # HW7 scripts import after adding the HW1/HW5 folders to sys.path

@@ -1,0 +1,18 @@
+{
+  "A": {
+    "kind": "search -> detail lookup",
+    "prompt": "Search for fixtures with 'Eagles' in the title, then look up the full details of the first result. Tell me its fixture code, venue, home team and tickets available."
+  },
+  "B": {
+    "kind": "aggregate -> supporting example",
+    "prompt": "Which home-team city has the most tickets available in total? Then find one fixture from that city as a supporting example."
+  },
+  "C": {
+    "kind": "search + two detail lookups -> compare",
+    "prompt": "Search for fixtures at 'Gilroy Field', then look up the details of the first two results and tell me which of the two has more tickets available."
+  },
+  "ERR": {
+    "kind": "error recovery (nonexistent id)",
+    "prompt": "Show me the full details of fixture FX-00000."
+  }
+}

@@ -91,3 +91,198 @@ $ curl http://localhost:8619/auth/me -H 'Authorization: Bearer eyJhbGciOiJIUzI1N
 {"detail":"Token has expired"}
 HTTP 401
 
+---- hw7 part 1 [login] 2026-10-23 17:45:48 PDT ----
+== 1. Login: valid credentials -> JWT, invalid -> 401 ==
+$ curl -X POST http://localhost:8619/auth/login -d username=s3319_writer -d password=$WRITER_PASSWORD
+{"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzMzMxOV93cml0ZXIiLCJyb2xlIjoid3JpdGVyIiwiaWF0IjoxNzkyODAyNzQ4LCJleHAiOjE3OTI4MDQ1NDh9.2CLU3dr-WZCY8SUWWAdiFWUxF4eN43jdVT3qa9oS_8M","token_type":"bearer","expires_in":1800}
+HTTP 200
+
+$ curl -X POST http://localhost:8619/auth/login -d username=s3319_writer -d password=wrong-password
+{"detail":"Invalid username or password"}
+HTTP 401
+
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:01:02 ===
+Task A (search -> detail lookup)
+[run 866fe364] Search for fixtures with 'Eagles' in the title, then look up the full details of the first result. Tell me its fixture code, venue, home team and tickets available.
+  step 1  model -> search_fixtures({"query": "Eagles"})
+           tool  <- ok: 10 fixture(s), first FX-00004
+  step 1  model -> fixture_details({"fixture_code": "FX-00001"})
+           tool  <- ok: FX-00001 'Pleasanton Hawks vs Cupertino Spartans - Matchweek 32', tickets 37
+  step 2  model -> final answer
+answer: The fixture code is FX-00004, the venue is Pleasanton Sports Complex, the home team is Pleasanton Wolves, and the tickets available are 148. The details of the first result, which is FX-00004, show that the venue is Pleasanton Sports Complex and the home team is Pleasanton Wolves with 148 tickets available.
+stop=final_answer  iterations=2  tool_calls=2  repairs=0  tokens=1884  latency=39468 ms
+check: FAIL - fixture_details was not called for the first search result FX-00004
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:01:59 ===
+Task B (aggregate -> supporting example)
+[run c6a51ebd] Which home-team city has the most tickets available in total? Then find one fixture from that city as a supporting example.
+  step 1  model -> tickets_by_city({"top_n": 1})
+           tool  <- ok: 1 row(s), top {'city': 'Gilroy', 'fixtures': 250, 'total_tickets': 64101, 'avg_tickets': 256.4}
+  step 2  model -> final answer
+answer: The city of Gilroy has the most tickets available with a total of 64101. Here is one fixture from that city:
+stop=final_answer  iterations=2  tool_calls=1  repairs=0  tokens=991  latency=11127 ms
+check: FAIL - no search_fixtures call for the top city Gilroy that returned an example
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:02:40 ===
+Task C (search + two detail lookups -> compare)
+[run f17c15ac] Search for fixtures at 'Gilroy Field', then look up the details of the first two results and tell me which of the two has more tickets available.
+  step 1  model -> search_fixtures({"query": "Gilroy Field", "limit": 2})
+           tool  <- ok: 2 fixture(s), first FX-00115
+  step 2  model -> fixture_details({"fixture_code": "FX-00115"})
+           tool  <- ok: FX-00115 'Gilroy Bears vs Hayward Eagles - Matchweek 10', tickets 247
+  step 2  model -> fixture_details({"fixture_code": "FX-00119"})
+           tool  <- ok: FX-00119 'Gilroy Wolves vs San Jose Eagles - Matchweek 9', tickets 395
+  step 3  model -> tickets_by_city({"top_n": 2})
+           tool  <- ok: 2 row(s), top {'city': 'Gilroy', 'fixtures': 250, 'total_tickets': 64101, 'avg_tickets': 256.4}
+  step 4  model -> final answer
+answer: The first fixture, FX-00115, has more tickets available with 247 compared to the second fixture, FX-00119, which has 395 tickets available.
+stop=final_answer  iterations=4  tool_calls=4  repairs=0  tokens=3195  latency=23731 ms
+check: PASS - compared ['FX-00115', 'FX-00119'], winner FX-00119
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:03:19 ===
+Task ERR (error recovery (nonexistent id))
+[run 8292c59e] Show me the full details of fixture FX-00000.
+  step 1  model -> fixture_details({"fixture_code": "FX-00000"})
+           tool  <- error NOT_FOUND: no fixture with code FX-00000
+  step 2  model -> final answer
+answer: It seems there is no fixture with the code FX-00000. Can you please provide another fixture code or the full details of a different fixture?
+stop=final_answer  iterations=2  tool_calls=1  repairs=0  tokens=946  latency=8593 ms
+check: PASS - tool returned NOT_FOUND and the agent answered without crashing
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:10:41 ===
+Task A (search -> detail lookup)
+[run 7330bbed] Search for fixtures with 'Eagles' in the title, then look up the full details of the first result. Tell me its fixture code, venue, home team and tickets available.
+  step 1  model -> search_fixtures({"query": "Eagles"})
+           tool  <- ok: 10 fixture(s), first FX-00004
+  step 1  model -> fixture_details({"fixture_code": "FX-00001"})  REJECTED: fixture_code FX-00001 does not appear in the question or in any earlier tool result; use a code from them
+  step 2  model -> fixture_details({"fixture_code": "FX-00004"})
+           tool  <- ok: FX-00004 'Pleasanton Wolves vs Fremont Eagles - Matchweek 20', tickets 148
+  step 3  model -> final answer
+answer: The fixture you asked about is FX-00004. It is held at the Pleasanton Sports Complex, featuring the Pleasanton Wolves as the home team. There are 148 tickets available for this fixture.
+stop=final_answer  iterations=3  tool_calls=2  repairs=1  tokens=3203  latency=29184 ms
+check: PASS - searched, looked up first result FX-00004, answer cites it
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:12:06 ===
+Task B (aggregate -> supporting example)
+[run a66b9227] Which home-team city has the most tickets available in total? Then find one fixture from that city as a supporting example.
+  step 1  model -> tickets_by_city({"top_n": 1})
+           tool  <- ok: 1 row(s), top {'city': 'Gilroy', 'fixtures': 250, 'total_tickets': 64101, 'avg_tickets': 256.4}
+  step 2  model -> final answer
+answer: The city of Gilroy has the most tickets available with a total of 64,101 tickets. Let's find one fixture from this city as an example.
+stop=final_answer  iterations=2  tool_calls=1  repairs=0  tokens=1074  latency=9602 ms
+check: FAIL - no search_fixtures call for the top city Gilroy that returned an example
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:14:00 ===
+Task C (search + two detail lookups -> compare)
+[run 589c7fc6] Search for fixtures at 'Gilroy Field', then look up the details of the first two results and tell me which of the two has more tickets available.
+  step 1  model -> search_fixtures({"query": "Gilroy Field", "limit": 2})
+           tool  <- ok: 2 fixture(s), first FX-00115
+  step 2  model -> fixture_details({"fixture_code": "FX-00115"})
+           tool  <- ok: FX-00115 'Gilroy Bears vs Hayward Eagles - Matchweek 10', tickets 247
+  step 2  model -> fixture_details({"fixture_code": "FX-00119"})
+           tool  <- ok: FX-00119 'Gilroy Wolves vs San Jose Eagles - Matchweek 9', tickets 395
+  step 3  model -> final answer
+answer: The first fixture with code FX-00119 has more tickets available with 395 compared to FX-00115 which has 247.
+stop=final_answer  iterations=3  tool_calls=3  repairs=0  tokens=2207  latency=16744 ms
+check: PASS - compared ['FX-00115', 'FX-00119'], winner FX-00119
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:14:34 ===
+Task ERR (error recovery (nonexistent id))
+[run 448536e6] Show me the full details of fixture FX-00000.
+  step 1  model -> fixture_details({"fixture_code": "FX-00000"})
+           tool  <- error NOT_FOUND: no fixture with code FX-00000
+  step 2  model -> final answer
+answer: It seems there is no fixture with the code FX-00000. Can you please provide the correct fixture code?
+stop=final_answer  iterations=2  tool_calls=1  repairs=0  tokens=1017  latency=5286 ms
+check: PASS - tool returned NOT_FOUND and the agent answered without crashing
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:20:13 ===
+Task B (aggregate -> supporting example)
+[run 262ad2f8] Which home-team city has the most tickets available in total? Then find one fixture from that city as a supporting example.
+  step 1  model -> tickets_by_city({"top_n": 1})
+           tool  <- ok: 1 row(s), top {'city': 'Gilroy', 'fixtures': 250, 'total_tickets': 64101, 'avg_tickets': 256.4}
+  step 2  model -> unfinished answer  NUDGED (call the tool still needed)
+  step 3  model -> fixture_details({"fixture_code": "FX-00005"})  REJECTED: fixture_code FX-00005 does not appear in the question or in any earlier tool result; use a code from them
+  step 4  model -> fixture_details({"fixture_code": "FX-00005"})  REJECTED: fixture_code FX-00005 does not appear in the question or in any earlier tool result; use a code from them
+  step 5  model -> fixture_details({"fixture_code": "FX-00005"})  REJECTED: fixture_code FX-00005 does not appear in the question or in any earlier tool result; use a code from them
+answer: Stopped: the model could not produce a valid tool call (fixture_details: fixture_code FX-00005 does not appear in the question or in any earlier tool result; use a code from them).
+stop=repair_failed  iterations=5  tool_calls=1  repairs=3  tokens=3240  latency=35501 ms
+check: FAIL - no search_fixtures call for the top city Gilroy that returned an example
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:24:02 ===
+Task B (aggregate -> supporting example)
+[run 3713e7d0] Which home-team city has the most tickets available in total? Then find one fixture from that city as a supporting example.
+  step 1  model -> tickets_by_city({"top_n": 1})
+           tool  <- ok: 1 row(s), top {'city': 'Gilroy', 'fixtures': 250, 'total_tickets': 64101, 'avg_tickets': 256.4}
+  step 2  model -> unfinished answer  NUDGED (call the tool still needed)
+  step 3  model -> search_fixtures({"query": "Gilroy"})
+           tool  <- ok: 10 fixture(s), first FX-00012
+  step 4  model -> final answer
+answer: The city of Gilroy has the most tickets available with a total of 64,101 tickets. One fixture from this city as an example is the Gilroy Hawks vs Berkeley Wolves match from Matchweek 8 at Gilroy Park with 444 tickets available.
+stop=final_answer  iterations=4  tool_calls=2  repairs=1  tokens=3064  latency=20614 ms
+check: FAIL - answer gives no supporting fixture (code or title) from the search
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:32:39 ===
+Task B (aggregate -> supporting example)
+[run 9ab41e93] Which home-team city has the most tickets available in total? Then find one fixture from that city as a supporting example.
+  step 1  model -> tickets_by_city({"top_n": 1})
+           tool  <- ok: 1 row(s), top {'city': 'Gilroy', 'fixtures': 250, 'total_tickets': 64101, 'avg_tickets': 256.4}
+  step 2  model -> unfinished answer  NUDGED (call the tool still needed)
+  step 3  model -> search_fixtures({"query": "Gilroy"})
+           tool  <- ok: 10 fixture(s), first FX-00012
+  step 4  model -> final answer
+answer: The city of Gilroy has the most tickets available with a total of 64,101 tickets. One fixture from this city as an example is the Gilroy Hawks vs Berkeley Wolves match from Matchweek 8 at Gilroy Park with 444 tickets available.
+stop=final_answer  iterations=4  tool_calls=2  repairs=1  tokens=3064  latency=27735 ms
+check: PASS - top city Gilroy and a supporting fixture from search
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:37:36 ===
+Task A (search -> detail lookup)
+[run 07819133] Search for fixtures with 'Eagles' in the title, then look up the full details of the first result. Tell me its fixture code, venue, home team and tickets available.
+  step 1  model -> search_fixtures({"query": "Eagles"})
+           tool  <- ok: 10 fixture(s), first FX-00004
+  step 1  model -> fixture_details({"fixture_code": "FX-00001"})  REJECTED: fixture_code FX-00001 does not appear in the question or in any earlier tool result; call search_fixtures (with a city, team or venue name) to get real fixture codes first
+  step 2  model -> fixture_details({"fixture_code": "FX-00004"})
+           tool  <- ok: FX-00004 'Pleasanton Wolves vs Fremont Eagles - Matchweek 20', tickets 148
+  step 3  model -> final answer
+answer: The fixture you asked about is FX-00004. It is held at the Pleasanton Sports Complex, with the home team being the Pleasanton Wolves. The number of tickets available for this fixture is 148.
+stop=final_answer  iterations=3  tool_calls=2  repairs=1  tokens=3235  latency=27996 ms
+check: PASS - searched, looked up first result FX-00004, answer cites it
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:38:48 ===
+Task C (search + two detail lookups -> compare)
+[run 0287de62] Search for fixtures at 'Gilroy Field', then look up the details of the first two results and tell me which of the two has more tickets available.
+  step 1  model -> search_fixtures({"query": "Gilroy Field", "limit": 2})
+           tool  <- ok: 2 fixture(s), first FX-00115
+  step 2  model -> fixture_details({"fixture_code": "FX-00115"})
+           tool  <- ok: FX-00115 'Gilroy Bears vs Hayward Eagles - Matchweek 10', tickets 247
+  step 2  model -> fixture_details({"fixture_code": "FX-00119"})
+           tool  <- ok: FX-00119 'Gilroy Wolves vs San Jose Eagles - Matchweek 9', tickets 395
+  step 3  model -> final answer
+answer: The first fixture with code FX-00119 has more tickets available with 395 compared to FX-00115 which has 247.
+stop=final_answer  iterations=3  tool_calls=3  repairs=0  tokens=2207  latency=18587 ms
+check: PASS - compared ['FX-00115', 'FX-00119'], winner FX-00119
+=== HW7 Part 2 agent | model qwen2.5:3b temp 0 seed 3319 | 2026-10-23 18:39:43 ===
+Task ERR (error recovery (nonexistent id))
+[run 17ffd64b] Show me the full details of fixture FX-00000.
+  step 1  model -> fixture_details({"fixture_code": "FX-00000"})
+           tool  <- error NOT_FOUND: no fixture with code FX-00000
+  step 2  model -> final answer
+answer: It seems there is no fixture with the code FX-00000. Can you please provide the correct fixture code?
+stop=final_answer  iterations=2  tool_calls=1  repairs=0  tokens=1017  latency=3816 ms
+check: PASS - tool returned NOT_FOUND and the agent answered without crashing
+=== HW7 Part 2 reliability | qwen2.5:3b temp 0.7 | 7 x A,B,C | 2026-10-23 18:41:00 ===
+ 1 A  seed 263320  slots 2  first-try ok 1  after repair ok 2  tools 2  -> success
+ 2 B  seed 263321  slots 2  first-try ok 1  after repair ok 2  tools 2  -> success
+ 3 C  seed 263322  slots 3  first-try ok 3  after repair ok 3  tools 3  -> success
+ 4 A  seed 263323  slots 2  first-try ok 2  after repair ok 2  tools 2  -> success
+ 5 B  seed 263324  slots 2  first-try ok 2  after repair ok 2  tools 2  -> success
+ 6 C  seed 263325  slots 3  first-try ok 3  after repair ok 3  tools 3  -> success
+ 7 A  seed 263326  slots 2  first-try ok 1  after repair ok 2  tools 2  -> lost_chain
+ 8 B  seed 263327  slots 2  first-try ok 2  after repair ok 2  tools 2  -> success
+ 9 C  seed 263328  slots 3  first-try ok 3  after repair ok 3  tools 3  -> success
+10 A  seed 263329  slots 2  first-try ok 1  after repair ok 2  tools 2  -> success
+11 B  seed 263330  slots 2  first-try ok 2  after repair ok 2  tools 2  -> success
+12 C  seed 263331  slots 3  first-try ok 3  after repair ok 3  tools 3  -> answer_not_supported
+13 A  seed 263332  slots 2  first-try ok 1  after repair ok 2  tools 2  -> success
+14 B  seed 263333  slots 2  first-try ok 1  after repair ok 2  tools 2  -> success
+15 C  seed 263334  slots 3  first-try ok 3  after repair ok 3  tools 3  -> success
+16 A  seed 263335  slots 2  first-try ok 2  after repair ok 2  tools 2  -> success
+17 B  seed 263336  slots 3  first-try ok 2  after repair ok 3  tools 3  -> success
+18 C  seed 263337  slots 3  first-try ok 3  after repair ok 3  tools 3  -> success
+19 A  seed 263338  slots 2  first-try ok 1  after repair ok 2  tools 2  -> success
+20 B  seed 263339  slots 2  first-try ok 2  after repair ok 2  tools 2  -> success
+21 C  seed 263340  slots 3  first-try ok 3  after repair ok 3  tools 3  -> success
+
+Well-formed call rate before repair: 42/50 = 84.0%
+Well-formed call rate after repair:  50/50 = 100.0%
+Task success: 19/21
+Failures by type: malformed_args=8, unknown_tool=0, text_instead_of_tool=0, lost_chain=1
+Raw data: /Users/villyalsriprajeet/Desktop/data260-3319/reports/hw07/raw/p2_reliability_attempts.csv
