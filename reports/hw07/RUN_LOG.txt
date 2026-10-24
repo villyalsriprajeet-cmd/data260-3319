@@ -1,0 +1,93 @@
+---- hw7 part 1 [login] 2026-10-23 17:05:06 PDT ----
+== 1. Login: valid credentials -> JWT, invalid -> 401 ==
+$ curl -X POST http://localhost:8619/auth/login -d username=s3319_writer -d password=$WRITER_PASSWORD
+{"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzMzMxOV93cml0ZXIiLCJyb2xlIjoid3JpdGVyIiwiaWF0IjoxNzkyODAwMzA3LCJleHAiOjE3OTI4MDIxMDd9.P-HUOM5E63bkAYUMHW9jGgHuDx05LQ5DcjVik4dC5Bw","token_type":"bearer","expires_in":1800}
+HTTP 200
+
+$ curl -X POST http://localhost:8619/auth/login -d username=s3319_writer -d password=wrong-password
+{"detail":"Invalid username or password"}
+HTTP 401
+
+---- hw7 part 1 [me] 2026-10-23 17:05:21 PDT ----
+== 2. GET /auth/me without a token -> 401, with a valid token -> 200 ==
+$ curl http://localhost:8619/auth/me
+{"detail":"Not authenticated"}
+HTTP 401
+
+$ curl http://localhost:8619/auth/me -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5c...'
+{"id":2,"username":"s3319_reader","name":"s3319_reader","email":"s3319_reader@s3319league.org","role":"reader"}
+HTTP 200
+
+---- hw7 part 1 [invalid] 2026-10-23 17:05:33 PDT ----
+== 3. GET /auth/me with an invalid token and an expired token -> 401 ==
+$ curl http://localhost:8619/auth/me -H 'Authorization: Bearer not.a.real-token'
+{"detail":"Invalid token"}
+HTTP 401
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/villyalsriprajeet/Desktop/data260-3319/code/api/expired_token.py", line 3, in <module>
+    from .database import SessionLocal
+  File "/Users/villyalsriprajeet/Desktop/data260-3319/code/api/database.py", line 5, in <module>
+    from sqlalchemy import create_engine
+ModuleNotFoundError: No module named 'sqlalchemy'
+$ curl http://localhost:8619/auth/me -H 'Authorization: Bearer ...'  (signed, exp = 1 minute ago)
+{"detail":"Invalid token"}
+HTTP 401
+
+---- hw7 part 1 [create] 2026-10-23 17:05:51 PDT ----
+== 4. POST /fixtures as reader -> 403, as writer -> 201 ==
+$ curl -X POST http://localhost:8619/fixtures -H 'Authorization: Bearer <reader token>' -d '{"fixture_title": "Gilroy Bears vs San Jose Hawks - Matchweek 9", "fixture_code": "FX-93544", "venue": "Gilroy Field", "tickets_available": 250, "home_team_id": 1}'
+{"detail":"Role 'reader' is not allowed; needs one of: writer, moderator"}
+HTTP 403
+
+$ curl -X POST http://localhost:8619/fixtures -H 'Authorization: Bearer <writer token>' -d '{"fixture_title": "Gilroy Bears vs San Jose Hawks - Matchweek 9", "fixture_code": "FX-93544", "venue": "Gilroy Field", "tickets_available": 250, "home_team_id": 1}'
+{"id":5012,"fixture_title":"Gilroy Bears vs San Jose Hawks - Matchweek 9","fixture_code":"FX-93544","venue":"Gilroy Field","tickets_available":250,"home_team_id":1,"created_at":"2026-10-23T17:05:51","updated_at":"2026-10-23T17:05:51"}
+HTTP 201
+
+---- hw7 part 1 [delete] 2026-10-23 17:06:05 PDT ----
+== 5. DELETE /fixtures/{id} as writer -> 403, as moderator -> 200 ==
+(writer created fixture id 5013 to delete)
+$ curl -X DELETE http://localhost:8619/fixtures/5013 -H 'Authorization: Bearer <writer token>'
+{"detail":"Role 'writer' is not allowed; needs one of: moderator"}
+HTTP 403
+
+$ curl -X DELETE http://localhost:8619/fixtures/5013 -H 'Authorization: Bearer <moderator token>'
+{"message":"Fixture deleted","id":5013,"deleted_by":"s3319_moderator"}
+HTTP 200
+
+---- hw7 part 1 [list] 2026-10-23 17:06:15 PDT ----
+== 6. GET /fixtures?limit=3 as reader -> 200 ==
+$ curl 'http://localhost:8619/fixtures?limit=3' -H 'Authorization: Bearer <reader token>'
+[{"id":5012,"fixture_title":"Gilroy Bears vs San Jose Hawks - Matchweek 9","fixture_code":"FX-93544","venue":"Gilroy Field","tickets_available":250,"home_team_id":1,"created_at":"2026-10-23T17:05:51","updated_at":"2026-10-23T17:05:51"},{"id":5000,"fixture_title":"San Mateo Sharks vs Cupertino Hawks - Matchweek 3","fixture_code":"FX-05000","venue":"San Mateo Field","tickets_available":131,"home_team_id":200,"created_at":"2026-10-01T17:14:36","updated_at":"2026-10-01T17:14:36"},{"id":4999,"fixture_title":"Morgan Hill Lions vs Gilroy Hawks - Matchweek 6","fixture_code":"FX-04999","venue":"Morgan Hill Park","tickets_available":94,"home_team_id":199,"created_at":"2026-10-01T17:14:36","updated_at":"2026-10-01T17:14:36"}]
+HTTP 200
+
+---- hw7 part 1 [invalid] 2026-10-23 17:08:53 PDT ----
+== 3. GET /auth/me with an invalid token and an expired token -> 401 ==
+$ curl http://localhost:8619/auth/me -H 'Authorization: Bearer not.a.real-token'
+{"detail":"Invalid token"}
+HTTP 401
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/villyalsriprajeet/Desktop/data260-3319/code/api/expired_token.py", line 3, in <module>
+    from .database import SessionLocal
+  File "/Users/villyalsriprajeet/Desktop/data260-3319/code/api/database.py", line 5, in <module>
+    from sqlalchemy import create_engine
+ModuleNotFoundError: No module named 'sqlalchemy'
+$ curl http://localhost:8619/auth/me -H 'Authorization: Bearer ...'  (signed, exp = 1 minute ago)
+{"detail":"Invalid token"}
+HTTP 401
+
+---- hw7 part 1 [invalid] 2026-10-23 17:19:16 PDT ----
+== 3. GET /auth/me with an invalid token and an expired token -> 401 ==
+$ curl http://localhost:8619/auth/me -H 'Authorization: Bearer not.a.real-token'
+{"detail":"Invalid token"}
+HTTP 401
+
+$ curl http://localhost:8619/auth/me -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5c...'  (signed, exp = 1 minute ago)
+{"detail":"Token has expired"}
+HTTP 401
+

@@ -1,0 +1,10 @@
+# HW7 Part 1: Ruff linter and formatter settings (used by the pre commit hook and `ruff check`)
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["code/frontend", "reports", "data", "__pycache__"]
+[tool.ruff.lint]
+select = ["E", "F", "I"]  # pycodestyle errors, pyflakes (unused imports/variables), import sorting
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

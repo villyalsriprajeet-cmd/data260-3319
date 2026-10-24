@@ -9,3 +9,7 @@ email-validator
 requests
 pymongo
 pyyaml
+PyJWT>=2.8
+python-multipart
+ruff
+pre-commit

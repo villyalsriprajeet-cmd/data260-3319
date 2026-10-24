@@ -1,7 +1,9 @@
 # HW6 settings: personal config values and the MongoDB connection, overridable with environment variables
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
+
 load_dotenv(Path(__file__).resolve().parent / ".env")
 SID4 = 3319
 PORT_BASE = 8000 + SID4 % 900  # 8619
@@ -26,4 +28,8 @@ SUMMARIZE_EVERY_USER_MSGS = int(os.getenv("SUMMARIZE_EVERY_USER_MSGS", "5"))  # 
 LIFETIME_EVERY_SUMMARIES = int(os.getenv("LIFETIME_EVERY_SUMMARIES", "3"))  # condense after every 3 session summaries
 EPISODIC_TOP_K = int(os.getenv("EPISODIC_TOP_K", "3"))  # k facts retrieved per turn
 MAX_FACTS_PER_MESSAGE = 3  # facts extracted from one user message
-METRICS_LOG = Path(__file__).resolve().parents[2] / "reports" / "hw06" / "raw" / "chat_metrics.csv"  # one row per /api/chat request
+METRICS_LOG = Path(__file__).resolve().parents[2] / "reports" / "hw06" / "raw" / "chat_metrics.csv"
+JWT_SECRET = os.getenv("JWT_SECRET")  # HW7: signing key, only from code/api/.env
+JWT_ALGORITHM = "HS256"
+JWT_EXPIRE_MINUTES = int(os.getenv("JWT_EXPIRE_MINUTES", "30"))
+ROLES = ("reader", "writer", "moderator")
