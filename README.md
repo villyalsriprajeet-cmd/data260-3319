@@ -117,3 +117,34 @@ Self-check:
     make verify-hw06
 
 Make sure the data260 environment is active, Docker is running, and Ollama has qwen2.5:3b pulled.
+HW7 - JWT roles, agent loop, Reflexion, bike-share ReAct agent, prompt injection, file tools
+
+Same configuration (SID4 3319, PORT_BASE 8619, PREFIX s3319, SEED 3319, VERIFY_SEED 263319, DOMAIN_ID 7). Model qwen2.5:3b through Ollama, MySQL s3319_rel.
+
+Files
+
+- code/api/ - JWT login (POST /auth/login, GET /auth/me), reader/writer/moderator roles on /fixtures and /teams, the bike-share page (GET /bikeshare)
+- code/api/sql/004_hw07_jwt_roles.sql and code/api/seed_hw07_users.py - username and role columns, three role accounts with hashed passwords
+- pyproject.toml, .pre-commit-config.yaml - Ruff and the pre-commit hook
+- code/hw7_agent.py, code/hw7_tasks.py, code/hw7_reliability.py - Part 2 agent loop, tasks A/B/C/ERR, 21-attempt reliability run
+- code/hw7_reflexion.py, code/hw7_reflexion_selftest.py - Part 3 bounded Reflexion and its offline self-test
+- code/bikeshare/ - Part 4 tools (csv_sql, policy_retriever, calculator), LangGraph agent, data prep, Part 5 injection_eval
+- code/hw7_file_tools.py, code/hw7_part6_test.py - Part 6 file tools, SAFE_PREFIXES, confirm_bash, is_destructive
+- code/verify_hw07.py - self-check (make verify-hw07)
+- reports/hw07/ - report, METRICS.md, RUN_LOG.txt, AI_USE.md, THREAT_MODEL.md, verification.json, cases/ and raw/
+
+How to run
+
+    mysql -u root -p < code/api/sql/004_hw07_jwt_roles.sql      # once
+    python -m code.api.seed_hw07_users
+    python -m uvicorn code.api.main:app --port 8619
+    bash code/hw7_auth_demo.sh all                                # Part 1
+    python code/hw7_agent.py A                                    # Part 2 (also B, C, ERR)
+    python code/hw7_reliability.py
+    python code/hw7_reflexion.py compare                          # Part 3
+    python -m code.bikeshare.prepare_data                         # Part 4 data, then open http://localhost:8619/bikeshare
+    python -m code.bikeshare.injection_eval all all               # Part 5
+    python code/hw7_part6_test.py                                 # Part 6
+    make verify-hw07
+
+code/api/.env needs DATABASE_URL, JWT_SECRET, JWT_EXPIRE_MINUTES and READER_PASSWORD / WRITER_PASSWORD / MODERATOR_PASSWORD.

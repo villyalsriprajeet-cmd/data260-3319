@@ -144,3 +144,6 @@ vite.config.ts.timestamp-*
 __pycache__/
 *.pyc
 .DS_Store
+
+# HW7 Part 4: downloaded Capital Bikeshare monthly zips
+data/bikeshare/raw/

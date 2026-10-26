@@ -12,4 +12,6 @@ pyyaml
 PyJWT>=2.8
 python-multipart
 ruff
-pre-commit
+pre-commitlanggraph
+langchain-core
+langchain-ollama

@@ -1,0 +1,179 @@
+{
+  "hw": "hw7",
+  "sid4": 3319,
+  "generated": "2026-10-24T20:15:36",
+  "commit_hash": "c6c3da342fed35e02b1b0ff18c98b6238b0a2d9a",
+  "tag": "none",
+  "config": {
+    "SID4": 3319,
+    "PORT_BASE": 8619,
+    "PREFIX": "s3319",
+    "SEED": 3319,
+    "VERIFY_SEED": 263319,
+    "DOMAIN_ID": 7
+  },
+  "model": {
+    "llm": "qwen2.5:3b",
+    "runtime": "Ollama (local)",
+    "agent_temperature": 0,
+    "agent_seed": 3319,
+    "reliability_temperature": 0.7,
+    "framework_part4": "LangGraph + langchain-ollama",
+    "database": "MySQL s3319_rel",
+    "auth": "JWT HS256, 30 min, roles reader/writer/moderator",
+    "lint": "ruff + pre-commit"
+  },
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "required code, report and case files exist",
+      "passed": true,
+      "detail": "19 files"
+    },
+    {
+      "check": "Part 2: >= 20 reliability attempts saved",
+      "passed": true,
+      "detail": "21 attempts"
+    },
+    {
+      "check": "Part 2: repair path raises the well-formed rate",
+      "passed": true,
+      "detail": "84% -> 100%"
+    },
+    {
+      "check": "Part 3: comparison data saved (original vs Reflexion)",
+      "passed": true,
+      "detail": "success 19 -> 21 of 21"
+    },
+    {
+      "check": "Part 3: stored reflections include evidence",
+      "passed": true,
+      "detail": "3"
+    },
+    {
+      "check": "Part 4: scenario_membership has >= 500 real trip rows",
+      "passed": true,
+      "detail": "540"
+    },
+    {
+      "check": "Part 4: scenario_payperuse has >= 500 real trip rows",
+      "passed": true,
+      "detail": "500"
+    },
+    {
+      "check": "Part 4: pricing snapshot (url, date, sha256) saved for both scenarios",
+      "passed": true,
+      "detail": "['membership', 'payperuse']"
+    },
+    {
+      "check": "Part 5: 3 attacks x 3 conditions recorded",
+      "passed": true,
+      "detail": "9"
+    },
+    {
+      "check": "Part 5: no attack succeeds with prompt + tool defense",
+      "passed": true,
+      "detail": "['blocked / not followed', 'blocked / not followed', 'blocked / not followed']"
+    },
+    {
+      "check": "Part 6: saved gate results are 10/10 correct",
+      "passed": true,
+      "detail": "10/10"
+    },
+    {
+      "check": "ruff passes on the HW7 code",
+      "passed": true,
+      "detail": "All checks passed!"
+    },
+    {
+      "check": "csv_sql: SELECT works and redacts ride_id",
+      "passed": true,
+      "detail": "2"
+    },
+    {
+      "check": "csv_sql: DELETE and stacked statements rejected, data intact",
+      "passed": true,
+      "detail": "rows left 2"
+    },
+    {
+      "check": "calculator: safe arithmetic, code rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tools return the common envelope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "safety gate: allow-list, deny-list wins over safe prefix",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 3: Reflexion self-test (bounds, budget, isolation, injection) passes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "POST /auth/login valid credentials -> 200 + JWT",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "check": "POST /auth/login invalid credentials -> 401",
+      "passed": true,
+      "detail": "401"
+    },
+    {
+      "check": "GET /auth/me without token -> 401",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "GET /auth/me invalid token -> 401",
+      "passed": true,
+      "detail": "401"
+    },
+    {
+      "check": "GET /auth/me with token -> 200 and role",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "check": "GET /fixtures as reader -> 200",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "check": "POST /fixtures as reader -> 403",
+      "passed": true,
+      "detail": "403"
+    },
+    {
+      "check": "POST /fixtures as writer -> 201",
+      "passed": true,
+      "detail": "201"
+    },
+    {
+      "check": "DELETE /fixtures/{id} as writer -> 403",
+      "passed": true,
+      "detail": "403"
+    },
+    {
+      "check": "DELETE /fixtures/{id} as moderator -> 200 (test row removed)",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "check": "Ollama has qwen2.5:3b",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hand-written agent loop completes a verification task (ERR)",
+      "passed": true,
+      "detail": "tool returned NOT_FOUND and the agent answered without crashing; stop=final_answer tool_calls=1"
+    }
+  ]
+}

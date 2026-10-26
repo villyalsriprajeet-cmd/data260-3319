@@ -9,6 +9,7 @@ from pymongo.errors import PyMongoError, ServerSelectionTimeoutError, WriteError
 from .mongo_db import ensure_collections
 from .perf import sql_counter
 from .routers.auth import router as auth_router
+from .routers.bikeshare import router as bikeshare_router
 from .routers.chat import router as chat_router
 from .routers.docs import router as docs_router
 from .routers.fixtures import router as fixtures_router
@@ -50,6 +51,7 @@ app.include_router(fixtures_router)  # CRUD on /fixtures
 app.include_router(teams_router)  # CRUD on /teams and /teams/{id}/fixtures
 app.include_router(docs_router)  # HW6 Part 1: CRUD on /api/fixtures (MongoDB)
 app.include_router(chat_router)  # HW6 Part 2: /api/chat, /api/memory, /api/aggregate
+app.include_router(bikeshare_router)  # HW7 Part 4: /bikeshare advisor UI and /bikeshare/run
 
 
 @app.exception_handler(WriteError)

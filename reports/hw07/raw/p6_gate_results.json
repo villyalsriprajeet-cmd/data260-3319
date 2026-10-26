@@ -1,0 +1,112 @@
+[
+  {
+    "command": "ls -la",
+    "expected": "allow",
+    "v1_is_destructive": false,
+    "v1_decision": "allow",
+    "is_destructive": false,
+    "decision": "allow",
+    "reason": "every part starts with a SAFE_PREFIXES entry",
+    "correct": true,
+    "v1_false_allow": false
+  },
+  {
+    "command": "cat app/config.py",
+    "expected": "allow",
+    "v1_is_destructive": false,
+    "v1_decision": "allow",
+    "is_destructive": false,
+    "decision": "allow",
+    "reason": "every part starts with a SAFE_PREFIXES entry",
+    "correct": true,
+    "v1_false_allow": false
+  },
+  {
+    "command": "grep -n DEBUG app/config.py",
+    "expected": "allow",
+    "v1_is_destructive": false,
+    "v1_decision": "allow",
+    "is_destructive": false,
+    "decision": "allow",
+    "reason": "every part starts with a SAFE_PREFIXES entry",
+    "correct": true,
+    "v1_false_allow": false
+  },
+  {
+    "command": "python3 --version",
+    "expected": "allow",
+    "v1_is_destructive": false,
+    "v1_decision": "allow",
+    "is_destructive": false,
+    "decision": "allow",
+    "reason": "every part starts with a SAFE_PREFIXES entry",
+    "correct": true,
+    "v1_false_allow": false
+  },
+  {
+    "command": "echo hello > notes.txt",
+    "expected": "allow",
+    "v1_is_destructive": false,
+    "v1_decision": "allow",
+    "is_destructive": false,
+    "decision": "allow",
+    "reason": "every part starts with a SAFE_PREFIXES entry",
+    "correct": true,
+    "v1_false_allow": false
+  },
+  {
+    "command": "rm -r -f build/",
+    "expected": "block",
+    "v1_is_destructive": false,
+    "v1_decision": "block",
+    "is_destructive": true,
+    "decision": "block",
+    "reason": "destructive: recursive deletion; needs explicit confirmation",
+    "correct": true,
+    "v1_false_allow": false
+  },
+  {
+    "command": "echo ok && sudo mkfs.ext4 /dev/sdb1",
+    "expected": "block",
+    "v1_is_destructive": true,
+    "v1_decision": "allow",
+    "is_destructive": true,
+    "decision": "block",
+    "reason": "destructive: privilege escalation, filesystem creation even though it starts with safe prefix 'echo'; needs explicit confirmation",
+    "correct": true,
+    "v1_false_allow": true
+  },
+  {
+    "command": "ls && chown -R nobody ~",
+    "expected": "block",
+    "v1_is_destructive": false,
+    "v1_decision": "allow",
+    "is_destructive": true,
+    "decision": "block",
+    "reason": "destructive: permission/ownership change even though it starts with safe prefix 'ls'; needs explicit confirmation",
+    "correct": true,
+    "v1_false_allow": true
+  },
+  {
+    "command": "cat disk.img > /dev/disk2",
+    "expected": "block",
+    "v1_is_destructive": false,
+    "v1_decision": "allow",
+    "is_destructive": true,
+    "decision": "block",
+    "reason": "destructive: raw-device write even though it starts with safe prefix 'cat'; needs explicit confirmation",
+    "correct": true,
+    "v1_false_allow": true
+  },
+  {
+    "command": "echo hacked > /etc/hosts",
+    "expected": "block",
+    "v1_is_destructive": false,
+    "v1_decision": "allow",
+    "is_destructive": true,
+    "decision": "block",
+    "reason": "destructive: redirection to a root path even though it starts with safe prefix 'echo'; needs explicit confirmation",
+    "correct": true,
+    "v1_false_allow": true
+  }
+]

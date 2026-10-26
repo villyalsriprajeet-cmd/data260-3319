@@ -1,0 +1,24 @@
+{
+  "scenario": "scenario_membership",
+  "source_url": "https://s3.amazonaws.com/capitalbikeshare-data/202609-capitalbikeshare-tripdata.zip",
+  "source_zip_sha256": "5f4517b46f7c11e5eb088221f0b83d8c348931e157c117a93346048958171435",
+  "seed": 3319,
+  "construction": "12 commuters x 45 real member trips (39 of 8-40 min + 6 of 46-90 min)",
+  "rows": 540,
+  "riders": 12,
+  "first_start": "2026-09-01 07:43:57.259",
+  "last_start": "2026-09-30 19:57:27.742",
+  "duration_min": {
+    "mean": 20.0,
+    "median": 13.3,
+    "max": 86.7,
+    "over_45": 72
+  },
+  "rideable_type": {
+    "classic_bike": 214,
+    "electric_bike": 326
+  },
+  "member_casual": {
+    "member": 540
+  }
+}

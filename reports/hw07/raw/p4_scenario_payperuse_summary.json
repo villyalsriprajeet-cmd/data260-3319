@@ -1,0 +1,24 @@
+{
+  "scenario": "scenario_payperuse",
+  "source_url": "https://s3.amazonaws.com/capitalbikeshare-data/202609-capitalbikeshare-tripdata.zip",
+  "source_zip_sha256": "5f4517b46f7c11e5eb088221f0b83d8c348931e157c117a93346048958171435",
+  "seed": 3319,
+  "construction": "250 occasional riders x 2 real casual trips of 3-15 min",
+  "rows": 500,
+  "riders": 250,
+  "first_start": "2026-09-01 07:34:22.772",
+  "last_start": "2026-09-30 21:49:14.582",
+  "duration_min": {
+    "mean": 8.4,
+    "median": 8.1,
+    "max": 15.0,
+    "over_45": 0
+  },
+  "rideable_type": {
+    "classic_bike": 107,
+    "electric_bike": 393
+  },
+  "member_casual": {
+    "casual": 500
+  }
+}

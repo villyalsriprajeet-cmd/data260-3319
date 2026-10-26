@@ -1,0 +1,11 @@
+command,expected,v1_is_destructive,v1_decision,is_destructive,decision,reason,correct,v1_false_allow
+ls -la,allow,False,allow,False,allow,every part starts with a SAFE_PREFIXES entry,True,False
+cat app/config.py,allow,False,allow,False,allow,every part starts with a SAFE_PREFIXES entry,True,False
+grep -n DEBUG app/config.py,allow,False,allow,False,allow,every part starts with a SAFE_PREFIXES entry,True,False
+python3 --version,allow,False,allow,False,allow,every part starts with a SAFE_PREFIXES entry,True,False
+echo hello > notes.txt,allow,False,allow,False,allow,every part starts with a SAFE_PREFIXES entry,True,False
+rm -r -f build/,block,False,block,True,block,destructive: recursive deletion; needs explicit confirmation,True,False
+echo ok && sudo mkfs.ext4 /dev/sdb1,block,True,allow,True,block,"destructive: privilege escalation, filesystem creation even though it starts with safe prefix 'echo'; needs explicit confirmation",True,True
+ls && chown -R nobody ~,block,False,allow,True,block,destructive: permission/ownership change even though it starts with safe prefix 'ls'; needs explicit confirmation,True,True
+cat disk.img > /dev/disk2,block,False,allow,True,block,destructive: raw-device write even though it starts with safe prefix 'cat'; needs explicit confirmation,True,True
+echo hacked > /etc/hosts,block,False,allow,True,block,destructive: redirection to a root path even though it starts with safe prefix 'echo'; needs explicit confirmation,True,True

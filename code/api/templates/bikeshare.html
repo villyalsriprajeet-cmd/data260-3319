@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bike Share Plan Advisor</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#1d2433; --muted:#667085; --line:#e4e7ec; --accent:#c8102e;
+          --ok:#12805c; --bad:#b42318; --chip:#eef2f6; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.5 -apple-system, "Segoe UI", Roboto, sans-serif; background:var(--bg); color:var(--ink); }
+  header { background:var(--ink); color:#fff; padding:14px 24px; display:flex; align-items:baseline; gap:12px; }
+  header h1 { margin:0; font-size:18px; } header span { color:#c3c9d4; font-size:13px; }
+  main { max-width:1280px; margin:0 auto; padding:16px; display:grid; gap:16px; grid-template-columns: 1fr; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; }
+  .card h2 { margin:0 0 10px; font-size:15px; }
+  form { display:grid; gap:10px; grid-template-columns: 1fr 2fr auto; align-items:end; }
+  label { font-size:12px; color:var(--muted); display:block; margin-bottom:4px; }
+  input[type=url], input[type=file] { width:100%; padding:8px; border:1px solid var(--line); border-radius:6px; background:#fff; }
+  button { background:var(--accent); color:#fff; border:0; border-radius:6px; padding:10px 22px; font-weight:600; cursor:pointer; }
+  button:disabled { opacity:.6; cursor:wait; }
+  .opts { grid-column: 1 / -1; font-size:12px; color:var(--muted); }
+  .opts summary { cursor:pointer; } .opts label { display:inline-block; margin:6px 16px 0 0; }
+  .cols { display:grid; gap:16px; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+  @media (max-width: 900px) { .cols, form { grid-template-columns: 1fr; } }
+  .strip { display:flex; gap:10px; flex-wrap:wrap; }
+  .metric { background:var(--chip); border-radius:8px; padding:8px 12px; min-width:120px; }
+  .metric b { display:block; font-size:18px; } .metric small { color:var(--muted); }
+  ol.timeline { list-style:none; margin:0; padding:0; }
+  ol.timeline li { border-left:3px solid var(--line); padding:6px 10px; margin:0 0 8px; }
+  ol.timeline li.agent { border-color:#3b5bdb; } ol.timeline li.fail { border-color:var(--bad); }
+  details summary { cursor:pointer; margin:4px 0; color:#344054; } details summary code { white-space:pre-wrap; word-break:break-word; }
+  .tool { font-weight:600; } .phase { font-size:11px; background:var(--chip); border-radius:4px; padding:1px 6px; margin-left:6px; }
+  code, pre { font:12px/1.4 ui-monospace, Menlo, monospace; } pre { white-space:pre-wrap; word-break:break-word; margin:4px 0 0;
+  background:#fafbfc; border:1px solid var(--line); border-radius:6px; padding:6px; color:#344054; }
+  .decision { font-size:22px; font-weight:700; margin:4px 0; }
+  .ok { color:var(--ok); } .bad { color:var(--bad); }
+  table { border-collapse:collapse; width:100%; margin:6px 0 12px; font-size:13px; }
+  th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); } th { color:var(--muted); font-weight:600; }
+  td.num { text-align:right; font-variant-numeric: tabular-nums; }
+  ul { margin:4px 0 12px; padding-left:18px; } .muted { color:var(--muted); }
+  blockquote { margin:4px 0; padding:4px 10px; border-left:3px solid var(--accent); background:#fff7f8; }
+</style>
+</head>
+<body>
+<header><h1>Bike Share Plan Advisor</h1><span>Capital Bikeshare · Monthly membership or pay per ride</span></header>
+<main>
+  <section class="card">
+    <form id="f">
+      <div><label for="trips">Trip CSV</label><input type="file" id="trips" name="trips" accept=".csv" required></div>
+      <div><label for="url">Pricing page URL</label><input type="url" id="url" name="url" value="{{DEFAULT_URL}}" required></div>
+      <button id="run" type="submit">Run</button>
+      <details class="opts"><summary>Security settings</summary>
+        <label><input type="checkbox" id="pd" checked> Treat pricing page text as untrusted</label>
+        <label><input type="checkbox" id="td" checked> Enforce tool and output checks (one read only SELECT, no raw trip rows)</label>
+      </details>
+    </form>
+  </section>
+  <section class="card"><h2>Run metrics</h2><div class="strip" id="metrics"><span class="muted">Upload a CSV and press Run.</span></div></section>
+  <div class="cols">
+    <section class="card"><h2>Tool call timeline</h2><ol class="timeline" id="timeline"></ol></section>
+    <section class="card"><h2>Results</h2><div id="results" class="muted">No run yet.</div></section>
+  </div>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const usd = (v) => (v < 0 ? "-$" : "$") + Math.abs(Number(v)).toFixed(2);
+
+function metric(label, value) { return `<div class="metric"><small>${label}</small><b>${esc(value)}</b></div>`; }
+
+function clip(label, text, n = 170) {  // long SQL / JSON collapses to one line; click to expand
+  text = String(text ?? "");
+  if (text.length <= n) return `<pre>${label}: ${esc(text)}</pre>`;
+  return `<details><summary><code>${label}: ${esc(text.slice(0, n))}…</code></summary><pre>${esc(text)}</pre></details>`;
+}
+
+function renderTimeline(items) {
+  $("timeline").innerHTML = items.map((t) => `<li class="${t.phase === "agent" ? "agent" : ""} ${t.success ? "" : "fail"}">
+    <span class="tool">${t.step}. ${esc(t.tool)}</span><span class="phase">${esc(t.phase)}</span>
+    <span class="muted"> · ${(t.t_ms / 1000).toFixed(1)} s</span>
+    ${clip("input", JSON.stringify(t.input))}${clip("observation", t.observation)}</li>`).join("");
+}
+
+function renderResults(r) {
+  const c = r.cost_check || {};
+  if (c.error) { $("results").innerHTML = `<p class="bad">Cost check failed: ${esc(c.error)}</p>`; return; }
+  const k = c.costs, p = c.prices;
+  const consistent = r.consistent_with_cost_check
+    ? `<span class="ok">✓ matches the verified cost comparison</span>`
+    : `<span class="bad">✗ differs from the verified cost comparison (${esc(c.decision_by_numbers)})</span>`;
+  const weekly = c.weekly.map((w) => `<tr><td>${esc(w.week_start)}</td><td class="num">${w.rides}</td>
+    <td class="num">${w.avg_min}</td><td class="num">${usd(w.pay_per_use_spend)}</td><td class="num">${usd(w.member_extra)}</td></tr>`).join("");
+  $("results").innerHTML = `
+    <div class="muted">Recommendation${r.decision_source === "agent" ? "" : " (from cost check)"}</div>
+    <div class="decision">${esc(r.decision)}</div><div>${consistent}</div>
+    ${r.decision_overridden ? `<div class="bad">The output check replaced the agent's decision (${esc(r.agent_decision)}) because it contradicted the verified totals.</div>` : ""}
+    ${r.react_draft && r.react_draft.decision && r.react_draft.decision !== r.decision
+      ? `<div class="muted">The agent's first draft said ${esc(r.react_draft.decision)}; it changed its answer after reading the verified tool results.</div>` : ""}
+    <h2 style="margin-top:14px">Justification</h2><p>${esc(r.justification) || '<span class="muted">(none)</span>'}</p>
+    <h2>Cost comparison (${k.rider_months} rider-months, ${c.profile.trips} trips, ${c.profile.riders} riders)</h2>
+    <table><tr><th>Item</th><th class="num">Value</th></tr>
+      <tr><td>Total cost, pay per ride</td><td class="num"><b>${usd(k.pay_per_use_total)}</b></td></tr>
+      <tr><td>Membership fees (${k.rider_months} × ${usd(p.monthly)}/month)</td><td class="num">${usd(k.membership_fees)}</td></tr>
+      <tr><td>Residual member charges (overage after ${p.member_included_min} min, ebike minutes)</td><td class="num">${usd(k.membership_residual)}</td></tr>
+      <tr><td>Total cost, monthly membership</td><td class="num"><b>${usd(k.membership_total)}</b></td></tr>
+      <tr><td>Savings with membership</td><td class="num">${usd(k.savings_if_membership)}</td></tr>
+      <tr><td>Break-even rides per rider-month</td><td class="num">${k.breakeven_rides_per_rider_month}</td></tr>
+      <tr><td>Actual rides per rider-month</td><td class="num">${k.actual_rides_per_rider_month}</td></tr>
+      <tr><td>Rider-months where membership is cheaper</td><td class="num">${k.rider_months_where_membership_cheaper} / ${k.rider_months}</td></tr>
+    </table>
+    <h2>By week</h2><table><tr><th>Week of</th><th class="num">Rides</th><th class="num">Avg min</th>
+      <th class="num">Pay per use spend</th><th class="num">Member extra</th></tr>${weekly}</table>
+    <h2>Citations</h2>
+    <div class="muted">Source: <a href="${esc(c.snapshot.url)}" target="_blank" rel="noopener">${esc(c.snapshot.url)}</a>
+      · captured ${esc(c.snapshot.accessed_at_utc)} UTC · SHA-256 <code>${esc(c.snapshot.sha256.slice(0, 16))}…</code></div>
+    ${r.citations.map((q) => `<blockquote>“${esc(q.quote)}” <span class="muted">(${esc(q.fields.join(", "))})</span></blockquote>`).join("")}
+    <h2>Assumptions and caveats</h2><ul>${r.assumptions.map((a) => `<li>${esc(a)}</li>`).join("")}</ul>`;
+}
+
+$("f").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const fd = new FormData();
+  fd.append("trips", $("trips").files[0]);
+  fd.append("url", $("url").value);
+  fd.append("prompt_defense", $("pd").checked);
+  fd.append("tool_defense", $("td").checked);
+  $("run").disabled = true; $("run").textContent = "Running…";
+  $("metrics").innerHTML = '<span class="muted">Working on it, this takes 1 to 3 minutes…</span>';
+  try {
+    const res = await fetch("/bikeshare/run", { method: "POST", body: fd });
+    const r = await res.json();
+    if (!res.ok) throw new Error(r.detail || res.statusText);
+    $("metrics").innerHTML = metric("Steps", r.metrics.steps) + metric("Model turns", r.metrics.model_turns)
+      + metric("Total time", (r.metrics.total_time_ms / 1000).toFixed(1) + " s") + metric("Stop reason", r.metrics.stop_reason)
+      + metric("Scenario", r.scenario);
+    renderTimeline(r.timeline);
+    renderResults(r);
+  } catch (err) {
+    $("metrics").innerHTML = `<span class="bad">Run failed: ${esc(err.message)}</span>`;
+  } finally {
+    $("run").disabled = false; $("run").textContent = "Run";
+  }
+});
+</script>
+</body>
+</html>
