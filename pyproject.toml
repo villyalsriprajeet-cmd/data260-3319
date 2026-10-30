@@ -10,3 +10,6 @@ quote-style = "double"
 indent-style = "space"
 [tool.ruff.lint.per-file-ignores]
 "code/hw7_*.py" = ["E402"]  # HW7 scripts import after adding the HW1/HW5 folders to sys.path
+"code/homework_demo.py" = ["E402"]  # HW8: imports come after the sys.path line
+"code/verify_hw08.py" = ["E402"]
+"code/kafka_agents/*.py" = ["E402"]

@@ -1,0 +1,93 @@
+{
+  "create": {
+    "correlation_id": "6b02e18f-795c-41f2-a5ab-8635f4844429",
+    "request_data": {
+      "fixture_title": "Spartans vs Eagles - Matchweek 9",
+      "fixture_code": "FX-94603",
+      "venue": "Riverside Park",
+      "tickets_available": 250,
+      "home_team_id": 1
+    },
+    "response": {
+      "correlation_id": "6b02e18f-795c-41f2-a5ab-8635f4844429",
+      "operation": "CREATE_FIXTURE",
+      "success": true,
+      "fixture_id": "ae89cc58-cc70-4e6a-8fb4-0b03da21de7d",
+      "message": "Fixture created"
+    }
+  },
+  "get": {
+    "correlation_id": "cf1351d4-f629-4b93-807d-93e49c47441b",
+    "response": {
+      "correlation_id": "cf1351d4-f629-4b93-807d-93e49c47441b",
+      "operation": "GET_FIXTURE",
+      "success": true,
+      "fixture": {
+        "fixture_id": "ae89cc58-cc70-4e6a-8fb4-0b03da21de7d",
+        "fixture_title": "Spartans vs Eagles - Matchweek 9",
+        "fixture_code": "FX-94603",
+        "venue": "Riverside Park",
+        "tickets_available": 250,
+        "home_team_id": 1
+      }
+    }
+  },
+  "error_cases": [
+    {
+      "case": "unknown operation",
+      "correlation_id": "700418af-c15e-43fc-8138-5052957fe9e7",
+      "response": {
+        "correlation_id": "700418af-c15e-43fc-8138-5052957fe9e7",
+        "operation": "DELETE_EVERYTHING",
+        "success": false,
+        "error": "Unknown operation"
+      },
+      "passed": true
+    },
+    {
+      "case": "missing field (venue)",
+      "correlation_id": "fb0e2346-7581-4758-a883-eb1d58c1b5ac",
+      "response": {
+        "correlation_id": "fb0e2346-7581-4758-a883-eb1d58c1b5ac",
+        "operation": "CREATE_FIXTURE",
+        "success": false,
+        "error": "Missing required field(s): venue"
+      },
+      "passed": true
+    },
+    {
+      "case": "invalid fixture_code",
+      "correlation_id": "121bd1ad-e357-4706-bac3-932aa1627d8e",
+      "response": {
+        "correlation_id": "121bd1ad-e357-4706-bac3-932aa1627d8e",
+        "operation": "CREATE_FIXTURE",
+        "success": false,
+        "error": "fixture_code must look like FX-12345"
+      },
+      "passed": true
+    },
+    {
+      "case": "empty fixture_title",
+      "correlation_id": "7fc5bcf7-5294-4d10-8aac-125da08d5cfa",
+      "response": {
+        "correlation_id": "7fc5bcf7-5294-4d10-8aac-125da08d5cfa",
+        "operation": "CREATE_FIXTURE",
+        "success": false,
+        "error": "fixture_title is required and must be a non-empty string"
+      },
+      "passed": true
+    },
+    {
+      "case": "unknown fixture_id",
+      "correlation_id": "93803a57-5022-4c50-97e0-218b48a7b7a2",
+      "response": {
+        "correlation_id": "93803a57-5022-4c50-97e0-218b48a7b7a2",
+        "operation": "GET_FIXTURE",
+        "success": false,
+        "error": "Fixture not found"
+      },
+      "passed": true
+    }
+  ],
+  "round_trip_passed": true
+}
