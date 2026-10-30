@@ -147,3 +147,6 @@ __pycache__/
 
 # HW7 Part 4: downloaded Capital Bikeshare monthly zips
 data/bikeshare/raw/
+
+# HW8: idempotency store of the Kafka agents
+code/kafka_agents/state/

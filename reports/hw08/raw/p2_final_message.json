@@ -1,0 +1,17 @@
+{
+  "correlation_id": "3f2c3d1e-5ee8-4618-82f3-30596106ff1f",
+  "status": "approved",
+  "answer": "As team manager, between now and kickoff, review the team's schedule to prepare any necessary reports or communications for the upcoming match. Send out a reminder email or message to the team with the game details, including the location (Riverside Park) and time (2 PM). Confirm with the league office that the fixture is set for Sunday at 2 PM and check for any last-minute changes or updates.",
+  "question": "Our team, the Spartans, plays the Eagles at Riverside Park this Sunday at 2 PM. League reminders go out 24 hours before kickoff. As team manager, what should I do between now and kickoff to get this fixture ready?",
+  "review_notes": "The draft follows the plan and is concise",
+  "checks": {
+    "answer_not_empty": true,
+    "within_word_limit": true
+  },
+  "trace": {
+    "asked_at": "2026-10-30T21:53:08.879Z",
+    "planned_at": "2026-10-30T21:53:31.212Z",
+    "drafted_at": "2026-10-30T21:53:52.362Z",
+    "reviewed_at": "2026-10-30T21:54:09.299Z"
+  }
+}
