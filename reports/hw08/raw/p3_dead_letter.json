@@ -1,0 +1,18 @@
+[
+  {
+    "partition": 0,
+    "offset": 0,
+    "key": "poison-demo",
+    "value": {
+      "correlation_id": null,
+      "failed_agent": "WRITER",
+      "source_topic": "s3319_tasks",
+      "source_partition": 0,
+      "source_offset": 2,
+      "attempts": 3,
+      "error": "ValueError: message is not a JSON object",
+      "original_value": "{\"correlation_id\": \"poison-0001\", \"plan\": [ <<< not valid JSON",
+      "failed_at": "2026-10-30T23:12:11.126Z"
+    }
+  }
+]

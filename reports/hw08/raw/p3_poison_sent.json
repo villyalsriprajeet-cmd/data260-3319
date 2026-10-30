@@ -1,0 +1,12 @@
+{
+  "poison": {
+    "partition": 0,
+    "offset": 2,
+    "value": "{\"correlation_id\": \"poison-0001\", \"plan\": [ <<< not valid JSON"
+  },
+  "follow_up": {
+    "correlation_id": "f9b537df-be27-42a1-9a8d-4488a3daf7e2",
+    "partition": 0,
+    "offset": 3
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "run": "keyed",
+  "verify_seed": 263319,
+  "messages_processed": 20,
+  "entities_in_one_partition": 4,
+  "entities_in_order": 4,
+  "entities": {
+    "FX-13344": {
+      "partitions": [
+        0
+      ],
+      "writers": [
+        "WRITER-A"
+      ],
+      "processed_seq_order": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "in_order": true
+    },
+    "FX-13355": {
+      "partitions": [
+        1
+      ],
+      "writers": [
+        "WRITER-B"
+      ],
+      "processed_seq_order": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "in_order": true
+    },
+    "FX-15596": {
+      "partitions": [
+        0
+      ],
+      "writers": [
+        "WRITER-A"
+      ],
+      "processed_seq_order": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "in_order": true
+    },
+    "FX-30687": {
+      "partitions": [
+        0
+      ],
+      "writers": [
+        "WRITER-A"
+      ],
+      "processed_seq_order": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "in_order": true
+    }
+  }
+}

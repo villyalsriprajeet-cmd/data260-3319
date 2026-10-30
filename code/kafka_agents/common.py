@@ -98,7 +98,7 @@ class ProcessedStore:
         row = self.db.execute("SELECT at FROM started WHERE agent=? AND cid=?", (agent, cid)).fetchone()
         self.db.execute("INSERT OR IGNORE INTO started VALUES (?, ?, ?)", (agent, cid, now_utc()))
         self.db.commit()
-        return row[0] if row else None  # set when an earlier run started but never finished
+        return row[0] if row and not self.done_at(agent, cid) else None  # started before, never finished
 
     def mark_done(self, agent, cid):
         self.db.execute("INSERT OR IGNORE INTO done VALUES (?, ?, ?)", (agent, cid, now_utc()))
