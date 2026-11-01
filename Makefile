@@ -10,3 +10,5 @@ verify-hw06:
 	python code/verify_hw06.py
 verify-hw07:
 	python code/verify_hw07.py
+verify-hw08:
+	python code/verify_hw08.py --with-agents

@@ -33,12 +33,12 @@ Part 3 - Failure table
                          the LLM again (303 tokens, 27.6 s), drafts       in 42 ms, no LLM call, drafts stayed at 2, final
                          went from 1 to 2                                 stayed at 1, lag 0
     Consumer killed      offset committed on receipt, kill -9 during      no commit before the work, kill -9 left lag 1, the
-                         the work, lag 0, restart got nothing, Writer     restarted Writer got the same offset, logged
+    mid-work             the work, lag 0, restart got nothing, Writer     restarted Writer got the same offset, logged
                          finished NEVER, 0 drafts (1 of 1 lost)           REDELIVERED and finished in 17.6 s (0 of 1 lost)
     Poison message       18 attempts in 64 s with no end, partition 0     3 attempts in 3.0 s (backoff 1 s, 2 s), moved to
                          lag 2, the good task behind it never ran         s3319_dead_letter, good task picked up 0.04 s later
-    Ordering             no key: 0/4 fixtures in one partition,           key = fixture_code: 4/4 in one partition, 4/4 in
-                         2/4 in order (FX-13355 and FX-30687 ran          order, Writer A took p0 (15 messages) and Writer B
+    Two partitions/      no key: 0/4 fixtures in one partition,           key = fixture_code: 4/4 in one partition, 4/4 in
+    two consumers        2/4 in order (FX-13355 and FX-30687 ran          order, Writer A took p0 (15 messages) and Writer B
                          as 1, 2, 4, 3, 5)                                took p1 (5 messages) in parallel
 
 Run settings for the before runs: --no-idempotency, --commit-mode before, --no-dlq, and no key in ordering_test.py. The after runs use the default Writer. The ordering test uses 20 messages (4 fixtures x 5 updates) built from VERIFY_SEED 263319, two partitions and two Writers in the same group.

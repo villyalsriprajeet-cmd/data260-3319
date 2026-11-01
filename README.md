@@ -148,3 +148,42 @@ How to run
     make verify-hw07
 
 code/api/.env needs DATABASE_URL, JWT_SECRET, JWT_EXPIRE_MINUTES and READER_PASSWORD / WRITER_PASSWORD / MODERATOR_PASSWORD.
+
+HW8 - Kafka request/response service, three agents over Kafka, failure tests
+
+Same configuration (SID4 3319, PORT_BASE 8619, PREFIX s3319, SEED 3319, VERIFY_SEED 263319, DOMAIN_ID 7). Kafka 3.9.2 in Docker (one KRaft broker), aiokafka 0.12.0, qwen2.5:3b through Ollama.
+
+Files
+
+- docker-compose.yml - Kafka, the fixture worker and the FastAPI service (port 8619)
+- code/kafka_service/ - Part 1 settings, fixture_store (CREATE_FIXTURE / GET_FIXTURE), worker.py, kafka_rpc.py, api.py, Dockerfile
+- code/homework_demo.py - Part 1 demo, CREATE then GET through FastAPI and Kafka with the full log sequence
+- code/kafka_agents/ - Part 2 planner.py, writer.py, reviewer.py, send_question.py, journey.py, shared common.py and runtime.py
+- code/kafka_agents/ - Part 3 replay_message.py, send_poison.py, ordering_test.py, read_topic.py, inspect_state.py
+- code/verify_hw08.py - self-check (make verify-hw08)
+- reports/hw08/ - report, METRICS.md, RUN_LOG.txt, AI_USE.md, verification.json and raw/
+
+Topics: s3319_fixture_requests, s3319_fixture_responses (Part 1), s3319_inbox, s3319_tasks (2 partitions), s3319_drafts, s3319_final (Part 2), s3319_dead_letter (Part 3).
+
+How to run
+
+    pip install -r code/api/requirements.txt                      # includes aiokafka==0.12.0
+    docker compose up -d --build                                  # Kafka, worker, API; creates the Part 1 topics
+    python code/homework_demo.py                                  # Part 1
+    for t in inbox:1 tasks:2 drafts:1 final:1 dead_letter:1; do docker exec s3319_kafka /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --if-not-exists --topic s3319_${t%%:*} --partitions ${t##*:} --replication-factor 1; done
+    cd code/kafka_agents
+    python planner.py                                             # Part 2, one terminal each
+    python writer.py
+    python reviewer.py
+    python send_question.py
+    python journey.py CORRELATION_ID
+    python replay_message.py --cid CORRELATION_ID                 # Part 3 duplicate (writer.py --no-idempotency for before)
+    python writer.py --commit-mode before --work-seconds 60       # Part 3 consumer death, kill -9 during the slow step
+    python send_poison.py                                         # Part 3 poison (writer.py --no-dlq for before)
+    python writer.py --instance A                                 # Part 3 ordering, with writer.py --instance B
+    python ordering_test.py nokey
+    python ordering_test.py keyed
+    cd ../..
+    make verify-hw08
+
+The idempotency store is code/kafka_agents/state/agents_state.db and the agent log is reports/hw08/logs/agents.log; both stay out of git.

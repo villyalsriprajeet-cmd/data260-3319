@@ -12,6 +12,8 @@ pyyaml
 PyJWT>=2.8
 python-multipart
 ruff
-pre-commitlanggraph
+pre-commit
+langgraph
 langchain-core
 langchain-ollama
+aiokafka==0.12.0
