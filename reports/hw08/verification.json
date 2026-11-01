@@ -1,0 +1,178 @@
+{
+  "hw": "hw8",
+  "sid4": 3319,
+  "generated": "2026-10-31T20:47:43",
+  "commit_hash": "a364807607b0d1d266831a39daf8e9a00126766e",
+  "tag": "none",
+  "config": {
+    "SID4": 3319,
+    "PORT_BASE": 8619,
+    "PREFIX": "s3319",
+    "SEED": 3319,
+    "VERIFY_SEED": 263319,
+    "DOMAIN_ID": 7
+  },
+  "model": {
+    "llm": "qwen2.5:3b",
+    "runtime": "Ollama (local)",
+    "temperature": 0,
+    "seed": 3319,
+    "kafka": "apache/kafka:3.9.2 (KRaft, single broker)",
+    "client": "aiokafka 0.12.0"
+  },
+  "seed": 3319,
+  "verify_seed": 263319,
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "docker: kafka, worker and api containers running",
+      "passed": true,
+      "detail": "['s3319_api', 's3319_worker', 's3319_kafka']"
+    },
+    {
+      "check": "topic s3319_fixture_requests exists with 1 partition(s)",
+      "passed": true,
+      "detail": "found 1"
+    },
+    {
+      "check": "topic s3319_fixture_responses exists with 1 partition(s)",
+      "passed": true,
+      "detail": "found 1"
+    },
+    {
+      "check": "topic s3319_inbox exists with 1 partition(s)",
+      "passed": true,
+      "detail": "found 1"
+    },
+    {
+      "check": "topic s3319_tasks exists with 2 partition(s)",
+      "passed": true,
+      "detail": "found 2"
+    },
+    {
+      "check": "topic s3319_drafts exists with 1 partition(s)",
+      "passed": true,
+      "detail": "found 1"
+    },
+    {
+      "check": "topic s3319_final exists with 1 partition(s)",
+      "passed": true,
+      "detail": "found 1"
+    },
+    {
+      "check": "topic s3319_dead_letter exists with 1 partition(s)",
+      "passed": true,
+      "detail": "found 1"
+    },
+    {
+      "check": "API on PORT_BASE names the two prefixed topics",
+      "passed": true,
+      "detail": "('s3319_fixture_requests', 's3319_fixture_responses')"
+    },
+    {
+      "check": "CREATE_FIXTURE returns success, a UUID fixture_id and the same correlation_id",
+      "passed": true,
+      "detail": "{'correlation_id': 'a884ef5d-8e36-46f6-aef8-5e4b8b6e5882', 'operation': 'CREATE_FIXTURE', 'success': True, 'fixture_id': 'f0e3cd84-fbe3-4f83-9dba-fc5bee6f194f', 'message': 'Fixture created'}"
+    },
+    {
+      "check": "GET_FIXTURE returns the created fixture and the same correlation_id",
+      "passed": true,
+      "detail": "{'correlation_id': '0805ed2d-3389-42e7-ad99-42430b64f44d', 'operation': 'GET_FIXTURE', 'success': True, 'fixture': {'fixture_id': 'f0e3cd84-fbe3-4f83-9dba-fc5bee6f194f', 'fixture_title': 'verify-hw08 fixture', 'fixture_code': 'FX-18067', 'venue': 'Verify Field', 'tickets_available': 10, 'home_team_i"
+    },
+    {
+      "check": "CREATE replayed with the same correlation_id gives the same fixture_id",
+      "passed": true,
+      "detail": "{'correlation_id': 'a884ef5d-8e36-46f6-aef8-5e4b8b6e5882', 'operation': 'CREATE_FIXTURE', 'success': True, 'fixture_id': 'f0e3cd84-fbe3-4f83-9dba-fc5bee6f194f', 'message': 'Fixture created', 'duplicate': True}"
+    },
+    {
+      "check": "error case (unknown operation) gives success false, a clean error and the same correlation_id",
+      "passed": true,
+      "detail": "Unknown operation"
+    },
+    {
+      "check": "error case (missing field) gives success false, a clean error and the same correlation_id",
+      "passed": true,
+      "detail": "Missing required field(s): venue"
+    },
+    {
+      "check": "error case (invalid value) gives success false, a clean error and the same correlation_id",
+      "passed": true,
+      "detail": "tickets_available must be >= 0"
+    },
+    {
+      "check": "error case (unknown fixture_id) gives success false, a clean error and the same correlation_id",
+      "passed": true,
+      "detail": "Fixture not found"
+    },
+    {
+      "check": "raw Kafka: request topic to worker to reply_to topic keeps the correlation_id",
+      "passed": true,
+      "detail": "{'correlation_id': 'verify-direct-730b3735-cd16-4cc4-82d7-d0431c908027', 'operation': 'GET_FIXTURE', 'success': False, 'error': 'Fixture not found'}"
+    },
+    {
+      "check": "Part 2 live: inbox, Planner, Writer, Reviewer, final with one correlation_id",
+      "passed": true,
+      "detail": "approved"
+    },
+    {
+      "check": "Part 1 saved demo: CREATE then GET round trip passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 2 saved final JSON has correlation_id, status and answer",
+      "passed": true,
+      "detail": "approved"
+    },
+    {
+      "check": "Part 3 duplicate: still 2 drafts after both replays (bug run 1 extra, fixed run 0)",
+      "passed": true,
+      "detail": "2"
+    },
+    {
+      "check": "Part 3 poison: dead letter entry after 3 attempts",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "check": "Part 3 ordering no key: 20 processed by 2 Writers, fixtures split",
+      "passed": true,
+      "detail": "4/4 split, 2/4 in order"
+    },
+    {
+      "check": "Part 3 ordering keyed: 4/4 in one partition and in order, 2 Writers",
+      "passed": true,
+      "detail": "['WRITER-A', 'WRITER-B']"
+    },
+    {
+      "check": "Part 3 logs contain DUPLICATE_SKIPPED",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 3 logs contain REDELIVERED",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 3 logs contain MOVED_TO_DEAD_LETTER",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 3 logs contain PARTITIONS_ASSIGNED",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "offline: validation rejects bad data and stores nothing",
+      "passed": true,
+      "detail": "Missing required field(s): fixture_code, venue, tickets_available, home_team_id"
+    },
+    {
+      "check": "ruff passes on the HW8 code",
+      "passed": true,
+      "detail": "All checks passed!"
+    }
+  ]
+}
