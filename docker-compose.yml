@@ -66,3 +66,15 @@ services:
       worker:
         condition: service_started
     restart: unless-stopped
+
+  redis:  # HW9: Redis Stack (Redis + vector search) for the view counter and the semantic cache
+    image: redis/redis-stack-server:7.4.0-v8
+    container_name: s3319_redis
+    ports:
+      - "127.0.0.1:6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped

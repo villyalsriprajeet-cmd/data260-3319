@@ -13,3 +13,4 @@ indent-style = "space"
 "code/homework_demo.py" = ["E402"]  # HW8: imports come after the sys.path line
 "code/verify_hw08.py" = ["E402"]
 "code/kafka_agents/*.py" = ["E402"]
+"code/hw9/*.py" = ["E402"]  # HW9: env settings come before the imports

@@ -17,3 +17,5 @@ langgraph
 langchain-core
 langchain-ollama
 aiokafka==0.12.0
+redis==5.2.1
+sentence-transformers
