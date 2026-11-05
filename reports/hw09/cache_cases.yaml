@@ -1,0 +1,73 @@
+# HW9 Part 3.1 - labeled cache test set, Domain 7 (community sports league fixtures)
+# Written and committed before any threshold sweep. Labels come from the meaning of each question,
+# not from similarity scores. Do not edit after the sweep: any labeling mistake is written up in
+# reports/hw09/LABEL_NOTES.md instead.
+#
+# seeds: the 10 questions that are in the cache before the sweep (answered once by the HW8 agents)
+# cases: 40 incoming questions, 10 per category
+#   exact_duplicate    same text as a seed                         expected: hit  (ref = that seed)
+#   paraphrase         same meaning and same answer as a seed      expected: hit  (ref = that seed)
+#   similar_different  looks like a seed but has another answer    expected: miss (ref = the look-alike seed)
+#   unrelated          not about any seed                          expected: miss (ref = null)
+# A hit is correct only if it returns the ref seed of a case that expects a hit. Any other hit is a false hit.
+
+seeds:
+  - {id: S01, query: "How many tickets are still available for fixture FX-00042?"}
+  - {id: S02, query: "Where is fixture FX-00117 being played?"}
+  - {id: S03, query: "Which team is the home team for fixture FX-00250?"}
+  - {id: S04, query: "What is the title of fixture FX-00300?"}
+  - {id: S05, query: "Is fixture FX-00512 sold out?"}
+  - {id: S06, query: "Which city is the home team of fixture FX-00777 from?"}
+  - {id: S07, query: "What should a team manager do on match day before kickoff?"}
+  - {id: S08, query: "How should a community league handle a fixture postponed because of heavy rain?"}
+  - {id: S09, query: "How many points does a team get for a win in the league?"}
+  - {id: S10, query: "What should players bring to an away game?"}
+
+cases:
+  # exact duplicates - same text as the seed, should hit
+  - {id: E01, category: exact_duplicate, expected: hit, ref: S01, query: "How many tickets are still available for fixture FX-00042?", why: "identical text"}
+  - {id: E02, category: exact_duplicate, expected: hit, ref: S02, query: "Where is fixture FX-00117 being played?", why: "identical text"}
+  - {id: E03, category: exact_duplicate, expected: hit, ref: S03, query: "Which team is the home team for fixture FX-00250?", why: "identical text"}
+  - {id: E04, category: exact_duplicate, expected: hit, ref: S04, query: "What is the title of fixture FX-00300?", why: "identical text"}
+  - {id: E05, category: exact_duplicate, expected: hit, ref: S05, query: "Is fixture FX-00512 sold out?", why: "identical text"}
+  - {id: E06, category: exact_duplicate, expected: hit, ref: S06, query: "Which city is the home team of fixture FX-00777 from?", why: "identical text"}
+  - {id: E07, category: exact_duplicate, expected: hit, ref: S07, query: "What should a team manager do on match day before kickoff?", why: "identical text"}
+  - {id: E08, category: exact_duplicate, expected: hit, ref: S08, query: "How should a community league handle a fixture postponed because of heavy rain?", why: "identical text"}
+  - {id: E09, category: exact_duplicate, expected: hit, ref: S09, query: "How many points does a team get for a win in the league?", why: "identical text"}
+  - {id: E10, category: exact_duplicate, expected: hit, ref: S10, query: "What should players bring to an away game?", why: "identical text"}
+
+  # paraphrases - other words, same fixture, same answer, should hit
+  - {id: P01, category: paraphrase, expected: hit, ref: S01, query: "How many tickets are left for fixture FX-00042?", why: "same fixture, same ticket count"}
+  - {id: P02, category: paraphrase, expected: hit, ref: S02, query: "What venue is fixture FX-00117 played at?", why: "same fixture, same venue"}
+  - {id: P03, category: paraphrase, expected: hit, ref: S03, query: "Who is the home side in fixture FX-00250?", why: "home side = home team"}
+  - {id: P04, category: paraphrase, expected: hit, ref: S04, query: "What is fixture FX-00300 called?", why: "called = title"}
+  - {id: P05, category: paraphrase, expected: hit, ref: S05, query: "Are there any tickets left for fixture FX-00512, or is it sold out?", why: "sold out = no tickets left, same answer"}
+  - {id: P06, category: paraphrase, expected: hit, ref: S06, query: "What city does the home team of fixture FX-00777 come from?", why: "same team, same city"}
+  - {id: P07, category: paraphrase, expected: hit, ref: S07, query: "Before kickoff on match day, what should the team manager do?", why: "same task list, words reordered"}
+  - {id: P08, category: paraphrase, expected: hit, ref: S08, query: "What should the league do when heavy rain postpones a fixture?", why: "same rain postponement policy"}
+  - {id: P09, category: paraphrase, expected: hit, ref: S09, query: "How many league points is a win worth?", why: "same points for a win"}
+  - {id: P10, category: paraphrase, expected: hit, ref: S10, query: "What items should players pack for an away match?", why: "pack = bring, match = game"}
+
+  # superficially similar - almost the same words, different correct answer, should miss
+  - {id: D01, category: similar_different, expected: miss, ref: S01, query: "How many tickets are still available for fixture FX-00043?", why: "different fixture, different ticket count"}
+  - {id: D02, category: similar_different, expected: miss, ref: S02, query: "Where is fixture FX-00118 being played?", why: "different fixture, different venue"}
+  - {id: D03, category: similar_different, expected: miss, ref: S03, query: "Which team is the away team for fixture FX-00250?", why: "away team, not home team"}
+  - {id: D04, category: similar_different, expected: miss, ref: S04, query: "What is the venue of fixture FX-00300?", why: "venue, not title"}
+  - {id: D05, category: similar_different, expected: miss, ref: S05, query: "Is fixture FX-00513 sold out?", why: "different fixture, different ticket count"}
+  - {id: D06, category: similar_different, expected: miss, ref: S06, query: "Which city is the home team of fixture FX-00778 from?", why: "different fixture, different home team"}
+  - {id: D07, category: similar_different, expected: miss, ref: S07, query: "What should a team manager do on match day after the final whistle?", why: "after the game, not before kickoff"}
+  - {id: D08, category: similar_different, expected: miss, ref: S08, query: "How should a community league handle a fixture abandoned because of a floodlight failure?", why: "abandoned mid-game for a power fault, not postponed for rain"}
+  - {id: D09, category: similar_different, expected: miss, ref: S09, query: "How many points does a team get for a draw in the league?", why: "draw is 1 point, win is 3"}
+  - {id: D10, category: similar_different, expected: miss, ref: S10, query: "What should referees bring to an away game?", why: "referee kit, not player kit"}
+
+  # unrelated - nothing in the cache answers these, should miss
+  - {id: U01, category: unrelated, expected: miss, ref: null, query: "How do I reset my password on the league website?", why: "account help"}
+  - {id: U02, category: unrelated, expected: miss, ref: null, query: "What is the weather forecast for Saturday?", why: "weather"}
+  - {id: U03, category: unrelated, expected: miss, ref: null, query: "How do I register a new player for next season?", why: "registration"}
+  - {id: U04, category: unrelated, expected: miss, ref: null, query: "Who won the 2023-24 Premier League?", why: "professional league history"}
+  - {id: U05, category: unrelated, expected: miss, ref: null, query: "What are the opening hours of the league office?", why: "office hours"}
+  - {id: U06, category: unrelated, expected: miss, ref: null, query: "How much does it cost to rent a pitch for an hour?", why: "pitch rental price"}
+  - {id: U07, category: unrelated, expected: miss, ref: null, query: "Can I bring my dog to a match?", why: "spectator rules"}
+  - {id: U08, category: unrelated, expected: miss, ref: null, query: "How do I become a volunteer referee?", why: "volunteering"}
+  - {id: U09, category: unrelated, expected: miss, ref: null, query: "What is the offside rule?", why: "laws of the game"}
+  - {id: U10, category: unrelated, expected: miss, ref: null, query: "Where can I buy the official league kit?", why: "merchandise"}
