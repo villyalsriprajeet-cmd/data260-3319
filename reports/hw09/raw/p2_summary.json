@@ -1,0 +1,13 @@
+{
+  "threshold": 0.85,
+  "queries": 12,
+  "cache_hits": 7,
+  "cache_misses": 5,
+  "hit_rate_pct": 58.3,
+  "avg_latency_cached_ms": 2410.6,
+  "avg_latency_non_cached_ms": 30935.6,
+  "avg_lookup_ms_all": 2082.9,
+  "avg_embed_ms_all": 1946.7,
+  "avg_search_ms_all": 136.2,
+  "avg_agent_ms_misses": 28997.5
+}
