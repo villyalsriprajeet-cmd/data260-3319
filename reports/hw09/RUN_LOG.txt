@@ -1,0 +1,913 @@
+HW9 RUN_LOG, Sri Prajeet Villyal, SID4 3319, PREFIX s3319, PORT_BASE 8619
+Built 2026-11-05 17:41 from the saved logs and raw files of the runs in the report.
+Times inside the logs are UTC (they end in Z).
+
+# reports/hw09/logs/qa_service.log (Parts 2 and 3: cache hits, misses, agents, stale)
+
+2026-11-05T22:21:17.197Z [QA] CACHE_MISS correlation_id=ace04687-51f9-4057-aa5c-d101860db694 best_similarity=None threshold=0.85 query=How many tickets are still available for fixture FX-00042?
+2026-11-05T22:21:17.495Z [QA] SENT_TO_AGENTS correlation_id=ace04687-51f9-4057-aa5c-d101860db694 topic=s3319_inbox partition=0 offset=5
+2026-11-05T22:21:48.526Z [QA] FINAL_FROM_AGENTS correlation_id=ace04687-51f9-4057-aa5c-d101860db694 status=approved words=26
+2026-11-05T22:21:48.660Z [QA] CACHE_STORED correlation_id=ace04687-51f9-4057-aa5c-d101860db694 key=s3319:qa:9740b94af77c953a data_version=FX-00042@2026-10-01T17:14:36
+2026-11-05T22:21:50.241Z [QA] CACHE_HIT similarity=1.0 matched_query=How many tickets are still available for fixture FX-00042? latency_ms=1574.8
+2026-11-05T22:21:51.968Z [QA] CACHE_HIT similarity=0.9562 matched_query=How many tickets are still available for fixture FX-00042? latency_ms=922.7
+2026-11-05T22:21:52.145Z [QA] CACHE_MISS correlation_id=521a0218-79cf-417f-b1b4-117bbc059442 best_similarity=0.6107 threshold=0.85 query=Where is fixture FX-00117 being played?
+2026-11-05T22:21:52.374Z [QA] SENT_TO_AGENTS correlation_id=521a0218-79cf-417f-b1b4-117bbc059442 topic=s3319_inbox partition=0 offset=6
+2026-11-05T22:22:08.717Z [QA] FINAL_FROM_AGENTS correlation_id=521a0218-79cf-417f-b1b4-117bbc059442 status=approved words=9
+2026-11-05T22:22:08.741Z [QA] CACHE_STORED correlation_id=521a0218-79cf-417f-b1b4-117bbc059442 key=s3319:qa:01a4b94e5d6a8c13 data_version=FX-00117@2026-10-01T17:14:36
+2026-11-05T22:22:10.295Z [QA] CACHE_HIT similarity=0.9646 matched_query=Where is fixture FX-00117 being played? latency_ms=1550.0
+2026-11-05T22:22:10.642Z [QA] CACHE_HIT similarity=1.0 matched_query=Where is fixture FX-00117 being played? latency_ms=318.2
+2026-11-05T22:22:12.734Z [QA] CACHE_MISS correlation_id=90cd68fa-9e2f-4f36-8e6f-a017c22cacb1 best_similarity=0.7185 threshold=0.85 query=Which team is the home team for fixture FX-00250?
+2026-11-05T22:22:13.829Z [QA] SENT_TO_AGENTS correlation_id=90cd68fa-9e2f-4f36-8e6f-a017c22cacb1 topic=s3319_inbox partition=0 offset=7
+2026-11-05T22:22:37.127Z [QA] FINAL_FROM_AGENTS correlation_id=90cd68fa-9e2f-4f36-8e6f-a017c22cacb1 status=approved words=12
+2026-11-05T22:22:37.265Z [QA] CACHE_STORED correlation_id=90cd68fa-9e2f-4f36-8e6f-a017c22cacb1 key=s3319:qa:37a194ea46cc16ef data_version=FX-00250@2026-10-01T17:14:36
+2026-11-05T22:22:38.730Z [QA] CACHE_HIT similarity=0.9723 matched_query=Which team is the home team for fixture FX-00250? latency_ms=1453.2
+2026-11-05T22:22:39.090Z [QA] CACHE_MISS correlation_id=f2e4a005-6f2a-44dd-9c41-1b4eb8f29732 best_similarity=0.321 threshold=0.85 query=What should a team manager do on match day before kickoff?
+2026-11-05T22:22:39.181Z [QA] SENT_TO_AGENTS correlation_id=f2e4a005-6f2a-44dd-9c41-1b4eb8f29732 topic=s3319_inbox partition=0 offset=8
+2026-11-05T22:22:59.878Z [QA] FINAL_FROM_AGENTS correlation_id=f2e4a005-6f2a-44dd-9c41-1b4eb8f29732 status=approved words=42
+2026-11-05T22:22:59.925Z [QA] CACHE_STORED correlation_id=f2e4a005-6f2a-44dd-9c41-1b4eb8f29732 key=s3319:qa:fc82a82ef96936ef data_version=none
+2026-11-05T22:23:01.438Z [QA] CACHE_HIT similarity=1.0 matched_query=What should a team manager do on match day before kickoff? latency_ms=1509.8
+2026-11-05T22:23:01.669Z [QA] CACHE_HIT similarity=0.983 matched_query=What should a team manager do on match day before kickoff? latency_ms=224.0
+2026-11-05T22:23:01.910Z [QA] CACHE_MISS correlation_id=6a5cf172-b9b2-46be-8de6-2a855ac7a3f2 best_similarity=0.39 threshold=0.85 query=How should a community league handle a fixture postponed because of heavy rain?
+2026-11-05T22:23:01.967Z [QA] SENT_TO_AGENTS correlation_id=6a5cf172-b9b2-46be-8de6-2a855ac7a3f2 topic=s3319_inbox partition=0 offset=9
+2026-11-05T22:23:40.033Z [QA] FINAL_FROM_AGENTS correlation_id=6a5cf172-b9b2-46be-8de6-2a855ac7a3f2 status=approved words=84
+2026-11-05T22:23:40.058Z [QA] CACHE_STORED correlation_id=6a5cf172-b9b2-46be-8de6-2a855ac7a3f2 key=s3319:qa:23266cd2f15d2e80 data_version=none
+2026-11-05T22:23:40.094Z [QA] P2_SUMMARY threshold=0.85 queries=12 cache_hits=7 cache_misses=5 hit_rate_pct=58.3 avg_latency_cached_ms=1079.0 avg_latency_non_cached_ms=26929.1 avg_lookup_ms_all=883.7 avg_agent_ms_misses=25995.8
+2026-11-05T22:28:17.993Z [QA] CACHE_MISS correlation_id=2ecb5ae3-b639-4c20-94c0-0ad97351c13f best_similarity=None threshold=0.85 query=How many tickets are still available for fixture FX-00042?
+2026-11-05T22:28:18.471Z [QA] SENT_TO_AGENTS correlation_id=2ecb5ae3-b639-4c20-94c0-0ad97351c13f topic=s3319_inbox partition=0 offset=10
+2026-11-05T22:28:48.571Z [QA] FINAL_FROM_AGENTS correlation_id=2ecb5ae3-b639-4c20-94c0-0ad97351c13f status=approved words=26
+2026-11-05T22:28:48.674Z [QA] CACHE_STORED correlation_id=2ecb5ae3-b639-4c20-94c0-0ad97351c13f key=s3319:qa:9740b94af77c953a data_version=FX-00042@2026-10-01T17:14:36
+2026-11-05T22:28:50.690Z [QA] CACHE_HIT similarity=1.0 matched_query=How many tickets are still available for fixture FX-00042? latency_ms=2006.7
+2026-11-05T22:28:55.093Z [QA] CACHE_HIT similarity=0.9562 matched_query=How many tickets are still available for fixture FX-00042? latency_ms=4303.9
+2026-11-05T22:28:58.012Z [QA] CACHE_MISS correlation_id=ab521296-94ba-447a-b7fa-c4d0602a7e7d best_similarity=0.6107 threshold=0.85 query=Where is fixture FX-00117 being played?
+2026-11-05T22:28:58.385Z [QA] SENT_TO_AGENTS correlation_id=ab521296-94ba-447a-b7fa-c4d0602a7e7d topic=s3319_inbox partition=0 offset=11
+2026-11-05T22:29:15.379Z [QA] FINAL_FROM_AGENTS correlation_id=ab521296-94ba-447a-b7fa-c4d0602a7e7d status=approved words=9
+2026-11-05T22:29:15.474Z [QA] CACHE_STORED correlation_id=ab521296-94ba-447a-b7fa-c4d0602a7e7d key=s3319:qa:01a4b94e5d6a8c13 data_version=FX-00117@2026-10-01T17:14:36
+2026-11-05T22:29:18.744Z [QA] CACHE_HIT similarity=0.9646 matched_query=Where is fixture FX-00117 being played? latency_ms=3243.4
+2026-11-05T22:29:20.767Z [QA] CACHE_HIT similarity=1.0 matched_query=Where is fixture FX-00117 being played? latency_ms=1822.7
+2026-11-05T22:29:24.416Z [QA] CACHE_MISS correlation_id=5341c8e1-2b53-4de6-948f-27899453dc57 best_similarity=0.7185 threshold=0.85 query=Which team is the home team for fixture FX-00250?
+2026-11-05T22:29:24.729Z [QA] SENT_TO_AGENTS correlation_id=5341c8e1-2b53-4de6-948f-27899453dc57 topic=s3319_inbox partition=0 offset=12
+2026-11-05T22:29:59.602Z [QA] FINAL_FROM_AGENTS correlation_id=5341c8e1-2b53-4de6-948f-27899453dc57 status=approved words=12
+2026-11-05T22:29:59.730Z [QA] CACHE_STORED correlation_id=5341c8e1-2b53-4de6-948f-27899453dc57 key=s3319:qa:37a194ea46cc16ef data_version=FX-00250@2026-10-01T17:14:36
+2026-11-05T22:30:02.772Z [QA] CACHE_HIT similarity=0.9723 matched_query=Which team is the home team for fixture FX-00250? latency_ms=3030.7
+2026-11-05T22:30:04.040Z [QA] CACHE_MISS correlation_id=368f89c2-83b5-4c9a-b30d-c8bfcc7372d3 best_similarity=0.321 threshold=0.85 query=What should a team manager do on match day before kickoff?
+2026-11-05T22:30:04.245Z [QA] SENT_TO_AGENTS correlation_id=368f89c2-83b5-4c9a-b30d-c8bfcc7372d3 topic=s3319_inbox partition=0 offset=13
+2026-11-05T22:30:26.651Z [QA] FINAL_FROM_AGENTS correlation_id=368f89c2-83b5-4c9a-b30d-c8bfcc7372d3 status=approved words=42
+2026-11-05T22:30:26.760Z [QA] CACHE_STORED correlation_id=368f89c2-83b5-4c9a-b30d-c8bfcc7372d3 key=s3319:qa:fc82a82ef96936ef data_version=none
+2026-11-05T22:30:28.681Z [QA] CACHE_HIT similarity=1.0 matched_query=What should a team manager do on match day before kickoff? latency_ms=1907.6
+2026-11-05T22:30:29.283Z [QA] CACHE_HIT similarity=0.983 matched_query=What should a team manager do on match day before kickoff? latency_ms=558.9
+2026-11-05T22:30:29.626Z [QA] CACHE_MISS correlation_id=8d70b94e-5a2d-4263-9345-f7ebf84f69dd best_similarity=0.39 threshold=0.85 query=How should a community league handle a fixture postponed because of heavy rain?
+2026-11-05T22:30:29.899Z [QA] SENT_TO_AGENTS correlation_id=8d70b94e-5a2d-4263-9345-f7ebf84f69dd topic=s3319_inbox partition=0 offset=14
+2026-11-05T22:31:09.713Z [QA] FINAL_FROM_AGENTS correlation_id=8d70b94e-5a2d-4263-9345-f7ebf84f69dd status=approved words=84
+2026-11-05T22:31:09.890Z [QA] CACHE_STORED correlation_id=8d70b94e-5a2d-4263-9345-f7ebf84f69dd key=s3319:qa:23266cd2f15d2e80 data_version=none
+2026-11-05T22:31:10.048Z [QA] P2_SUMMARY threshold=0.85 queries=12 cache_hits=7 cache_misses=5 hit_rate_pct=58.3 avg_latency_cached_ms=2410.6 avg_latency_non_cached_ms=30935.6 avg_lookup_ms_all=2082.9 avg_embed_ms_all=1946.7 avg_search_ms_all=136.2 avg_agent_ms_misses=28997.5
+2026-11-05T23:02:09.864Z [QA] SENT_TO_AGENTS correlation_id=e3fafcd4-4308-436b-b41f-fa74090cbfec topic=s3319_inbox partition=0 offset=15
+2026-11-05T23:02:40.907Z [QA] FINAL_FROM_AGENTS correlation_id=e3fafcd4-4308-436b-b41f-fa74090cbfec status=approved words=26
+2026-11-05T23:02:44.644Z [QA] SEED_STORED correlation_id=e3fafcd4-4308-436b-b41f-fa74090cbfec seed=S01 key=s3319:qa:9740b94af77c953a agent_ms=31136.2
+2026-11-05T23:02:45.153Z [QA] SENT_TO_AGENTS correlation_id=a83b161b-d62c-4a3b-bdb9-989a8ff9b1df topic=s3319_inbox partition=0 offset=16
+2026-11-05T23:02:59.221Z [QA] FINAL_FROM_AGENTS correlation_id=a83b161b-d62c-4a3b-bdb9-989a8ff9b1df status=approved words=9
+2026-11-05T23:03:01.362Z [QA] SEED_STORED correlation_id=a83b161b-d62c-4a3b-bdb9-989a8ff9b1df seed=S02 key=s3319:qa:01a4b94e5d6a8c13 agent_ms=14258.2
+2026-11-05T23:03:01.592Z [QA] SENT_TO_AGENTS correlation_id=0b1bf383-bd89-4f83-8584-30b530ff6614 topic=s3319_inbox partition=0 offset=17
+2026-11-05T23:03:23.557Z [QA] FINAL_FROM_AGENTS correlation_id=0b1bf383-bd89-4f83-8584-30b530ff6614 status=approved words=12
+2026-11-05T23:03:29.202Z [QA] SEED_STORED correlation_id=0b1bf383-bd89-4f83-8584-30b530ff6614 seed=S03 key=s3319:qa:37a194ea46cc16ef agent_ms=22055.2
+2026-11-05T23:03:30.173Z [QA] SENT_TO_AGENTS correlation_id=056ce187-fd2e-436d-8eed-3d5cbf814b5e topic=s3319_inbox partition=0 offset=18
+2026-11-05T23:03:53.424Z [QA] FINAL_FROM_AGENTS correlation_id=056ce187-fd2e-436d-8eed-3d5cbf814b5e status=approved words=14
+2026-11-05T23:03:54.946Z [QA] SEED_STORED correlation_id=056ce187-fd2e-436d-8eed-3d5cbf814b5e seed=S04 key=s3319:qa:17fe9775201cfc9c agent_ms=23286.6
+2026-11-05T23:03:55.198Z [QA] SENT_TO_AGENTS correlation_id=3b78e502-9f96-4255-93af-4dec89a1d431 topic=s3319_inbox partition=0 offset=19
+2026-11-05T23:04:21.893Z [QA] FINAL_FROM_AGENTS correlation_id=3b78e502-9f96-4255-93af-4dec89a1d431 status=needs_revision words=25
+2026-11-05T23:04:23.377Z [QA] SEED_STORED correlation_id=3b78e502-9f96-4255-93af-4dec89a1d431 seed=S05 key=s3319:qa:8bb0b98948519531 agent_ms=26750.4
+2026-11-05T23:04:23.643Z [QA] SENT_TO_AGENTS correlation_id=53ca3882-e99d-4bdd-8549-652ce77d542b topic=s3319_inbox partition=0 offset=20
+2026-11-05T23:04:41.258Z [QA] FINAL_FROM_AGENTS correlation_id=53ca3882-e99d-4bdd-8549-652ce77d542b status=approved words=1
+2026-11-05T23:04:45.754Z [QA] SEED_STORED correlation_id=53ca3882-e99d-4bdd-8549-652ce77d542b seed=S06 key=s3319:qa:fe18b853233cc8f8 agent_ms=17670.0
+2026-11-05T23:04:45.835Z [QA] SENT_TO_AGENTS correlation_id=34a964e3-b8c2-4515-8b3b-4566474c031c topic=s3319_inbox partition=0 offset=21
+2026-11-05T23:05:06.038Z [QA] FINAL_FROM_AGENTS correlation_id=34a964e3-b8c2-4515-8b3b-4566474c031c status=approved words=42
+2026-11-05T23:05:07.340Z [QA] SEED_STORED correlation_id=34a964e3-b8c2-4515-8b3b-4566474c031c seed=S07 key=s3319:qa:fc82a82ef96936ef agent_ms=20278.0
+2026-11-05T23:05:07.387Z [QA] SENT_TO_AGENTS correlation_id=2411148f-fdea-4b41-a424-841fb4cb1f9b topic=s3319_inbox partition=0 offset=22
+2026-11-05T23:05:42.939Z [QA] FINAL_FROM_AGENTS correlation_id=2411148f-fdea-4b41-a424-841fb4cb1f9b status=approved words=84
+2026-11-05T23:05:43.824Z [QA] SEED_STORED correlation_id=2411148f-fdea-4b41-a424-841fb4cb1f9b seed=S08 key=s3319:qa:23266cd2f15d2e80 agent_ms=35592.1
+2026-11-05T23:05:43.884Z [QA] SENT_TO_AGENTS correlation_id=fcbf32e5-8840-4e78-80b1-54e8599f5ace topic=s3319_inbox partition=0 offset=23
+2026-11-05T23:05:59.279Z [QA] FINAL_FROM_AGENTS correlation_id=fcbf32e5-8840-4e78-80b1-54e8599f5ace status=approved words=11
+2026-11-05T23:05:59.955Z [QA] SEED_STORED correlation_id=fcbf32e5-8840-4e78-80b1-54e8599f5ace seed=S09 key=s3319:qa:8646ef254434f6fb agent_ms=15460.9
+2026-11-05T23:05:59.980Z [QA] SENT_TO_AGENTS correlation_id=cc64add2-b65c-43f5-b437-de9d01d1b368 topic=s3319_inbox partition=0 offset=24
+2026-11-05T23:06:21.229Z [QA] FINAL_FROM_AGENTS correlation_id=cc64add2-b65c-43f5-b437-de9d01d1b368 status=approved words=36
+2026-11-05T23:06:24.388Z [QA] SEED_STORED correlation_id=cc64add2-b65c-43f5-b437-de9d01d1b368 seed=S10 key=s3319:qa:b4c2a242727ec3e8 agent_ms=21276.5
+2026-11-05T23:11:35.336Z [QA] SENT_TO_AGENTS correlation_id=e7291238-a61f-4fb8-bf1d-f7d7c143bdf7 topic=s3319_inbox partition=0 offset=25
+2026-11-05T23:12:03.244Z [QA] FINAL_FROM_AGENTS correlation_id=e7291238-a61f-4fb8-bf1d-f7d7c143bdf7 status=approved words=8
+2026-11-05T23:12:03.738Z [QA] SENT_TO_AGENTS correlation_id=f78eb72d-a1dd-4621-b63f-194c0c52dc9b topic=s3319_inbox partition=0 offset=26
+2026-11-05T23:12:24.553Z [QA] FINAL_FROM_AGENTS correlation_id=f78eb72d-a1dd-4621-b63f-194c0c52dc9b status=approved words=11
+2026-11-05T23:12:24.700Z [QA] SENT_TO_AGENTS correlation_id=929ac486-90be-4847-93b5-dbf043fae9ae topic=s3319_inbox partition=0 offset=27
+2026-11-05T23:12:47.186Z [QA] FINAL_FROM_AGENTS correlation_id=929ac486-90be-4847-93b5-dbf043fae9ae status=approved words=23
+2026-11-05T23:12:47.295Z [QA] SENT_TO_AGENTS correlation_id=55897846-4a59-4f1c-bcf8-ce79010faa1c topic=s3319_inbox partition=0 offset=28
+2026-11-05T23:13:08.157Z [QA] FINAL_FROM_AGENTS correlation_id=55897846-4a59-4f1c-bcf8-ce79010faa1c status=approved words=31
+2026-11-05T23:13:08.185Z [QA] SENT_TO_AGENTS correlation_id=093ddb56-be4b-4bca-8c4c-a3f90d5421c9 topic=s3319_inbox partition=0 offset=29
+2026-11-05T23:13:32.025Z [QA] FINAL_FROM_AGENTS correlation_id=093ddb56-be4b-4bca-8c4c-a3f90d5421c9 status=approved words=48
+2026-11-05T23:13:32.035Z [QA] SENT_TO_AGENTS correlation_id=d1e86164-b734-46cd-bb6c-aafc63d5be91 topic=s3319_inbox partition=0 offset=30
+2026-11-05T23:13:46.917Z [QA] FINAL_FROM_AGENTS correlation_id=d1e86164-b734-46cd-bb6c-aafc63d5be91 status=approved words=12
+2026-11-05T23:13:46.932Z [QA] SENT_TO_AGENTS correlation_id=c92d1228-0689-497c-9bd5-bbc019055bea topic=s3319_inbox partition=0 offset=31
+2026-11-05T23:14:07.571Z [QA] FINAL_FROM_AGENTS correlation_id=c92d1228-0689-497c-9bd5-bbc019055bea status=approved words=37
+2026-11-05T23:14:07.678Z [QA] SENT_TO_AGENTS correlation_id=ba779865-3d6b-4417-8843-a7e660c7720d topic=s3319_inbox partition=0 offset=32
+2026-11-05T23:14:34.826Z [QA] FINAL_FROM_AGENTS correlation_id=ba779865-3d6b-4417-8843-a7e660c7720d status=approved words=10
+2026-11-05T23:14:34.940Z [QA] SENT_TO_AGENTS correlation_id=c25f9442-e74e-423a-88cd-e5f317d7bcf2 topic=s3319_inbox partition=0 offset=33
+2026-11-05T23:14:49.102Z [QA] FINAL_FROM_AGENTS correlation_id=c25f9442-e74e-423a-88cd-e5f317d7bcf2 status=approved words=8
+2026-11-05T23:14:49.117Z [QA] SENT_TO_AGENTS correlation_id=b264a3d4-b455-43df-b8c7-3cd354d5d5e1 topic=s3319_inbox partition=0 offset=34
+2026-11-05T23:15:12.547Z [QA] FINAL_FROM_AGENTS correlation_id=b264a3d4-b455-43df-b8c7-3cd354d5d5e1 status=approved words=51
+2026-11-05T23:15:12.557Z [QA] SENT_TO_AGENTS correlation_id=2a84a5fe-8f33-4fdc-957f-e9a6f3c3c4eb topic=s3319_inbox partition=0 offset=35
+2026-11-05T23:15:41.157Z [QA] FINAL_FROM_AGENTS correlation_id=2a84a5fe-8f33-4fdc-957f-e9a6f3c3c4eb status=approved words=65
+2026-11-05T23:15:41.169Z [QA] SENT_TO_AGENTS correlation_id=7d83c9b1-103a-4bc9-87be-b3664ac5fafa topic=s3319_inbox partition=0 offset=36
+2026-11-05T23:15:54.925Z [QA] FINAL_FROM_AGENTS correlation_id=7d83c9b1-103a-4bc9-87be-b3664ac5fafa status=approved words=11
+2026-11-05T23:15:54.961Z [QA] SENT_TO_AGENTS correlation_id=f249bb0b-124d-452b-914b-7f09806efa7c topic=s3319_inbox partition=0 offset=37
+2026-11-05T23:16:19.960Z [QA] FINAL_FROM_AGENTS correlation_id=f249bb0b-124d-452b-914b-7f09806efa7c status=needs_revision words=53
+2026-11-05T23:16:20.188Z [QA] SENT_TO_AGENTS correlation_id=3396cbd0-34fb-46b3-9b33-051c6f9bc69a topic=s3319_inbox partition=0 offset=38
+2026-11-05T23:16:37.568Z [QA] FINAL_FROM_AGENTS correlation_id=3396cbd0-34fb-46b3-9b33-051c6f9bc69a status=approved words=36
+2026-11-05T23:16:37.624Z [QA] SENT_TO_AGENTS correlation_id=928c08b3-0372-4992-8dec-80605cd1d6cf topic=s3319_inbox partition=0 offset=39
+2026-11-05T23:16:52.676Z [QA] FINAL_FROM_AGENTS correlation_id=928c08b3-0372-4992-8dec-80605cd1d6cf status=approved words=22
+2026-11-05T23:16:52.732Z [QA] SENT_TO_AGENTS correlation_id=fb1d16bb-e7d5-4ee6-8934-8f2f13f497cb topic=s3319_inbox partition=0 offset=40
+2026-11-05T23:17:19.819Z [QA] FINAL_FROM_AGENTS correlation_id=fb1d16bb-e7d5-4ee6-8934-8f2f13f497cb status=approved words=57
+2026-11-05T23:17:19.856Z [QA] SENT_TO_AGENTS correlation_id=007e1ea7-59bb-4bea-a8ce-42435a1001cb topic=s3319_inbox partition=0 offset=41
+2026-11-05T23:17:42.358Z [QA] FINAL_FROM_AGENTS correlation_id=007e1ea7-59bb-4bea-a8ce-42435a1001cb status=needs_revision words=31
+2026-11-05T23:17:42.371Z [QA] SENT_TO_AGENTS correlation_id=9758a238-c05f-4521-8377-bff03937a80d topic=s3319_inbox partition=0 offset=42
+2026-11-05T23:18:01.098Z [QA] FINAL_FROM_AGENTS correlation_id=9758a238-c05f-4521-8377-bff03937a80d status=approved words=23
+2026-11-05T23:18:01.147Z [QA] SENT_TO_AGENTS correlation_id=81f25dff-f4cd-4c00-9a09-516832a0f235 topic=s3319_inbox partition=0 offset=43
+2026-11-05T23:18:22.115Z [QA] FINAL_FROM_AGENTS correlation_id=81f25dff-f4cd-4c00-9a09-516832a0f235 status=approved words=37
+2026-11-05T23:18:22.204Z [QA] SENT_TO_AGENTS correlation_id=580e6504-ae65-4832-86fb-abddf9de808b topic=s3319_inbox partition=0 offset=44
+2026-11-05T23:18:42.411Z [QA] FINAL_FROM_AGENTS correlation_id=580e6504-ae65-4832-86fb-abddf9de808b status=approved words=33
+2026-11-05T23:18:42.543Z [QA] SENT_TO_AGENTS correlation_id=354b0859-def1-4a8c-a870-073896e5caa8 topic=s3319_inbox partition=0 offset=45
+2026-11-05T23:19:10.192Z [QA] FINAL_FROM_AGENTS correlation_id=354b0859-def1-4a8c-a870-073896e5caa8 status=approved words=75
+2026-11-05T23:19:10.208Z [QA] SENT_TO_AGENTS correlation_id=58c601a5-f4e6-4437-819e-824059ceb295 topic=s3319_inbox partition=0 offset=46
+2026-11-05T23:20:00.161Z [QA] FINAL_FROM_AGENTS correlation_id=58c601a5-f4e6-4437-819e-824059ceb295 status=needs_revision words=159
+2026-11-05T23:20:00.197Z [QA] SENT_TO_AGENTS correlation_id=35e2eada-9d89-45f5-b7e8-7ad323f86a9b topic=s3319_inbox partition=0 offset=47
+2026-11-05T23:20:24.291Z [QA] FINAL_FROM_AGENTS correlation_id=35e2eada-9d89-45f5-b7e8-7ad323f86a9b status=approved words=43
+2026-11-05T23:20:24.405Z [QA] P3_SWEEP_DONE thresholds=[0.75,0.8,0.85,0.9,0.95] agent_runs=23
+2026-11-05T23:58:01.747Z [QA] SENT_TO_AGENTS correlation_id=68a8d8f2-c8a9-4eb7-acf4-3225ddcb7786 topic=s3319_inbox partition=0 offset=48
+2026-11-05T23:58:29.345Z [QA] FINAL_FROM_AGENTS correlation_id=68a8d8f2-c8a9-4eb7-acf4-3225ddcb7786 status=approved words=28
+2026-11-06T00:06:01.237Z [QA] CACHE_HIT similarity=1.0 matched_query=How many tickets are still available for fixture FX-00042? latency_ms=480.0
+2026-11-06T00:06:01.849Z [QA] RECORD_UPDATED fixture=FX-00042 tickets_before=51 tickets_after=12
+2026-11-06T00:06:01.895Z [QA] CACHE_HIT similarity=1.0 matched_query=How many tickets are still available for fixture FX-00042? latency_ms=45.7
+2026-11-06T00:06:01.944Z [QA] STALE_INVALIDATED similarity=1.0 cached=FX-00042@2026-10-01T17:14:36 current=FX-00042@2026-11-05T16:06:01
+2026-11-06T00:06:01.945Z [QA] CACHE_MISS correlation_id=a409960f-3496-4cf0-9e17-83b04cbc232b best_similarity=1.0 threshold=0.95 query=How many tickets are still available for fixture FX-00042?
+2026-11-06T00:06:02.016Z [QA] SENT_TO_AGENTS correlation_id=a409960f-3496-4cf0-9e17-83b04cbc232b topic=s3319_inbox partition=0 offset=49
+2026-11-06T00:06:31.530Z [QA] FINAL_FROM_AGENTS correlation_id=a409960f-3496-4cf0-9e17-83b04cbc232b status=approved words=26
+2026-11-06T00:06:31.616Z [QA] CACHE_STORED correlation_id=a409960f-3496-4cf0-9e17-83b04cbc232b key=s3319:qa:9740b94af77c953a data_version=FX-00042@2026-11-05T16:06:01
+2026-11-06T00:06:33.385Z [QA] CACHE_HIT similarity=1.0 matched_query=How many tickets are still available for fixture FX-00042? latency_ms=1765.5
+2026-11-06T01:24:42.751Z [QA] CACHE_RESTORED correlation_id=a409960f-3496-4cf0-9e17-83b04cbc232b seed=S01 key=s3319:qa:9740b94af77c953a data_version=FX-00042@2026-11-05T16:06:01
+2026-11-06T01:24:43.940Z [QA] CACHE_RESTORED correlation_id=a83b161b-d62c-4a3b-bdb9-989a8ff9b1df seed=S02 key=s3319:qa:01a4b94e5d6a8c13 data_version=FX-00117@2026-10-01T17:14:36
+2026-11-06T01:24:44.228Z [QA] CACHE_RESTORED correlation_id=0b1bf383-bd89-4f83-8584-30b530ff6614 seed=S03 key=s3319:qa:37a194ea46cc16ef data_version=FX-00250@2026-10-01T17:14:36
+2026-11-06T01:24:44.853Z [QA] CACHE_RESTORED correlation_id=056ce187-fd2e-436d-8eed-3d5cbf814b5e seed=S04 key=s3319:qa:17fe9775201cfc9c data_version=FX-00300@2026-10-01T17:14:36
+2026-11-06T01:24:44.885Z [QA] CACHE_RESTORED correlation_id=3b78e502-9f96-4255-93af-4dec89a1d431 seed=S05 key=s3319:qa:8bb0b98948519531 data_version=FX-00512@2026-10-01T17:14:36
+2026-11-06T01:24:45.093Z [QA] CACHE_RESTORED correlation_id=53ca3882-e99d-4bdd-8549-652ce77d542b seed=S06 key=s3319:qa:fe18b853233cc8f8 data_version=FX-00777@2026-10-01T17:14:36
+2026-11-06T01:24:45.118Z [QA] CACHE_RESTORED correlation_id=34a964e3-b8c2-4515-8b3b-4566474c031c seed=S07 key=s3319:qa:fc82a82ef96936ef data_version=none
+2026-11-06T01:24:45.144Z [QA] CACHE_RESTORED correlation_id=2411148f-fdea-4b41-a424-841fb4cb1f9b seed=S08 key=s3319:qa:23266cd2f15d2e80 data_version=none
+2026-11-06T01:24:45.166Z [QA] CACHE_RESTORED correlation_id=fcbf32e5-8840-4e78-80b1-54e8599f5ace seed=S09 key=s3319:qa:8646ef254434f6fb data_version=none
+2026-11-06T01:24:45.773Z [QA] CACHE_RESTORED correlation_id=cc64add2-b65c-43f5-b437-de9d01d1b368 seed=S10 key=s3319:qa:b4c2a242727ec3e8 data_version=none
+
+
+# reports/hw09/raw/p2_summary.json
+
+{
+  "threshold": 0.85,
+  "queries": 12,
+  "cache_hits": 7,
+  "cache_misses": 5,
+  "hit_rate_pct": 58.3,
+  "avg_latency_cached_ms": 2410.6,
+  "avg_latency_non_cached_ms": 30935.6,
+  "avg_lookup_ms_all": 2082.9,
+  "avg_embed_ms_all": 1946.7,
+  "avg_search_ms_all": 136.2,
+  "avg_agent_ms_misses": 28997.5
+}
+
+
+# reports/hw09/raw/p3_sweep_summary.json
+
+[
+  {
+    "threshold": 0.75,
+    "cases": 40,
+    "hits": 28,
+    "correct_hits": 19,
+    "false_hits": 9,
+    "misses": 12,
+    "missed_should_hit": 0,
+    "hit_rate_pct": 70.0,
+    "false_hit_rate_pct": 32.1,
+    "mean_latency_ms": 7535.4,
+    "false_hit_cases": [
+      "P05",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D09"
+    ]
+  },
+  {
+    "threshold": 0.8,
+    "cases": 40,
+    "hits": 27,
+    "correct_hits": 18,
+    "false_hits": 9,
+    "misses": 13,
+    "missed_should_hit": 1,
+    "hit_rate_pct": 67.5,
+    "false_hit_rate_pct": 33.3,
+    "mean_latency_ms": 7995.7,
+    "false_hit_cases": [
+      "P05",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D09"
+    ]
+  },
+  {
+    "threshold": 0.85,
+    "cases": 40,
+    "hits": 24,
+    "correct_hits": 17,
+    "false_hits": 7,
+    "misses": 16,
+    "missed_should_hit": 2,
+    "hit_rate_pct": 60.0,
+    "false_hit_rate_pct": 29.2,
+    "mean_latency_ms": 9446.0,
+    "false_hit_cases": [
+      "P05",
+      "D01",
+      "D02",
+      "D03",
+      "D05",
+      "D06",
+      "D09"
+    ]
+  },
+  {
+    "threshold": 0.9,
+    "cases": 40,
+    "hits": 19,
+    "correct_hits": 14,
+    "false_hits": 5,
+    "misses": 21,
+    "missed_should_hit": 6,
+    "hit_rate_pct": 47.5,
+    "false_hit_rate_pct": 26.3,
+    "mean_latency_ms": 11978.3,
+    "false_hit_cases": [
+      "D01",
+      "D02",
+      "D03",
+      "D05",
+      "D06"
+    ]
+  },
+  {
+    "threshold": 0.95,
+    "cases": 40,
+    "hits": 17,
+    "correct_hits": 13,
+    "false_hits": 4,
+    "misses": 23,
+    "missed_should_hit": 7,
+    "hit_rate_pct": 42.5,
+    "false_hit_rate_pct": 23.5,
+    "mean_latency_ms": 13220.6,
+    "false_hit_cases": [
+      "D01",
+      "D02",
+      "D05",
+      "D06"
+    ]
+  }
+]
+
+
+# reports/hw09/raw/p3_cost.json
+
+{
+  "miss_cost": 1.0,
+  "false_hit_cost": 20.0,
+  "table": [
+    {
+      "threshold": 0.75,
+      "cases": 40,
+      "hits": 28,
+      "correct_hits": 19,
+      "false_hits": 9,
+      "misses": 12,
+      "missed_should_hit": 0,
+      "hit_rate_pct": 70.0,
+      "false_hit_rate_pct": 32.1,
+      "mean_latency_ms": 7535.4,
+      "false_hit_cases": [
+        "P05",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D09"
+      ],
+      "total_cost": 192.0
+    },
+    {
+      "threshold": 0.8,
+      "cases": 40,
+      "hits": 27,
+      "correct_hits": 18,
+      "false_hits": 9,
+      "misses": 13,
+      "missed_should_hit": 1,
+      "hit_rate_pct": 67.5,
+      "false_hit_rate_pct": 33.3,
+      "mean_latency_ms": 7995.7,
+      "false_hit_cases": [
+        "P05",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D09"
+      ],
+      "total_cost": 193.0
+    },
+    {
+      "threshold": 0.85,
+      "cases": 40,
+      "hits": 24,
+      "correct_hits": 17,
+      "false_hits": 7,
+      "misses": 16,
+      "missed_should_hit": 2,
+      "hit_rate_pct": 60.0,
+      "false_hit_rate_pct": 29.2,
+      "mean_latency_ms": 9446.0,
+      "false_hit_cases": [
+        "P05",
+        "D01",
+        "D02",
+        "D03",
+        "D05",
+        "D06",
+        "D09"
+      ],
+      "total_cost": 156.0
+    },
+    {
+      "threshold": 0.9,
+      "cases": 40,
+      "hits": 19,
+      "correct_hits": 14,
+      "false_hits": 5,
+      "misses": 21,
+      "missed_should_hit": 6,
+      "hit_rate_pct": 47.5,
+      "false_hit_rate_pct": 26.3,
+      "mean_latency_ms": 11978.3,
+      "false_hit_cases": [
+        "D01",
+        "D02",
+        "D03",
+        "D05",
+        "D06"
+      ],
+      "total_cost": 121.0
+    },
+    {
+      "threshold": 0.95,
+      "cases": 40,
+      "hits": 17,
+      "correct_hits": 13,
+      "false_hits": 4,
+      "misses": 23,
+      "missed_should_hit": 7,
+      "hit_rate_pct": 42.5,
+      "false_hit_rate_pct": 23.5,
+      "mean_latency_ms": 13220.6,
+      "false_hit_cases": [
+        "D01",
+        "D02",
+        "D05",
+        "D06"
+      ],
+      "total_cost": 103.0
+    }
+  ],
+  "chosen": 0.95,
+  "sensitivity": [
+    {
+      "ratio": 1,
+      "best_threshold": 0.75,
+      "costs": {
+        "0.75": 21,
+        "0.8": 22,
+        "0.85": 23,
+        "0.9": 26,
+        "0.95": 27
+      }
+    },
+    {
+      "ratio": 2,
+      "best_threshold": 0.85,
+      "costs": {
+        "0.75": 30,
+        "0.8": 31,
+        "0.85": 30,
+        "0.9": 31,
+        "0.95": 31
+      }
+    },
+    {
+      "ratio": 5,
+      "best_threshold": 0.95,
+      "costs": {
+        "0.75": 57,
+        "0.8": 58,
+        "0.85": 51,
+        "0.9": 46,
+        "0.95": 43
+      }
+    },
+    {
+      "ratio": 10,
+      "best_threshold": 0.95,
+      "costs": {
+        "0.75": 102,
+        "0.8": 103,
+        "0.85": 86,
+        "0.9": 71,
+        "0.95": 63
+      }
+    },
+    {
+      "ratio": 20,
+      "best_threshold": 0.95,
+      "costs": {
+        "0.75": 192,
+        "0.8": 193,
+        "0.85": 156,
+        "0.9": 121,
+        "0.95": 103
+      }
+    },
+    {
+      "ratio": 50,
+      "best_threshold": 0.95,
+      "costs": {
+        "0.75": 462,
+        "0.8": 463,
+        "0.85": 366,
+        "0.9": 271,
+        "0.95": 223
+      }
+    }
+  ]
+}
+
+
+# reports/hw09/raw/p3_stale_demo.json
+
+{
+  "query": "How many tickets are still available for fixture FX-00042?",
+  "fixture_code": "FX-00042",
+  "threshold": 0.95,
+  "1_before_update": {
+    "query": "How many tickets are still available for fixture FX-00042?",
+    "answer": "For fixture FX-00042, titled 'Milpitas Eagles vs San Mateo Wolves - Matchweek 5', there are 51 tickets still available for the game held at Milpitas Field.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "matched_query": "How many tickets are still available for fixture FX-00042?",
+    "data_version": "FX-00042@2026-10-01T17:14:36",
+    "latency_ms": 480.0,
+    "lookup_ms": 479.4,
+    "embed_ms": 455.3,
+    "search_ms": 24.2,
+    "agent_ms": 0.0,
+    "started_at": "2026-11-06T00:06:00.756+00:00",
+    "finished_at": "2026-11-06T00:06:01.802+00:00"
+  },
+  "3_stale_hit": {
+    "query": "How many tickets are still available for fixture FX-00042?",
+    "answer": "For fixture FX-00042, titled 'Milpitas Eagles vs San Mateo Wolves - Matchweek 5', there are 51 tickets still available for the game held at Milpitas Field.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "matched_query": "How many tickets are still available for fixture FX-00042?",
+    "data_version": "FX-00042@2026-10-01T17:14:36",
+    "latency_ms": 45.7,
+    "lookup_ms": 45.7,
+    "embed_ms": 39.2,
+    "search_ms": 6.5,
+    "agent_ms": 0.0,
+    "started_at": "2026-11-06T00:06:01.850+00:00",
+    "finished_at": "2026-11-06T00:06:01.896+00:00",
+    "current_version": "FX-00042@2026-11-05T16:06:01",
+    "db_tickets": 12
+  },
+  "4_invalidated": {
+    "query": "How many tickets are still available for fixture FX-00042?",
+    "answer": "For fixture FX-00042, titled 'Milpitas Eagles vs San Mateo Wolves - Matchweek 5', there are 12 tickets still available for this match held at Milpitas Field.",
+    "is_cached": false,
+    "similarity": 1.0,
+    "matched_query": "How many tickets are still available for fixture FX-00042?",
+    "data_version": "FX-00042@2026-11-05T16:06:01",
+    "latency_ms": 29719.4,
+    "lookup_ms": 22.9,
+    "embed_ms": 20.7,
+    "search_ms": 2.2,
+    "agent_ms": 29594.7,
+    "correlation_id": "a409960f-3496-4cf0-9e17-83b04cbc232b",
+    "review_status": "approved",
+    "started_at": "2026-11-06T00:06:01.898+00:00",
+    "finished_at": "2026-11-06T00:06:31.617+00:00"
+  },
+  "5_fresh_hit": {
+    "query": "How many tickets are still available for fixture FX-00042?",
+    "answer": "For fixture FX-00042, titled 'Milpitas Eagles vs San Mateo Wolves - Matchweek 5', there are 12 tickets still available for this match held at Milpitas Field.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "matched_query": "How many tickets are still available for fixture FX-00042?",
+    "data_version": "FX-00042@2026-11-05T16:06:01",
+    "latency_ms": 1765.5,
+    "lookup_ms": 1608.4,
+    "embed_ms": 1585.9,
+    "search_ms": 22.5,
+    "agent_ms": 0.0,
+    "started_at": "2026-11-06T00:06:31.620+00:00",
+    "finished_at": "2026-11-06T00:06:33.899+00:00"
+  },
+  "version_check_ms": {
+    "mean": 0.94,
+    "median": 0.48,
+    "max": 9.46
+  }
+}
+
+
+# reports/hw09/part4/runs/demo_repair.jsonl
+
+[TR06] What is the venue of fixture FX-01104 and how many tickets are left?
+  attempt 1 (controlled fault): REVISE  Oakland Park
+    evaluator: The answer does not give the correct number of tickets left that was asked for.  feedback: Also give the number of tickets left of FX-01104; it is in the fixture record.
+  attempt 2: PASS  The venue of fixture FX-01104 is Oakland Park and there are 267 tickets left.
+  final PASS after 2 attempt(s), 16.1 s
+
+
+# reports/hw09/part4/runs/training.jsonl
+
+[TR01] How many tickets are left for fixture FX-01101?
+  attempt 1: PASS  156 tickets are left for fixture FX-01101
+  final PASS after 1 attempt(s), 3.12 s
+[TR02] Which team is the away team in fixture FX-01103?
+  attempt 1: PASS  Campbell Lions
+  final PASS after 1 attempt(s), 1.44 s
+[TR03] Is fixture FX-01002 sold out?
+  attempt 1: PASS  FX-01002 is sold out as the tickets_available value is 0.
+  final PASS after 1 attempt(s), 3.01 s
+[TR04] What is the kickoff time for fixture FX-01106?
+  attempt 1: PASS  The provided fixture records do not contain the kickoff time for fixture FX-01106.
+  final PASS after 1 attempt(s), 2.95 s
+[TR05] What is the venue for fixture FX-09001?
+  attempt 1: PASS  no fixture with this code exists in the league database
+  final PASS after 1 attempt(s), 1.89 s
+[TR06] What is the venue of fixture FX-01104 and how many tickets are left?
+  attempt 1: PASS  The venue of fixture FX-01104 is Oakland Park and there are 267 tickets left.
+  final PASS after 1 attempt(s), 3.92 s
+[TR07] How many tickets are left in total for fixtures FX-01107 and FX-01108?
+  attempt 1: PASS  There are 793 tickets left in total for fixtures FX-01107 and FX-01108.
+  final PASS after 1 attempt(s), 4.58 s
+[TR08] How many more tickets does fixture FX-01114 have than fixture FX-01115?
+  attempt 1: REVISE  Fixture FX-01114 has 37 more tickets than fixture FX-01115
+    evaluator: FX-01114 has 136 and FX-01115 has 173 tickets; the answer has the wrong number or says more/fewer the wrong way round.  feedback: Your answer says FX-01114 has more tickets, but in the records FX-01114 has fewer tickets than FX-01115; fix the direction.
+  attempt 2: PASS  Fixture FX-01114 has 37 fewer tickets than fixture FX-01115
+  final PASS after 2 attempt(s), 6.06 s
+[TR09] How many matchweeks apart are fixtures FX-01105 and FX-01110?
+  attempt 1: PASS  There are 15 matchweeks apart between fixtures FX-01105 and FX-01110.
+  final PASS after 1 attempt(s), 3.78 s
+[TR10] How many tickets are left in total for fixtures FX-01111 and FX-01112?
+  attempt 1: PASS  There are 87 tickets left in total for fixtures FX-01111 and FX-01112.
+  final PASS after 1 attempt(s), 3.08 s
+[TR11] Give the venue, the away team and the matchweek of fixture FX-01113.
+  attempt 1: PASS  FX-01113 was played at Hayward Stadium in Matchweek 28, with the away team being Santa Clara Bears.
+  final PASS after 1 attempt(s), 3.79 s
+[TR12] How many more tickets does fixture FX-01102 have than fixture FX-01109?
+  attempt 1: REVISE  Fixture FX-01102 has 259 more tickets available than fixture FX-01109.
+    evaluator: FX-01102 has 193 and FX-01109 has 452 tickets; the answer has the wrong number or says more/fewer the wrong way round.  feedback: Your answer says FX-01102 has more tickets, but in the records FX-01102 has fewer tickets than FX-01109; fix the direction.
+  attempt 2: PASS  Fixture FX-01102 has 259 fewer tickets available than fixture FX-01109.
+  final PASS after 2 attempt(s), 6.77 s
+[TR13] How many matchweeks apart are fixtures FX-01111 and FX-01112?
+  attempt 1: PASS  The fixtures FX-01111 and FX-01112 are 27 matchweeks apart.
+  final PASS after 1 attempt(s), 4.56 s
+[TR14] How many tickets are left in total for fixtures FX-01113 and FX-01114?
+  attempt 1: PASS  There are 235 tickets left in total for fixtures FX-01113 and FX-01114.
+  final PASS after 1 attempt(s), 3.84 s
+[TR15] Give the venue, the away team and the matchweek of fixture FX-01115.
+  attempt 1: PASS  FX-01115 was played at Gilroy Field in Matchweek 24, with the away team being the Milpitas Lions.
+  final PASS after 1 attempt(s), 3.14 s
+[TR16] How many more tickets does fixture FX-01110 have than fixture FX-01101?  lessons loaded: lesson_001
+  attempt 1: PASS  fixture FX-01110 has 333 more tickets than fixture FX-01101
+  final PASS after 1 attempt(s), 3.01 s
+
+
+# reports/hw09/part4/runs/test_baseline.jsonl
+
+[TE01] How many tickets remain for fixture FX-03101?
+  attempt 1: PASS  8 tickets remain for fixture FX-03101
+  final PASS after 1 attempt(s), 3.7 s
+[TE02] At which venue is fixture FX-03102 played?
+  attempt 1: PASS  Oakland Stadium
+  final PASS after 1 attempt(s), 2.0 s
+[TE03] Which team is the away team in fixture FX-03105?
+  attempt 1: PASS  Cupertino Hawks
+  final PASS after 1 attempt(s), 1.81 s
+[TE04] Is fixture FX-02004 sold out?
+  attempt 1: PASS  FX-02004 is sold out as the tickets_available value is 0.
+  final PASS after 1 attempt(s), 3.79 s
+[TE05] Is fixture FX-03107 sold out?
+  attempt 1: PASS  FX-03107 is not sold out as there are 230 tickets available.
+  final PASS after 1 attempt(s), 4.64 s
+[TE06] Who is the home team for fixture FX-09004?
+  attempt 1: PASS  no home team found for fixture FX-09004 as no fixture with this code exists in the league database
+  final PASS after 1 attempt(s), 4.23 s
+[TE07] Who will referee fixture FX-03110?
+  attempt 1: REVISE  The fixture FX-03110 will be refereed by the same referee that has been used for previous matches in the league, as no specific referee is mentioned for this particular fixture.
+    evaluator: The reference data has no referee, but the answer gives one.  feedback: The records do not contain the referee; say it is not available.
+  final REVISE after 1 attempt(s), 4.55 s
+[TE08] How many tickets are left in total for fixtures FX-03101 and FX-03102?
+  attempt 1: PASS  There are 53 tickets left in total for fixtures FX-03101 and FX-03102.
+  final PASS after 1 attempt(s), 3.98 s
+[TE09] How many tickets are left in total for fixtures FX-03108 and FX-03109?
+  attempt 1: PASS  There are 571 tickets left in total for fixtures FX-03108 and FX-03109.
+  final PASS after 1 attempt(s), 3.88 s
+[TE10] How many more tickets does fixture FX-03103 have than fixture FX-03111?
+  attempt 1: REVISE  Fixture FX-03103 has 376 more tickets than fixture FX-03111.
+    evaluator: FX-03103 has 82 and FX-03111 has 378 tickets; the answer has the wrong number or says more/fewer the wrong way round.  feedback: Your answer says FX-03103 has more tickets, but in the records FX-03103 has fewer tickets than FX-03111; fix the direction. Your number is not the gap between the two tickets_available values; subtract again.
+  final REVISE after 1 attempt(s), 4.98 s
+[TE11] How many more tickets does fixture FX-03114 have than fixture FX-03104?
+  attempt 1: PASS  Fixture FX-03114 has 370 more tickets available than fixture FX-03104.
+  final PASS after 1 attempt(s), 5.53 s
+[TE12] How many matchweeks apart are fixtures FX-03106 and FX-03110?
+  attempt 1: PASS  There are 22 matchweeks between fixtures FX-03106 and FX-03110.
+  final PASS after 1 attempt(s), 4.68 s
+[TE13] How many matchweeks apart are fixtures FX-03112 and FX-03107?
+  attempt 1: PASS  There are 31 matchweeks apart between fixtures FX-03112 and FX-03107.
+  final PASS after 1 attempt(s), 4.29 s
+[TE14] Give the venue, the away team and the matchweek of fixture FX-03111.
+  attempt 1: PASS  Livermore Stadium, the away team Fremont Bears, and the matchweek was 22.
+  final PASS after 1 attempt(s), 2.69 s
+[TE15] Give the venue, the away team and the matchweek of fixture FX-03112.
+  attempt 1: PASS  FX-0312 venue is Milpitas Stadium, the away team is San Mateo Wolves and the matchweek is 2.
+  final PASS after 1 attempt(s), 3.59 s
+[TE16] Where is fixture FX-03113 played and how many tickets are left?
+  attempt 1: PASS  Fixture FX-03113 is played at Hayward Park and there are 452 tickets left.
+  final PASS after 1 attempt(s), 2.76 s
+
+
+# reports/hw09/part4/runs/test_evaluator_repair.jsonl
+
+[TE01] How many tickets remain for fixture FX-03101?
+  attempt 1: PASS  8 tickets remain for fixture FX-03101
+  final PASS after 1 attempt(s), 2.89 s
+[TE02] At which venue is fixture FX-03102 played?
+  attempt 1: PASS  Oakland Stadium
+  final PASS after 1 attempt(s), 1.18 s
+[TE03] Which team is the away team in fixture FX-03105?
+  attempt 1: PASS  Cupertino Hawks
+  final PASS after 1 attempt(s), 1.0 s
+[TE04] Is fixture FX-02004 sold out?
+  attempt 1: PASS  FX-02004 is sold out as the tickets_available value is 0.
+  final PASS after 1 attempt(s), 2.46 s
+[TE05] Is fixture FX-03107 sold out?
+  attempt 1: PASS  FX-03107 is not sold out as there are 230 tickets available.
+  final PASS after 1 attempt(s), 3.05 s
+[TE06] Who is the home team for fixture FX-09004?
+  attempt 1: PASS  no home team found for fixture FX-09004 as no fixture with this code exists in the league database
+  final PASS after 1 attempt(s), 3.29 s
+[TE07] Who will referee fixture FX-03110?
+  attempt 1: REVISE  The fixture FX-03110 will be refereed by the same referee that has been used for previous matches in the league, as no specific referee is mentioned for this particular fixture.
+    evaluator: The reference data has no referee, but the answer gives one.  feedback: The records do not contain the referee; say it is not available.
+  attempt 2: PASS  The referee for fixture FX-03110 is not available based on the provided fixture records.
+  final PASS after 2 attempt(s), 7.06 s
+[TE08] How many tickets are left in total for fixtures FX-03101 and FX-03102?
+  attempt 1: PASS  There are 53 tickets left in total for fixtures FX-03101 and FX-03102.
+  final PASS after 1 attempt(s), 3.46 s
+[TE09] How many tickets are left in total for fixtures FX-03108 and FX-03109?
+  attempt 1: PASS  There are 571 tickets left in total for fixtures FX-03108 and FX-03109.
+  final PASS after 1 attempt(s), 2.95 s
+[TE10] How many more tickets does fixture FX-03103 have than fixture FX-03111?
+  attempt 1: REVISE  Fixture FX-03103 has 376 more tickets than fixture FX-03111.
+    evaluator: FX-03103 has 82 and FX-03111 has 378 tickets; the answer has the wrong number or says more/fewer the wrong way round.  feedback: Your answer says FX-03103 has more tickets, but in the records FX-03103 has fewer tickets than FX-03111; fix the direction. Your number is not the gap between the two tickets_available values; subtract again.
+  attempt 2: REVISE  Fixture FX-03103 has 376 fewer tickets than fixture FX-03111.
+    evaluator: FX-03103 has 82 and FX-03111 has 378 tickets; the answer has the wrong number or says more/fewer the wrong way round.  feedback: Your number is not the gap between the two tickets_available values; subtract again.
+  final REVISE after 2 attempt(s), 6.17 s
+[TE11] How many more tickets does fixture FX-03114 have than fixture FX-03104?
+  attempt 1: PASS  Fixture FX-03114 has 370 more tickets available than fixture FX-03104.
+  final PASS after 1 attempt(s), 2.48 s
+[TE12] How many matchweeks apart are fixtures FX-03106 and FX-03110?
+  attempt 1: PASS  There are 22 matchweeks between fixtures FX-03106 and FX-03110.
+  final PASS after 1 attempt(s), 2.94 s
+[TE13] How many matchweeks apart are fixtures FX-03112 and FX-03107?
+  attempt 1: PASS  There are 31 matchweeks apart between fixtures FX-03112 and FX-03107.
+  final PASS after 1 attempt(s), 2.57 s
+[TE14] Give the venue, the away team and the matchweek of fixture FX-03111.
+  attempt 1: PASS  Livermore Stadium, the away team Fremont Bears, and the matchweek was 22.
+  final PASS after 1 attempt(s), 2.0 s
+[TE15] Give the venue, the away team and the matchweek of fixture FX-03112.
+  attempt 1: PASS  FX-0312 venue is Milpitas Stadium, the away team is San Mateo Wolves and the matchweek is 2.
+  final PASS after 1 attempt(s), 3.5 s
+[TE16] Where is fixture FX-03113 played and how many tickets are left?
+  attempt 1: PASS  Fixture FX-03113 is played at Hayward Park and there are 452 tickets left.
+  final PASS after 1 attempt(s), 2.3 s
+
+
+# reports/hw09/part4/runs/test_lesson_memory.jsonl
+
+[TE01] How many tickets remain for fixture FX-03101?
+  attempt 1: PASS  8 tickets remain for fixture FX-03101
+  final PASS after 1 attempt(s), 2.14 s
+[TE02] At which venue is fixture FX-03102 played?
+  attempt 1: PASS  Oakland Stadium
+  final PASS after 1 attempt(s), 0.95 s
+[TE03] Which team is the away team in fixture FX-03105?
+  attempt 1: PASS  Cupertino Hawks
+  final PASS after 1 attempt(s), 0.98 s
+[TE04] Is fixture FX-02004 sold out?
+  attempt 1: PASS  FX-02004 is sold out as the tickets_available value is 0.
+  final PASS after 1 attempt(s), 2.73 s
+[TE05] Is fixture FX-03107 sold out?
+  attempt 1: PASS  FX-03107 is not sold out as there are 230 tickets available.
+  final PASS after 1 attempt(s), 2.95 s
+[TE06] Who is the home team for fixture FX-09004?
+  attempt 1: PASS  no home team found for fixture FX-09004 as no fixture with this code exists in the league database
+  final PASS after 1 attempt(s), 3.48 s
+[TE07] Who will referee fixture FX-03110?
+  attempt 1: REVISE  The fixture FX-03110 will be refereed by the same referee that has been used for previous matches in the league, as no specific referee is mentioned for this particular fixture.
+    evaluator: The reference data has no referee, but the answer gives one.  feedback: The records do not contain the referee; say it is not available.
+  attempt 2: PASS  The referee for fixture FX-03110 is not available based on the provided fixture records.
+  final PASS after 2 attempt(s), 6.62 s
+[TE08] How many tickets are left in total for fixtures FX-03101 and FX-03102?
+  attempt 1: PASS  There are 53 tickets left in total for fixtures FX-03101 and FX-03102.
+  final PASS after 1 attempt(s), 3.32 s
+[TE09] How many tickets are left in total for fixtures FX-03108 and FX-03109?
+  attempt 1: PASS  There are 571 tickets left in total for fixtures FX-03108 and FX-03109.
+  final PASS after 1 attempt(s), 2.56 s
+[TE10] How many more tickets does fixture FX-03103 have than fixture FX-03111?  lessons loaded: lesson_001
+  attempt 1: REVISE  FX-03103 has 708 more tickets than FX-03111.
+    evaluator: FX-03103 has 82 and FX-03111 has 378 tickets; the answer has the wrong number or says more/fewer the wrong way round.  feedback: Your answer says FX-03103 has more tickets, but in the records FX-03103 has fewer tickets than FX-03111; fix the direction. Your number is not the gap between the two tickets_available values; subtract again.
+  attempt 2: PASS  FX-03103 has 296 fewer tickets than FX-03111.
+  final PASS after 2 attempt(s), 7.77 s
+[TE11] How many more tickets does fixture FX-03114 have than fixture FX-03104?  lessons loaded: lesson_001
+  attempt 1: PASS  fixture FX-03114 has 370 more tickets than fixture FX-03104.
+  final PASS after 1 attempt(s), 3.94 s
+[TE12] How many matchweeks apart are fixtures FX-03106 and FX-03110?
+  attempt 1: PASS  There are 22 matchweeks between fixtures FX-03106 and FX-03110.
+  final PASS after 1 attempt(s), 2.69 s
+[TE13] How many matchweeks apart are fixtures FX-03112 and FX-03107?
+  attempt 1: PASS  There are 31 matchweeks apart between fixtures FX-03112 and FX-03107.
+  final PASS after 1 attempt(s), 2.65 s
+[TE14] Give the venue, the away team and the matchweek of fixture FX-03111.
+  attempt 1: PASS  Livermore Stadium, the away team Fremont Bears, and the matchweek was 22.
+  final PASS after 1 attempt(s), 2.38 s
+[TE15] Give the venue, the away team and the matchweek of fixture FX-03112.
+  attempt 1: PASS  FX-0312 venue is Milpitas Stadium, the away team is San Mateo Wolves and the matchweek is 2.
+  final PASS after 1 attempt(s), 2.83 s
+[TE16] Where is fixture FX-03113 played and how many tickets are left?
+  attempt 1: PASS  Fixture FX-03113 is played at Hayward Park and there are 452 tickets left.
+  final PASS after 1 attempt(s), 2.15 s
+
+
+# reports/hw09/part4/runs/test_validated_improvement.jsonl
+
+[TE01] How many tickets remain for fixture FX-03101?
+  attempt 1: PASS  8 tickets remain for fixture FX-03101
+  final PASS after 1 attempt(s), 1.91 s
+[TE02] At which venue is fixture FX-03102 played?
+  attempt 1: PASS  Oakland Stadium
+  final PASS after 1 attempt(s), 1.02 s
+[TE03] Which team is the away team in fixture FX-03105?
+  attempt 1: PASS  Cupertino Hawks
+  final PASS after 1 attempt(s), 0.95 s
+[TE04] Is fixture FX-02004 sold out?
+  attempt 1: PASS  FX-02004 is sold out as the tickets_available value is 0.
+  final PASS after 1 attempt(s), 2.94 s
+[TE05] Is fixture FX-03107 sold out?
+  attempt 1: PASS  FX-03107 is not sold out as there are 230 tickets available.
+  final PASS after 1 attempt(s), 3.03 s
+[TE06] Who is the home team for fixture FX-09004?
+  attempt 1: PASS  no home team found for fixture FX-09004 as no fixture with this code exists in the league database
+  final PASS after 1 attempt(s), 3.2 s
+[TE07] Who will referee fixture FX-03110?
+  attempt 1: REVISE  The fixture FX-03110 will be refereed by the same referee that has been used for previous matches in the league, as no specific referee is mentioned for this particular fixture.
+    evaluator: The reference data has no referee, but the answer gives one.  feedback: The records do not contain the referee; say it is not available.
+  attempt 2: PASS  The referee for fixture FX-03110 is not available based on the provided fixture records.
+  final PASS after 2 attempt(s), 6.65 s
+[TE08] How many tickets are left in total for fixtures FX-03101 and FX-03102?
+  attempt 1: PASS  There are 53 tickets left in total for fixtures FX-03101 and FX-03102.
+  final PASS after 1 attempt(s), 2.96 s
+[TE09] How many tickets are left in total for fixtures FX-03108 and FX-03109?
+  attempt 1: PASS  There are 571 tickets left in total for fixtures FX-03108 and FX-03109.
+  final PASS after 1 attempt(s), 2.49 s
+[TE10] How many more tickets does fixture FX-03103 have than fixture FX-03111?  lessons loaded: lesson_001
+  attempt 1: REVISE  FX-03103 has 708 more tickets than FX-03111.
+    evaluator: FX-03103 has 82 and FX-03111 has 378 tickets; the answer has the wrong number or says more/fewer the wrong way round.  feedback: Your answer says FX-03103 has more tickets, but in the records FX-03103 has fewer tickets than FX-03111; fix the direction. Your number is not the gap between the two tickets_available values; subtract again.
+  attempt 2: PASS  FX-03103 has 296 fewer tickets than FX-03111.
+  final PASS after 2 attempt(s), 6.77 s
+[TE11] How many more tickets does fixture FX-03114 have than fixture FX-03104?  lessons loaded: lesson_001
+  attempt 1: PASS  fixture FX-03114 has 370 more tickets than fixture FX-03104.
+  final PASS after 1 attempt(s), 3.24 s
+[TE12] How many matchweeks apart are fixtures FX-03106 and FX-03110?
+  attempt 1: PASS  There are 22 matchweeks between fixtures FX-03106 and FX-03110.
+  final PASS after 1 attempt(s), 3.09 s
+[TE13] How many matchweeks apart are fixtures FX-03112 and FX-03107?
+  attempt 1: PASS  There are 31 matchweeks apart between fixtures FX-03112 and FX-03107.
+  final PASS after 1 attempt(s), 2.93 s
+[TE14] Give the venue, the away team and the matchweek of fixture FX-03111.
+  attempt 1: PASS  Livermore Stadium, the away team Fremont Bears, and the matchweek was 22.
+  final PASS after 1 attempt(s), 2.61 s
+[TE15] Give the venue, the away team and the matchweek of fixture FX-03112.
+  attempt 1: PASS  FX-0312 venue is Milpitas Stadium, the away team is San Mateo Wolves and the matchweek is 2.
+  final PASS after 1 attempt(s), 3.86 s
+[TE16] Where is fixture FX-03113 played and how many tickets are left?
+  attempt 1: PASS  Fixture FX-03113 is played at Hayward Park and there are 452 tickets left.
+  final PASS after 1 attempt(s), 3.3 s
+
+
+# reports/hw09/part4/validation_report.json
+
+[
+  {
+    "lesson_id": "lesson_001",
+    "failures_before": 3,
+    "failures_after": 3,
+    "fixed": [],
+    "broke": [],
+    "unrelated_unsupported_after": [],
+    "checks": {
+      "failure cases improve or stay the same": true,
+      "previously correct answers stay correct": true,
+      "unrelated questions get no unsupported answers": true
+    },
+    "decision": "keep"
+  }
+]
+
+
+# reports/hw09/part4/results_test.json
+
+[
+  {
+    "variant": "Baseline",
+    "correct": 14,
+    "incorrect": 2,
+    "avg_attempts": 1.0,
+    "avg_latency_s": 3.82,
+    "first_attempt_correct": 14,
+    "lessons_available": 0,
+    "failed": [
+      "TE07",
+      "TE10"
+    ]
+  },
+  {
+    "variant": "Evaluator Repair",
+    "correct": 15,
+    "incorrect": 1,
+    "avg_attempts": 1.12,
+    "avg_latency_s": 3.08,
+    "first_attempt_correct": 14,
+    "lessons_available": 0,
+    "failed": [
+      "TE10"
+    ]
+  },
+  {
+    "variant": "Lesson Memory",
+    "correct": 16,
+    "incorrect": 0,
+    "avg_attempts": 1.12,
+    "avg_latency_s": 3.13,
+    "first_attempt_correct": 14,
+    "lessons_available": 1,
+    "failed": []
+  },
+  {
+    "variant": "Validated Improvement",
+    "correct": 16,
+    "incorrect": 0,
+    "avg_attempts": 1.12,
+    "avg_latency_s": 3.18,
+    "first_attempt_correct": 14,
+    "lessons_available": 1,
+    "failed": []
+  }
+]
+

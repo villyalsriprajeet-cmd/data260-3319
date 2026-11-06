@@ -1,0 +1,178 @@
+{
+  "hw": "hw9",
+  "sid4": 3319,
+  "generated": "2026-11-05T17:26:53",
+  "commit_hash": "0e87d2e9de54cc0d3235c5b7ac0502d2cd9869d6",
+  "tag": "none",
+  "config": {
+    "SID4": 3319,
+    "PORT_BASE": 8619,
+    "PREFIX": "s3319",
+    "SEED": 3319,
+    "VERIFY_SEED": 263319,
+    "DOMAIN_ID": 7
+  },
+  "model": {
+    "llm": "qwen2.5:3b",
+    "runtime": "Ollama (local)",
+    "temperature": 0,
+    "seed": 3319,
+    "embedder": "sentence-transformers/all-MiniLM-L6-v2 (384 dims)",
+    "redis": "redis/redis-stack-server:7.4.0-v8"
+  },
+  "seed": 3319,
+  "verify_seed": 263319,
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "docker: s3319_redis container running",
+      "passed": true,
+      "detail": "['s3319_redis', 's3319_api', 's3319_worker', 's3319_kafka']"
+    },
+    {
+      "check": "Redis answers PING and has the vector search module",
+      "passed": true,
+      "detail": "['ReJSON', 'RedisCompat', 'bf', 'redisgears_2', 'search', 'timeseries']"
+    },
+    {
+      "check": "every Redis key starts with s3319:",
+      "passed": true,
+      "detail": "10 keys, 0 without prefix"
+    },
+    {
+      "check": "Part 1: INCR returns 1..13 in order",
+      "passed": true,
+      "detail": "13"
+    },
+    {
+      "check": "Part 1: Redis holds 13 and MySQL holds 10 (synced at the 10th view only)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 1: the view sync does not change updated_at (the data-version marker)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 2: vector index exists with 384-dim cosine embeddings",
+      "passed": true,
+      "detail": "s3319:idx:qa"
+    },
+    {
+      "check": "Part 2 live: an exact duplicate of a cached question is a hit at ~1.0",
+      "passed": true,
+      "detail": "1.0"
+    },
+    {
+      "check": "Part 2 live: an unrelated question is a miss",
+      "passed": true,
+      "detail": "0.2796"
+    },
+    {
+      "check": "Part 2 saved run: at least 10 queries with is_cached, similarity and latency",
+      "passed": true,
+      "detail": "12"
+    },
+    {
+      "check": "Part 2 saved run: exact duplicates, paraphrases and new questions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 2 saved run: cached answers were faster than non-cached ones",
+      "passed": true,
+      "detail": "58.3% hits, 2410.6 vs 30935.6 ms"
+    },
+    {
+      "check": "Part 3.1: cache_cases.yaml has 40 cases, 10 per category",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 3.1: cache_cases.yaml was committed before the sweep results",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 3.2: sweep at 0.75, 0.80, 0.85, 0.90, 0.95 over 40 cases",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 3.2: hit rate never rises as the threshold rises",
+      "passed": true,
+      "detail": "[28, 27, 24, 19, 17]"
+    },
+    {
+      "check": "Part 3.4: the shipped threshold has the lowest total cost",
+      "passed": true,
+      "detail": "0.95"
+    },
+    {
+      "check": "Part 3.3: false hit D01 returned another fixture's answer",
+      "passed": true,
+      "detail": "0.9896"
+    },
+    {
+      "check": "Part 3.5: stale hit, then invalidation by the data-version marker, then a fresh hit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 3.5 live: the cached FX-00042 answer carries the current data version",
+      "passed": true,
+      "detail": "('FX-00042@2026-11-05T16:06:01', 'FX-00042@2026-11-05T16:06:01')"
+    },
+    {
+      "check": "Part 4: reference dataset from s3319_rel has every needed field",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 4: training/validation/test files hold only ids and questions",
+      "passed": true,
+      "detail": "{'training': 16, 'validation': 12, 'test': 16}"
+    },
+    {
+      "check": "Part 4.2: lessons.json entries have the five required fields",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 4.2: a later training question loaded an earlier lesson",
+      "passed": true,
+      "detail": "['TR16']"
+    },
+    {
+      "check": "Part 4.1: controlled bad first answer is revised to PASS in 2 attempts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 4.1: no question ever used more than 2 attempts",
+      "passed": true,
+      "detail": "81"
+    },
+    {
+      "check": "Part 4.3: lessons.json holds exactly the lessons validation kept",
+      "passed": true,
+      "detail": "['lesson_001']"
+    },
+    {
+      "check": "Part 4.4: four variants, each graded on the whole test set",
+      "passed": true,
+      "detail": "{'Baseline': 14, 'Evaluator Repair': 15, 'Lesson Memory': 16, 'Validated Improvement': 16}"
+    },
+    {
+      "check": "Part 4: evaluator regression cases (TR04, TR16 bugs stay fixed)",
+      "passed": true,
+      "detail": "['REVISE', 'PASS', 'PASS']"
+    },
+    {
+      "check": "ruff passes on the HW9 code",
+      "passed": true,
+      "detail": "All checks passed!"
+    }
+  ]
+}

@@ -187,3 +187,50 @@ How to run
     make verify-hw08
 
 The idempotency store is code/kafka_agents/state/agents_state.db and the agent log is reports/hw08/logs/agents.log; both stay out of git.
+
+HW9 - Redis view counter, semantic cache, threshold economics, self-improving agents
+
+Same configuration (SID4 3319, PORT_BASE 8619, PREFIX s3319, SEED 3319, VERIFY_SEED 263319, DOMAIN_ID 7). Redis Stack 7.4.0-v8 in Docker (s3319_redis, vector search), MySQL s3319_rel, Kafka 3.9.2 and the HW8 agents, qwen2.5:3b through Ollama, all-MiniLM-L6-v2 embeddings. Every Redis key starts with s3319:.
+
+Files
+
+- docker-compose.yml - adds the redis service (s3319_redis, port 6379)
+- code/api/sql/005_hw09_views.sql - fixtures.views column
+- code/hw9/check_setup.py - Step 0 check of Redis, MySQL, Ollama, Kafka and the embedder
+- code/hw9/fixture_cache.py, p1_counter_test.py - Part 1 increment_fixture_views (INCR, MySQL sync every 10 views)
+- code/hw9/semantic_cache.py, qa_service.py, p2_run.py - Part 2 semantic cache (Redis vector index s3319:idx:qa, cosine) in front of the HW8 Planner, Writer and Reviewer
+- reports/hw09/cache_cases.yaml, code/hw9/p3_cases.py - Part 3.1 labeled cases (committed before the sweep)
+- code/hw9/p3_sweep.py, p3_analysis.py, p3_stale.py - Part 3.2 to 3.5 sweep, false hit, cost model, stale answer and data-version invalidation
+- code/hw9/p4_agents.py, p4_run.py - Part 4 Answering Agent, Evaluator Agent, lessons, validation and the four variants
+- reports/hw09/part4/ - reference_fixtures.json, training_data.json, validation_data.json, test_data.json, lessons.json, lessons_candidates.json, validation_report.json, results_test.json and runs/
+- code/verify_hw09.py - self-check (make verify-hw09), code/hw9/build_run_log.py builds RUN_LOG.txt, code/hw9/restore_cache.py puts the 10 saved seed answers back into Redis
+- reports/hw09/ - report, METRICS.md, RUN_LOG.txt, AI_USE.md, verification.json and raw/
+
+How to run
+
+    docker compose up -d                                          # Redis Stack, Kafka, worker, API
+    mysql -u root -p < code/api/sql/005_hw09_views.sql            # once
+    python -m code.hw9.check_setup
+    python -m code.hw9.p1_counter_test                            # Part 1
+    cd code/kafka_agents && python planner.py                     # Parts 2 and 3: one terminal each
+    python writer.py
+    python reviewer.py
+    cd ../..
+    python -m code.hw9.p2_run --probe                             # Part 2, similarities only
+    python -m code.hw9.p2_run --reset                             # Part 2, 12 queries through the cache and agents
+    python -m code.hw9.p3_cases                                   # Part 3.1
+    python -m code.hw9.p3_sweep seed                              # Part 3.2
+    python -m code.hw9.p3_sweep sweep
+    python -m code.hw9.p3_analysis false-hit --case D01           # Part 3.3
+    python -m code.hw9.p3_analysis cost --miss-cost 1 --false-hit-cost 20   # Part 3.4
+    python -m code.hw9.p3_stale                                   # Part 3.5
+    python -m code.hw9.p4_run reference                           # Part 4 (no Kafka needed)
+    python -m code.hw9.p4_run demo-repair
+    python -m code.hw9.p4_run train
+    python -m code.hw9.p4_run validate
+    python -m code.hw9.p4_run test
+    python -m code.hw9.restore_cache                              # only if Redis lost the cache
+    make verify-hw09
+    python -m code.hw9.build_run_log
+
+Add -W ignore::FutureWarning to hide one huggingface warning.

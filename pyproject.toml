@@ -14,3 +14,4 @@ indent-style = "space"
 "code/verify_hw08.py" = ["E402"]
 "code/kafka_agents/*.py" = ["E402"]
 "code/hw9/*.py" = ["E402"]  # HW9: env settings come before the imports
+"code/verify_hw09.py" = ["E402"]
