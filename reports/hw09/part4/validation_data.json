@@ -1,14 +1,14 @@
 [
   {"id": "VA01", "question": "How many tickets are still available for fixture FX-02101?"},
-  {"id": "VA02", "question": "What is the venue for fixture FX-02102?"},
-  {"id": "VA03", "question": "Which team is the home side in fixture FX-02103?"},
-  {"id": "VA04", "question": "Which team is the away team for fixture FX-02104?"},
-  {"id": "VA05", "question": "Who are the visitors in fixture FX-02105?"},
-  {"id": "VA06", "question": "Is fixture FX-01503 sold out?"},
-  {"id": "VA07", "question": "Is fixture FX-02106 sold out?"},
-  {"id": "VA08", "question": "Which team is the home team for fixture FX-09003?"},
-  {"id": "VA09", "question": "What time is kickoff for fixture FX-02107?"},
-  {"id": "VA10", "question": "Where is fixture FX-02108 played and how many tickets are left?"},
-  {"id": "VA11", "question": "How many more tickets does fixture FX-02109 have than fixture FX-02110?"},
-  {"id": "VA12", "question": "Which city is the home team of fixture FX-02111 from?"}
+  {"id": "VA02", "question": "Which team is the home side in fixture FX-02103?"},
+  {"id": "VA03", "question": "How many tickets are left in total for fixtures FX-02104 and FX-02105?"},
+  {"id": "VA04", "question": "How many tickets are left in total for fixtures FX-02106 and FX-02107?"},
+  {"id": "VA05", "question": "How many more tickets does fixture FX-02101 have than fixture FX-02108?"},
+  {"id": "VA06", "question": "How many more tickets does fixture FX-02111 have than fixture FX-02102?"},
+  {"id": "VA07", "question": "How many matchweeks apart are fixtures FX-02104 and FX-02102?"},
+  {"id": "VA08", "question": "How many matchweeks apart are fixtures FX-02103 and FX-02110?"},
+  {"id": "VA09", "question": "Give the venue, the away team and the matchweek of fixture FX-02108."},
+  {"id": "VA10", "question": "Give the venue, the away team and the matchweek of fixture FX-02109."},
+  {"id": "VA11", "question": "Which team is the home team for fixture FX-09003?"},
+  {"id": "VA12", "question": "What time is kickoff for fixture FX-02107?"}
 ]

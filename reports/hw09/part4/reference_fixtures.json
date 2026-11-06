@@ -1,6 +1,6 @@
 {
   "source": "MySQL s3319_rel (fixtures JOIN teams), exported by code/hw9/p4_run.py reference",
-  "exported_at": "2026-11-06T00:25:30.241Z",
+  "exported_at": "2026-11-06T00:42:48.550Z",
   "fields": "title is 'Home vs Away - Matchweek N'; away_team and matchweek come from the title",
   "fixtures": [
     {
@@ -162,16 +162,6 @@
       "home_city": "Gilroy",
       "away_team": "Milpitas Lions",
       "matchweek": 24
-    },
-    {
-      "fixture_code": "FX-01503",
-      "fixture_title": "Sunnyvale Sharks vs Morgan Hill Lions - Matchweek 27",
-      "venue": "Sunnyvale Field",
-      "tickets_available": 0,
-      "home_team": "Sunnyvale Sharks",
-      "home_city": "Sunnyvale",
-      "away_team": "Morgan Hill Lions",
-      "matchweek": 27
     },
     {
       "fixture_code": "FX-02004",
@@ -436,9 +426,7 @@
   ],
   "not_in_league": [
     "FX-09001",
-    "FX-09002",
     "FX-09003",
-    "FX-09004",
-    "FX-09005"
+    "FX-09004"
   ]
 }

@@ -5,7 +5,7 @@ import asyncio
 import json
 import re
 import time
-from code.hw9.qa_service import FACTS_SQL, facts_text, fixture_codes
+from code.hw9.qa_service import CODE_RE, FACTS_SQL, facts_text, fixture_codes
 from code.kafka_service.settings import SEED, now_utc
 from datetime import date
 from pathlib import Path
@@ -54,8 +54,8 @@ REFUSAL = re.compile(
 )
 PATTERNS = {  # failure pattern -> (description, correction, question tags it applies to)
     "omits_requested_field": (
-        "The answer leaves out part of a question that asks for two facts.",
-        "When a question asks for two facts, answer every part; check each requested fact before finishing.",
+        "The answer leaves out part of a question that asks for more than one fact.",
+        "When a question asks for several facts, answer every part; check each requested fact before finishing.",
         ["multi"],
     ),
     "wrong_away_team": (
@@ -80,10 +80,21 @@ PATTERNS = {  # failure pattern -> (description, correction, question tags it ap
         ["unsupported"],
     ),
     "wrong_difference": (
-        "The answer gives the wrong difference between two ticket counts.",
-        "For 'how many more tickets' questions, subtract the smaller tickets_available from the larger one "
-        "and state that number.",
+        "The answer gives the wrong difference between two ticket counts, or says more instead of fewer.",
+        "For 'how many more tickets does A have than B', compute A minus B; if the result is negative, "
+        "say A has that many fewer tickets than B.",
         ["difference"],
+    ),
+    "wrong_total": (
+        "The answer gives the wrong total of two ticket counts.",
+        "For 'in total' questions, add the tickets_available of both fixtures digit by digit and give the sum.",
+        ["total"],
+    ),
+    "wrong_week_gap": (
+        "The answer gives the wrong number of matchweeks between two fixtures.",
+        "For 'how many matchweeks apart' questions, take the number after 'Matchweek' in each title and "
+        "subtract the smaller from the larger.",
+        ["week_gap"],
     ),
 }
 for _f, _name in FIELD_NAMES.items():
@@ -117,7 +128,7 @@ def load_reference():
 def analyze(question, fixtures):
     """What the question asks: kind, requested fields and fixture codes (used by both agents)."""
     q = question.lower()
-    codes = fixture_codes(question)
+    codes = list(dict.fromkeys(c.upper() for c in CODE_RE.findall(question)))  # keep question order (A minus B)
     unknown = [c for c in codes if c not in fixtures]
     unsupported = [name for name, rx in UNSUPPORTED.items() if re.search(rx, q)]
     if unknown:
@@ -126,6 +137,10 @@ def analyze(question, fixtures):
         kind, fields = "unsupported", unsupported
     elif "how many more tickets" in q and len(codes) == 2:
         kind, fields = "difference", ["tickets"]
+    elif "in total" in q and len(codes) == 2:
+        kind, fields = "total", ["tickets"]
+    elif "matchweeks apart" in q and len(codes) == 2:
+        kind, fields = "week_gap", ["matchweek"]
     elif "sold out" in q:
         kind, fields = "sold_out", ["tickets"]
     else:
@@ -232,23 +247,55 @@ class EvaluatorAgent:
                 )
         elif kind == "difference":
             a, b = (int(self.fixtures[c]["tickets_available"]) for c in codes)
-            checked = {codes[0]: a, codes[1]: b, "difference": abs(a - b)}
-            if abs(a - b) not in numbers(answer):
+            d = a - b  # "how many more does the first have than the second"
+            checked = {codes[0]: a, codes[1]: b, "first_minus_second": d}
+            low = answer.lower()
+            pos_a, pos_b = low.find(codes[0].lower()), low.find(codes[1].lower())
+            subject_is_b = pos_b != -1 and (pos_a == -1 or pos_b < pos_a)  # which fixture the sentence is about
+            claim = -1 if (re.search(r"fewer|\bless\b|lower|negative", low) or f"-{abs(d)}" in low) else 1
+            claim = -claim if subject_is_b else claim  # 'B has N more' means A has N fewer
+            direction_ok = d == 0 or (claim > 0) == (d > 0)
+            if abs(d) not in numbers(answer) or not direction_ok:
                 problems.append(
                     (
                         "wrong_difference",
-                        "The difference between the two ticket counts is missing or wrong.",
-                        "Subtract the two tickets_available values from the records and state the difference.",
+                        f"{codes[0]} has {a} and {codes[1]} has {b} tickets; the answer has the wrong number or "
+                        "says more/fewer the wrong way round.",
+                        "Compute first minus second from the records; if the first fixture has fewer tickets, "
+                        "say it has that many fewer.",
+                    )
+                )
+        elif kind == "total":
+            a, b = (int(self.fixtures[c]["tickets_available"]) for c in codes)
+            checked = {codes[0]: a, codes[1]: b, "total": a + b}
+            if a + b not in numbers(answer):
+                problems.append(
+                    (
+                        "wrong_total",
+                        "The total of the two ticket counts is missing or wrong.",
+                        "Add the tickets_available of both fixtures from the records and give the sum.",
+                    )
+                )
+        elif kind == "week_gap":
+            a, b = (int(self.fixtures[c]["matchweek"]) for c in codes)
+            checked = {codes[0]: a, codes[1]: b, "gap": abs(a - b)}
+            if abs(a - b) not in numbers(answer):
+                problems.append(
+                    (
+                        "wrong_week_gap",
+                        "The number of matchweeks between the two fixtures is missing or wrong.",
+                        "Read both matchweek numbers from the titles and subtract the smaller from the larger.",
                     )
                 )
         elif kind == "sold_out":
             tickets = int(self.fixtures[codes[0]]["tickets_available"])
             checked = {"tickets_available": tickets, "sold_out": tickets == 0}
-            zero = re.search(r" (0|zero|no) tickets ", t)
-            says_not = re.search(
-                r"not sold out|n t sold out|still available|tickets (are )?(still )?(left|available|remaining)", t
+            ts = norm(re.sub(r"tickets_available", "count", answer, flags=re.I))  # the field name is not a claim
+            zero = re.search(r" (0|zero|no) tickets ", ts)
+            still = re.search(
+                r"not sold out|n t sold out| [1-9]\d* (tickets )?(are )?(still )?(left|available|remaining)", ts
             )
-            ok = (zero or ("sold out" in t and not says_not)) if tickets == 0 else (says_not and not zero)
+            ok = (zero or ("sold out" in ts and not still)) if tickets == 0 else (still and not zero)
             if not ok:
                 problems.append(
                     (
