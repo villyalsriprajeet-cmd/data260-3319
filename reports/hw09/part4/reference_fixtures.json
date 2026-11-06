@@ -1,0 +1,444 @@
+{
+  "source": "MySQL s3319_rel (fixtures JOIN teams), exported by code/hw9/p4_run.py reference",
+  "exported_at": "2026-11-06T00:25:30.241Z",
+  "fields": "title is 'Home vs Away - Matchweek N'; away_team and matchweek come from the title",
+  "fixtures": [
+    {
+      "fixture_code": "FX-01002",
+      "fixture_title": "Santa Clara Hawks vs Gilroy Lions - Matchweek 2",
+      "venue": "Santa Clara Arena",
+      "tickets_available": 0,
+      "home_team": "Santa Clara Hawks",
+      "home_city": "Santa Clara",
+      "away_team": "Gilroy Lions",
+      "matchweek": 2
+    },
+    {
+      "fixture_code": "FX-01101",
+      "fixture_title": "Daly City Eagles vs Walnut Creek Spartans - Matchweek 21",
+      "venue": "Daly City Field",
+      "tickets_available": 156,
+      "home_team": "Daly City Eagles",
+      "home_city": "Daly City",
+      "away_team": "Walnut Creek Spartans",
+      "matchweek": 21
+    },
+    {
+      "fixture_code": "FX-01102",
+      "fixture_title": "Oakland Bulldogs vs Redwood City Spartans - Matchweek 24",
+      "venue": "Oakland Arena",
+      "tickets_available": 193,
+      "home_team": "Oakland Bulldogs",
+      "home_city": "Oakland",
+      "away_team": "Redwood City Spartans",
+      "matchweek": 24
+    },
+    {
+      "fixture_code": "FX-01103",
+      "fixture_title": "Sunnyvale Sharks vs Campbell Lions - Matchweek 22",
+      "venue": "Sunnyvale Stadium",
+      "tickets_available": 230,
+      "home_team": "Sunnyvale Sharks",
+      "home_city": "Sunnyvale",
+      "away_team": "Campbell Lions",
+      "matchweek": 22
+    },
+    {
+      "fixture_code": "FX-01104",
+      "fixture_title": "Oakland Hawks vs Sunnyvale Spartans - Matchweek 17",
+      "venue": "Oakland Park",
+      "tickets_available": 267,
+      "home_team": "Oakland Hawks",
+      "home_city": "Oakland",
+      "away_team": "Sunnyvale Spartans",
+      "matchweek": 17
+    },
+    {
+      "fixture_code": "FX-01105",
+      "fixture_title": "Berkeley Spartans vs Milpitas Wolves - Matchweek 14",
+      "venue": "Berkeley Field",
+      "tickets_available": 304,
+      "home_team": "Berkeley Spartans",
+      "home_city": "Berkeley",
+      "away_team": "Milpitas Wolves",
+      "matchweek": 14
+    },
+    {
+      "fixture_code": "FX-01106",
+      "fixture_title": "Fremont Tigers vs Hayward Bears - Matchweek 10",
+      "venue": "Fremont Field",
+      "tickets_available": 341,
+      "home_team": "Fremont Tigers",
+      "home_city": "Fremont",
+      "away_team": "Hayward Bears",
+      "matchweek": 10
+    },
+    {
+      "fixture_code": "FX-01107",
+      "fixture_title": "Pleasanton Eagles vs Redwood City Sharks - Matchweek 8",
+      "venue": "Pleasanton Arena",
+      "tickets_available": 378,
+      "home_team": "Pleasanton Eagles",
+      "home_city": "Pleasanton",
+      "away_team": "Redwood City Sharks",
+      "matchweek": 8
+    },
+    {
+      "fixture_code": "FX-01108",
+      "fixture_title": "Redwood City Bulldogs vs Oakland Spartans - Matchweek 5",
+      "venue": "Redwood City Park",
+      "tickets_available": 415,
+      "home_team": "Redwood City Bulldogs",
+      "home_city": "Redwood City",
+      "away_team": "Oakland Spartans",
+      "matchweek": 5
+    },
+    {
+      "fixture_code": "FX-01109",
+      "fixture_title": "Campbell Wolves vs Mountain View Wolves - Matchweek 36",
+      "venue": "Campbell Park",
+      "tickets_available": 452,
+      "home_team": "Campbell Wolves",
+      "home_city": "Campbell",
+      "away_team": "Mountain View Wolves",
+      "matchweek": 36
+    },
+    {
+      "fixture_code": "FX-01110",
+      "fixture_title": "Berkeley Wolves vs Walnut Creek Eagles - Matchweek 29",
+      "venue": "Berkeley Field",
+      "tickets_available": 489,
+      "home_team": "Berkeley Wolves",
+      "home_city": "Berkeley",
+      "away_team": "Walnut Creek Eagles",
+      "matchweek": 29
+    },
+    {
+      "fixture_code": "FX-01111",
+      "fixture_title": "Livermore Hawks vs San Mateo Sharks - Matchweek 5",
+      "venue": "Livermore Arena",
+      "tickets_available": 25,
+      "home_team": "Livermore Hawks",
+      "home_city": "Livermore",
+      "away_team": "San Mateo Sharks",
+      "matchweek": 5
+    },
+    {
+      "fixture_code": "FX-01112",
+      "fixture_title": "Milpitas Hawks vs Walnut Creek Bears - Matchweek 32",
+      "venue": "Milpitas Field",
+      "tickets_available": 62,
+      "home_team": "Milpitas Hawks",
+      "home_city": "Milpitas",
+      "away_team": "Walnut Creek Bears",
+      "matchweek": 32
+    },
+    {
+      "fixture_code": "FX-01113",
+      "fixture_title": "Hayward Eagles vs Santa Clara Bears - Matchweek 28",
+      "venue": "Hayward Stadium",
+      "tickets_available": 99,
+      "home_team": "Hayward Eagles",
+      "home_city": "Hayward",
+      "away_team": "Santa Clara Bears",
+      "matchweek": 28
+    },
+    {
+      "fixture_code": "FX-01114",
+      "fixture_title": "Walnut Creek Sharks vs Mountain View Hawks - Matchweek 17",
+      "venue": "Walnut Creek Park",
+      "tickets_available": 136,
+      "home_team": "Walnut Creek Sharks",
+      "home_city": "Walnut Creek",
+      "away_team": "Mountain View Hawks",
+      "matchweek": 17
+    },
+    {
+      "fixture_code": "FX-01115",
+      "fixture_title": "Gilroy Bears vs Milpitas Lions - Matchweek 24",
+      "venue": "Gilroy Field",
+      "tickets_available": 173,
+      "home_team": "Gilroy Bears",
+      "home_city": "Gilroy",
+      "away_team": "Milpitas Lions",
+      "matchweek": 24
+    },
+    {
+      "fixture_code": "FX-01503",
+      "fixture_title": "Sunnyvale Sharks vs Morgan Hill Lions - Matchweek 27",
+      "venue": "Sunnyvale Field",
+      "tickets_available": 0,
+      "home_team": "Sunnyvale Sharks",
+      "home_city": "Sunnyvale",
+      "away_team": "Morgan Hill Lions",
+      "matchweek": 27
+    },
+    {
+      "fixture_code": "FX-02004",
+      "fixture_title": "Pleasanton Wolves vs Morgan Hill Bulldogs - Matchweek 19",
+      "venue": "Pleasanton Field",
+      "tickets_available": 0,
+      "home_team": "Pleasanton Wolves",
+      "home_city": "Pleasanton",
+      "away_team": "Morgan Hill Bulldogs",
+      "matchweek": 19
+    },
+    {
+      "fixture_code": "FX-02101",
+      "fixture_title": "Daly City Eagles vs Walnut Creek Wolves - Matchweek 24",
+      "venue": "Daly City Park",
+      "tickets_available": 82,
+      "home_team": "Daly City Eagles",
+      "home_city": "Daly City",
+      "away_team": "Walnut Creek Wolves",
+      "matchweek": 24
+    },
+    {
+      "fixture_code": "FX-02102",
+      "fixture_title": "Oakland Bulldogs vs Hayward Bulldogs - Matchweek 36",
+      "venue": "Oakland Field",
+      "tickets_available": 119,
+      "home_team": "Oakland Bulldogs",
+      "home_city": "Oakland",
+      "away_team": "Hayward Bulldogs",
+      "matchweek": 36
+    },
+    {
+      "fixture_code": "FX-02103",
+      "fixture_title": "Sunnyvale Sharks vs Redwood City Tigers - Matchweek 7",
+      "venue": "Sunnyvale Sports Complex",
+      "tickets_available": 156,
+      "home_team": "Sunnyvale Sharks",
+      "home_city": "Sunnyvale",
+      "away_team": "Redwood City Tigers",
+      "matchweek": 7
+    },
+    {
+      "fixture_code": "FX-02104",
+      "fixture_title": "Oakland Hawks vs Berkeley Wolves - Matchweek 1",
+      "venue": "Oakland Sports Complex",
+      "tickets_available": 193,
+      "home_team": "Oakland Hawks",
+      "home_city": "Oakland",
+      "away_team": "Berkeley Wolves",
+      "matchweek": 1
+    },
+    {
+      "fixture_code": "FX-02105",
+      "fixture_title": "Berkeley Spartans vs Campbell Spartans - Matchweek 36",
+      "venue": "Berkeley Arena",
+      "tickets_available": 230,
+      "home_team": "Berkeley Spartans",
+      "home_city": "Berkeley",
+      "away_team": "Campbell Spartans",
+      "matchweek": 36
+    },
+    {
+      "fixture_code": "FX-02106",
+      "fixture_title": "Fremont Tigers vs Gilroy Wolves - Matchweek 11",
+      "venue": "Fremont Sports Complex",
+      "tickets_available": 267,
+      "home_team": "Fremont Tigers",
+      "home_city": "Fremont",
+      "away_team": "Gilroy Wolves",
+      "matchweek": 11
+    },
+    {
+      "fixture_code": "FX-02107",
+      "fixture_title": "Pleasanton Eagles vs San Mateo Tigers - Matchweek 1",
+      "venue": "Pleasanton Stadium",
+      "tickets_available": 304,
+      "home_team": "Pleasanton Eagles",
+      "home_city": "Pleasanton",
+      "away_team": "San Mateo Tigers",
+      "matchweek": 1
+    },
+    {
+      "fixture_code": "FX-02108",
+      "fixture_title": "Redwood City Bulldogs vs Campbell Lions - Matchweek 21",
+      "venue": "Redwood City Park",
+      "tickets_available": 341,
+      "home_team": "Redwood City Bulldogs",
+      "home_city": "Redwood City",
+      "away_team": "Campbell Lions",
+      "matchweek": 21
+    },
+    {
+      "fixture_code": "FX-02109",
+      "fixture_title": "Campbell Wolves vs San Mateo Wolves - Matchweek 7",
+      "venue": "Campbell Stadium",
+      "tickets_available": 378,
+      "home_team": "Campbell Wolves",
+      "home_city": "Campbell",
+      "away_team": "San Mateo Wolves",
+      "matchweek": 7
+    },
+    {
+      "fixture_code": "FX-02110",
+      "fixture_title": "Berkeley Wolves vs Pleasanton Spartans - Matchweek 30",
+      "venue": "Berkeley Park",
+      "tickets_available": 415,
+      "home_team": "Berkeley Wolves",
+      "home_city": "Berkeley",
+      "away_team": "Pleasanton Spartans",
+      "matchweek": 30
+    },
+    {
+      "fixture_code": "FX-02111",
+      "fixture_title": "Livermore Hawks vs Santa Clara Bulldogs - Matchweek 5",
+      "venue": "Livermore Sports Complex",
+      "tickets_available": 452,
+      "home_team": "Livermore Hawks",
+      "home_city": "Livermore",
+      "away_team": "Santa Clara Bulldogs",
+      "matchweek": 5
+    },
+    {
+      "fixture_code": "FX-03101",
+      "fixture_title": "Daly City Eagles vs Milpitas Bears - Matchweek 4",
+      "venue": "Daly City Field",
+      "tickets_available": 8,
+      "home_team": "Daly City Eagles",
+      "home_city": "Daly City",
+      "away_team": "Milpitas Bears",
+      "matchweek": 4
+    },
+    {
+      "fixture_code": "FX-03102",
+      "fixture_title": "Oakland Bulldogs vs Redwood City Eagles - Matchweek 16",
+      "venue": "Oakland Stadium",
+      "tickets_available": 45,
+      "home_team": "Oakland Bulldogs",
+      "home_city": "Oakland",
+      "away_team": "Redwood City Eagles",
+      "matchweek": 16
+    },
+    {
+      "fixture_code": "FX-03103",
+      "fixture_title": "Sunnyvale Sharks vs Morgan Hill Eagles - Matchweek 17",
+      "venue": "Sunnyvale Stadium",
+      "tickets_available": 82,
+      "home_team": "Sunnyvale Sharks",
+      "home_city": "Sunnyvale",
+      "away_team": "Morgan Hill Eagles",
+      "matchweek": 17
+    },
+    {
+      "fixture_code": "FX-03104",
+      "fixture_title": "Oakland Hawks vs Livermore Eagles - Matchweek 18",
+      "venue": "Oakland Sports Complex",
+      "tickets_available": 119,
+      "home_team": "Oakland Hawks",
+      "home_city": "Oakland",
+      "away_team": "Livermore Eagles",
+      "matchweek": 18
+    },
+    {
+      "fixture_code": "FX-03105",
+      "fixture_title": "Berkeley Spartans vs Cupertino Hawks - Matchweek 7",
+      "venue": "Berkeley Arena",
+      "tickets_available": 156,
+      "home_team": "Berkeley Spartans",
+      "home_city": "Berkeley",
+      "away_team": "Cupertino Hawks",
+      "matchweek": 7
+    },
+    {
+      "fixture_code": "FX-03106",
+      "fixture_title": "Fremont Tigers vs Gilroy Tigers - Matchweek 15",
+      "venue": "Fremont Park",
+      "tickets_available": 193,
+      "home_team": "Fremont Tigers",
+      "home_city": "Fremont",
+      "away_team": "Gilroy Tigers",
+      "matchweek": 15
+    },
+    {
+      "fixture_code": "FX-03107",
+      "fixture_title": "Pleasanton Eagles vs Cupertino Eagles - Matchweek 33",
+      "venue": "Pleasanton Field",
+      "tickets_available": 230,
+      "home_team": "Pleasanton Eagles",
+      "home_city": "Pleasanton",
+      "away_team": "Cupertino Eagles",
+      "matchweek": 33
+    },
+    {
+      "fixture_code": "FX-03108",
+      "fixture_title": "Redwood City Bulldogs vs Fremont Eagles - Matchweek 12",
+      "venue": "Redwood City Arena",
+      "tickets_available": 267,
+      "home_team": "Redwood City Bulldogs",
+      "home_city": "Redwood City",
+      "away_team": "Fremont Eagles",
+      "matchweek": 12
+    },
+    {
+      "fixture_code": "FX-03109",
+      "fixture_title": "Campbell Wolves vs Santa Clara Falcons - Matchweek 26",
+      "venue": "Campbell Park",
+      "tickets_available": 304,
+      "home_team": "Campbell Wolves",
+      "home_city": "Campbell",
+      "away_team": "Santa Clara Falcons",
+      "matchweek": 26
+    },
+    {
+      "fixture_code": "FX-03110",
+      "fixture_title": "Berkeley Wolves vs Walnut Creek Falcons - Matchweek 37",
+      "venue": "Berkeley Park",
+      "tickets_available": 341,
+      "home_team": "Berkeley Wolves",
+      "home_city": "Berkeley",
+      "away_team": "Walnut Creek Falcons",
+      "matchweek": 37
+    },
+    {
+      "fixture_code": "FX-03111",
+      "fixture_title": "Livermore Hawks vs Fremont Bears - Matchweek 22",
+      "venue": "Livermore Stadium",
+      "tickets_available": 378,
+      "home_team": "Livermore Hawks",
+      "home_city": "Livermore",
+      "away_team": "Fremont Bears",
+      "matchweek": 22
+    },
+    {
+      "fixture_code": "FX-03112",
+      "fixture_title": "Milpitas Hawks vs San Mateo Wolves - Matchweek 2",
+      "venue": "Milpitas Stadium",
+      "tickets_available": 415,
+      "home_team": "Milpitas Hawks",
+      "home_city": "Milpitas",
+      "away_team": "San Mateo Wolves",
+      "matchweek": 2
+    },
+    {
+      "fixture_code": "FX-03113",
+      "fixture_title": "Hayward Eagles vs Livermore Bulldogs - Matchweek 7",
+      "venue": "Hayward Park",
+      "tickets_available": 452,
+      "home_team": "Hayward Eagles",
+      "home_city": "Hayward",
+      "away_team": "Livermore Bulldogs",
+      "matchweek": 7
+    },
+    {
+      "fixture_code": "FX-03114",
+      "fixture_title": "Walnut Creek Sharks vs Milpitas Falcons - Matchweek 1",
+      "venue": "Walnut Creek Arena",
+      "tickets_available": 489,
+      "home_team": "Walnut Creek Sharks",
+      "home_city": "Walnut Creek",
+      "away_team": "Milpitas Falcons",
+      "matchweek": 1
+    }
+  ],
+  "not_in_league": [
+    "FX-09001",
+    "FX-09002",
+    "FX-09003",
+    "FX-09004",
+    "FX-09005"
+  ]
+}
