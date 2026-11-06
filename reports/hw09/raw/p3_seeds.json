@@ -1,0 +1,124 @@
+[
+  {
+    "seed": "S01",
+    "key": "s3319:qa:9740b94af77c953a",
+    "query": "How many tickets are still available for fixture FX-00042?",
+    "answer": "For fixture FX-00042, titled 'Milpitas Eagles vs San Mateo Wolves - Matchweek 5', there are 51 tickets still available for the game held at Milpitas Field.",
+    "review_status": "approved",
+    "agent_ms": 31136.2,
+    "data_version": "FX-00042@2026-10-01T17:14:36",
+    "fixture_codes": [
+      "FX-00042"
+    ],
+    "correlation_id": "e3fafcd4-4308-436b-b41f-fa74090cbfec"
+  },
+  {
+    "seed": "S02",
+    "key": "s3319:qa:01a4b94e5d6a8c13",
+    "query": "Where is fixture FX-00117 being played?",
+    "answer": "Fixture FX-00117 is being played at San Jose Field.",
+    "review_status": "approved",
+    "agent_ms": 14258.2,
+    "data_version": "FX-00117@2026-10-01T17:14:36",
+    "fixture_codes": [
+      "FX-00117"
+    ],
+    "correlation_id": "a83b161b-d62c-4a3b-bdb9-989a8ff9b1df"
+  },
+  {
+    "seed": "S03",
+    "key": "s3319:qa:37a194ea46cc16ef",
+    "query": "Which team is the home team for fixture FX-00250?",
+    "answer": "San Jose Spartans (San Jose) is the home team for fixture FX-00250.",
+    "review_status": "approved",
+    "agent_ms": 22055.2,
+    "data_version": "FX-00250@2026-10-01T17:14:36",
+    "fixture_codes": [
+      "FX-00250"
+    ],
+    "correlation_id": "0b1bf383-bd89-4f83-8584-30b530ff6614"
+  },
+  {
+    "seed": "S04",
+    "key": "s3319:qa:17fe9775201cfc9c",
+    "query": "What is the title of fixture FX-00300?",
+    "answer": "The title of fixture FX-00300 is 'Cupertino Eagles vs Oakland Tigers - Matchweek 31'.",
+    "review_status": "approved",
+    "agent_ms": 23286.6,
+    "data_version": "FX-00300@2026-10-01T17:14:36",
+    "fixture_codes": [
+      "FX-00300"
+    ],
+    "correlation_id": "056ce187-fd2e-436d-8eed-3d5cbf814b5e"
+  },
+  {
+    "seed": "S05",
+    "key": "s3319:qa:8bb0b98948519531",
+    "query": "Is fixture FX-00512 sold out?",
+    "answer": "Since the venue's total capacity is not provided, we can only conclude that the fixture is not sold out based on the available tickets alone.",
+    "review_status": "needs_revision",
+    "agent_ms": 26750.4,
+    "data_version": "FX-00512@2026-10-01T17:14:36",
+    "fixture_codes": [
+      "FX-00512"
+    ],
+    "correlation_id": "3b78e502-9f96-4255-93af-4dec89a1d431"
+  },
+  {
+    "seed": "S06",
+    "key": "s3319:qa:fe18b853233cc8f8",
+    "query": "Which city is the home team of fixture FX-00777 from?",
+    "answer": "Cupertino",
+    "review_status": "approved",
+    "agent_ms": 17670.0,
+    "data_version": "FX-00777@2026-10-01T17:14:36",
+    "fixture_codes": [
+      "FX-00777"
+    ],
+    "correlation_id": "53ca3882-e99d-4bdd-8549-652ce77d542b"
+  },
+  {
+    "seed": "S07",
+    "key": "s3319:qa:fc82a82ef96936ef",
+    "query": "What should a team manager do on match day before kickoff?",
+    "answer": "A team manager should review the team's performance from the previous match, prepare the team's equipment and ensure it is in good condition, and communicate with the coach and players to set expectations for the upcoming match on match day before kickoff.",
+    "review_status": "approved",
+    "agent_ms": 20278.0,
+    "data_version": "none",
+    "fixture_codes": [],
+    "correlation_id": "34a964e3-b8c2-4515-8b3b-4566474c031c"
+  },
+  {
+    "seed": "S08",
+    "key": "s3319:qa:23266cd2f15d2e80",
+    "query": "How should a community league handle a fixture postponed because of heavy rain?",
+    "answer": "\"We will review the affected matches\u2019 schedules to confirm which games need to be rescheduled due to the weather condition. We will then contact the teams involved to inform them of the decision and propose potential rescheduling options, such as changing the date or playing at an alternate venue. We will also coordinate with the venue management to ensure that the proposed rescheduled matches can be played at the chosen venues, considering any additional requirements or restrictions that may arise from the weather conditions.\"",
+    "review_status": "approved",
+    "agent_ms": 35592.1,
+    "data_version": "none",
+    "fixture_codes": [],
+    "correlation_id": "2411148f-fdea-4b41-a424-841fb4cb1f9b"
+  },
+  {
+    "seed": "S09",
+    "key": "s3319:qa:8646ef254434f6fb",
+    "query": "How many points does a team get for a win in the league?",
+    "answer": "A team gets 3 points for a win in the league.",
+    "review_status": "approved",
+    "agent_ms": 15460.9,
+    "data_version": "none",
+    "fixture_codes": [],
+    "correlation_id": "fcbf32e5-8840-4e78-80b1-54e8599f5ace"
+  },
+  {
+    "seed": "S10",
+    "key": "s3319:qa:b4c2a242727ec3e8",
+    "query": "What should players bring to an away game?",
+    "answer": "Here are the essentials players should bring to an away game: their team uniforms and equipment, appropriate clothing for the venue's weather, and their own water bottles and snacks for hydration and sustenance during the game.",
+    "review_status": "approved",
+    "agent_ms": 21276.5,
+    "data_version": "none",
+    "fixture_codes": [],
+    "correlation_id": "cc64add2-b65c-43f5-b437-de9d01d1b368"
+  }
+]

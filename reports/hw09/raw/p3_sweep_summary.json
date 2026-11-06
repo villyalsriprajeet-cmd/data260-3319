@@ -1,0 +1,106 @@
+[
+  {
+    "threshold": 0.75,
+    "cases": 40,
+    "hits": 28,
+    "correct_hits": 19,
+    "false_hits": 9,
+    "misses": 12,
+    "missed_should_hit": 0,
+    "hit_rate_pct": 70.0,
+    "false_hit_rate_pct": 32.1,
+    "mean_latency_ms": 7535.4,
+    "false_hit_cases": [
+      "P05",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D09"
+    ]
+  },
+  {
+    "threshold": 0.8,
+    "cases": 40,
+    "hits": 27,
+    "correct_hits": 18,
+    "false_hits": 9,
+    "misses": 13,
+    "missed_should_hit": 1,
+    "hit_rate_pct": 67.5,
+    "false_hit_rate_pct": 33.3,
+    "mean_latency_ms": 7995.7,
+    "false_hit_cases": [
+      "P05",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D09"
+    ]
+  },
+  {
+    "threshold": 0.85,
+    "cases": 40,
+    "hits": 24,
+    "correct_hits": 17,
+    "false_hits": 7,
+    "misses": 16,
+    "missed_should_hit": 2,
+    "hit_rate_pct": 60.0,
+    "false_hit_rate_pct": 29.2,
+    "mean_latency_ms": 9446.0,
+    "false_hit_cases": [
+      "P05",
+      "D01",
+      "D02",
+      "D03",
+      "D05",
+      "D06",
+      "D09"
+    ]
+  },
+  {
+    "threshold": 0.9,
+    "cases": 40,
+    "hits": 19,
+    "correct_hits": 14,
+    "false_hits": 5,
+    "misses": 21,
+    "missed_should_hit": 6,
+    "hit_rate_pct": 47.5,
+    "false_hit_rate_pct": 26.3,
+    "mean_latency_ms": 11978.3,
+    "false_hit_cases": [
+      "D01",
+      "D02",
+      "D03",
+      "D05",
+      "D06"
+    ]
+  },
+  {
+    "threshold": 0.95,
+    "cases": 40,
+    "hits": 17,
+    "correct_hits": 13,
+    "false_hits": 4,
+    "misses": 23,
+    "missed_should_hit": 7,
+    "hit_rate_pct": 42.5,
+    "false_hit_rate_pct": 23.5,
+    "mean_latency_ms": 13220.6,
+    "false_hit_cases": [
+      "D01",
+      "D02",
+      "D05",
+      "D06"
+    ]
+  }
+]
