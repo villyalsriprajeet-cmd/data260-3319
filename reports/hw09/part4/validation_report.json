@@ -1,0 +1,16 @@
+[
+  {
+    "lesson_id": "lesson_001",
+    "failures_before": 3,
+    "failures_after": 3,
+    "fixed": [],
+    "broke": [],
+    "unrelated_unsupported_after": [],
+    "checks": {
+      "failure cases improve or stay the same": true,
+      "previously correct answers stay correct": true,
+      "unrelated questions get no unsupported answers": true
+    },
+    "decision": "keep"
+  }
+]

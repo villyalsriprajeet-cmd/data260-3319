@@ -256,13 +256,21 @@ class EvaluatorAgent:
             claim = -claim if subject_is_b else claim  # 'B has N more' means A has N fewer
             direction_ok = d == 0 or (claim > 0) == (d > 0)
             if abs(d) not in numbers(answer) or not direction_ok:
+                tips = []
+                if not direction_ok:  # name the exact mistake, but not the number
+                    said, true = ("more", "fewer") if claim > 0 else ("fewer", "more")
+                    tips.append(
+                        f"Your answer says {codes[0]} has {said} tickets, but in the records {codes[0]} has "
+                        f"{true} tickets than {codes[1]}; fix the direction."
+                    )
+                if abs(d) not in numbers(answer):
+                    tips.append("Your number is not the gap between the two tickets_available values; subtract again.")
                 problems.append(
                     (
                         "wrong_difference",
                         f"{codes[0]} has {a} and {codes[1]} has {b} tickets; the answer has the wrong number or "
                         "says more/fewer the wrong way round.",
-                        "Compute first minus second from the records; if the first fixture has fewer tickets, "
-                        "say it has that many fewer.",
+                        " ".join(tips),
                     )
                 )
         elif kind == "total":

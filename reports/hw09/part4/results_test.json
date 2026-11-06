@@ -1,0 +1,47 @@
+[
+  {
+    "variant": "Baseline",
+    "correct": 14,
+    "incorrect": 2,
+    "avg_attempts": 1.0,
+    "avg_latency_s": 3.82,
+    "first_attempt_correct": 14,
+    "lessons_available": 0,
+    "failed": [
+      "TE07",
+      "TE10"
+    ]
+  },
+  {
+    "variant": "Evaluator Repair",
+    "correct": 15,
+    "incorrect": 1,
+    "avg_attempts": 1.12,
+    "avg_latency_s": 3.08,
+    "first_attempt_correct": 14,
+    "lessons_available": 0,
+    "failed": [
+      "TE10"
+    ]
+  },
+  {
+    "variant": "Lesson Memory",
+    "correct": 16,
+    "incorrect": 0,
+    "avg_attempts": 1.12,
+    "avg_latency_s": 3.13,
+    "first_attempt_correct": 14,
+    "lessons_available": 1,
+    "failed": []
+  },
+  {
+    "variant": "Validated Improvement",
+    "correct": 16,
+    "incorrect": 0,
+    "avg_attempts": 1.12,
+    "avg_latency_s": 3.18,
+    "first_attempt_correct": 14,
+    "lessons_available": 1,
+    "failed": []
+  }
+]

@@ -1,0 +1,5 @@
+variant,correct,incorrect,avg_attempts,avg_latency_s,first_attempt_correct,lessons_available,failed
+Baseline,14,2,1.0,3.82,14,0,"['TE07', 'TE10']"
+Evaluator Repair,15,1,1.12,3.08,14,0,['TE10']
+Lesson Memory,16,0,1.12,3.13,14,1,[]
+Validated Improvement,16,0,1.12,3.18,14,1,[]
