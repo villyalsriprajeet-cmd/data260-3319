@@ -1,7 +1,9 @@
 # HW8 Parts 2 and 3 consume loop: skip duplicates, retry, dead letter, commit
+# HW10 Part 4.1 adds a queue-wait span and a processing span per message, and a fault hook
 import argparse
 import asyncio
 import os
+from code.hw10.tracing import now_iso, write_span
 
 from aiokafka import TopicPartition
 from common import (
@@ -16,6 +18,8 @@ from common import (
     now_utc,
     show_banner,
 )
+
+QUEUE_FROM = {"PLANNER": ("inbox", "asked_at"), "WRITER": ("tasks", "planned_at"), "REVIEWER": ("drafts", "drafted_at")}
 
 
 def agent_args(name):
@@ -40,6 +44,7 @@ class AgentRunner:
         self.max_attempts = None if args.no_dlq else MAX_ATTEMPTS
         self.store = ProcessedStore()
         self.consumer = self.producer = None
+        self.last_error, self.last_attempts = None, 0
 
     async def commit(self, msg, why):
         await self.consumer.commit({TopicPartition(msg.topic, msg.partition): msg.offset + 1})
@@ -88,12 +93,16 @@ class AgentRunner:
         attempt = 0
         while True:
             attempt += 1
+            self.last_attempts = attempt
             try:
                 if record is None:
                     raise ValueError("message is not a JSON object")
+                if (record.get("trace") or {}).get("inject_fault") == self.name:  # HW10 failed-trace test
+                    raise RuntimeError(f"injected fault at {self.name} for the HW10 failed-trace test")
                 return await self.handler(record, msg, self)
             except Exception as exc:  # any failure is retried, then dead-lettered
                 error = f"{type(exc).__name__}: {exc}"
+                self.last_error = error
                 limit = self.max_attempts or "no limit"
                 alog(
                     self.role,
@@ -123,7 +132,20 @@ class AgentRunner:
         await self.commit(msg, "duplicate skipped")
         return True
 
+    def queue_span(self, record, cid, received_at):
+        stage, key = QUEUE_FROM.get(self.name, (None, None))
+        sent_at = (record.get("trace") or {}).get(key)
+        if stage and sent_at:
+            write_span(cid, stage, sent_at, received_at, service=f"kafka:{self.in_topic}", consumer=self.role)
+
+    def work_span(self, cid, received_at, done_at, outputs):
+        failed = outputs is None
+        status, error = ("error", self.last_error) if failed else ("ok", None)
+        attrs = {"attempts": self.last_attempts, "dead_lettered": failed}
+        write_span(cid, self.name.lower(), received_at, done_at, status, error, service=self.role, **attrs)
+
     async def handle(self, msg):
+        received_at = now_iso()
         record = decode(msg.value)
         cid = record.get("correlation_id") if record else None
         alog(
@@ -148,12 +170,20 @@ class AgentRunner:
                 first_started_at=earlier,
                 note="earlier attempt never finished",
             )
+        traced = bool(cid) and record.get("type") != "ordering_test"
+        if traced:
+            self.queue_span(record, cid, received_at)
         outputs = await self.run_with_retries(msg, record)
+        done_at = now_iso()  # work ends here; the send below counts as queue wait
         if outputs is None:
+            if traced:
+                self.work_span(cid, received_at, done_at, None)
             await self.commit(msg, "after dead letter")
             return
         for topic, key, value in outputs:
             await self.send(topic, key, value)
+        if traced:
+            self.work_span(cid, received_at, done_at, outputs)
         if cid:
             self.store.mark_done(self.name, cid)
         if self.args.commit_mode == "after":
