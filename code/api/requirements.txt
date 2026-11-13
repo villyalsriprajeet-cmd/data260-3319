@@ -19,3 +19,5 @@ langchain-ollama
 aiokafka==0.12.0
 redis==5.2.1
 sentence-transformers
+deepeval==4.3.4
+streamlit==1.67.0
