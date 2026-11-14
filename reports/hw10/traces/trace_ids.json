@@ -1,0 +1,17 @@
+{
+  "miss": {
+    "trace_id": "f7d3710d-e830-470b-90af-1cbea2d800c5",
+    "path": "miss",
+    "status": "ok"
+  },
+  "hit": {
+    "trace_id": "e1aba12d-90c8-4f13-bca6-0aa794b1219d",
+    "path": "hit",
+    "status": "ok"
+  },
+  "failed": {
+    "trace_id": "8e8aeab3-ffd7-415f-9108-70061d11ee21",
+    "path": "miss",
+    "status": "error"
+  }
+}
