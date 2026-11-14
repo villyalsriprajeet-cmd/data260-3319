@@ -1,0 +1,112 @@
+[
+  {
+    "prompt": "original GEval example (score 1)",
+    "criterion": "helpfulness",
+    "item": "correct answer",
+    "expected": "high (4-5)",
+    "score": 1.0,
+    "reason": "The response does not directly answer the question as it provides extra information (the title of the fixture) and does not specify the number of tickets available, which is a key part of the question.",
+    "status": "ok",
+    "error": null,
+    "ms": 16180.8
+  },
+  {
+    "prompt": "original GEval example (score 1)",
+    "criterion": "helpfulness",
+    "item": "wrong facts",
+    "expected": "low (1-2)",
+    "score": 1.0,
+    "reason": "The actual output does not directly answer the question. It provides incorrect information about the venue and does not mention the number of tickets still available. It also introduces a new fixture (Milpitas Field) which is not mentioned in the input.",
+    "status": "ok",
+    "error": null,
+    "ms": 7479.6
+  },
+  {
+    "prompt": "original GEval example (score 1)",
+    "criterion": "helpfulness",
+    "item": "off topic",
+    "expected": "lowest (1)",
+    "score": 1.0,
+    "reason": "The actual output does not answer the question at all. It provides advice about player arrival time instead of answering the number of tickets available and the venue for fixture FX-00305.",
+    "status": "ok",
+    "error": null,
+    "ms": 6576.0
+  },
+  {
+    "prompt": "original GEval example (score 1)",
+    "criterion": "plan_quality",
+    "item": "concrete plan",
+    "expected": "high (4-5)",
+    "score": 1.0,
+    "reason": "The output contains a single step that does not cover the main needs of the question. It only reads the venue and tickets_available values but does not combine them into a single answer, and it does not mention the fixture name.",
+    "status": "ok",
+    "error": null,
+    "ms": 9053.3
+  },
+  {
+    "prompt": "original GEval example (score 1)",
+    "criterion": "plan_quality",
+    "item": "vague plan",
+    "expected": "low (1-2)",
+    "score": 1.0,
+    "reason": "The actual output is missing any steps related to the fixture facts and the question asked. It only mentions reading the question and thinking about it.",
+    "status": "ok",
+    "error": null,
+    "ms": 5461.6
+  },
+  {
+    "prompt": "de-anchored example",
+    "criterion": "helpfulness",
+    "item": "correct answer",
+    "expected": "high (4-5)",
+    "score": 4.0,
+    "reason": "The response directly answers the question by providing the number of tickets available and the venue. However, it includes extra information like the fixture title, which is not necessary for the question asked. This makes it slightly more verbose than necessary.",
+    "status": "ok",
+    "error": null,
+    "ms": 8385.5
+  },
+  {
+    "prompt": "de-anchored example",
+    "criterion": "helpfulness",
+    "item": "wrong facts",
+    "expected": "low (1-2)",
+    "score": 1.0,
+    "reason": "The output does not directly answer the question as it provides incorrect venue information and does not mention the number of tickets still available. It also introduces new facts not aligned with the input.",
+    "status": "ok",
+    "error": null,
+    "ms": 5746.9
+  },
+  {
+    "prompt": "de-anchored example",
+    "criterion": "helpfulness",
+    "item": "off topic",
+    "expected": "lowest (1)",
+    "score": 1.0,
+    "reason": "The actual output does not answer the question about the number of tickets available or the venue for fixture FX-00305. It provides general advice instead.",
+    "status": "ok",
+    "error": null,
+    "ms": 6742.3
+  },
+  {
+    "prompt": "de-anchored example",
+    "criterion": "plan_quality",
+    "item": "concrete plan",
+    "expected": "high (4-5)",
+    "score": 3.0,
+    "reason": "The output contains only one step that is redundant and does not cover all the required information. It should have included both the number of tickets and the venue in separate steps.",
+    "status": "ok",
+    "error": null,
+    "ms": 5880.2
+  },
+  {
+    "prompt": "de-anchored example",
+    "criterion": "plan_quality",
+    "item": "vague plan",
+    "expected": "low (1-2)",
+    "score": 1.0,
+    "reason": "The output does not provide any steps to find the number of tickets available or the venue for fixture FX-00305. It only states that the question will be read and answered.",
+    "status": "ok",
+    "error": null,
+    "ms": 6103.0
+  }
+]

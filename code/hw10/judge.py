@@ -13,17 +13,24 @@ OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
 JUDGE_MODEL = os.getenv("JUDGE_MODEL", "qwen2.5:3b")
 JUDGE_SETTINGS = {"temperature": 0.0, "seed": 3319, "num_ctx": 2048, "num_predict": 256}  # same num_ctx as the agents
 JUDGE_HTTP_TIMEOUT = float(os.getenv("JUDGE_HTTP_TIMEOUT", "120"))  # seconds per judge call
+DEANCHOR = os.getenv("JUDGE_DEANCHOR", "1") == "1"  # remove the score 1 example from the GEval prompt
+EXAMPLE = '"reason": "your concise and informative reason here",\n  "score": '  # GEval example answer
+ANCHOR = EXAMPLE + "1\n}"
+NEUTRAL = EXAMPLE + "<integer from the rubric that fits your reason>\n}"
 
 
 class LocalJudge(DeepEvalBaseLLM):
-    def __init__(self, model=JUDGE_MODEL, base_url=OLLAMA_URL, timeout=JUDGE_HTTP_TIMEOUT):
+    def __init__(self, model=JUDGE_MODEL, base_url=OLLAMA_URL, timeout=JUDGE_HTTP_TIMEOUT, deanchor=DEANCHOR):
         self.model_name, self.base_url, self.timeout = model, base_url.rstrip("/"), timeout
+        self.deanchor = deanchor
         super().__init__(model)
 
     def load_model(self):
         return self.model_name
 
     def chat(self, prompt, schema=None):
+        if self.deanchor:
+            prompt = prompt.replace(ANCHOR, NEUTRAL)  # a small judge copies the example score otherwise
         payload = {
             "model": self.model_name,
             "messages": [{"role": "user", "content": prompt}],
@@ -53,4 +60,5 @@ class LocalJudge(DeepEvalBaseLLM):
 
 def judge_settings():
     base = {"judge_model": JUDGE_MODEL, "ollama_url": OLLAMA_URL, "http_timeout_s": JUDGE_HTTP_TIMEOUT}
+    base["deanchor"] = DEANCHOR
     return {**base, **JUDGE_SETTINGS}
