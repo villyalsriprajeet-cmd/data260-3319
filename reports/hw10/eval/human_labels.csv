@@ -1,0 +1,21 @@
+case_id,trace_id,human_score,note,labeled_at
+C01,60cf6e38-d70e-4e9d-a6b9-34c1a58ba819,5,,2026-11-14T05:16:57.671Z
+C02,323372d7-dc32-41fd-8a9d-15302723cd1a,5,,2026-11-14T05:17:26.842Z
+C03,7a3745d7-e522-4853-a4e1-765dda9f905d,1,,2026-11-14T05:21:00.413Z
+C04,e6cb8ab0-63bc-4480-a0a4-9cc5dfd647ad,5,,2026-11-14T05:21:45.040Z
+C05,61e4f409-18c2-4460-99aa-1d7bcb145d62,4,,2026-11-14T05:23:59.785Z
+C06,861d6d50-08c9-417d-9ccc-1addf163e94d,5,matches facts,2026-11-14T05:25:46.716Z
+C07,9c16565a-cadf-4119-b728-b460a6b7ae15,2,no combined total,2026-11-14T05:27:26.868Z
+C08,a07c5fc6-d23a-44cb-b1be-6296c8098d74,4,"honest, some extra text",2026-11-14T05:32:26.326Z
+C09,c7648e38-87df-4efb-86f2-93cefc3b14ae,4,"honest, repeats",2026-11-14T05:33:47.723Z
+C10,5c4e103f-b2a8-45c2-b322-2eb6efd710b8,2,"partly correct, invented time",2026-11-14T05:35:32.298Z
+C11,b1e12d31-4001-4208-8b25-bb938f5774db,4,minor wording slip,2026-11-14T05:37:18.280Z
+C12,dd1f9e13-cf01-40dc-aa36-f1875e47064b,5,sensible advice,2026-11-14T05:39:20.288Z
+C13,4c2f7c3d-bb3d-4537-9549-6ead43136fa2,5,clear step by step,2026-11-14T05:42:00.342Z
+C14,5ab9baff-4b31-42b0-a413-0a996dcc7724,4,small gaps for youth,2026-11-14T05:43:45.136Z
+C15,133efd09-cfa9-4489-8dde-fa2ae963aaa5,5,correct and concise,2026-11-14T05:45:00.377Z
+C16,51779481-9dc8-4915-b2b1-f60e66562f5b,2,"doesn't say consequence, odd step",2026-11-14T05:47:26.397Z
+C17,f8665593-70c7-4bdf-bcd4-1f6bc5c56dfe,1,"aimed at venue staff, not driver",2026-11-14T05:51:04.953Z
+C18,9454ed0d-5e89-459d-8874-5134b24ee83e,5,"correct, but question off topic",2026-11-14T05:52:35.514Z
+C19,40741f6f-112f-4314-a56b-63eea3aba691,1,invented teams and times,2026-11-14T05:53:52.306Z
+C20,005f541e-f3ea-4c94-b484-126bebb57d51,1,invented $14 price,2026-11-14T05:57:26.778Z

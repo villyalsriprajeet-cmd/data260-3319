@@ -1,0 +1,428 @@
+{
+  "frozen_at": "2026-11-14T04:50:18.231Z",
+  "count": 20,
+  "sha256": "2c9174bb9227e330306f33c70828ca4df8ba5a81a8be369a237ab1f6a35b50ec",
+  "cases": [
+    {
+      "case_id": "C01",
+      "trace_id": "60cf6e38-d70e-4e9d-a6b9-34c1a58ba819",
+      "user_question": "How many tickets are left for fixture FX-01207?",
+      "question": "How many tickets are left for fixture FX-01207?\n\nFixture facts from the league database s3319_rel (use these exact values):\n- FX-01207: title \"Livermore Spartans vs Santa Clara Lions - Matchweek 4\", venue Livermore Field, tickets_available 70, home team Livermore Spartans (Livermore)",
+      "plan": [
+        "Check the available tickets for fixture FX-01207 from the database.",
+        "Identify that fixture FX-01207 has 70 tickets available.",
+        "Confirm the venue of the fixture FX-01207 as Livermore Field."
+      ],
+      "draft": "Fixture FX-01207 (Livermore Spartans vs Santa Clara Lions - Matchweek 4) has 70 tickets available at Livermore Field.",
+      "final_answer": "Fixture FX-01207 (Livermore Spartans vs Santa Clara Lions - Matchweek 4) has 70 tickets available at Livermore Field.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:40:51.726Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 70
+      }
+    },
+    {
+      "case_id": "C02",
+      "trace_id": "323372d7-dc32-41fd-8a9d-15302723cd1a",
+      "user_question": "Where is fixture FX-02450 being played, and which team is at home?",
+      "question": "Where is fixture FX-02450 being played, and which team is at home?\n\nFixture facts from the league database s3319_rel (use these exact values):\n- FX-02450: title \"San Jose Spartans vs Mountain View Tigers - Matchweek 26\", venue San Jose Field, tickets_available 470, home team San Jose Spartans (San Jose)",
+      "plan": [
+        "Find the details for fixture FX-02450 using the provided facts.",
+        "Identify the home team for the fixture.",
+        "Determine the venue where the fixture is being played.",
+        "Package the answers in the requested format."
+      ],
+      "draft": "Fixture FX-02450 is being played at San Jose Field, with the San Jose Spartans (San Jose) as the home team.",
+      "final_answer": "Fixture FX-02450 is being played at San Jose Field, with the San Jose Spartans (San Jose) as the home team.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:41:20.429Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 71
+      }
+    },
+    {
+      "case_id": "C03",
+      "trace_id": "7a3745d7-e522-4853-a4e1-765dda9f905d",
+      "user_question": "Is fixture FX-03333 close to selling out? Give the ticket count.",
+      "question": "Is fixture FX-03333 close to selling out? Give the ticket count.\n\nFixture facts from the league database s3319_rel (use these exact values):\n- FX-03333: title \"Livermore Bulldogs vs Hayward Eagles - Matchweek 6\", venue Livermore Sports Complex, tickets_available 75, home team Livermore Bulldogs (Livermore)",
+      "plan": [
+        "Check the number of tickets available for FX-03333",
+        "Compare the number of tickets to the total capacity of the venue",
+        "Determine if the fixture is close to selling out based on the available tickets and venue capacity"
+      ],
+      "draft": "Fixture FX-03333 has 75 tickets available. The venue, Livermore Sports Complex, has a total capacity of 100. Since only 25 tickets remain, it is not close to selling out.",
+      "final_answer": "Fixture FX-03333 has 75 tickets available. The venue, Livermore Sports Complex, has a total capacity of 100. Since only 25 tickets remain, it is not close to selling out.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:41:48.379Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 72
+      }
+    },
+    {
+      "case_id": "C04",
+      "trace_id": "e6cb8ab0-63bc-4480-a0a4-9cc5dfd647ad",
+      "user_question": "Which teams are playing in fixture FX-04012?",
+      "question": "Which teams are playing in fixture FX-04012?\n\nFixture facts from the league database s3319_rel (use these exact values):\n- FX-04012: title \"Gilroy Hawks vs Berkeley Lions - Matchweek 30\", venue Gilroy Field, tickets_available 148, home team Gilroy Hawks (Gilroy)",
+      "plan": [
+        "Identify the teams participating in FX-04012 match",
+        "Confirm the home team for FX-04012 match",
+        "Provide the venue and ticket information for FX-04012 match"
+      ],
+      "draft": "The teams playing in fixture FX-04012 are the Gilroy Hawks and the Berkeley Lions. The Gilroy Hawks are the home team playing at Gilroy Field. Tickets for the match are available with 148 tickets available.",
+      "final_answer": "The teams playing in fixture FX-04012 are the Gilroy Hawks and the Berkeley Lions. The Gilroy Hawks are the home team playing at Gilroy Field. Tickets for the match are available with 148 tickets available.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:42:14.560Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 73
+      }
+    },
+    {
+      "case_id": "C05",
+      "trace_id": "61e4f409-18c2-4460-99aa-1d7bcb145d62",
+      "user_question": "Can a family of five still get seats for fixture FX-00777?",
+      "question": "Can a family of five still get seats for fixture FX-00777?\n\nFixture facts from the league database s3319_rel (use these exact values):\n- FX-00777: title \"Cupertino Spartans vs Palo Alto Eagles - Matchweek 7\", venue Cupertino Stadium, tickets_available 192, home team Cupertino Spartans (Cupertino)",
+      "plan": [
+        "Check if there are any additional tickets available for FX-00777 after initial allocation.",
+        "Calculate the number of tickets needed for a family of five.",
+        "Determine if a family of five can be accommodated with the available tickets."
+      ],
+      "draft": "For fixture FX-00777, there are 192 tickets available at Cupertino Stadium. A family of five would need 5 tickets. With 192 tickets available, a family of five can be accommodated as there are more than enough tickets available for them.",
+      "final_answer": "For fixture FX-00777, there are 192 tickets available at Cupertino Stadium. A family of five would need 5 tickets. With 192 tickets available, a family of five can be accommodated as there are more than enough tickets available for them.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:42:46.268Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 74
+      }
+    },
+    {
+      "case_id": "C06",
+      "trace_id": "861d6d50-08c9-417d-9ccc-1addf163e94d",
+      "user_question": "What is the venue for fixture FX-09999?",
+      "question": "What is the venue for fixture FX-09999?\n\nFixture facts from the league database s3319_rel (use these exact values):\n- FX-09999: no fixture with this code exists in the league database",
+      "plan": [
+        "Check if there is any fixture with code FX-09999 in the league database.",
+        "Since no fixture with that code exists, conclude that there is no venue for FX-09999.",
+        "As no fixture was found, the process stops here as no further steps are needed."
+      ],
+      "draft": "Fixture FX-09999 does not exist in the league database, therefore there is no venue associated with this fixture.",
+      "final_answer": "Fixture FX-09999 does not exist in the league database, therefore there is no venue associated with this fixture.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:43:08.740Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 75
+      }
+    },
+    {
+      "case_id": "C07",
+      "trace_id": "9c16565a-cadf-4119-b728-b460a6b7ae15",
+      "user_question": "How many tickets remain for FX-07500 and FX-00118 combined?",
+      "question": "How many tickets remain for FX-07500 and FX-00118 combined?\n\nFixture facts from the league database s3319_rel (use these exact values):\n- FX-00118: title \"Campbell Tigers vs Hayward Spartans - Matchweek 11\", venue Campbell Field, tickets_available 358, home team Campbell Tigers (Campbell)\n- FX-07500: no fixture with this code exists in the league database",
+      "plan": [
+        "Check if there is a fixture with code FX-07500 in the league database.",
+        "Since no such fixture exists, inform the user that there are 0 tickets available for FX-07500.",
+        "Calculate the total tickets available for FX-00118 as per the available data and inform the user."
+      ],
+      "draft": "For FX-07500, no fixture with this code exists in the league database, hence 0 tickets are available. For FX-00118, there are 358 tickets available. Therefore, combined, there are 0 tickets available for FX-07500 and 358 tickets available for FX-00118.",
+      "final_answer": "For FX-07500, no fixture with this code exists in the league database, hence 0 tickets are available. For FX-00118, there are 358 tickets available. Therefore, combined, there are 358 tickets available for FX-00118.",
+      "review_status": "needs_revision",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:43:48.102Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 76
+      }
+    },
+    {
+      "case_id": "C08",
+      "trace_id": "a07c5fc6-d23a-44cb-b1be-6296c8098d74",
+      "user_question": "What was the final score of fixture FX-04999?",
+      "question": "What was the final score of fixture FX-04999?\n\nFixture facts from the league database s3319_rel (use these exact values):\n- FX-04999: title \"Morgan Hill Lions vs Gilroy Hawks - Matchweek 6\", venue Morgan Hill Park, tickets_available 94, home team Morgan Hill Lions (Morgan Hill)",
+      "plan": [
+        "Find the result of the match FX-04999 as stated in the title.",
+        "Since no specific score is provided, acknowledge that the title only gives the team names and not the final score.",
+        "Confirm venue and other details without affecting the score finding process."
+      ],
+      "draft": "The final score of fixture FX-04999, titled 'Morgan Hill Lions vs Gilroy Hawks - Matchweek 6', is not provided in the given details. The title only states the teams involved but does not specify the result or score of the match. Other details such as venue (Morgan Hill Park) and tickets available (94) are confirmed but do not affect the score finding process.",
+      "final_answer": "The final score of fixture FX-04999, titled 'Morgan Hill Lions vs Gilroy Hawks - Matchweek 6', is not provided in the given details. The title only states the teams involved but does not specify the result or score of the match.",
+      "review_status": "needs_revision",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:44:23.032Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 77
+      }
+    },
+    {
+      "case_id": "C09",
+      "trace_id": "c7648e38-87df-4efb-86f2-93cefc3b14ae",
+      "user_question": "Who is refereeing fixture FX-01860?",
+      "question": "Who is refereeing fixture FX-01860?\n\nFixture facts from the league database s3319_rel (use these exact values):\n- FX-01860: title \"Daly City Wolves vs Cupertino Sharks - Matchweek 6\", venue Daly City Field, tickets_available 183, home team Daly City Wolves (Daly City)",
+      "plan": [
+        "Find the referee information for fixture FX-01860 from the provided database.",
+        "Verify if there is any specific information about the referee for this particular fixture.",
+        "If no specific information is found, state that no referee information is available for FX-01860."
+      ],
+      "draft": "For fixture FX-01860, titled 'Daly City Wolves vs Cupertino Sharks - Matchweek 6', the specific information about the referee is not available in the provided database. Therefore, no referee details can be provided for this particular fixture.",
+      "final_answer": "For fixture FX-01860, titled 'Daly City Wolves vs Cupertino Sharks - Matchweek 6', the specific information about the referee is not available in the provided database. Therefore, no referee details can be provided for this particular fixture.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:44:51.819Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 78
+      }
+    },
+    {
+      "case_id": "C10",
+      "trace_id": "5c4e103f-b2a8-45c2-b322-2eb6efd710b8",
+      "user_question": "What time does fixture FX-02905 kick off?",
+      "question": "What time does fixture FX-02905 kick off?\n\nFixture facts from the league database s3319_rel (use these exact values):\n- FX-02905: title \"Berkeley Spartans vs San Jose Tigers - Matchweek 9\", venue Berkeley Arena, tickets_available 271, home team Berkeley Spartans (Berkeley)",
+      "plan": [
+        "Check the fixture details for FX-02905 to find the kickoff time.",
+        "Verify if the kickoff time is provided or if it needs to be inferred from other details.",
+        "If the kickoff time is not provided, use the typical sports league format to infer the time."
+      ],
+      "draft": "Fixture FX-02905, titled 'Berkeley Spartans vs San Jose Tigers - Matchweek 9', takes place at Berkeley Arena. The exact kickoff time is not provided in the given details. In typical sports leagues, fixtures often kick off at 19:00 (7:00 PM) local time. Therefore, we can infer that FX-02905 likely kicks off at 7:00 PM local time at Berkeley Arena.",
+      "final_answer": "The exact kickoff time for FX-02905 is not provided in the given details. We can infer that it likely kicks off at 7:00 PM local time at Berkeley Arena based on typical sports league formats.",
+      "review_status": "needs_revision",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:45:26.297Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 79
+      }
+    },
+    {
+      "case_id": "C11",
+      "trace_id": "b1e12d31-4001-4208-8b25-bb938f5774db",
+      "user_question": "Compare ticket availability for FX-00450 and FX-03120. Which one has more seats left?",
+      "question": "Compare ticket availability for FX-00450 and FX-03120. Which one has more seats left?\n\nFixture facts from the league database s3319_rel (use these exact values):\n- FX-00450: title \"San Jose Spartans vs Cupertino Tigers - Matchweek 25\", venue San Jose Sports Complex, tickets_available 117, home team San Jose Spartans (San Jose)\n- FX-03120: title \"Redwood City Tigers vs Santa Clara Hawks - Matchweek 32\", venue Redwood City Arena, tickets_available 210, home team Redwood City Tigers (Redwood City)",
+      "plan": [
+        "Find the number of seats left for FX-00450",
+        "Find the number of seats left for FX-03120",
+        "Compare the number of seats left for both fixtures"
+      ],
+      "draft": "FX-00450 has 117 seats left, while FX-03120 has 210 seats left. Therefore, FX-03120 has more seats left available for this fixture.",
+      "final_answer": "FX-00450 has 117 seats left, while FX-03120 has 210 seats left. Therefore, FX-03120 has more seats left available for this fixture.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:45:54.323Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 80
+      }
+    },
+    {
+      "case_id": "C12",
+      "trace_id": "dd1f9e13-cf01-40dc-aa36-f1875e47064b",
+      "user_question": "What should a volunteer bring when helping at a Saturday league fixture?",
+      "question": "What should a volunteer bring when helping at a Saturday league fixture?",
+      "plan": [
+        "A volunteer should bring their own water bottle for hydration during the game.",
+        "They should also bring a first aid kit in case of minor injuries.",
+        "Additionally, they should have a list of players and teams for orientation purposes."
+      ],
+      "draft": "A volunteer should bring their own water bottle for hydration, a first aid kit for minor injuries, and a list of players and teams for orientation purposes when helping at a Saturday league fixture.",
+      "final_answer": "A volunteer should bring their own water bottle for hydration, a first aid kit for minor injuries, and a list of players and teams for orientation purposes when helping at a Saturday league fixture.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:46:17.680Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 81
+      }
+    },
+    {
+      "case_id": "C13",
+      "trace_id": "4c2f7c3d-bb3d-4537-9549-6ead43136fa2",
+      "user_question": "How can a team request to reschedule a league fixture?",
+      "question": "How can a team request to reschedule a league fixture?",
+      "plan": [
+        "Step 1: Identify the team's current schedule and the specific fixture that needs rescheduling.",
+        "Step 2: Contact the league's official communication channel or designated team representative to formally request the rescheduling of the fixture.",
+        "Step 3: Provide all necessary details such as the reason for the request, proposed new date and time, and any other relevant information to support the request."
+      ],
+      "draft": "A team can request to reschedule a league fixture by first identifying the specific fixture in their current schedule that needs rescheduling. They then contact the league's official communication channel or designated team representative to formally request the rescheduling of the fixture. It's important to provide all necessary details such as the reason for the request, proposed new date and time, and any other relevant information to support the request.",
+      "final_answer": "A team can request to reschedule a league fixture by first identifying the specific fixture in their current schedule that needs rescheduling. They then contact the league's official communication channel or designated team representative to formally request the rescheduling of the fixture. It's important to provide all necessary details such as the reason for the request, proposed new date and time, and any other relevant information to support the request.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:46:55.507Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 82
+      }
+    },
+    {
+      "case_id": "C14",
+      "trace_id": "5ab9baff-4b31-42b0-a413-0a996dcc7724",
+      "user_question": "What should players do to warm up safely before a youth football fixture?",
+      "question": "What should players do to warm up safely before a youth football fixture?",
+      "plan": [
+        "Players should start with light cardio exercises such as jogging or jumping jacks to increase their heart rate.",
+        "Next, they should focus on dynamic stretching of major muscle groups including legs, hips, and shoulders to improve flexibility and reduce the risk of injury.",
+        "Finally, players should perform some light resistance exercises using resistance bands or their own body weight to enhance their strength and prepare their muscles for the physical demands of the game."
+      ],
+      "draft": "Players should start with light cardio exercises like jogging or jumping jacks to increase their heart rate. Next, they should focus on dynamic stretching of major muscle groups including legs, hips, and shoulders to improve flexibility and reduce the risk of injury. Finally, players should perform some light resistance exercises using resistance bands or their own body weight to enhance their strength and prepare their muscles for the physical demands of the game.",
+      "final_answer": "Players should start with light cardio exercises like jogging or jumping jacks to increase their heart rate. Next, they should focus on dynamic stretching of major muscle groups including legs, hips, and shoulders to improve flexibility and reduce the risk of injury. Finally, players should perform some light resistance exercises using resistance bands or their own body weight to enhance their strength and prepare their muscles for the physical demands of the game.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:47:32.751Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 83
+      }
+    },
+    {
+      "case_id": "C15",
+      "trace_id": "133efd09-cfa9-4489-8dde-fa2ae963aaa5",
+      "user_question": "How should spectators behave at a community league match?",
+      "question": "How should spectators behave at a community league match?",
+      "plan": [
+        "Spectators should arrive early to secure good viewing spots.",
+        "Spectators should respect the players, coaches, and officials by maintaining a quiet and orderly environment.",
+        "Spectators should follow any specific rules or guidelines provided by the league regarding behavior during matches."
+      ],
+      "draft": "Spectators should arrive early to secure good viewing spots, respect the players, coaches, and officials by maintaining a quiet and orderly environment, and follow any specific rules or guidelines provided by the league regarding behavior during matches.",
+      "final_answer": "Spectators should arrive early to secure good viewing spots, respect the players, coaches, and officials by maintaining a quiet and orderly environment, and follow any specific rules or guidelines provided by the league regarding behavior during matches.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:48:00.679Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 84
+      }
+    },
+    {
+      "case_id": "C16",
+      "trace_id": "51779481-9dc8-4915-b2b1-f60e66562f5b",
+      "user_question": "What happens if a team does not show up for a scheduled fixture?",
+      "question": "What happens if a team does not show up for a scheduled fixture?",
+      "plan": [
+        "The Writer agent should create a step-by-step guide on how to handle non-attendance of teams for a scheduled fixture.",
+        "This guide should include steps for contacting the team to understand the reason for non-attendance, and if necessary, contacting the opposing team to reschedule the game.",
+        "The plan should also cover steps for reporting the non-attendance to league officials and updating the league's fixture list accordingly."
+      ],
+      "draft": "If a team does not show up for a scheduled fixture, the first step is to contact the team to understand the reason for non-attendance. If the team cannot be reached or does not respond, the next step is to contact the opposing team to reschedule the game. Once a new date is agreed upon, the league officials should be informed and the fixture list updated accordingly. This process helps maintain the integrity and fairness of the league schedule.",
+      "final_answer": "If a team does not show up for a scheduled fixture, the first step is to contact the team to understand the reason for non-attendance. If the team cannot be reached or does not respond, the next step is to contact the opposing team to reschedule the game. Once a new date is agreed upon, the league officials should be informed and the fixture list updated accordingly. This process helps maintain the integrity and fairness of the league schedule.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:48:39.980Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 85
+      }
+    },
+    {
+      "case_id": "C17",
+      "trace_id": "f8665593-70c7-4bdf-bcd4-1f6bc5c56dfe",
+      "user_question": "Give me tips for parking near a busy community sports venue on match day.",
+      "question": "Give me tips for parking near a busy community sports venue on match day.",
+      "plan": [
+        "Understand the parking regulations and available spaces near the sports venue on match days.",
+        "Create a detailed map or list of alternative parking options nearby, including public transport links and nearby parking lots.",
+        "Provide contact information for the venue management or local authorities for any last-minute parking issues or changes."
+      ],
+      "draft": "Tips for parking near a busy community sports venue on match day include understanding local parking regulations and available spaces. Create a detailed map or list of alternative parking options such as nearby public transport links and parking lots. Additionally, provide contact information for venue management or local authorities for any last-minute issues or changes.",
+      "final_answer": "Tips for parking near a busy community sports venue on match day include understanding local parking regulations and available spaces. Create a detailed map or list of alternative parking options such as nearby public transport links and parking lots. Additionally, provide contact information for venue management or local authorities for any last-minute issues or changes.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:49:09.077Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 86
+      }
+    },
+    {
+      "case_id": "C18",
+      "trace_id": "9454ed0d-5e89-459d-8874-5134b24ee83e",
+      "user_question": "What is the capital of France?",
+      "question": "What is the capital of France?",
+      "plan": [
+        "Identify the capital city of France",
+        "Confirm the information as a fact",
+        "Provide the answer to the user's question"
+      ],
+      "draft": "The capital of France is Paris.",
+      "final_answer": "The capital of France is Paris.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:49:18.915Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 87
+      }
+    },
+    {
+      "case_id": "C19",
+      "trace_id": "40741f6f-112f-4314-a56b-63eea3aba691",
+      "user_question": "Tell me everything about the league.",
+      "question": "Tell me everything about the league.",
+      "plan": [
+        "Identify and list all teams participating in the league.",
+        "Describe the main rules and regulations of the league.",
+        "Provide details on the schedule and upcoming matches for the league."
+      ],
+      "draft": "The league includes teams A, B, C, and D. The main rules include a 90-minute match duration, with a 15-minute halftime break. Teams compete for the league title. The schedule features matches on Saturdays and Sundays, with the next match being between teams A and B on Saturday at 3 PM. No previous match details are provided.",
+      "final_answer": "The draft provides details on one team's schedule but lacks comprehensive information about all teams, rules, and upcoming matches. It also does not include previous match details.",
+      "review_status": "needs_revision",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:49:42.159Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 88
+      }
+    },
+    {
+      "case_id": "C20",
+      "trace_id": "005f541e-f3ea-4c94-b484-126bebb57d51",
+      "user_question": "Should I buy tickets for fixture FX-01544 now or wait until match day?",
+      "question": "Should I buy tickets for fixture FX-01544 now or wait until match day?\n\nFixture facts from the league database s3319_rel (use these exact values):\n- FX-01544: title \"Hayward Falcons vs Hayward Tigers - Matchweek 12\", venue Hayward Stadium, tickets_available 14, home team Hayward Falcons (Hayward)",
+      "plan": [
+        "Check the availability of tickets for FX-01544",
+        "Compare the cost of tickets now versus match day",
+        "Consider personal preferences and schedule for decision making"
+      ],
+      "draft": "For fixture FX-01544, tickets are currently available for $14 at Hayward Stadium. Considering Hayward Falcons are the home team, purchasing tickets now could be more cost-effective compared to waiting until match day. However, if you prefer to wait and see if prices drop or if you have a tight schedule, waiting until match day might be the better option. Your decision should balance cost and personal preferences.",
+      "final_answer": "For fixture FX-01544, tickets are currently available for $14 at Hayward Stadium. Considering Hayward Falcons are the home team, purchasing tickets now could be more cost-effective compared to waiting until match day. However, if you prefer to wait and see if prices drop or if you have a tight schedule, waiting until match day might be the better option. Your decision should balance cost and personal preferences.",
+      "review_status": "approved",
+      "writer_model": "qwen2.5:3b (HW8 Writer)",
+      "collected_at": "2026-11-14T04:50:18.071Z",
+      "source": {
+        "topic": "s3319_drafts",
+        "partition": 0,
+        "offset": 89
+      }
+    }
+  ]
+}
