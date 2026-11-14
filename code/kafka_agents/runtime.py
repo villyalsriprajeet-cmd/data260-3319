@@ -6,6 +6,7 @@ import os
 from code.hw10.tracing import now_iso, write_span
 
 from aiokafka import TopicPartition
+from aiokafka.errors import CommitFailedError
 from common import (
     DEAD_LETTER,
     MAX_ATTEMPTS,
@@ -47,7 +48,11 @@ class AgentRunner:
         self.last_error, self.last_attempts = None, 0
 
     async def commit(self, msg, why):
-        await self.consumer.commit({TopicPartition(msg.topic, msg.partition): msg.offset + 1})
+        try:
+            await self.consumer.commit({TopicPartition(msg.topic, msg.partition): msg.offset + 1})
+        except CommitFailedError:  # HW10: group rebalanced in a broker stall; a redelivery is skipped as duplicate
+            alog(self.role, "COMMIT_FAILED_REBALANCED", self.cid_of(msg), partition=msg.partition, offset=msg.offset)
+            return
         alog(
             self.role,
             "OFFSET_COMMITTED",

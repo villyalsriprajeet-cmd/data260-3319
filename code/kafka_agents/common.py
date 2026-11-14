@@ -128,7 +128,7 @@ async def make_consumer(topic, group, role):
         group_id=group,
         auto_offset_reset="earliest",
         enable_auto_commit=False,  # offsets are committed by hand
-        session_timeout_ms=10000,
+        session_timeout_ms=30000,  # HW10: rides out a short broker stall without leaving the group
         heartbeat_interval_ms=3000,
     )
     await consumer.start()
