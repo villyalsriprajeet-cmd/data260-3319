@@ -1,0 +1,80 @@
+{
+  "created_at": "2026-11-14T06:19:16.160Z",
+  "cases": 20,
+  "runs": 3,
+  "cases_sha256": "2c9174bb9227e330306f33c70828ca4df8ba5a81a8be369a237ab1f6a35b50ec",
+  "labels_commit": "21e0f51 2026-11-13T22:02:37-08:00 hw10 part 3.1: freeze 20 writer drafts and my human helpfulness labels before any judge run",
+  "judge": {
+    "judge_model": "qwen2.5:3b",
+    "ollama_url": "http://localhost:11434",
+    "http_timeout_s": 120.0,
+    "deanchor": true,
+    "temperature": 0.0,
+    "seed": 3319,
+    "num_ctx": 2048,
+    "num_predict": 256
+  },
+  "criterion": "helpfulness",
+  "rubric_steps": [
+    "Check whether the actual output directly answers the question in the input.",
+    "Check that every fact in the actual output (fixture codes, venues, ticket counts, team names, dates, times) agrees with the facts given in the input; an invented or contradicting fact is a serious error.",
+    "Check that the advice is specific and useful for a community sports league manager, player or fan, not generic filler.",
+    "Penalize missing key information, unnecessary tangents, or text that is hard to follow."
+  ],
+  "rubric_levels": [
+    "Does not answer the question, or is mostly wrong or invented.",
+    "Partly answers, but has a wrong or invented fact or misses most of what was asked.",
+    "Answers the main question correctly but is vague, incomplete or padded.",
+    "Correct and useful, with a small omission or minor wording issue.",
+    "Correct, complete, specific and concise."
+  ],
+  "inputs": "question exactly as the Writer saw it (with MySQL facts) and the frozen Writer draft",
+  "human_spread": {
+    "1": 4,
+    "2": 3,
+    "3": 0,
+    "4": 5,
+    "5": 8
+  },
+  "agreement_by_run": {
+    "run1": {
+      "spearman": 0.143,
+      "mean_abs_diff": 1.7,
+      "exact_agreement": 0.15,
+      "within_1_agreement": 0.6,
+      "judge_mean": 2.9
+    },
+    "run2": {
+      "spearman": 0.143,
+      "mean_abs_diff": 1.7,
+      "exact_agreement": 0.15,
+      "within_1_agreement": 0.6,
+      "judge_mean": 2.9
+    },
+    "run3": {
+      "spearman": 0.143,
+      "mean_abs_diff": 1.7,
+      "exact_agreement": 0.15,
+      "within_1_agreement": 0.6,
+      "judge_mean": 2.9
+    }
+  },
+  "agreement_median": {
+    "spearman": 0.143,
+    "mean_abs_diff": 1.7,
+    "exact_agreement": 0.15,
+    "within_1_agreement": 0.6,
+    "judge_mean": 2.9
+  },
+  "repeatability": {
+    "cases_with_any_change": 0,
+    "change_rate": 0.0,
+    "mean_change": 0.0,
+    "max_change": 0.0,
+    "pairwise_change_rate": {
+      "run1_vs_run2": 0.0,
+      "run1_vs_run3": 0.0,
+      "run2_vs_run3": 0.0
+    }
+  }
+}
