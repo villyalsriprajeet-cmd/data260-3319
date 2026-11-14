@@ -1,0 +1,112 @@
+{
+  "miss_requests": 50,
+  "skipped_incomplete": [],
+  "percentile_method": "linear interpolation (statistics.quantiles, inclusive)",
+  "share_method": "sum of the stage over all requests / sum of end-to-end over all requests",
+  "queue_stages": [
+    "inbox",
+    "tasks",
+    "drafts",
+    "final"
+  ],
+  "stages": {
+    "cache_lookup": {
+      "n": 50,
+      "p50_ms": 3213.0,
+      "p95_ms": 7005.5,
+      "mean_ms": 3607.8,
+      "share_pct": 5.6
+    },
+    "inbox": {
+      "n": 50,
+      "p50_ms": 208.0,
+      "p95_ms": 803.0,
+      "mean_ms": 286.3,
+      "share_pct": 0.4
+    },
+    "planner": {
+      "n": 50,
+      "p50_ms": 9160.5,
+      "p95_ms": 13213.3,
+      "mean_ms": 9566.5,
+      "share_pct": 14.8
+    },
+    "tasks": {
+      "n": 50,
+      "p50_ms": 149.0,
+      "p95_ms": 510.9,
+      "mean_ms": 206.6,
+      "share_pct": 0.3
+    },
+    "writer": {
+      "n": 50,
+      "p50_ms": 9206.0,
+      "p95_ms": 12820.9,
+      "mean_ms": 9281.8,
+      "share_pct": 14.4
+    },
+    "drafts": {
+      "n": 50,
+      "p50_ms": 153.5,
+      "p95_ms": 488.3,
+      "mean_ms": 197.3,
+      "share_pct": 0.3
+    },
+    "reviewer": {
+      "n": 50,
+      "p50_ms": 12489.0,
+      "p95_ms": 15553.2,
+      "mean_ms": 12519.2,
+      "share_pct": 19.4
+    },
+    "final": {
+      "n": 50,
+      "p50_ms": 152.5,
+      "p95_ms": 569.4,
+      "mean_ms": 259.9,
+      "share_pct": 0.4
+    },
+    "evaluation": {
+      "n": 50,
+      "p50_ms": 27619.0,
+      "p95_ms": 35597.7,
+      "mean_ms": 28012.7,
+      "share_pct": 43.4
+    },
+    "queue_wait_total": {
+      "n": 50,
+      "p50_ms": 874.0,
+      "p95_ms": 1558.4,
+      "mean_ms": 950.1,
+      "share_pct": 1.5
+    },
+    "other": {
+      "n": 50,
+      "p50_ms": 461.5,
+      "p95_ms": 1773.2,
+      "mean_ms": 659.3,
+      "share_pct": 1.0
+    },
+    "end_to_end": {
+      "n": 50,
+      "p50_ms": 64319.0,
+      "p95_ms": 83202.3,
+      "mean_ms": 64597.3,
+      "share_pct": 100.0
+    }
+  },
+  "cache_hits": {
+    "request": {
+      "n": 20,
+      "p50_ms": 167.0,
+      "p95_ms": 547.5,
+      "mean_ms": 236.8
+    },
+    "cache_lookup": {
+      "n": 20,
+      "p50_ms": 163.0,
+      "p95_ms": 541.5,
+      "mean_ms": 233.7
+    }
+  }
+}

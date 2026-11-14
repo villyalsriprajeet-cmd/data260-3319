@@ -1,0 +1,51 @@
+trace_id,question,e2e,cache_lookup,inbox,planner,tasks,writer,drafts,reviewer,final,evaluation,queue_wait_total,other
+27e908fe-ccb8-4e11-bc74-66601e1b6a58,How should a club organise carpools for an away fixture?,78862.0,172.0,145.0,14377.0,294.0,11835.0,150.0,15545.0,330.0,35680.0,919.0,334.0
+73f5b67f-d957-4d86-b2d9-c1bbb3cdf423,What first aid supplies should be at the pitch side for a youth match?,65903.0,5186.0,238.0,11782.0,243.0,8554.0,51.0,13594.0,271.0,24942.0,803.0,1042.0
+1d115647-d17e-4f91-8031-3a21f330ec06,How can parents help coaches during a weekend league game?,61626.0,4373.0,1104.0,9408.0,351.0,9275.0,555.0,13694.0,314.0,22263.0,2324.0,289.0
+775b6775-8854-4840-8e09-81333ad7dc01,What is a fair way to split playing time among substitutes?,74828.0,5548.0,182.0,10412.0,55.0,9428.0,154.0,13088.0,222.0,35355.0,613.0,384.0
+7892c9ff-a4fe-4a56-8836-902f2e67272b,How should a referee handle a player who receives two yellow cards?,64450.0,8198.0,240.0,6877.0,1089.0,7363.0,219.0,7935.0,86.0,31132.0,1634.0,1311.0
+ba87003a-05fe-4efa-9dda-f75fc1876309,What should a team do if their kit colours clash with the opponents?,84402.0,9983.0,550.0,11356.0,440.0,13022.0,273.0,14890.0,153.0,33259.0,1416.0,476.0
+13466b91-2483-4d2b-80d0-6a54f663aae7,How can a league attract more volunteers for match days?,61892.0,2794.0,117.0,9433.0,118.0,10395.0,117.0,14269.0,85.0,24218.0,437.0,346.0
+581b4e3b-df60-4711-ac1a-86c9565a5a78,What snacks are good for players at half time?,53004.0,3227.0,92.0,6812.0,38.0,6641.0,147.0,8542.0,631.0,26327.0,908.0,547.0
+3a54f3c6-1764-4e95-916a-02532f9ef23a,How do you set up cones for a pre-match passing drill?,69265.0,4050.0,257.0,11191.0,277.0,9332.0,85.0,12363.0,310.0,31064.0,929.0,336.0
+73d1df1c-74a3-4dc7-b0bc-feebad1bb597,What should a captain say before the coin toss?,60076.0,3583.0,246.0,8308.0,234.0,7594.0,135.0,9534.0,383.0,29446.0,998.0,613.0
+42352725-cbb8-4a28-a8ce-387476ea8b8f,How can a small club raise money for new goal nets?,51662.0,4637.0,324.0,8321.0,303.0,7339.0,70.0,10028.0,160.0,20187.0,857.0,293.0
+cd6f425e-bd27-4ee8-a0ac-e109a6255769,What are good ways to keep spectators away from the touchline?,53254.0,2344.0,266.0,9593.0,117.0,8009.0,49.0,12084.0,113.0,20324.0,545.0,355.0
+7afd5b66-543b-4eac-97e2-ffea17fb375f,How should injuries be recorded after a fixture?,70533.0,3780.0,122.0,11840.0,603.0,9895.0,252.0,14327.0,314.0,28656.0,1291.0,744.0
+31d115e5-65f8-411e-be2c-bae69d872035,What should be in a match day kit bag for a goalkeeper?,59074.0,3825.0,177.0,8061.0,189.0,6636.0,148.0,10333.0,178.0,28992.0,692.0,535.0
+1633553c-3170-4e58-b0ae-94f7d91a0cb9,Is there room for a school group of 30 at fixture FX-01999?,87704.0,9566.0,77.0,13686.0,441.0,12575.0,80.0,15589.0,138.0,32521.0,736.0,3031.0
+650fb77f-889e-4c32-bdbb-abaa7a60b6e3,How can coaches keep young players motivated after a heavy defeat?,65892.0,4528.0,172.0,10478.0,286.0,10965.0,92.0,13055.0,340.0,25126.0,890.0,850.0
+c8fb2819-ab55-44cd-8b49-376a6f02d688,How should lost property be handled at a community sports ground?,73824.0,4179.0,456.0,11109.0,318.0,8443.0,61.0,12160.0,456.0,35983.0,1291.0,659.0
+2a9acad2-56f3-424a-9335-a9cd3c42f3d8,What can be done to reduce noise complaints from neighbours on match days?,57030.0,3584.0,84.0,6891.0,139.0,9906.0,77.0,12925.0,37.0,21111.0,337.0,2276.0
+ebfe77fc-75ad-4d56-9e3e-ff77a08de3df,How should a league tell fans about a late venue change?,64188.0,2784.0,272.0,11923.0,79.0,9262.0,571.0,12615.0,494.0,25771.0,1416.0,417.0
+95854de8-066c-4b1d-9695-8b2c50d8681b,What steps keep a grass pitch playable after heavy rain?,55419.0,2492.0,536.0,5909.0,81.0,8522.0,298.0,12287.0,110.0,24775.0,1025.0,409.0
+703030c4-683a-4c83-bc19-fd3acc81e9e3,How can teams make their matches easier to attend for wheelchair users?,57692.0,2506.0,209.0,7707.0,349.0,8525.0,88.0,11536.0,102.0,26351.0,748.0,319.0
+c982e1ee-aec4-4ad2-a416-4d79e17ef2ae,What is the best way to post fixture results on social media?,54418.0,3199.0,1149.0,7478.0,41.0,7437.0,173.0,10340.0,103.0,23965.0,1466.0,533.0
+7f4d90f3-e0eb-40db-9595-f4df1b7f7079,How should a coach plan a light training session the day before a match?,71860.0,2552.0,167.0,12420.0,229.0,10184.0,162.0,12815.0,256.0,32581.0,814.0,494.0
+d48e347a-e49b-42f4-9d70-55dc78f2abbf,What should an assistant referee watch for in an offside decision?,64637.0,2857.0,133.0,10398.0,81.0,9615.0,98.0,14489.0,48.0,26504.0,360.0,414.0
+30406240-2fe6-4aaa-a0ee-858dd5ca0f2a,Who is the home side in fixture FX-04321?,53339.0,2305.0,97.0,8969.0,99.0,4676.0,129.0,6807.0,44.0,29269.0,369.0,944.0
+36164375-225f-42c8-bb7f-c8a7da86722a,How can a club welcome new families to the league?,53783.0,2288.0,715.0,7217.0,64.0,8036.0,141.0,11320.0,324.0,23438.0,1244.0,240.0
+fed1f471-05d9-4b39-a1c1-3b81f446a311,What should happen if floodlights fail during an evening fixture?,81736.0,3638.0,248.0,13034.0,132.0,11654.0,153.0,14759.0,152.0,37497.0,685.0,469.0
+425ffba1-0339-4bae-81c2-cab4ef1d7a41,How should players cool down after the final whistle?,58268.0,4265.0,875.0,8885.0,152.0,6644.0,485.0,10402.0,2890.0,23146.0,4402.0,524.0
+9e8e19d4-09ad-414d-8cef-8782c9275b17,Which records should a team secretary keep for each season?,47194.0,4852.0,467.0,7061.0,150.0,1760.0,190.0,8121.0,68.0,24150.0,875.0,375.0
+ee0959e2-4eb5-4e00-ad8c-f9aa1b8c41a4,How can a league keep match fees affordable for low income families?,76364.0,2215.0,149.0,12584.0,262.0,12493.0,473.0,15512.0,314.0,31999.0,1198.0,363.0
+c1c46780-4cc0-426e-9f0a-cd3abc6a1a44,What is the role of a club welfare officer?,66476.0,4015.0,356.0,8271.0,139.0,13508.0,204.0,13645.0,81.0,25810.0,780.0,447.0
+17e73f88-97a3-441f-b150-65c547480ff5,How should drinks breaks be managed in very hot weather?,78142.0,3437.0,210.0,13360.0,200.0,12265.0,373.0,15300.0,127.0,32524.0,910.0,346.0
+30a9cd29-6c3c-407f-81c5-cb2b0dc68681,How do you train new referees for youth fixtures?,71576.0,4722.0,312.0,12770.0,198.0,9877.0,168.0,14582.0,195.0,26734.0,873.0,2018.0
+4f73cf27-7d2c-4c2a-8746-fa7e10a5e3b1,What makes a good team talk in the dressing room?,69025.0,1926.0,88.0,7952.0,73.0,11615.0,120.0,15560.0,261.0,30976.0,542.0,454.0
+3077f797-35db-4219-9545-a82086732178,Give me the matchup title for fixture FX-00666.,68679.0,2660.0,67.0,12252.0,158.0,9604.0,60.0,14037.0,201.0,28461.0,486.0,1179.0
+a0ba8dea-be56-4176-8b48-248dccd1d470,How should a league resolve a dispute over a disallowed goal?,61993.0,2704.0,174.0,9288.0,68.0,8585.0,153.0,12795.0,163.0,26777.0,558.0,1286.0
+48ce97a9-c655-4cea-94a1-1259b73e227e,What equipment does a groundskeeper need for line marking?,52981.0,2309.0,101.0,8244.0,148.0,6326.0,183.0,9771.0,112.0,25335.0,544.0,452.0
+21b931a1-8240-4a80-aac9-bb48475c7750,How can teams reduce plastic waste at match venues?,54085.0,2064.0,235.0,9298.0,568.0,6898.0,61.0,10065.0,83.0,24567.0,947.0,246.0
+a173d8af-31f4-4c53-a5b7-85ce006f3c09,What is a sensible policy on mobile phones in the dugout?,61188.0,2000.0,55.0,7924.0,95.0,10953.0,185.0,10428.0,134.0,28999.0,469.0,415.0
+95078369-d9f5-4050-9f32-d60eaf542e3d,How should a trophy presentation be organised at the end of the season?,57165.0,2373.0,148.0,7243.0,90.0,10781.0,81.0,14694.0,114.0,21399.0,433.0,242.0
+04e542eb-24f0-4a7c-94ff-bfa7528817ac,What can players eat the night before a big game?,55890.0,1873.0,355.0,9846.0,46.0,8407.0,126.0,10114.0,77.0,24862.0,604.0,184.0
+b8187fb2-f2e0-43bc-a6ba-6bd65cdb4085,How can a coach spot signs of concussion during play?,55997.0,2562.0,100.0,9033.0,224.0,7547.0,179.0,10194.0,82.0,25805.0,585.0,271.0
+8c4a0c54-e4d2-45a4-921c-a23fbbb9e794,What information belongs in a weekly club newsletter?,59048.0,2260.0,119.0,5251.0,96.0,8764.0,186.0,12108.0,117.0,29640.0,518.0,507.0
+edf227e7-e3e4-4c26-921a-efe7a4496f3f,How should team sheets be submitted to the referee?,67128.0,4856.0,466.0,12510.0,97.0,8706.0,450.0,10757.0,85.0,28700.0,1098.0,501.0
+732640f3-48b3-458f-87a5-6c0938a51baa,How busy will fixture FX-03550 be based on tickets left?,66163.0,4398.0,207.0,8635.0,140.0,9150.0,491.0,11024.0,78.0,30566.0,916.0,1474.0
+73d8611d-748a-4b2d-a92f-f559abd0e296,How can a league schedule fixtures around school holidays?,71196.0,2916.0,605.0,10638.0,145.0,10431.0,91.0,14430.0,59.0,31481.0,900.0,400.0
+d0ae6967-1a23-4d14-8e78-0a57e31f3582,What should a goalkeeper practise before kickoff?,55964.0,2783.0,196.0,7480.0,163.0,7245.0,166.0,10344.0,115.0,26481.0,640.0,991.0
+27035a99-3df8-4b53-bc81-ba09e5b593b8,How do you organise a penalty shootout fairly?,67625.0,2038.0,175.0,8979.0,99.0,9922.0,446.0,15217.0,372.0,29759.0,1092.0,618.0
+9f28040d-d145-4370-8187-060d43cb2618,What are good ice breaker games for a new under nines squad?,86511.0,4482.0,179.0,7211.0,274.0,18868.0,210.0,23611.0,783.0,30231.0,1446.0,662.0
+23a4c738-96a4-413a-a785-50ffdf4629db,How should a club handle abusive comments from a parent?,70856.0,4504.0,302.0,8619.0,54.0,8621.0,257.0,12325.0,329.0,35497.0,942.0,348.0

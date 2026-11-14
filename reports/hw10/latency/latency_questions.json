@@ -1,0 +1,450 @@
+{
+  "safe_similarity": 0.85,
+  "cache_threshold": 0.95,
+  "candidates": [
+    {
+      "question": "How should a club organise carpools for an away fixture?",
+      "cache_sim": 0.4106,
+      "pair_sim": 0.0,
+      "kept": true
+    },
+    {
+      "question": "What first aid supplies should be at the pitch side for a youth match?",
+      "cache_sim": 0.5496,
+      "pair_sim": 0.3325,
+      "kept": true
+    },
+    {
+      "question": "How can parents help coaches during a weekend league game?",
+      "cache_sim": 0.4816,
+      "pair_sim": 0.439,
+      "kept": true
+    },
+    {
+      "question": "What is a fair way to split playing time among substitutes?",
+      "cache_sim": 0.4379,
+      "pair_sim": 0.3677,
+      "kept": true
+    },
+    {
+      "question": "How should a referee handle a player who receives two yellow cards?",
+      "cache_sim": 0.523,
+      "pair_sim": 0.3458,
+      "kept": true
+    },
+    {
+      "question": "Which venue hosts fixture FX-02718?",
+      "cache_sim": 0.9233,
+      "pair_sim": 0.2726,
+      "kept": false
+    },
+    {
+      "question": "What should a team do if their kit colours clash with the opponents?",
+      "cache_sim": 0.3712,
+      "pair_sim": 0.3586,
+      "kept": true
+    },
+    {
+      "question": "How can a league attract more volunteers for match days?",
+      "cache_sim": 0.5291,
+      "pair_sim": 0.5401,
+      "kept": true
+    },
+    {
+      "question": "What snacks are good for players at half time?",
+      "cache_sim": 0.4798,
+      "pair_sim": 0.4632,
+      "kept": true
+    },
+    {
+      "question": "How do you set up cones for a pre-match passing drill?",
+      "cache_sim": 0.2158,
+      "pair_sim": 0.2502,
+      "kept": true
+    },
+    {
+      "question": "What should a captain say before the coin toss?",
+      "cache_sim": 0.4612,
+      "pair_sim": 0.3571,
+      "kept": true
+    },
+    {
+      "question": "How can a small club raise money for new goal nets?",
+      "cache_sim": 0.4193,
+      "pair_sim": 0.6062,
+      "kept": true
+    },
+    {
+      "question": "What are good ways to keep spectators away from the touchline?",
+      "cache_sim": 0.3579,
+      "pair_sim": 0.4497,
+      "kept": true
+    },
+    {
+      "question": "How should injuries be recorded after a fixture?",
+      "cache_sim": 0.4536,
+      "pair_sim": 0.4206,
+      "kept": true
+    },
+    {
+      "question": "What should be in a match day kit bag for a goalkeeper?",
+      "cache_sim": 0.4688,
+      "pair_sim": 0.5601,
+      "kept": true
+    },
+    {
+      "question": "Is there room for a school group of 30 at fixture FX-01999?",
+      "cache_sim": 0.457,
+      "pair_sim": 0.3447,
+      "kept": true
+    },
+    {
+      "question": "How can coaches keep young players motivated after a heavy defeat?",
+      "cache_sim": 0.4014,
+      "pair_sim": 0.612,
+      "kept": true
+    },
+    {
+      "question": "How should lost property be handled at a community sports ground?",
+      "cache_sim": 0.4796,
+      "pair_sim": 0.4137,
+      "kept": true
+    },
+    {
+      "question": "What can be done to reduce noise complaints from neighbours on match days?",
+      "cache_sim": 0.4054,
+      "pair_sim": 0.4782,
+      "kept": true
+    },
+    {
+      "question": "How should a league tell fans about a late venue change?",
+      "cache_sim": 0.5506,
+      "pair_sim": 0.4566,
+      "kept": true
+    },
+    {
+      "question": "What steps keep a grass pitch playable after heavy rain?",
+      "cache_sim": 0.4914,
+      "pair_sim": 0.2888,
+      "kept": true
+    },
+    {
+      "question": "How can teams make their matches easier to attend for wheelchair users?",
+      "cache_sim": 0.4534,
+      "pair_sim": 0.5629,
+      "kept": true
+    },
+    {
+      "question": "What is the best way to post fixture results on social media?",
+      "cache_sim": 0.2867,
+      "pair_sim": 0.2916,
+      "kept": true
+    },
+    {
+      "question": "How should a coach plan a light training session the day before a match?",
+      "cache_sim": 0.6593,
+      "pair_sim": 0.4794,
+      "kept": true
+    },
+    {
+      "question": "What should an assistant referee watch for in an offside decision?",
+      "cache_sim": 0.617,
+      "pair_sim": 0.533,
+      "kept": true
+    },
+    {
+      "question": "Who is the home side in fixture FX-04321?",
+      "cache_sim": 0.7759,
+      "pair_sim": 0.4043,
+      "kept": true
+    },
+    {
+      "question": "How can a club welcome new families to the league?",
+      "cache_sim": 0.4209,
+      "pair_sim": 0.6344,
+      "kept": true
+    },
+    {
+      "question": "What should happen if floodlights fail during an evening fixture?",
+      "cache_sim": 0.4865,
+      "pair_sim": 0.39,
+      "kept": true
+    },
+    {
+      "question": "How should players cool down after the final whistle?",
+      "cache_sim": 0.4331,
+      "pair_sim": 0.4207,
+      "kept": true
+    },
+    {
+      "question": "Which records should a team secretary keep for each season?",
+      "cache_sim": 0.395,
+      "pair_sim": 0.3034,
+      "kept": true
+    },
+    {
+      "question": "How can a league keep match fees affordable for low income families?",
+      "cache_sim": 0.3598,
+      "pair_sim": 0.5551,
+      "kept": true
+    },
+    {
+      "question": "What is the role of a club welfare officer?",
+      "cache_sim": 0.2488,
+      "pair_sim": 0.4269,
+      "kept": true
+    },
+    {
+      "question": "How should drinks breaks be managed in very hot weather?",
+      "cache_sim": 0.2798,
+      "pair_sim": 0.3436,
+      "kept": true
+    },
+    {
+      "question": "How do you train new referees for youth fixtures?",
+      "cache_sim": 0.5607,
+      "pair_sim": 0.534,
+      "kept": true
+    },
+    {
+      "question": "What makes a good team talk in the dressing room?",
+      "cache_sim": 0.4959,
+      "pair_sim": 0.4101,
+      "kept": true
+    },
+    {
+      "question": "Give me the matchup title for fixture FX-00666.",
+      "cache_sim": 0.7723,
+      "pair_sim": 0.6922,
+      "kept": true
+    },
+    {
+      "question": "How should a league resolve a dispute over a disallowed goal?",
+      "cache_sim": 0.4576,
+      "pair_sim": 0.4248,
+      "kept": true
+    },
+    {
+      "question": "What equipment does a groundskeeper need for line marking?",
+      "cache_sim": 0.3585,
+      "pair_sim": 0.3828,
+      "kept": true
+    },
+    {
+      "question": "How can teams reduce plastic waste at match venues?",
+      "cache_sim": 0.3702,
+      "pair_sim": 0.5039,
+      "kept": true
+    },
+    {
+      "question": "What is a sensible policy on mobile phones in the dugout?",
+      "cache_sim": 0.366,
+      "pair_sim": 0.4542,
+      "kept": true
+    },
+    {
+      "question": "How should a trophy presentation be organised at the end of the season?",
+      "cache_sim": 0.4081,
+      "pair_sim": 0.3891,
+      "kept": true
+    },
+    {
+      "question": "What can players eat the night before a big game?",
+      "cache_sim": 0.5445,
+      "pair_sim": 0.6768,
+      "kept": true
+    },
+    {
+      "question": "How can a coach spot signs of concussion during play?",
+      "cache_sim": 0.4325,
+      "pair_sim": 0.511,
+      "kept": true
+    },
+    {
+      "question": "What information belongs in a weekly club newsletter?",
+      "cache_sim": 0.244,
+      "pair_sim": 0.4017,
+      "kept": true
+    },
+    {
+      "question": "How should team sheets be submitted to the referee?",
+      "cache_sim": 0.5709,
+      "pair_sim": 0.5371,
+      "kept": true
+    },
+    {
+      "question": "How busy will fixture FX-03550 be based on tickets left?",
+      "cache_sim": 0.7055,
+      "pair_sim": 0.5292,
+      "kept": true
+    },
+    {
+      "question": "How can a league schedule fixtures around school holidays?",
+      "cache_sim": 0.5618,
+      "pair_sim": 0.6074,
+      "kept": true
+    },
+    {
+      "question": "What should a goalkeeper practise before kickoff?",
+      "cache_sim": 0.6671,
+      "pair_sim": 0.5729,
+      "kept": true
+    },
+    {
+      "question": "How do you organise a penalty shootout fairly?",
+      "cache_sim": 0.4289,
+      "pair_sim": 0.5448,
+      "kept": true
+    },
+    {
+      "question": "What are good ice breaker games for a new under nines squad?",
+      "cache_sim": 0.4509,
+      "pair_sim": 0.4452,
+      "kept": true
+    },
+    {
+      "question": "How should a club handle abusive comments from a parent?",
+      "cache_sim": 0.2252,
+      "pair_sim": 0.4417,
+      "kept": true
+    },
+    {
+      "question": "What should a team pack for a long bus trip to an away game?",
+      "cache_sim": 0.6697,
+      "pair_sim": 0.5248,
+      "kept": false
+    },
+    {
+      "question": "How do you choose a team captain for the season?",
+      "cache_sim": 0.4723,
+      "pair_sim": 0.5049,
+      "kept": false
+    },
+    {
+      "question": "How can grandparents get involved in supporting the club?",
+      "cache_sim": 0.2566,
+      "pair_sim": 0.6715,
+      "kept": false
+    },
+    {
+      "question": "What signage helps visitors find the right pitch at a large park?",
+      "cache_sim": 0.4436,
+      "pair_sim": 0.4365,
+      "kept": false
+    },
+    {
+      "question": "How should coaches rotate goalkeepers in youth leagues?",
+      "cache_sim": 0.4142,
+      "pair_sim": 0.7065,
+      "kept": false
+    },
+    {
+      "question": "What paperwork does a new club need to join the league?",
+      "cache_sim": 0.4066,
+      "pair_sim": 0.6691,
+      "kept": false
+    },
+    {
+      "question": "How can a team improve communication between defenders?",
+      "cache_sim": 0.3996,
+      "pair_sim": 0.5519,
+      "kept": false
+    },
+    {
+      "question": "What is a good way to thank the volunteer of the season?",
+      "cache_sim": 0.3604,
+      "pair_sim": 0.4823,
+      "kept": false
+    },
+    {
+      "question": "How should a club store balls and bibs between matches?",
+      "cache_sim": 0.3906,
+      "pair_sim": 0.4669,
+      "kept": false
+    },
+    {
+      "question": "What should a referee carry in their pocket during a match?",
+      "cache_sim": 0.4934,
+      "pair_sim": 0.6528,
+      "kept": false
+    },
+    {
+      "question": "How do you teach young players to take throw-ins correctly?",
+      "cache_sim": 0.4424,
+      "pair_sim": 0.4967,
+      "kept": false
+    },
+    {
+      "question": "What makes a good club badge design?",
+      "cache_sim": 0.2562,
+      "pair_sim": 0.4324,
+      "kept": false
+    },
+    {
+      "question": "How should a coach respond to a player arriving late?",
+      "cache_sim": 0.5328,
+      "pair_sim": 0.535,
+      "kept": false
+    },
+    {
+      "question": "How can a league collect feedback from players after the season?",
+      "cache_sim": 0.4339,
+      "pair_sim": 0.4934,
+      "kept": false
+    }
+  ],
+  "questions": [
+    "How should a club organise carpools for an away fixture?",
+    "What first aid supplies should be at the pitch side for a youth match?",
+    "How can parents help coaches during a weekend league game?",
+    "What is a fair way to split playing time among substitutes?",
+    "How should a referee handle a player who receives two yellow cards?",
+    "What should a team do if their kit colours clash with the opponents?",
+    "How can a league attract more volunteers for match days?",
+    "What snacks are good for players at half time?",
+    "How do you set up cones for a pre-match passing drill?",
+    "What should a captain say before the coin toss?",
+    "How can a small club raise money for new goal nets?",
+    "What are good ways to keep spectators away from the touchline?",
+    "How should injuries be recorded after a fixture?",
+    "What should be in a match day kit bag for a goalkeeper?",
+    "Is there room for a school group of 30 at fixture FX-01999?",
+    "How can coaches keep young players motivated after a heavy defeat?",
+    "How should lost property be handled at a community sports ground?",
+    "What can be done to reduce noise complaints from neighbours on match days?",
+    "How should a league tell fans about a late venue change?",
+    "What steps keep a grass pitch playable after heavy rain?",
+    "How can teams make their matches easier to attend for wheelchair users?",
+    "What is the best way to post fixture results on social media?",
+    "How should a coach plan a light training session the day before a match?",
+    "What should an assistant referee watch for in an offside decision?",
+    "Who is the home side in fixture FX-04321?",
+    "How can a club welcome new families to the league?",
+    "What should happen if floodlights fail during an evening fixture?",
+    "How should players cool down after the final whistle?",
+    "Which records should a team secretary keep for each season?",
+    "How can a league keep match fees affordable for low income families?",
+    "What is the role of a club welfare officer?",
+    "How should drinks breaks be managed in very hot weather?",
+    "How do you train new referees for youth fixtures?",
+    "What makes a good team talk in the dressing room?",
+    "Give me the matchup title for fixture FX-00666.",
+    "How should a league resolve a dispute over a disallowed goal?",
+    "What equipment does a groundskeeper need for line marking?",
+    "How can teams reduce plastic waste at match venues?",
+    "What is a sensible policy on mobile phones in the dugout?",
+    "How should a trophy presentation be organised at the end of the season?",
+    "What can players eat the night before a big game?",
+    "How can a coach spot signs of concussion during play?",
+    "What information belongs in a weekly club newsletter?",
+    "How should team sheets be submitted to the referee?",
+    "How busy will fixture FX-03550 be based on tickets left?",
+    "How can a league schedule fixtures around school holidays?",
+    "What should a goalkeeper practise before kickoff?",
+    "How do you organise a penalty shootout fairly?",
+    "What are good ice breaker games for a new under nines squad?",
+    "How should a club handle abusive comments from a parent?"
+  ],
+  "max_cache_sim": 0.7759,
+  "max_pair_sim": 0.6922
+}
