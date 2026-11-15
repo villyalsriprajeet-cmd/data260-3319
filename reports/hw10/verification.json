@@ -1,0 +1,205 @@
+{
+  "hw": "hw10",
+  "sid4": 3319,
+  "generated": "2026-11-14T17:16:19",
+  "commit_hash": "dfaec5663e3cf648fb9eb2f7fb7062576f01fc10",
+  "tag": "none",
+  "config": {
+    "SID4": 3319,
+    "PORT_BASE": 8619,
+    "PREFIX": "s3319",
+    "SEED": 3319,
+    "VERIFY_SEED": 263319,
+    "DOMAIN_ID": 7
+  },
+  "model": {
+    "llm": "qwen2.5:3b",
+    "runtime": "Ollama (local)",
+    "temperature": 0,
+    "seed": 3319,
+    "judge": "DeepEval 4.3.4 GEval, 1 to 5 rubric, qwen2.5:3b through Ollama (local)",
+    "embedder": "sentence-transformers/all-MiniLM-L6-v2 (384 dims)",
+    "redis": "redis/redis-stack-server:7.4.0-v8",
+    "dashboard": "streamlit 1.67.0"
+  },
+  "judge": {
+    "judge_model": "qwen2.5:3b",
+    "ollama_url": "http://localhost:11434",
+    "http_timeout_s": 120.0,
+    "deanchor": true,
+    "temperature": 0.0,
+    "seed": 3319,
+    "num_ctx": 2048,
+    "num_predict": 256
+  },
+  "seed": 3319,
+  "verify_seed": 263319,
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "docker: s3319_kafka and s3319_redis running",
+      "passed": true,
+      "detail": "['s3319_redis', 's3319_api', 's3319_worker', 's3319_kafka']"
+    },
+    {
+      "check": "Kafka: agent topics plus s3319_evaluations exist",
+      "passed": true,
+      "detail": "all six"
+    },
+    {
+      "check": "Redis answers PING and every key starts with s3319:",
+      "passed": true,
+      "detail": "66 keys"
+    },
+    {
+      "check": "Part 1: dashboard has Summary, Evaluation and Trace lookup pages",
+      "passed": true,
+      "detail": "['Summary', 'Evaluation', 'Trace lookup']"
+    },
+    {
+      "check": "Part 1.1: dashboard uses @st.cache_data (files) and @st.cache_resource (Redis client)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 1.1 live: Summary page renders counts, hit rate, error rate and latency with source and window",
+      "passed": true,
+      "detail": "{'Requests': '78', 'Cache hits': '21', 'Cache misses': '57', 'Cache hit rate': '26.9%', 'Error rate': '1.3%'}"
+    },
+    {
+      "check": "Part 1.2 live: Evaluation page renders stage scores, Spearman, mean absolute difference and repeatability",
+      "passed": true,
+      "detail": "{'Planner: plan quality': '3.55', 'Spearman (median of runs)': '0.143', 'Mean absolute difference': '1.7', 'Max change': '0.0'}"
+    },
+    {
+      "check": "Part 1.3 live: Trace lookup tells hit, miss and failed paths apart",
+      "passed": true,
+      "detail": "{'hit': 'CACHE HIT path: answered from the Redis ', 'miss': 'CACHE MISS path: no cached answer close ', 'failed': 'FAILED request on the cache-miss path. F'}"
+    },
+    {
+      "check": "Part 2: evaluations saved for end-to-end questions",
+      "passed": true,
+      "detail": "53 ok of 53 traces"
+    },
+    {
+      "check": "Part 2.2: plan, draft and final scores are on the 1 to 5 scale with a reason",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 2.2: trace_id, final answer, both scores, difference and interpretation saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 2.1: plan, draft and final joined by correlation_id with source offsets and judge kept",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 2: every latency request was evaluated end to end",
+      "passed": true,
+      "detail": "50"
+    },
+    {
+      "check": "Part 2.1 saved run: malformed finals skipped and the evaluator kept scoring",
+      "passed": true,
+      "detail": "4 skipped"
+    },
+    {
+      "check": "Part 2.1 live: judge unavailable is recorded as an error, no hang",
+      "passed": true,
+      "detail": "0.1 s"
+    },
+    {
+      "check": "Part 2.1 live: a judge that never answers is cut off",
+      "passed": true,
+      "detail": "3.0 s"
+    },
+    {
+      "check": "Part 3.1: eval_cases.json holds 20 Writer drafts and matches its sha256",
+      "passed": true,
+      "detail": "2c9174bb9227"
+    },
+    {
+      "check": "Part 3.1: frozen drafts unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 3.1: human_labels.csv has one 1 to 5 label per draft",
+      "passed": true,
+      "detail": "20"
+    },
+    {
+      "check": "Part 3.1: cases and labels committed (last change) before the judge scores were added",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 3.3: three judge runs over the same 20 frozen drafts",
+      "passed": true,
+      "detail": "{1: 20, 2: 20, 3: 20}"
+    },
+    {
+      "check": "Part 3.2: Spearman and mean absolute difference recompute from the raw per-case CSV",
+      "passed": true,
+      "detail": "{'spearman': 0.143, 'mean_abs_diff': 1.7}"
+    },
+    {
+      "check": "Part 3.3: repeatability (cases changed, max change) recomputes from the CSV",
+      "passed": true,
+      "detail": "{'cases_with_any_change': 0, 'change_rate': 0.0, 'mean_change': 0.0, 'max_change': 0.0, 'pairwise_change_rate': {'run1_vs_run2': 0.0, 'run1_vs_run3': 0.0, 'run2_vs_run3': 0.0}}"
+    },
+    {
+      "check": "Part 4.1: every span has trace_id, stage, start, end, status (and error when failed)",
+      "passed": true,
+      "detail": "800"
+    },
+    {
+      "check": "Part 4.2: hit, miss and failed trace ids saved for the dashboard",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 4.2: miss trace runs cache_lookup, inbox, tasks, drafts, final and evaluation in order",
+      "passed": true,
+      "detail": "82940.0 ms"
+    },
+    {
+      "check": "Part 4.2: hit trace is a cache_lookup hit with no agent stages",
+      "passed": true,
+      "detail": "similarity 1.0"
+    },
+    {
+      "check": "Part 4.2: failed trace names the failing stage and its error",
+      "passed": true,
+      "detail": "writer: RuntimeError: injected fault at WRITER for the HW10 failed-trace test"
+    },
+    {
+      "check": "Part 4.3: at least 50 confirmed cache misses",
+      "passed": true,
+      "detail": "50, max similarity 0.7759"
+    },
+    {
+      "check": "Part 4.3: p50 and p95 per stage and total queue wait recompute from the spans",
+      "passed": true,
+      "detail": "max gap 0.0"
+    },
+    {
+      "check": "Part 4.3: stage shares of end-to-end latency add up to 100%",
+      "passed": true,
+      "detail": "100.0"
+    },
+    {
+      "check": "Part 4.3: cache-hit latency kept separate from the misses",
+      "passed": true,
+      "detail": "{'n': 20, 'p50_ms': 167.0, 'p95_ms': 547.5, 'mean_ms': 236.8}"
+    },
+    {
+      "check": "ruff passes on the HW10 code",
+      "passed": true,
+      "detail": "All checks passed!"
+    }
+  ]
+}

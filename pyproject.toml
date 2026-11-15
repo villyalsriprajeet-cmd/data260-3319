@@ -16,3 +16,4 @@ indent-style = "space"
 "code/hw9/*.py" = ["E402"]  # HW9: env settings come before the imports
 "code/verify_hw09.py" = ["E402"]
 "code/hw10/*.py" = ["E402"]  # HW10: env settings come before the imports
+"code/verify_hw10.py" = ["E402"]

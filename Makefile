@@ -15,3 +15,6 @@ verify-hw08:
 
 verify-hw09:
 	python -m code.verify_hw09
+
+verify-hw10:
+	python -m code.verify_hw10

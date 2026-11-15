@@ -234,3 +234,46 @@ How to run
     python -m code.hw9.build_run_log
 
 Add -W ignore::FutureWarning to hide one huggingface warning.
+
+HW10 - Evaluation, judge validation, distributed tracing and a Streamlit dashboard
+
+Same configuration (SID4 3319, PORT_BASE 8619, PREFIX s3319, SEED 3319, VERIFY_SEED 263319, DOMAIN_ID 7). Builds on the HW8 Planner, Writer and Reviewer over Kafka and the HW9 semantic cache (threshold 0.95). Judge: DeepEval 4.3.4 GEval with qwen2.5:3b through Ollama (temperature 0, seed 3319). Dashboard: Streamlit 1.67.0 on port 8620. Every trace_id is the HW8 correlation_id.
+
+Files
+
+- code/hw10/check_setup.py - Step 0 check of the packages, Ollama, a GEval smoke test, the six Kafka topics, Redis, MySQL and the embedder
+- code/hw10/tracing.py - one JSON span per stage in reports/hw10/traces/spans.jsonl; code/kafka_agents/runtime.py writes the queue and work spans of each agent
+- code/hw10/traced_qa.py, ask.py - traced questions through the cache and the agents (hit, miss, injected failure)
+- code/hw10/judge.py, geval_metrics.py - local GEval judge (de-anchored prompt) and the 1 to 5 criteria
+- code/hw10/evaluator.py, bound_test.py, judge_probe.py - Part 2 evaluator on s3319_final, bounded-run tests, judge calibration probe
+- code/hw10/p3_cases.py, p3_judge.py - Part 3 frozen drafts, human labels, three judge runs and the validation report
+- code/hw10/p4_latency.py - Part 4.3 latency of 50 confirmed cache misses, cache hits kept separate
+- code/hw10/dashboard.py - Part 1 dashboard (Summary, Evaluation, Trace lookup)
+- code/verify_hw10.py - self-check (make verify-hw10); code/hw10/build_run_log.py builds RUN_LOG.txt
+- reports/hw10/ - report, METRICS.md, RUN_LOG.txt, AI_USE.md, verification.json, eval/, traces/ and latency/
+
+How to run
+
+    docker compose up -d                                          # Kafka, Redis Stack, worker, API
+    python -m code.hw10.check_setup
+    cd code/kafka_agents && python planner.py                     # one terminal each
+    python writer.py
+    python reviewer.py
+    cd ../..
+    python -m code.hw10.evaluator                                 # Part 2, its own terminal
+    python -m code.hw10.ask --question "..." --label miss         # Part 4.1 and 4.2 (add --fault WRITER for a failure)
+    python -m code.hw10.bound_test malformed                      # Part 2.1 bounds (also judge-down and judge-hang)
+    python -m code.hw10.judge_probe
+    python -m code.hw10.p3_cases collect                          # Part 3.1, then label, then commit both files
+    python -m code.hw10.p3_cases label
+    python -m code.hw10.p3_judge run                              # Part 3.2 and 3.3
+    python -m code.hw10.p3_judge report
+    python -m code.hw10.p4_latency probe                          # Part 4.3
+    python -m code.hw10.p4_latency run
+    python -m code.hw10.p4_latency hits
+    python -m code.hw10.p4_latency analyze
+    streamlit run code/hw10/dashboard.py --server.port 8620       # Part 1
+    make verify-hw10
+    python -m code.hw10.build_run_log
+
+Add -W ignore::FutureWarning to hide one huggingface warning. The dashboard needs pyarrow 24.0.0 with NumPy 1.26.4 (pyarrow 26 needs NumPy 2, which breaks torch 2.2.2).
