@@ -21,3 +21,4 @@ redis==5.2.1
 sentence-transformers
 deepeval==4.3.4
 streamlit==1.67.0
+pyarrow==24.0.0  # HW10: streamlit tables; pyarrow 26 needs NumPy 2, which breaks torch 2.2.2
