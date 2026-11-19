@@ -150,3 +150,7 @@ data/bikeshare/raw/
 
 # HW8: idempotency store of the Kafka agents
 code/kafka_agents/state/
+
+# HW11: Stock Watch state and digests (created by watch.py, not committed)
+code/hw11/stock-watch/state/
+code/hw11/stock-watch/digests/

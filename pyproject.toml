@@ -2,7 +2,7 @@
 [tool.ruff]
 line-length = 120
 target-version = "py312"
-extend-exclude = ["code/frontend", "reports", "data", "__pycache__"]
+extend-exclude = ["code/frontend", "reports", "data", "__pycache__", "code/hw11/stock-watch"]  # HW11: instructor kit kept as given
 [tool.ruff.lint]
 select = ["E", "F", "I"]  # pycodestyle errors, pyflakes (unused imports/variables), import sorting
 [tool.ruff.format]
