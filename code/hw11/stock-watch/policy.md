@@ -61,6 +61,7 @@ holders received MSG Rangers shares; that is not a news move.
 - Old filing: an 8-K filed more than 5 calendar days before the run date is old news on its first
   sighting (for example the first live run pulls each company's last 5 8-Ks): `quiet`, 0.10.
 - When several items are listed, use the highest-scoring one.
+- Fixture (test) runs: the run date is the newest date in that fixture folder, not today's date.
 
 ## 3. News items
 

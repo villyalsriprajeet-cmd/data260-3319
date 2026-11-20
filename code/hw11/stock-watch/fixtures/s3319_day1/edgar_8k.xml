@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DATA 260 HW11 (s3319) golden-set fixture, day 1. Riverside Valley FC Holdings (RVFC), FixtureLine Ticketing (FXLN) and Pinecrest Community Leagues (PCLG) are FICTIONAL companies; these filings do not exist. -->
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>EDGAR 8-K filings (HW11 fixture, day 1, fictional)</title>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009933192-26-000101</id>
+    <updated>2026-11-17T16:10:00-05:00</updated>
+    <title>FXLN: 8-K - Current report (2.02, 9.01)</title>
+    <summary>(Fictional test item.) FixtureLine Ticketing Inc. Item 2.02 Results of Operations and Financial Condition; Item 9.01 Financial Statements and Exhibits. Q3 revenue $88M, up 21% year over year, driven by community league fixture ticketing.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9933192/000993319226000101/0009933192-26-000101-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009933191-26-000102</id>
+    <updated>2026-11-17T17:30:00-05:00</updated>
+    <title>RVFC: 8-K - Current report (5.02)</title>
+    <summary>(Fictional test item.) Riverside Valley FC Holdings Inc. Item 5.02 Departure of Directors or Certain Officers: Chief Executive Officer Dana Whitlock resigned effective immediately; the Chief Financial Officer was named interim CEO.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9933191/000993319126000102/0009933191-26-000102-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009933193-26-000103</id>
+    <updated>2026-11-17T08:05:00-05:00</updated>
+    <title>PCLG: 8-K - Current report (2.01, 9.01)</title>
+    <summary>(Fictional test item.) Pinecrest Community Leagues Inc. Item 2.01 Completion of Acquisition or Disposition of Assets: the company completed the sale of Lakeside Community Arena for $41 million in cash.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9933193/000993319326000103/0009933193-26-000103-index.htm" rel="alternate"/>
+  </entry>
+</feed>

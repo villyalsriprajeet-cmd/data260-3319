@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DATA 260 HW11 (s3319) golden-set fixture, day 2. Fictional companies; these filings do not exist. Like the real EDGAR feed, it still lists day 1's filings. -->
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>EDGAR 8-K filings (HW11 fixture, day 2, fictional)</title>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009933193-26-000201</id>
+    <updated>2026-11-19T07:45:00-05:00</updated>
+    <title>PCLG: 8-K - Current report (1.01)</title>
+    <summary>(Fictional test item.) Pinecrest Community Leagues Inc. Item 1.01 Entry into a Material Definitive Agreement: a five-year regional media-rights agreement with Summit Sports Network to broadcast league fixtures, starting with the 2027 season.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9933193/000993319326000201/0009933193-26-000201-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009933192-26-000202</id>
+    <updated>2026-11-19T09:20:00-05:00</updated>
+    <title>FXLN: 8-K/A - Current report, amendment (2.02)</title>
+    <summary>(Fictional test item.) FixtureLine Ticketing Inc. Amendment No. 1 to the 8-K filed November 17, 2026, filed solely to correct a typographical error in Exhibit 99.1. No change to the reported results.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9933192/000993319226000202/0009933192-26-000202-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009933192-26-000203</id>
+    <updated>2026-11-19T16:15:00-05:00</updated>
+    <title>FXLN: 8-K - Current report (8.01)</title>
+    <summary>(Fictional test item.) FixtureLine Ticketing Inc. Item 8.01 Other Events: the board approved a pilot of dynamic ticket pricing for community league fixtures in three states, starting March 2027. No financial guidance was given.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9933192/000993319226000203/0009933192-26-000203-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009933192-26-000101</id>
+    <updated>2026-11-17T16:10:00-05:00</updated>
+    <title>FXLN: 8-K - Current report (2.02, 9.01)</title>
+    <summary>(Fictional test item.) FixtureLine Ticketing Inc. Item 2.02 Results of Operations and Financial Condition; Item 9.01 Financial Statements and Exhibits. Q3 revenue $88M, up 21% year over year, driven by community league fixture ticketing.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9933192/000993319226000101/0009933192-26-000101-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009933191-26-000102</id>
+    <updated>2026-11-17T17:30:00-05:00</updated>
+    <title>RVFC: 8-K - Current report (5.02)</title>
+    <summary>(Fictional test item.) Riverside Valley FC Holdings Inc. Item 5.02 Departure of Directors or Certain Officers: Chief Executive Officer Dana Whitlock resigned effective immediately; the Chief Financial Officer was named interim CEO.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9933191/000993319126000102/0009933191-26-000102-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009933193-26-000103</id>
+    <updated>2026-11-17T08:05:00-05:00</updated>
+    <title>PCLG: 8-K - Current report (2.01, 9.01)</title>
+    <summary>(Fictional test item.) Pinecrest Community Leagues Inc. Item 2.01 Completion of Acquisition or Disposition of Assets: the company completed the sale of Lakeside Community Arena for $41 million in cash.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9933193/000993319326000103/0009933193-26-000103-index.htm" rel="alternate"/>
+  </entry>
+</feed>

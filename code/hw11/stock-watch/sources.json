@@ -26,7 +26,7 @@
       "type": "stooq",
       "modes": ["fixtures"],
       "url": "https://stooq.com/q/d/l/",
-      "tickers": ["nbrx.us", "cbds.us", "lksp.us"],
+      "tickers": ["nbrx.us", "cbds.us", "lksp.us", "rvfc.us", "fxln.us", "pclg.us"],
       "threshold_pct": 2.0,
       "lookback_days": 3
     },
