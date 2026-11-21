@@ -18,3 +18,6 @@ verify-hw09:
 
 verify-hw10:
 	python -m code.verify_hw10
+
+verify-hw11:
+	python code/verify_hw11.py

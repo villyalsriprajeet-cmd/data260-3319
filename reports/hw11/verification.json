@@ -1,0 +1,198 @@
+{
+  "hw": "hw11",
+  "sid4": 3319,
+  "generated": "2026-11-20T23:14:28",
+  "commit_hash": "c482760ae2de8364dc7beef01cb638e548b2ad0a",
+  "tag": "none",
+  "config": {
+    "SID4": 3319,
+    "PORT_BASE": 8619,
+    "PREFIX": "s3319",
+    "SEED": 3319,
+    "VERIFY_SEED": 263319,
+    "DOMAIN_ID": 7
+  },
+  "agent": {
+    "agent": "Meta Muse (free plan, browser at muse.ai)",
+    "tool": "watch.py (kit, patched for HW11)"
+  },
+  "watch_py_sha16": "d4b74e4ab758aae4",
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "Part 1: watch.py is the patched kit version",
+      "passed": true,
+      "detail": "d4b74e4ab758aae4"
+    },
+    {
+      "check": "Part 1: live allowlist is Yahoo chart API and data.sec.gov only",
+      "passed": true,
+      "detail": "['data.sec.gov', 'query1.finance.yahoo.com']"
+    },
+    {
+      "check": "Part 1: live watchlist MSGK, BATRA, TKO, DKNG",
+      "passed": true,
+      "detail": "['MSGK', 'BATRA', 'TKO', 'DKNG']"
+    },
+    {
+      "check": "Part 1: SEC user agent has a contact email",
+      "passed": true,
+      "detail": "DATA260-stock-watch/1.0 sriprajeet.villyal@sjsu.edu"
+    },
+    {
+      "check": "Part 2: policy defines notify",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 2: policy defines digest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 2: policy defines ask",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 2: policy defines quiet",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 2: per-ticker notify thresholds (BATRA 3.5, MSGK 5, TKO 5, DKNG 9)",
+      "passed": true,
+      "detail": "{'BATRA': True, 'MSGK': True, 'TKO': True, 'DKNG': True}"
+    },
+    {
+      "check": "Part 2: 8-K item rules (1.01, 2.01, 2.02, 5.02, 8.01, 9.01)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 2: fixture run-date rule added in Part 3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 3: 12 cases",
+      "passed": true,
+      "detail": "12"
+    },
+    {
+      "check": "Part 3: two cases in each of the six categories",
+      "passed": true,
+      "detail": "{'normal': 2, 'boundary': 2, 'adversarial': 2, 'ambiguous': 2, 'near_duplicate': 2, 'interruption': 2}"
+    },
+    {
+      "check": "Part 3: case ids unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 3: every label is notify, digest, ask or quiet",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 3: fixtures and labels unchanged since commit",
+      "passed": true,
+      "detail": "11 files match"
+    },
+    {
+      "check": "Part 3: labels committed before the first agent run",
+      "passed": true,
+      "detail": "c482760 at 2026-11-19T17:42:24-08:00, first agent run 2026-11-19T18:05:28-08:00, commits touching the labels: 1"
+    },
+    {
+      "check": "Part 4: --stop-after 2 interrupts day 1 and status says so",
+      "passed": true,
+      "detail": "exit 3, interrupted, stopped after 2 items in source prices_demo"
+    },
+    {
+      "check": "Part 4: resume finds the 8 day-1 items",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "check": "Part 4: regex guard flags A1 only",
+      "passed": true,
+      "detail": "['Pinecrest Community Leagues: fan club priority update']"
+    },
+    {
+      "check": "Part 4: injection-flagged item is forced to ask",
+      "passed": true,
+      "detail": "ask"
+    },
+    {
+      "check": "Part 4: restart loses and repeats nothing (8 retrieved, none twice)",
+      "passed": true,
+      "detail": "{'run_start': 1, 'retrieved': 8, 'interrupted': 1, 'resume': 1, 'source_done': 3, 'injection_flagged': 1, 'importance_scored': 8, 'decision': 8, 'effect': 4}"
+    },
+    {
+      "check": "Part 4: fetch blocks the injection link",
+      "passed": true,
+      "detail": "clubdesk.pinecrest-fans.example is not an approved source"
+    },
+    {
+      "check": "Part 4: day 2 has 6 new items and 7 duplicates suppressed",
+      "passed": true,
+      "detail": "6 new, 7 duplicates"
+    },
+    {
+      "check": "Part 4: filing and news story citing it merge into one effect",
+      "passed": true,
+      "detail": "['5fae1c388b4e']"
+    },
+    {
+      "check": "Part 4: retried alert returns ALREADY_REPORTED",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Part 4: replay alerts have the effect IDs Muse reported",
+      "passed": true,
+      "detail": "['2dd956e23bad', '4b56a686f4d7', '5fae1c388b4e', '97ae571da30e', 'c126485d9f69']"
+    },
+    {
+      "check": "Part 6: every golden case resolves to a retrieved, decided item",
+      "passed": true,
+      "detail": "12/12"
+    },
+    {
+      "check": "Part 6: metrics recompute (duplicates 0, recovery 1.0, 1 blocked, 0 injection notified)",
+      "passed": true,
+      "detail": "{'cases': 12, 'decision_accuracy': 1.0, 'precision_notify': 1.0, 'recall_notify': 1.0, 'unnecessary_notification_rate': 0.0, 'duplicate_notification_rate': 0.0, 'restart_recovery_rate': 1.0, 'blocked_non_allowlisted_urls': 1, 'injection_items_flagged': 1, 'injection_items_notified': 0, 'tokens_per_a"
+    },
+    {
+      "check": "Part 1: kit demo_test.sh still gives decision_accuracy 1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reports/hw11/METRICS.md exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reports/hw11/RUN_LOG.txt exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reports/hw11/AI_USE.md exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "METRICS.md cites the live run, the golden runs and the traced alert",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "ruff passes on the HW11 code",
+      "passed": true,
+      "detail": "ruff not on PATH, skipped (the pre-commit hook ran it)"
+    }
+  ]
+}

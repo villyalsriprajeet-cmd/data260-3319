@@ -277,3 +277,29 @@ How to run
     python -m code.hw10.build_run_log
 
 Add -W ignore::FutureWarning to hide one huggingface warning. The dashboard needs pyarrow 24.0.0 with NumPy 1.26.4 (pyarrow 26 needs NumPy 2, which breaks torch 2.2.2).
+
+HW11 - Stock Watch: an always-on monitor on Meta Muse
+
+Same configuration (SID4 3319, PORT_BASE 8619, PREFIX s3319, SEED 3319, VERIFY_SEED 263319, DOMAIN_ID 7). Agent: Meta Muse (free plan, muse.ai) running the instructor kit's watch.py on its cloud computer, with standing instructions in Muse memory and a weekday 1:30 PM Pacific scheduled task. Watchlist: MSGK, BATRA, TKO, DKNG (sports business, domain 7).
+
+Files
+
+- code/hw11/stock-watch/ - the kit: watch.py (patched), policy.md (Part 2), sources.json (live: Yahoo chart API and data.sec.gov only), fixtures/s3319_day1 and s3319_day2 and golden/gold_s3319.json (Part 3)
+- code/hw11/patch_watch_hw11.py - patch 1: per-ticker volatility command (vol), source errors reported in pending
+- code/hw11/patch_watch_hw11_sources.py - patch 2: Yahoo chart API prices and data.sec.gov 8-K filings (Stooq and legacy EDGAR were blocked from Muse)
+- code/hw11/make_golden_s3319.py - writes the golden fixtures and labels (12 cases, 2 per category), committed before any agent run
+- code/verify_hw11.py - self-check (make verify-hw11): kit, policy, golden set, labels-before-run, fixture replay
+- reports/hw11/ - report, METRICS.md, RUN_LOG.txt, AI_USE.md, verification.json
+
+How to run
+
+    python3 code/hw11/patch_watch_hw11.py code/hw11/stock-watch/watch.py   # once, on the kit as given
+    python3 code/hw11/patch_watch_hw11_sources.py code/hw11/stock-watch/watch.py
+    python3 code/hw11/make_golden_s3319.py code/hw11/stock-watch           # once; commit before any agent run
+    cd code/hw11/stock-watch && bash demo_test.sh && cd ../../..           # kit check, accuracy 1.0
+    # zip code/hw11/stock-watch (without state/ and digests/), attach it in Muse and use the prompts in MUSE_SETUP.md
+    # on Muse: run stock-watch (live), run stock-watch on fixtures/s3319_day1 with --stop-after 2, new chat, resume,
+    #          run stock-watch on fixtures/s3319_day2, then python3 watch.py metrics --gold golden/gold_s3319.json
+    make verify-hw11
+
+The live ledger stays on the Muse computer (state/watch.db); back it up with python3 watch.py snapshot --out <file> before a fixture test and restore it with restore --file <file> --force afterwards.
