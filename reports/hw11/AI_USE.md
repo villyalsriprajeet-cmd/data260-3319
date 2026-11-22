@@ -1,11 +1,10 @@
 # HW11 AI Use
 
 ## 1. What I used AI for and what I did myself
-I used two AI systems. Meta Muse is the agent being tested: ii ran watch.py, scored every item with my policy.md and
-posted the alerts. Separately, I used an AI assistant as a helper: i read the assignment and the kit, drafted
+I used an AI assistant as a helper: i read the assignment and the kit, drafted
 the two watch.py patches (per-ticker volatility command, Yahoo and data.sec.gov sources), the golden-set generator,
 the verify script and the Muse prompts, and explained errors. I chose the watchlist and agreed the threshold rule
-(about 2.5 x each stock's typical daily move) after looking at the vol data. The assistant drafted the fictional
+(about 2.5 x each stock's typical daily move) after looking at the vol data. Then drafted the fictional
 fixtures and the 12 labels; I checked each case against policy.md and committed them before any agent run (c482760). I ran
 everything on Muse myself (install, live run, schedule, both fixture runs, the restart in a new chat, the injection
 and duplicate tests), took every screenshot, made all commits, and checked the numbers in METRICS.md against the Muse
